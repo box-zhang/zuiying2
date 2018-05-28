@@ -1,8 +1,8 @@
-<script language=JavaScript src="http://js.sohu.com/pv.js">
-</script>
-<script language="javascript" src="http://js.sohu.com/wrating20120726.js">
-</script>
+<script language=JavaScript src="http://js.sohu.com/pv.js"></script>
+<script language="javascript" src="http://js.sohu.com/wrating20120726.js"></script>
 <script language="javascript">
+
+
     var _wratingId = null;
     try {
         _wratingId = _getAcc();
@@ -19,5 +19,4 @@
         document.write('try{vjTrack();}catch(e){}');
         document.write('</scr' + 'ipt>');
     }
-
 </script>
