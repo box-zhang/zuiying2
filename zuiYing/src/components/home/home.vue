@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div>
     <v-header-home></v-header-home>
     <v-discover-person></v-discover-person>
     <v-discover-video></v-discover-video>
@@ -18,11 +18,11 @@
 
   export default {
      components:{
+      vHeaderHome,
       vDiscoverPerson,
       vDiscoverVideo,
       vHomeShow,
       vHomeService,
-      vHeaderHome,
       vFooter
     }
   };
@@ -31,15 +31,6 @@
 <style lang="stylus" rel="stylesheet/stylus">
 @import '../../common/stylus/variable';
 @import '../../common/stylus/mixin';
-.title-black
-  text-align: center
-  h2
-    font-size: 28px
-    line-height: 48px
-  p
-    margin-top: 15px
-    font-size: 12px
-    line-height: 20px
 .title-white
   margin: 90px 0
   font-size: 36px

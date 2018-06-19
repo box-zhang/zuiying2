@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import Home from 'components/home/home';
-import Activity from 'components/activity/activity';
+import ActivityMovie from 'components/activityMovie/activityMovie';
 import Propagandize from 'components/propagandize/propagandize';
 import Marketing from 'components/marketing/marketing';
 import UpLoad from 'components/upLoad/upLoad';
@@ -12,6 +12,7 @@ import Login from 'components/login/login';
 import Signin from 'components/login/signin';
 import PasswordRetrieve from 'components/passwordRetrieve/passwordRetrieve';
 import About from 'components/about/about';
+import ShowAll from 'components/showAll/showAll';
 
 import Introduce from 'components/introduce/introduce';
 
@@ -26,8 +27,8 @@ export default new VueRouter({
       path: '/home',
       component: Home
     },{
-      path: '/activity',
-      component: Activity
+      path: '/activity-movie',
+      component: ActivityMovie
     },{
       path: '/propagandize',
       component: Propagandize
@@ -62,6 +63,9 @@ export default new VueRouter({
     },{
       path: '/about',
       component: About
+    },{
+      path: '/show-more',
+      component: ShowAll
     }
   ]
 });

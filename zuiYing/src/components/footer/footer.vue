@@ -46,7 +46,7 @@
 										<dt>企业服务</dt>
 										<dd>
 											<ul>
-											    <li><router-link tag="span" class="nav-item" to="/activity"><a href="javascript:;">电影节</a></router-link></li>
+											    <li><router-link tag="span" class="nav-item" to="/activity-movie"><a href="javascript:;">电影节</a></router-link></li>
 											    <li><router-link tag="span" class="nav-item" to="/propagandize"><a href="javascript:;">电影节宣发</a></router-link></li>
 											    <li><router-link tag="span" class="nav-item" to="/marketing"><a href="javascript:;">电影节营销</a></router-link></li>
 											</ul>

@@ -21,7 +21,7 @@
                 </ul>
               </div>
               <div class="create-btn">
-                <i-button type="ghost" shape="circle" class="hollow">创建我的主页</i-button>
+                <router-link tag="span" class="nav-item" to="/login"><a href="#"><i-button type="ghost" shape="circle" class="hollow">创建我的主页</i-button></a></router-link>
               </div>
             </i-col>
           </Row>
@@ -60,14 +60,9 @@
             </ul>
           </div>
           <div class="create-btn">
-            <i-button type="ghost" shape="circle" class="hollow">浏览更多赛事</i-button>
+            <router-link tag="span" class="nav-item" to="/activity-movie"><a href="#"><i-button type="ghost" shape="circle" class="hollow">浏览更多赛事</i-button></a></router-link>
           </div>
         </div>
-        <Row>
-          <i-col span="8">col-8</i-col>
-          <i-col span="8">col-8</i-col>
-          <i-col span="8">col-8</i-col>
-        </Row>
       </div>
       <v-circle2></v-circle2>
     </div>
@@ -122,6 +117,9 @@
     margin: 45px auto
     text-align: center
     width: 400px
+    a
+      display: block
+      width: 100%
   .hollow
     height: 50px
     font-size: 18px

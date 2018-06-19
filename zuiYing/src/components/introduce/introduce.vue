@@ -1,5 +1,9 @@
 <template>
-	<div>introduce       </div>
+	<div class="introduce">
+		<div class="main">
+			<p>介绍</p>
+		</div>
+	</div>
 </template>
 
 <script type="text/ECMAScript-6">

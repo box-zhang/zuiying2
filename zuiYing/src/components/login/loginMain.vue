@@ -1,21 +1,23 @@
 <template>
   <div class="login-wrapper">
-    <div class="main">
-      <div class="login-header">
-        <div class="logo">
-          <img src="./logo_login.png" height="31" width="154" alt="">
+    <div class="wrapper-main">
+      <div class="main">
+        <div class="login-header">
+          <div class="logo">
+            <img src="./logo_login.png" height="31" width="154" alt="">
+          </div>
+          <p>向世界说，你好！ Say hello to the world</p>
         </div>
-        <p>向世界说，你好！ Say hello to the world</p>
+        <router-view></router-view>
       </div>
-      <router-view></router-view>
-    </div>
-    <div class="login-bottom">
-        <ul>
-            <li>帮助</li>
-            <li>隐私</li>
-            <li>条款</li>
-        </ul>
-        <p>2018 &copy; 京ICP备15041417号-1Copyright  ZUIYINGTV 版权所有</p>
+      <div class="login-bottom">
+          <ul>
+              <li>帮助</li>
+              <li>隐私</li>
+              <li>条款</li>
+          </ul>
+          <p>2018 &copy; 京ICP备15041417号-1Copyright  ZUIYINGTV 版权所有</p>
+      </div>
     </div>
   </div>
 </template>
@@ -31,11 +33,10 @@
   display: flex
   flex-flow: column
   min-height: 100vh
-  padding: 100px 50px 30px
   background: $color-positive-background-m
   text-align: center
   .main
-    min-height: calc(86vh - 2.5em - 7em);
+    min-height: calc(94vh - 2.5em - 7em);
     /* Avoid padding/borders screwing up our height: */
     box-sizing: border-box;
 .login-header

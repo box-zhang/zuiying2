@@ -38,6 +38,8 @@ module.exports = {
       'common': resolve('src/common'),
       'components': resolve('src/components'),
       'router': resolve('src/router'),
+      'images': resolve('src/common/images'),
+      'stylus': resolve('src/common/stylus'),
     }
   },
   module: {

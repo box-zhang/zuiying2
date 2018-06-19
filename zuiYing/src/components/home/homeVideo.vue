@@ -157,6 +157,6 @@
         a
           width: 100%
           .ivu-btn-primary
-            width: 80%
+            width: 86%
             positive()
 </style>

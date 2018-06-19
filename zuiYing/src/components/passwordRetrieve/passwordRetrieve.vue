@@ -1,28 +1,30 @@
 <template>
   <div class="login-wrapper">
-    <div class="main">
-      <div class="login-header">
-        <div class="logo">
-          <img src="./icon7_password.png" height="50" width="50" alt="">
+    <div class="wrapper-main">
+      <div class="main">
+        <div class="login-header">
+          <div class="logo">
+            <img src="./icon7_password.png" height="50" width="50" alt="">
+          </div>
+          <h2>找回密码</h2>
+          <p>我们将发送激活邮件到你的注册邮箱</p>
         </div>
-        <h2>找回密码</h2>
-        <p>我们将发送激活邮件到你的注册邮箱</p>
+        <div class="form-wrapper">
+          <Form ref="formValidate" :model="formValidate" :rules="ruleValidate">
+            <FormItem prop="mail">
+              <i-input v-model="formValidate.mail" placeholder="请输入你的邮箱">
+                <Icon type="ios-email-outline" slot="prepend"></Icon>
+              </i-input>
+            </FormItem>
+            <FormItem>
+              <Button type="primary" shape="circle" class="positive" @click="handleSubmit('formValidate')">发送</Button>
+            </FormItem>
+          </Form>
+        </div>
       </div>
-      <div class="form-wrapper">
-        <Form ref="formValidate" :model="formValidate" :rules="ruleValidate">
-          <FormItem prop="mail">
-            <i-input v-model="formValidate.mail" placeholder="请输入你的邮箱">
-              <Icon type="ios-email-outline" slot="prepend"></Icon>
-            </i-input>
-          </FormItem>
-          <FormItem>
-            <Button type="primary" shape="circle" class="positive" @click="handleSubmit('formValidate')">发送</Button>
-          </FormItem>
-        </Form>
+      <div class="login-bottom">
+        <p>如果收不到验证码,可发邮件至 help@zuiying.com 给我们</p>
       </div>
-    </div>
-    <div class="login-bottom">
-      <p>如果收不到验证码,可发邮件至 help@zuiying.com 给我们</p>
     </div>
   </div>
 </template>
@@ -66,11 +68,10 @@
   display: flex
   flex-flow: column
   min-height: 100vh
-  padding: 100px 50px 30px
   background: $color-positive-background-m
   text-align: center
   .main
-    min-height: calc(90vh - 2.5em - 7em);
+    min-height: calc(98vh - 2.5em - 7em);
     box-sizing: border-box;
 .login-header
   font-size: 14px

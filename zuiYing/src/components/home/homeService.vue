@@ -51,10 +51,10 @@
         <div class="choice">
           <Row>
             <i-col span="12">
-              <a href="javascript:;"><Button type="ghost" shape="circle" class="negative">随便看看</Button></a>
+              <router-link tag="span" class="nav-item" to="/activity-movie"><a href="javascript:;"><Button type="ghost" shape="circle" class="negative">随便看看</Button></a></router-link>
             </i-col>
             <i-col span="12">
-              <Button type="ghost" shape="circle" class="positive">我要加入</Button>
+              <router-link tag="span" class="nav-item" to="/login"><a href="#"><Button type="ghost" shape="circle" class="positive">我要加入</Button></a></router-link>
             </i-col>
           </Row>
         </div>

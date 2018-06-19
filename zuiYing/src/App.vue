@@ -33,7 +33,8 @@
   font-size: 14px
 .ivu-layout
   background: none
-
+.wrapper-main
+  padding-top: 100px
 .main
   position: relative
   z-index: 2
@@ -50,6 +51,37 @@
     line-height: 0
     clear: both
     visibility: hidden
+
+.title-black
+  text-align: center
+  h2
+    font-size: 28px
+    line-height: 48px
+  p
+    margin-top: 15px
+    font-size: 12px
+    line-height: 20px
+
+.title-active
+  position: relative
+  line-height: 24px
+  h3,.active-more
+    padding: 20px 0
+  h3
+    font-size: 18px
+    color: $color-text-l
+  .active-more
+    position: absolute
+    top: 0
+    right: 10px
+    font-size: 14px
+
+.link-a a
+  color: $color-emphasis-l
+  &:hover
+    color: $color-emphasis-ll
+
+
 .positive
   positive()
 .negative
