@@ -1,0 +1,123 @@
+border-1px($color)
+  position: relative
+  &:after
+    display: block
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    border-top: 1px solid $color
+    content: ' '
+
+border-none()
+  &:after
+    display: none
+
+//
+bg-image($url)
+  background-image: url($url + "@2x.png")
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
+    background-image: url($url + "@3x.png")
+
+circle($size)
+  width: $size
+  height: $size
+  border-radius: $size
+
+clearfix()
+  display: inline-block
+  &:after
+    display: block
+    content: "."
+    height: 0
+    line-height: 0
+    clear: both
+    visibility: hidden
+
+//
+no-wrap()
+  text-overflow: ellipsis
+  overflow: hidden
+  white-space: nowrap
+
+//
+extend-click()
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: -10px
+    left: -10px
+    right: -10px
+    bottom: -10px
+// btn-background gray-btn:negative\red-btn:positive
+negative()
+  line-height: 2
+  padding: 6px 40px
+  background: $color-negative-background-ll
+  border: 1px solid $color-negative-background-d
+  color: $color-white
+  &:hover
+    color: $color-negative-background
+    border:  1px solid $color-negative-background
+    background: transparent
+  &:focus
+    box-shadow: 0 0 0 2px $color-negative-background-d
+positive()
+  line-height: 2
+  padding: 6px 40px
+  background: $color-positive-background-ll
+  border: 1px solid $color-positive-background-d
+  color: $color-white
+  &:hover
+    color: $color-positive-background
+    border:  1px solid $color-positive-background
+    background: transparent
+  &:active
+    color: $color-positive-background
+    border:  1px solid $color-positive-background
+    background: transparent
+  &:focus
+    box-shadow: 0 0 0 2px $color-positive-background-d
+
+negative2()
+  line-height: 2
+  padding: 6px 10px
+  background: $color-negative-background-ll
+  border: 1px solid $color-negative-background-d
+  color: $color-white
+  &:hover
+    color: $color-negative-background
+    border:  1px solid $color-negative-background
+    background: $color-negative-background-l
+  &:focus
+    box-shadow: 0 0 0 2px $color-negative-background-d
+positive2()
+  line-height: 2
+  padding: 6px 10px
+  background: $color-positive-background-ll
+  border: 1px solid $color-positive-background-d
+  color: $color-white
+  &:hover
+    color: $color-positive-background
+    border:  1px solid $color-positive-background
+    background: $color-positive-background-l
+  &:active
+    color: $color-positive-background
+    border:  1px solid $color-positive-background
+    background: $color-positive-background-l
+  &:focus
+    box-shadow: 0 0 0 2px $color-positive-background-d
+
+// btn-background gray-btn:negative\red-btn:positive
+hollow()
+  line-height: 2
+  padding: 6px 10px
+  width: 80%
+  border: 1px solid $color-white-ll
+  color: $color-white-ll
+  &:hover
+    color: $color-white
+    border:  1px solid $color-white
+  &:focus
+    box-shadow: 0 0 0 2px $color-white-d
