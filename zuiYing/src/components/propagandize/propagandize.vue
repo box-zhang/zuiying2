@@ -108,11 +108,11 @@
                 <p>腾讯游戏</p>
               </li>
               <li>
-                <div class="partner-logo"><img src="../../common/images/logo_tmall.png" alt="凤凰网"></div>
+                <div class="partner-logo"><img src="../../common/images/logo_fengh.png" alt="凤凰网"></div>
                 <p>凤凰网</p>
               </li>
               <li>
-                <div class="partner-logo"><img src="../../common/images/logo_tmall.png" alt="人民日报"></div>
+                <div class="partner-logo"><img src="../../common/images/logo_renm.png" alt="人民日报"></div>
                 <p>人民日报</p>
               </li>
           </ul>
@@ -142,6 +142,7 @@
 @import '../../common/stylus/variable';
 @import '../../common/stylus/mixin';
 .spread
+  margin-top: 45px
   >.main
     ul
       display: flex

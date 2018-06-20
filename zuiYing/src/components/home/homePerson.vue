@@ -1,110 +1,112 @@
 <template>
   <div class="discover-person">
     <div class="main">
-      <div class="title-black">
-        <h2>发现中国最优秀的领域达人</h2>
-        <p>达人聚集地、百万级达人分享、寻找生活、寻找创意</p>
-      </div>
-      <div class="discover-nav">
-        <ul>
-          <li>
-            <a href="javascript:;">
-                <span class="icon"><img src="./icon1.png" alt=""></span>
-                <div class="discover-nav-text">
-                  <p>创意</p>
-                  <p class="more"><a href="javascript:;">了解详情 &nbsp;&gt;</a></p>
-                </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:;">
-                <span class="icon"><img src="./icon2.png" alt=""></span>
-                <div class="discover-nav-text">
-                  <p>趣味</p>
-                  <p class="more"><a href="javascript:;">了解详情&nbsp;&gt;</a></p>
-                </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:;">
-                <span class="icon"><img src="./icon3.png" alt=""></span>
-                <div class="discover-nav-text">
-                  <p>运动</p>
-                  <p class="more"><a href="javascript:;">了解详情&nbsp;&gt;</a></p>
-                </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:;">
-                <span class="icon"><img src="./icon4.png" alt=""></span>
-                <div class="discover-nav-text">
-                  <p>美食</p>
-                  <p class="more"><a href="javascript:;">了解详情&nbsp;&gt;</a></p>
-                </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:;">
-                <span class="icon"><img src="./icon5.png" alt=""></span>
-                <div class="discover-nav-text">
-                  <p>生活</p>
-                  <p class="more"><a href="javascript:;">了解详情&nbsp;&gt;</a></p>
-                </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="discover-person-list">
-        <ul>
-          <li>
-            <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
-            <div class="user-information">
-              <p class="user-name">user Name</p>
-            </div>
-          </li>
-          <li>
-            <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
-            <div class="user-information">
-              <p class="user-name">user Name</p>
-            </div>
-          </li>
-          <li>
-            <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
-            <div class="user-information">
-              <p class="user-name">user Name</p>
-            </div>
-          </li>
-          <li>
-            <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
-            <div class="user-information">
-              <p class="user-name">user Name</p>
-            </div>
-          </li>
-          <li>
-            <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
-            <div class="user-information">
-              <p class="user-name">user Name</p>
-            </div>
-          </li>
-          <li>
-            <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
-            <div class="user-information">
-              <p class="user-name">user Name</p>
-            </div>
-          </li>
-          <li>
-            <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
-            <div class="user-information">
-              <p class="user-name">user Name</p>
-            </div>
-          </li>
-          <li>
-            <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
-            <div class="user-information">
-              <p>user Name</p>
-            </div>
-          </li>
-        </ul>
+      <div class="content">
+        <div class="title-black">
+          <h2>发现中国最优秀的领域达人</h2>
+          <p>达人聚集地、百万级达人分享、寻找生活、寻找创意</p>
+        </div>
+        <div class="discover-nav">
+          <ul>
+            <li>
+              <a href="javascript:;">
+                  <span class="icon"><img src="./icon1.png" alt=""></span>
+                  <div class="discover-nav-text">
+                    <p>创意</p>
+                    <p class="more"><a href="javascript:;">了解详情 &nbsp;&gt;</a></p>
+                  </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                  <span class="icon"><img src="./icon2.png" alt=""></span>
+                  <div class="discover-nav-text">
+                    <p>趣味</p>
+                    <p class="more"><a href="javascript:;">了解详情&nbsp;&gt;</a></p>
+                  </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                  <span class="icon"><img src="./icon3.png" alt=""></span>
+                  <div class="discover-nav-text">
+                    <p>运动</p>
+                    <p class="more"><a href="javascript:;">了解详情&nbsp;&gt;</a></p>
+                  </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                  <span class="icon"><img src="./icon4.png" alt=""></span>
+                  <div class="discover-nav-text">
+                    <p>美食</p>
+                    <p class="more"><a href="javascript:;">了解详情&nbsp;&gt;</a></p>
+                  </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                  <span class="icon"><img src="./icon5.png" alt=""></span>
+                  <div class="discover-nav-text">
+                    <p>生活</p>
+                    <p class="more"><a href="javascript:;">了解详情&nbsp;&gt;</a></p>
+                  </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="discover-person-list">
+          <ul>
+            <li>
+              <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
+              <div class="user-information">
+                <p class="user-name">user Name</p>
+              </div>
+            </li>
+            <li>
+              <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
+              <div class="user-information">
+                <p class="user-name">user Name</p>
+              </div>
+            </li>
+            <li>
+              <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
+              <div class="user-information">
+                <p class="user-name">user Name</p>
+              </div>
+            </li>
+            <li>
+              <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
+              <div class="user-information">
+                <p class="user-name">user Name</p>
+              </div>
+            </li>
+            <li>
+              <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
+              <div class="user-information">
+                <p class="user-name">user Name</p>
+              </div>
+            </li>
+            <li>
+              <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
+              <div class="user-information">
+                <p class="user-name">user Name</p>
+              </div>
+            </li>
+            <li>
+              <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
+              <div class="user-information">
+                <p class="user-name">user Name</p>
+              </div>
+            </li>
+            <li>
+              <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
+              <div class="user-information">
+                <p>user Name</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <v-circle1></v-circle1>

@@ -1,31 +1,34 @@
 <template>
-    <div class="header-home">
-      <div class="main">
-        <Row>
-          <i-col span="4">&nbsp;</i-col>
-          <i-col span="16">
-            <div class="banner-head">
-              <h1>
-                <p>向世界说，你好！</p>
-                <p>Say hello to the world</p>
-              </h1>
-            </div>
-            <div class="banner-text">
-              <p>888,000 位达人在最影</p>
-            </div>
-            <div class="choice">
-              <Row>
-                <i-col span="12">
-                  <a href="javascript:;"><Button type="ghost" shape="circle" class="negative">随便看看</Button></a>
-                </i-col>
-                <i-col span="12">
-                  <Button type="ghost" shape="circle" class="positive">我要加入</Button>
-                </i-col>
-              </Row>
-            </div>
-          </i-col>
-          <i-col span="4">&nbsp;</i-col>
-        </Row>
+    <div class="header">
+      <img src="./header_bg.jpg" width="100%" alt="">
+      <div class="header-home">
+        <div class="main">
+          <Row>
+            <i-col span="4">&nbsp;</i-col>
+            <i-col span="16">
+              <div class="banner-head">
+                <h1>
+                  <p>向世界说，你好！</p>
+                  <p>Say hello to the world</p>
+                </h1>
+              </div>
+              <div class="banner-text">
+                <p>888,000 位达人在最影</p>
+              </div>
+              <div class="choice">
+                <Row>
+                  <i-col span="12">
+                    <router-link tag="span" class="nav-item" to="/show"><a href="javascript:;"><Button type="ghost" shape="circle" class="negative">随便看看</Button></a></router-link>
+                  </i-col>
+                  <i-col span="12">
+                    <router-link tag="span" class="nav-item" to="/login"><Button type="ghost" shape="circle" class="positive">我要加入</Button></router-link>
+                  </i-col>
+                </Row>
+              </div>
+            </i-col>
+            <i-col span="4">&nbsp;</i-col>
+          </Row>
+        </div>
       </div>
     </div>
 </template>
@@ -41,14 +44,14 @@
 <style lang="stylus" rel="stylesheet/stylus" >
 @import "~common/stylus/variable"
 @import "~common/stylus/mixin"
-
 .header-home
-  background: url(header_bg.jpg) no-repeat top center
-  background-size: auto 100%
-  height: auto
-  text-align: center
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
   .banner-head
-    padding: 160px 0 0
+    padding: 200px 0 0
     color: $color-white-l
     h1
       font-size: 30px

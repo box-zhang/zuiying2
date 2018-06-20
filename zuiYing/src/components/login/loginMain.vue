@@ -33,10 +33,10 @@
   display: flex
   flex-flow: column
   min-height: 100vh
-  background: $color-positive-background-m
+  background: $color-pink
   text-align: center
   .main
-    min-height: calc(94vh - 2.5em - 7em);
+    min-height: calc(90vh - 2.5em - 7em);
     /* Avoid padding/borders screwing up our height: */
     box-sizing: border-box;
 .login-header

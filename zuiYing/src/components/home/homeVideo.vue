@@ -1,64 +1,66 @@
 <template>
   <div class="discover-video">
     <div class="main">
-      <Row>
-        <i-col span="12">
-          <div class="video-list">
-            <ul>
-              <li>
-                <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
-                <div class="user-information">
-                  <div class="user-information-text">
-                    <p class="user-name">video Name</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
-                <div class="user-information">
-                  <div class="user-information-text">
-                    <p class="user-name">video Name</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
-                <div class="user-information">
-                  <div class="user-information-text">
-                    <p class="user-name">video Name</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
-                <div class="user-information">
-                  <div class="user-information-text">
-                    <p class="user-name">video Name</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </i-col>
-        <i-col span="12">
-          <div class="video-nav">
-            <div class="title-black">
-              <h2>中国最优秀的达人视频</h2>
-              <p>创意广告、影视混剪、美食制作、美妆达人、健身教学</p>
-            </div>
-            <div class="video-link">
+      <div class="content">
+        <Row>
+          <i-col span="12">
+            <div class="video-list">
               <ul>
-                <li><a href="javascript:;"><i-button type="primary" shape="circle">广告/宣传片</i-button></a></li>
-                <li><a href="javascript:;"><i-button type="primary" shape="circle">剧情短片</i-button></a></li>
-                <li><a href="javascript:;"><i-button type="primary" shape="circle">纪录片</i-button></a></li>
-                <li><a href="javascript:;"><i-button type="primary" shape="circle">网剧</i-button></a></li>
-                <li><a href="javascript:;"><i-button type="primary" shape="circle">MV</i-button></a></li>
-                <li class="more"><a href="javascript:;">了解详情 &nbsp;&gt;</a></li>
+                <li>
+                  <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
+                  <div class="user-information">
+                    <div class="user-information-text">
+                      <p class="user-name">video Name</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
+                  <div class="user-information">
+                    <div class="user-information-text">
+                      <p class="user-name">video Name</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
+                  <div class="user-information">
+                    <div class="user-information-text">
+                      <p class="user-name">video Name</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="user-pic"><img src="./user_head.jpg" alt=""></div>
+                  <div class="user-information">
+                    <div class="user-information-text">
+                      <p class="user-name">video Name</p>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </div>
-          </div>
-        </i-col>
-      </Row>
+          </i-col>
+          <i-col span="12">
+            <div class="video-nav">
+              <div class="title-black">
+                <h2>中国最优秀的达人视频</h2>
+                <p>创意广告、影视混剪、美食制作、美妆达人、健身教学</p>
+              </div>
+              <div class="video-link">
+                <ul>
+                  <li><a href="javascript:;"><i-button type="primary" shape="circle">广告/宣传片</i-button></a></li>
+                  <li><a href="javascript:;"><i-button type="primary" shape="circle">剧情短片</i-button></a></li>
+                  <li><a href="javascript:;"><i-button type="primary" shape="circle">纪录片</i-button></a></li>
+                  <li><a href="javascript:;"><i-button type="primary" shape="circle">网剧</i-button></a></li>
+                  <li><a href="javascript:;"><i-button type="primary" shape="circle">MV</i-button></a></li>
+                  <li class="more"><a href="javascript:;">了解详情 &nbsp;&gt;</a></li>
+                </ul>
+              </div>
+            </div>
+          </i-col>
+        </Row>
+      </div>
     </div>
   </div>
 </template>
@@ -140,6 +142,8 @@
           top: 50%;
           margin: -20px 0 0
           width: 100%
+  .video-nav
+    margin-left: 100px
   .video-link
     margin: 50px auto
     width: 400px

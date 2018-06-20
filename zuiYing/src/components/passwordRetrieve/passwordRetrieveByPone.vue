@@ -64,15 +64,9 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 @import '../../common/stylus/variable';
 .login-wrapper
-  display: flex
-  flex-flow: column
-  min-height: 100vh
   padding: 100px 50px 30px
-  background: $color-positive-background-m
-  text-align: center
   .main
     min-height: calc(86vh - 2.5em - 7em);
-    box-sizing: border-box;
 .login-header
   font-size: 14px
   color: $color-text-dd

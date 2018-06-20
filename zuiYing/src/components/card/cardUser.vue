@@ -1,18 +1,21 @@
 <template>
-	<div class="card-user">
-		<Card :bordered="false">
-			<div slot="title">
-				<div class="user-main-bg"><img src="./card_user_bg.jpg" alt=""></div>
-			</div>
-			<div class="user-inf">
-				<div class="user-discribe">
-					<div class="user-pic"><img src="./card_user.jpg" alt=""></div>
-					<p class="user-name">尹小白</p>
-					<p class="user-area">北京</p>
-					<p class="user-autograph">个性签名个性签名个性签名个性签名个性签名个性签名个性签名个性签名个性签名…</p>
+	<div class="card card-user">
+		<router-link tag="span" class="nav-item" to="/show/user">
+			<Card :bordered="false">
+				<div slot="title">
+					<div class="user-bg"><img src="./card_user_bg.jpg" alt=""></div>
 				</div>
-			</div>
-    </Card>
+				<div class="user-inf">
+					<div class="user-discribe">
+			      <Avatar style="background-color: #eee" src="https://i.loli.net/2017/08/21/599a521472424.jpg"  icon="person" size="large"/>
+						<p class="user-name">尹小白</p>
+						<p class="user-area">北京</p>
+						<div class="enjoy"><Button type="primary" shape="circle" size="small" class="btn-small" disabled>已关注</Button></div>
+						<p class="user-autograph">个性签名个性签名个性签名个性签名个性签名个性签名个性签名个性签名个性签名…</p>
+					</div>
+				</div>
+	    </Card>
+	  </router-link>
 	</div>
 </template>
 
@@ -25,30 +28,21 @@
 @import "~common/stylus/variable"
 @import "~common/stylus/mixin"
 .card-user
-	margin: 10px 0
-	display: inline-block
-	border-radius: 10px
-	overflow: hidden
 	width: 22%
-	img
-		width: 100%
-	.ivu-card-head
-		padding: 0
-	.user-main-bg
+	.user-bg
 		height: 90px
+		border-radius: 10px 10px 0 0
 		overflow: hidden
-		background: $color-theme-d
+		background-color: $color-negative-background-m
 	.user-inf
 		font-size: 12px
 		line-height: 18px
 		color: $color-theme-ll
 		.user-discribe
+			margin-top: -50px
 			text-align: center
-			.user-pic
-				margin-top: -100px
-				display: inline-block
+			.ivu-avatar
 				circle(60px)
-				overflow: hidden
 				border: 1px solid #eee
 			p
 				margin: 5px

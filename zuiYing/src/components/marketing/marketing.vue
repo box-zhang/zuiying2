@@ -142,11 +142,12 @@
 @import '../../common/stylus/variable';
 @import '../../common/stylus/mixin';
 .spread
-  ul
-    display: flex
-    justify-content: center
-    flex-wrap: wrap
-    align-items: flex-start
+  >.main
+    ul
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+      align-items: flex-start
   .spread-list
     margin: 60px 20px
     text-align: center

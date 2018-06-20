@@ -17,14 +17,7 @@
 					</div>
 				</div>
 				<div class="user-inf">
-					<dl>
-						<dt>
-			          <Avatar style="background-color: #eee" src="https://i.loli.net/2017/08/21/599a521472424.jpg"  icon="person" />
-						</dt>
-						<dd>
-							<p>尹小白</p>
-						</dd>
-					</dl>
+					点赞、查阅、喜欢
 				</div>
 	    </Card>
 	  </router-link>

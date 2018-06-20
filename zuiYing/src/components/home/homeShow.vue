@@ -3,65 +3,68 @@
     <div class="show-top"></div>
     <div class="show-content">
       <div class="main">
-        <div class="show-bright">
-          <h2 class="title-white">个性化展示空间</h2>
-          <Row>
-            <i-col span="12">
-              <div class="show-img">
-                <img src="./user_video_pic.jpg" height="410" width="380" alt="">
-              </div>
-            </i-col>
-            <i-col span="12">
-              <div class="show-list">
-                <ul>
-                  <li>个性化展示空间</li>
-                  <li>功能全面的影像作品集</li>
-                  <li>流程的视频播放体验</li>
-                  <li>无广告无水印视频</li>
-                </ul>
-              </div>
-              <div class="create-btn">
-                <router-link tag="span" class="nav-item" to="/login"><a href="#"><i-button type="ghost" shape="circle" class="hollow">创建我的主页</i-button></a></router-link>
-              </div>
-            </i-col>
-          </Row>
-        </div>
-        <div class="show-activity">
-          <h2 class="title-white">电影节</h2>
-          <div class="show-workers">
-            <ul>
-              <li>
-                <div class="workers-pic">
-                  <img src="./works_pic.jpg" alt="">
+        <div class="content">
+          <div class="show-bright">
+            <h2 class="title-white">个性化展示空间</h2>
+            <Row>
+              <i-col span="12">
+                <div class="show-img">
+                  <img src="./user_video_pic.jpg" height="410" width="380" alt="">
                 </div>
-                <div class="workers-information">
-                  <h3>NEW ERA 青年电影季</h3>
-                  <p>NEW ERA NEW ERA 青年电影季，是一个为未来而建的青年影展，其使命是发现未成名的好电影，鼓励纯粹的创作，扶植优秀青年创作人。</p>
+              </i-col>
+              <i-col span="12">
+                <div class="show-list">
+                  <ul>
+                    <li>个性化展示空间</li>
+                    <li>功能全面的影像作品集</li>
+                    <li>流程的视频播放体验</li>
+                    <li>无广告无水印视频</li>
+                  </ul>
                 </div>
-              </li>
-              <li>
-                <div class="workers-pic">
-                  <img src="./works_pic.jpg" alt="">
+                <div class="create-btn">
+                  <router-link tag="span" class="nav-item" to="/login"><a href="#"><i-button type="ghost" shape="circle" class="hollow">创建我的主页</i-button></a></router-link>
                 </div>
-                <div class="workers-information">
-                  <h3>NEW ERA 青年电影季</h3>
-                  <p>NEW ERA NEW ERA 青年电影季，是一个为未来而建的青年影展，其使命是发现未成名的好电影，鼓励纯粹的创作，扶植优秀青年创作人。</p>
-                </div>
-              </li>
-              <li>
-                <div class="workers-pic">
-                  <img src="./works_pic.jpg" alt="">
-                </div>
-                <div class="workers-information">
-                  <h3>NEW ERA 青年电影季</h3>
-                  <p>NEW ERA NEW ERA 青年电影季，是一个为未来而建的青年影展，其使命是发现未成名的好电影，鼓励纯粹的创作，扶植优秀青年创作人。</p>
-                </div>
-              </li>
-            </ul>
+              </i-col>
+            </Row>
           </div>
-          <div class="create-btn">
-            <router-link tag="span" class="nav-item" to="/activity-movie"><a href="#"><i-button type="ghost" shape="circle" class="hollow">浏览更多赛事</i-button></a></router-link>
+          <div class="show-activity">
+            <h2 class="title-white">电影节</h2>
+            <div class="show-workers">
+              <ul>
+                <li>
+                  <div class="workers-pic">
+                    <img src="./works_pic.jpg" alt="">
+                  </div>
+                  <div class="workers-information">
+                    <h3>NEW ERA 青年电影季</h3>
+                    <p>NEW ERA NEW ERA 青年电影季，是一个为未来而建的青年影展，其使命是发现未成名的好电影，鼓励纯粹的创作，扶植优秀青年创作人。</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="workers-pic">
+                    <img src="./works_pic.jpg" alt="">
+                  </div>
+                  <div class="workers-information">
+                    <h3>NEW ERA 青年电影季</h3>
+                    <p>NEW ERA NEW ERA 青年电影季，是一个为未来而建的青年影展，其使命是发现未成名的好电影，鼓励纯粹的创作，扶植优秀青年创作人。</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="workers-pic">
+                    <img src="./works_pic.jpg" alt="">
+                  </div>
+                  <div class="workers-information">
+                    <h3>NEW ERA 青年电影季</h3>
+                    <p>NEW ERA NEW ERA 青年电影季，是一个为未来而建的青年影展，其使命是发现未成名的好电影，鼓励纯粹的创作，扶植优秀青年创作人。</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="create-btn">
+              <router-link tag="span" class="nav-item" to="/activity-movie"><a href="#"><i-button type="ghost" shape="circle" class="hollow">浏览更多赛事</i-button></a></router-link>
+            </div>
           </div>
+
         </div>
       </div>
       <v-circle2></v-circle2>
@@ -126,11 +129,10 @@
     hollow()
   .show-workers ul
     display: flex
-    justify-content: center
-    flex-grow: 1
+    justify-content: space-between
     li
       display: inline-block
-      margin: 0 35px 20px
+      margin: 0 20px 30px
       width: 300px
       border-radius: 10px
       box-shadow: 0 28px 10px -10px rgba(220,220,236,0.4)

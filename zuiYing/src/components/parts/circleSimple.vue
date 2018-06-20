@@ -26,5 +26,6 @@
 		&.circle2
 			clear: both
 			float:right
-			margin-right:-100px
+			margin-right:-10%
+			margin-top: -100px
 </style>

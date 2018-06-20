@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="content-top">
     <v-header-home></v-header-home>
     <v-discover-person></v-discover-person>
     <v-discover-video></v-discover-video>
     <v-home-show></v-home-show>
     <v-home-service></v-home-service>
-    <v-footer :style="{background:'rgba(255,66,89,0.08)'}"></v-footer>
+    <v-footer :style="{background:'#FFF4F5'}"></v-footer>
   </div>
 </template>
 <script type="text/ECMAScript-6">

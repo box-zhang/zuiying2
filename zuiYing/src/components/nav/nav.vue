@@ -6,7 +6,7 @@
           <div class="layout-logo"><img src="./logo.png" height="24" width="24" alt=""></div>
           <div class="layout-ceiling-nav">
               <router-link tag="span" class="nav-item" to="/home"><a href="#">最影</a></router-link>
-              <router-link tag="span" class="nav-item" to="/activity-movie"><a href="#">电影节</a></router-link>
+              <router-link tag="span" class="nav-item" to="/activity"><a href="#">电影节</a></router-link>
               <router-link tag="span" class="nav-item" to="/propagandize"><a href="#">宣传发布</a></router-link>
               <router-link tag="span" class="nav-item" to="/marketing"><a href="#">电影营销</a></router-link>
           </div>

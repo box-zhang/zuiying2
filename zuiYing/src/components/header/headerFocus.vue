@@ -72,7 +72,7 @@
 @import "~common/stylus/mixin"
 .head-focus
   position: relative
-  margin-top: 45px
+  // margin-top: 45px
   background: #3E3D54
   .focus-img
     height: 100%
