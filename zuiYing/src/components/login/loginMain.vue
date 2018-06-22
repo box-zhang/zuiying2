@@ -1,7 +1,7 @@
 <template>
   <div class="login-wrapper">
     <div class="wrapper-main">
-      <div class="main">
+      <div class="main form-icon">
         <div class="login-header">
           <div class="logo">
             <img src="./logo_login.png" height="31" width="154" alt="">

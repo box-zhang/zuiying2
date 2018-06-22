@@ -76,7 +76,7 @@
         <v-page></v-page>
       </div>
     </div>
-    <v-footer :style="{background:'#FFF4F5'}"></v-footer>
+    <v-footer class="bg-pink"></v-footer>
   </div>
 </template>
 

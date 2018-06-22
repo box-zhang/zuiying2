@@ -54,7 +54,7 @@
                   <li><a href="javascript:;"><i-button type="primary" shape="circle">纪录片</i-button></a></li>
                   <li><a href="javascript:;"><i-button type="primary" shape="circle">网剧</i-button></a></li>
                   <li><a href="javascript:;"><i-button type="primary" shape="circle">MV</i-button></a></li>
-                  <li class="more"><a href="javascript:;">了解详情 &nbsp;&gt;</a></li>
+                  <li class="more"><router-link tag="span" class="nav-item" to="/users">了解详情 &nbsp;&gt;</router-link></li>
                 </ul>
               </div>
             </div>

@@ -135,10 +135,14 @@
       li
         flex: 1
         text-align: center
+        a:hover .icon
+          transform: scale(1.1)
+          transition: ease 0.6s;
     .icon
       display: block
       width: 60px
       height: 60px
+      transition: ease 0.7s;
       img
         width: 100%
     .discover-nav-text

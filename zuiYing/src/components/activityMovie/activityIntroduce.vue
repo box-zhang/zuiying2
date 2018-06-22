@@ -3,139 +3,46 @@
     <v-header-focus></v-header-focus>
     <div class="main">
       <div class="content">
+        <article class="video-article">
+          <h1>电影节的标题</h1>
+          <p>2017 年充满各种让脑粉期盼多年的重启与科幻巨作。听到「科幻」二字可别只会想到超级英雄电影。继年初的《生化危机：终章》《黑夜传说5：血战》、与获得 8 项金奖提名的《降临》，接下来除了人人都想得到的《攻壳机动队》等年度强档，目前也还有几部讨论度较低的作品非常值得期待。以下就今年的科幻片做预测分析，你自己最期待哪部电影呢？</p>
+          <h2>必看强档：</h2>
+          <dl>
+            <dt><div class="text-red">《攻壳机动队》</div></dt>
+            <dd>
+              <div class="v-pic"><img src="" alt=""></div>
+              <p>过去我们已经在《2017 强片特搜：明年将引爆话题的17部巨作》介绍了不少年度强片，排除超级英雄电影后，2017 年半最让人期待又怕受伤害的科幻电影，绝对是《攻壳机动队》。改编自士郎正宗同名漫画，并由科幻片女神约翰逊·斯嘉丽饰演「上校」草薙素子，绮丽的背景设定、酷炫的预告，让连非原著粉丝的观众都无比期待；此外，让老影迷等了好久的《异形：契约》《银翼杀手 2049》也是万众注目的焦点，无疑都能为春季的票房带来可观数字。之后由吕克·贝松暑期档《星际特工：千星之城》，更是集巨星与梦幻原著设定之大成的必看巨作，就是要科幻迷今年荷包防守不能。</p>
+            </dd>
+          </dl>
+          <dl>
+            <dt><div class="text-red">《攻壳机动队》</div></dt>
+            <dd>
+              <div class="v-pic"><img src="" alt=""></div>
+              <div class="v-pic"><img src="" alt=""></div>
+            </dd>
+          </dl>
+        </article>
         <div class="activity-sign">
-          <dl>
-            <dt>所属类目：</dt>
-            <dd>
-              <div class="activity-sign-list clearfix">
-                <ul>
-                    <li class="item-sign active"><span>全部</span></li>
-                    <li class="item-sign"><span>类目一</span></li>
-                    <li class="item-sign"><span>类目二</span></li>
-                    <li class="item-sign"><span>类目一</span></li>
-                    <li class="item-sign"><span>类目一</span></li>
-                    <li class="item-sign"><span>类目一</span></li>
-                    <li class="item-sign"><span>类目一</span></li>
-                    <li class="item-sign"><span>类目一</span></li>
-                    <li class="item-sign"><span>类目一</span></li>
-                    <li class="item-sign"><span>类目一</span></li>
-                    <li class="item-sign"><span>类目一</span></li>
-                    <li class="item-sign"><span>类目一</span></li>
-                    <li class="item-sign"><span>类目一</span></li>
-                    <li class="item-sign"><span>类目一</span></li>
-                    <li class="item-sign"><span>类目一</span></li>
-                    <li class="item-sign"><span>类目一</span></li>
-                </ul>
-              </div>
-              <div class="btn-show"><span>收起</span><Icon type="arrow-down-b"></Icon></div>
-              <!-- <Tabs :animated="false">
-                <TabPane label="标签一">标签一的内容</TabPane>
-                <TabPane label="标签二">标签二的内容</TabPane>
-                <TabPane label="标签三">标签三的内容</TabPane>
-              </Tabs>
-              <Collapse v-model="value1">
-                <Panel name="1">
-                    <p slot="content">史蒂夫·乔布斯（Steve Jobs），1955年2月24日生于美国加利福尼亚州旧金山，美国发明家、企业家、美国苹果公司联合创办人。</p>
-                </Panel>
-              </Collapse> -->
-            </dd>
-          </dl>
-          <hr>
-          <dl>
-            <dt>其他选项：</dt>
-            <dd>
-              <div class="activity-sign-list clearfix">
-                <div class="activity-sing-label">
-                  <label>
-                    <span>国际：</span>
-                    <Select v-model="model8" clearable style="width:200px">
-                      <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
-                    </Select>
-                  </label>
-                </div>
-                <div class="activity-sing-label">
-                  <label>
-                    <span>状态：</span>
-                    <Select v-model="model8" clearable style="width:200px">
-                      <Option v-for="item in status" :value="item.value" :key="item.value">{{ item.label }}</Option>
-                    </Select>
-                  </label>
-                </div>
-              </div>
-            </dd>
-          </dl>
+          <div class="activity-sign-h">
+            <router-link to="/activity-sign"><Button type="primary" shape="circle" class="positive">立即报名￥200</Button></router-link>
+          </div>
+          <div class="activity-sign-h">
+            <Checkbox>报名即代表同意 <router-link to="/activity-treaty">《最影上传用户协议》</router-link></Checkbox>
+          </div>
         </div>
-        <div class="good-work">
-          <v-card-activity></v-card-activity>
-          <v-card-activity></v-card-activity>
-          <v-card-activity></v-card-activity>
-          <v-card-activity></v-card-activity>
-          <v-card-activity></v-card-activity>
-          <v-card-activity></v-card-activity>
-        </div>
-        <v-page></v-page>
       </div>
     </div>
-    <v-footer :style="{background:'#FFF4F5'}"></v-footer>
+    <v-footer class="bg-pink"></v-footer>
   </div>
 </template>
 
 <script type="text/ECMAScript-6">
   import vHeaderFocus from 'components/header/headerFocus';
   import vFooter from 'components/footer/footer';
-  import vCardActivity from 'components/card/cardActivity';
-  import vPage from 'components/page/page';
   export default {
-        data () {
-            return {
-                cityList: [
-                    {
-                        value: 'New York',
-                        label: 'New York'
-                    },
-                    {
-                        value: 'London',
-                        label: 'London'
-                    },
-                    {
-                        value: 'Sydney',
-                        label: 'Sydney'
-                    },
-                    {
-                        value: 'Ottawa',
-                        label: 'Ottawa'
-                    },
-                    {
-                        value: 'Paris',
-                        label: 'Paris'
-                    },
-                    {
-                        value: 'Canberra',
-                        label: 'Canberra'
-                    }
-                ],
-                status: [
-                    {
-                        value: 'on',
-                        label: '进行中'
-                    },
-                    {
-                        value: 'over',
-                        label: '已完成'
-                    },
-                    {
-                        value: 'end',
-                        label: '已结束'
-                    }
-                ],
-                model8: ''
-            };
-        },
     components:{
       vHeaderFocus,
       vFooter,
-      vCardActivity,
-      vPage,
     }
   };
 </script>
@@ -145,56 +52,33 @@
 @import "~common/stylus/variable"
 @import "~common/stylus/mixin"
 .activity
-  .content-list
-    margin: 40px 40px 80px
-.activity-sign
-  position: relative
-  margin: 50px 0 30px
-  line-height: 20px
-  hr
-    height: 0
-    line-height: 0
-    border: 0
-    border-top: 1px solid #E9E9E9;
-  .btn-show
-    position: absolute
-    top: 0
-    right: 0
-    padding: 2px 0
-    width: 80px
-    text-align: center
-    cursor: pointer
-    color: $color-emphasis-l
-    .ivu-icon
-      margin: 0 5px
-      font-size: 12px
-      color: $color-emphasis-l
-    &:hover,
-    &:hover .ivu-icon
-      color: $color-emphasis-ll
-  dl
-    margin: 25px 0 5px
-    padding: 10px 0
-  dt
-    font-weight: bold
-  dd
-    position: relative
-    margin-top: -26px
-    padding: 0 80px
-    .item-sign
-      margin: 2px 5px
-      padding: 2px 15px
-      float: left
+  .video-article
+    padding: 40px
+    line-height: 30px
+    h1,h2,h3,h4
+      padding: 20px
       text-align: center
-      cursor: pointer
-      &:hover,
-      &.active
-        background: $color-emphasis-l
-        border-radius: 100px
-        color: $color-white
-  .activity-sign-list
-    .activity-sing-label
-      float: left
-      margin: 0 10px
-
+    h1
+      font-size: 24px
+      text-align: center
+    h2
+      font-size: 20px
+    p
+      margin: 30px 0
+      text-indent: 2rem
+    dt
+      font-size: 18px
+      text-align: center
+    .v-pic
+      margin: 30px auto
+      width: 86%
+      min-height: 10px
+      border-radius: 2px
+      background:$color-positive-background-m
+      overflow: hidden
+  .activity-sign
+    margin: 50px
+    text-align: center
+    .activity-sign-h
+      margin: 20px
 </style>

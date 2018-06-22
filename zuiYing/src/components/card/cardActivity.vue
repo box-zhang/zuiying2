@@ -1,23 +1,21 @@
 <template>
 	<div class="card card-activity">
-		<router-link tag="span" class="nav-item" to="/activity/introduce">
 			<Card :bordered="false">
 				<div slot="title">
-					<div class="card-pic">
-						<img src="./card_video.jpg" alt="">
-					</div>
-				</div>
-				<div class="activity-inf">
-					<div class="activity-discribe">
-						<p class="card-name">标题</p>
-						<div class="activity-time">
-							<span>5月5日</span>&nbsp;至&nbsp;<span>5月8日</span>
-							<div class="activity-price">报名费 <span class="price">¥200</span></div>
+					<router-link tag="span" class="nav-item" to="introduce">
+						<div class="card-pic">
+							<img src="./card_video.jpg" alt="">
 						</div>
+					</router-link>
+				</div>
+				<div class="activity-discribe">
+					<router-link tag="span" class="nav-item" to="introduce"><p class="card-name">标题</p></router-link>
+					<div class="activity-time">
+						<span>5月5日</span>&nbsp;至&nbsp;<span>5月8日</span>
+						<div class="activity-price">报名费 <span class="price">¥200</span></div>
 					</div>
 				</div>
 	    </Card>
-	  </router-link>
 	</div>
 </template>
 
@@ -38,7 +36,6 @@
 			margin: 10px 0 0
 			padding-right: 80px
 			font-size: 12px
-			color: $color-theme-ll
 		.activity-price
 			position: absolute
 			top: 0

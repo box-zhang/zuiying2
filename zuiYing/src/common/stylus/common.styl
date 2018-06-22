@@ -1,3 +1,19 @@
+.bg-white
+  background: #fff
+.bg-pink
+  background: rgba(255,66,89,0.08)
+.content-circle-bg
+  content-circle-bg()
+.content
+  margin: 45px 40px 80px
+  width: 100%
+  clearfix()
+.content-lr
+  margin: 0 40px
+  width: 100%
+  clearfix()
+.content-top
+  margin-top: 45px
 // header
 .header
   position: relative
@@ -19,10 +35,6 @@
   background: none
 .wrapper-main
   padding-top: 100px
-.content
-  margin: 0 40px
-.content-top
-  margin-top: 45px
 .main
   position: relative
   z-index: 2
@@ -39,11 +51,6 @@
     line-height: 0
     clear: both
     visibility: hidden
-.good-work
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-between
-  align-items: flex-start
 .title-black
   text-align: center
   h2
@@ -88,8 +95,9 @@
 .ivu-icon
   font-size: 18px
   color: $color-text-d
-.ivu-input
-  padding: 4px 7px 4px 32px
+.form-icon
+  .ivu-input
+    padding: 4px 7px 4px 32px
 .ivu-input, .ivu-input-group-append, .ivu-input-group-prepend
   border-radius: 15px
 .form-wrapper .ivu-input-group-prepend
@@ -110,10 +118,21 @@
 .ivu-form-item-error-tip
   color: $color-positive-background
 
+// flex layout
+.good-work
+  display: flex
+  flex-wrap: wrap
+  flex-wrap: wrap
+  justify-content: space-between
+  // justify-content: flex-start
+  align-items: flex-start
+
 // commponents-card
 .card
   margin: 10px 0
   display: inline-block
+  color: $color-text-article
+  line-height: 24px
   .ivu-card-head
     padding: 0
   img
@@ -123,19 +142,114 @@
     font-size: 14px
     color: $color-theme
     font-weight: bold
+    cursor: pointer
   .card-pic
     position: relative
     height: 200px
     border-radius: 10px 10px 0 0
     background-color: $color-negative-background-m
     overflow: hidden
+    cursor: pointer
+  .card-label
+    position: absolute
+    bottom: 10px
+    right: 5px
+    padding: 3px 10px
+    background: $color-theme-ll
+    color: $color-white
+    font-size: 12px
+    border-radius: 3px
+  .card-discribe
+    padding: 10px 16px
+    line-height: 20px
+    .sign
+      font-size: 12px
+      color: $color-theme-ll
+      i
+        padding: 0 5px
+        font-style: normal
 .ivu-card
   border: 1px solid $color-negative-background-m
   box-shadow: 0 0 8px 0 rgba(220,220,236,0.40)
   border-radius: 10px
-// flex layout
-.good-work
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-between
-  align-items: flex-start
+
+.ivu-avatar
+  border: 1px solid #eee
+  box-shadow: 0 0 8px 0 rgba(220,220,236,0.80)
+  background: url(../images/user_pic.png) no-repeat center center
+  background-size: 50% 50%
+  background-color: #FFFFFF
+.user-inf
+  color: $color-text-article
+  .user-discribe
+    margin: 5px
+    text-align: center
+  .user-name
+    margin: 0 5px
+  .user-name,
+  .user-name a
+    color: $color-theme
+    font-weight: bold
+  .enjoy
+    margin: 5px
+  .user-autograph
+    margin: 20px 0
+
+// commponents-card end
+hr
+  margin: 10px 0
+  height: 0
+  line-height: 0
+  border: 0
+  border-bottom: 1px solid #DFDFDf
+.text-red
+  color:$color-sub-theme
+ol
+  list-style-position: inside
+  &.text-level1 li
+    list-style: cjk-ideographic
+    list-style-position: inside
+  &.text-level2 li
+    list-style: decimal
+    list-style-position: inside
+  &.text-level3 li
+    list-style: upper-alpha
+    list-style-position: inside
+  .level-none
+    display: none
+    margin: 0 10px
+.nav-item
+  cursor: pointer
+.ivu-modal-close
+  right: 20px
+.ivu-modal-header
+  h2
+    padding: 5px
+    font-weight: bold
+.ivu-modal-footer
+  display: none
+// button reset
+.choose
+  text-align: center
+  .ivu-btn
+    margin: 5px 10px
+    min-width: 120px
+.ivu-btn-primary
+  border-color: $color-positive-background-m
+  &:hover
+    background: transparent
+    color: $color-positive-background
+.ivu-btn-ghost
+  border-color: $color-negative-background-d
+  &:hover
+    color: $color-negative-background
+    border-color: $color-negative-background
+  &:active,
+  &:focus
+    box-shadow: 0 0 0 2px $color-negative-background-d
+.ivu-btn-ghost.btn-gray
+  color: $color-white
+  background: $color-negative-background-ll
+  &:hover
+    color: $color-negative-background
+    background: transparent

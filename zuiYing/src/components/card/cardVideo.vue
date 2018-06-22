@@ -1,12 +1,13 @@
 <template>
-	<div class="card card-main">
-		<router-link tag="span" class="nav-item" to="/show/video">
+	<div class="card card-video">
 			<Card :bordered="false">
 				<div slot="title">
-					<div class="card-pic">
-						<img src="./card_video.jpg" alt="">
-						<span class="card-time">5:06</span>
-					</div>
+					<router-link tag="span" class="nav-item" to="/videoID">
+						<div class="card-pic">
+							<img src="./card_video.jpg" alt="">
+							<span class="card-label">5:06</span>
+						</div>
+				  </router-link>
 					<div class="card-discribe">
 						<p class="card-name">标题</p>
 						<div class="sign">
@@ -19,15 +20,16 @@
 				<div class="user-inf">
 					<dl>
 						<dt>
-			          <Avatar style="background-color: #eee" src="https://i.loli.net/2017/08/21/599a521472424.jpg"  icon="person" />
+							<router-link to="/works">
+			          <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg"  icon="person" />
+			        </router-link>
 						</dt>
 						<dd>
-							<p>尹小白</p>
+							<p class="user-name"><router-link to="/works">尹小白</router-link></p>
 						</dd>
 					</dl>
 				</div>
 	    </Card>
-	  </router-link>
 	</div>
 </template>
 
@@ -39,29 +41,12 @@
 <style lang="stylus" rel="stylesheet/stylus">
 @import "~common/stylus/variable"
 @import "~common/stylus/mixin"
-.card-main
+.card-video
 	width: 30%
-	.card-time
-		position: absolute
-		bottom: 10px
-		right: 5px
-		padding: 3px 10px
-		background: $color-theme-ll
-		color: $color-white
-		font-size: 10px
-		border-radius: 3px
-	.card-discribe
-		padding: 10px 16px
-		line-height: 20px
-		.sign
-			font-size: 12px
-			color: $color-theme-ll
-			i
-				padding: 0 5px
-				font-style: normal
 	dd
 		margin-top: -30px
 		padding-left: 40px
 		line-height: 30px
 		font-size: 12px
+		color:$color-theme
 </style>

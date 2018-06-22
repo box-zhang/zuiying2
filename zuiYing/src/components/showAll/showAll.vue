@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="bg-pink content-top">
     <v-header-focus></v-header-focus>
     <div class="main">
-      <div class="content-list">
+      <div class="content">
         <div class="title-active">
           <h3>每日优选</h3>
-          <router-link tag="span" class="nav-item" to="/show/video-more"><span class="active-more link-a"><a href="#">更多</a></span></router-link>
+          <router-link tag="span" class="nav-item" to="/videos"><span class="active-more link-a"><a href="#">更多</a></span></router-link>
         </div>
         <div class="good-work">
           <v-card-video></v-card-video>
@@ -17,7 +17,7 @@
         </div>
         <div class="title-active">
           <h3>明星用户</h3>
-          <router-link tag="span" class="nav-item" to="/show/user-more"><span class="active-more link-a"><a href="#">更多</a></span></router-link>
+          <router-link tag="span" class="nav-item" to="/users"><span class="active-more link-a"><a href="#">更多</a></span></router-link>
         </div>
         <div class="good-work">
           <v-card-user></v-card-user>
@@ -31,6 +31,7 @@
         </div>
       </div>
     </div>
+    <v-footer class="bg-white"></v-footer>
   </div>
 </template>
 

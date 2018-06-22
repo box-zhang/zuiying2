@@ -1,0 +1,132 @@
+<template>
+  <div class="bg-pink">
+    <div class="main">
+      <div class="content">
+        <div class="content-circle-bg treaty-box">
+          <h1>最影用户上传协议</h1>
+          <div class="treaty-text">
+            <ol class="text-level1">
+                <li>总则
+                  <ol class="text-level2">
+                      <li><span class="level-none">1.1</span>用户同意本协议的条款并按照页面上的提示完成作品上传流程。用户在进行作品上传时 即表示用户与最影公司达成协议，完全接受本协议项下全部条款。</li>
+                      <li><span class="level-none">1.2</span>用户在最影上传作品，应当使用已注册的有效用户名和密码。该用户帐号和密码由用户负责保管，用户不得将帐号和密码转让给任何第三人；用户应当对以其用户帐号进行的所有活动和事件负法律责任。</li>
+                      <li><span class="level-none">1.3</span>最影用户在上传作品时，除遵守本协议的规定，还同时应当遵守最影的其他协议和规定，以及遵守中华人民共和国的法律法规。最影上传用户协议可由最影公司随时更新，且无需另行通知。用户在使用相关服务时，应关注并遵守其所适用的相关条款。</li>
+                  </ol>
+                </li>
+                <li>合法使用作品上传服务
+                  <ol class="text-level2">
+                    <li><span class="level-none">2.1</span>用户在使用作品上传服务时，必须遵守中华人民共和国相关法律法规的规定，用户同意将不会利用本服务进行任何违法或不正当的活动，包括但不限于上传包含有下列内容之一的作品内容：
+                      <ol class="text-level3">
+                          <li><span class="level-none">1）</span>反对宪法确定的基本原则；</li>
+                          <li><span class="level-none">2）</span>危害国家统一、主权和领土完整的；</li>
+                          <li><span class="level-none">3）</span>泄露国家秘密、危害国家安全或者损害国家荣誉和利益的；</li>
+                          <li><span class="level-none">4）</span>煽动民族仇恨、民族歧视，破坏民族团结，或者侵害民族风俗、习惯的；</li>
+                          <li><span class="level-none">5）</span>宣扬邪教、迷信的；</li>
+                          <li><span class="level-none">6）</span>扰乱社会秩序，破坏社会稳定的；</li>
+                          <li><span class="level-none">7）</span>诱导未成年人违法犯罪和渲染暴力、色情、赌博、恐怖活动的；</li>
+                          <li><span class="level-none">8）</span>侮辱或者诽谤他人，侵害公民个人隐私等他人合法权益的；</li>
+                          <li><span class="level-none">9）</span>危害社会公德，损害民族优秀文化传统的；</li>
+                          <li><span class="level-none">10）</span>非法的广播电视频道、视听节目网站提供的非法视频内容；</li>
+                          <li><span class="level-none">11）</span>有关法律、行政法规和国家规定禁止的其他内容。</li>
+                      </ol>
+                    </li>
+                    <li><span class="level-none">2.2</span>用户不得对本服务任何部分或本服务之使用或获得，进行复制、拷贝、出售、转售或用于任何其它商业目的。</li>
+                    <li><span class="level-none">2.3</span>用户须对自己在使用最影服务过程中的行为承担法律责任。用户承担法律责任的形式包括但不限于：对受到侵害者进行赔偿，以及在最影公司首先承担了因用户行为导致的行政处罚或侵权损害赔偿责任后，用户应给予最影公司等额的赔偿。</li>
+                  </ol>
+                </li>
+                <li>知识产权及其他合法权益保护
+                  <ol class="text-level2">
+                    <li><span class="level-none">3.1</span>最影提供上传作品功能专为用户自己创作或享有合法来源的作品提供服务。最影尊重他人知识产权和合法权益，请用户在上传作品前确保拥有上传的作品内容的著作权及信息网络传播权或者已经取得上述全部权利人的许可；</li>
+                    <li><span class="level-none">3.2</span>对于用户上传到最影上的作品，用户同意最影在全世界范围内具有免费的、永久性的、不可撤销的、非独家的和完全再许可的权利和许可，以使用、复制、修改、改编、出版、翻译、据以创作衍生作品、传播、表演和展示此等内容（整体或部分），和/或将此等内容编入当前已知的或以后开发的其他任何形式的作品、媒体或技术中。</li>
+                    <li><span class="level-none">3.3</span>用户应确保上传的作品内容，已经获得被拍摄人（如有）的许可，并确保作品内容没有侵犯他人的人身权，包括但不限于名誉权、肖像权、隐私权、姓名权，不存在任何著作权纠纷。</li>
+                  </ol>
+                </li>
+                <li>服务风险及免费声明
+                  <ol class="text-level2">
+                    <li><span class="level-none">4.1</span>用户完全理解并同意，本服务涉及到互联网及移动通讯等服务，可能会受到各个环节不稳定因素的影响。因此服务存在因上述不可抗力、计算机病毒或黑客攻击、系统不稳定、用户所在位置、用户关机、GSM网络、互联网络、通信线路原因等造成的服务中断或不能满足用户要求的风险。使用本服务的用户须承担以上风险，最影对服务之及时性、安全性、准确性不作担保，对因此导致用户不能发送和接受阅读消息、或传递错误，个人设定之时效、未予储存或其他问题不承担任何责任。对于不可抗力或非最影过错原因导致的用户数据损失、丢失或服务停止，最影将不承担任何责任。</li>
+                    <li><span class="level-none">4.2</span>对于系统发生故障影响到本服务的正常运行，最影承诺及时处理进行修复。但用户因此而产生的经济和精神损失，最影不承担责任。此外，最影保留不经事先通知为维修保养、升级或其他目的暂停本服务任何部分的权利。</li>
+                    <li><span class="level-none">4.3</span>最影郑重提请您注意，任何经由本服务以上载的作品内容，均由内容提供者承担责任。最影无法控制经由本服务上载之内容，也无法对用户的使用行为进行全面控制，因此不保证内容的合法性、正确性、完整性、真实性或品质；您已预知使用本服务时，可能会接触到令人不快、不适当或令人厌恶之内容，并同意将自行加以判断并承担所有风险，而不依赖于最影。但在任何情况下，最影有权依法停止传输任何前述内容并采取相应行动，包括但不限于暂停用户使用本服务的全部或部分，保存有关记录，并向有关机关报告。最影有权(但无义务)依其自行之考量，拒绝和删除可经由本服务提供之违反本条款的或其他引起最影或其他用户反感的任何内容。</li>
+                    <li><span class="level-none">4.4</span>用户完全理解并同意，若第三方在您不知情或未经您同意的前提下，将您的作品上传于最影及由此所产生的任何可能侵害您权益的行为，最影均不对任何人承担任何责任。</li>
+                    <li><span class="level-none">4.5</span>用户完全理解并同意，第三方可以通过访问最影而获得用户中的相关信息，并可对信息进行使用行为。对用户或第三方以任何方式进行的使用可能侵害您权益的行为，最影均不对任何人承担任何责任。</li>
+                    <li><span class="level-none">4.6</span>如发生下列任何一种情形，最影有权随时中断或终止向用户提供服务而无需通知该用户：
+                      <ol class="text-level3">
+                          <li><span class="level-none">4.6.1</span>用户提供的个人资料不真实；</li>
+                          <li><span class="level-none">4.6.2</span>用户违反本服务条款的规定；</li>
+                          <li><span class="level-none">4.6.3</span>按照主管部门的要求；</li>
+                          <li><span class="level-none">4.6.4</span>用户注册后长期闲置不用的帐号及相应的域名；</li>
+                          <li><span class="level-none">4.6.5</span>最影发现用户恶意注册；</li>
+                          <li><span class="level-none">4.6.6</span>最影收到第三方投诉且该第三方出具相应证据的；</li>
+                          <li><span class="level-none">4.6.7</span>其他最影认为是符合整体服务需求的特殊情形。</li>
+                      </ol>
+                    </li>
+                    <li><span class="level-none">4.7</span>最影有权根据服务的需要，至少提前2日通知用户后，收回用户所用的空间域名</li>
+                  </ol>
+                </li>
+                <li>违约作品的处理原则
+                  <ol class="text-level2">
+                    <li><span class="level-none">5.1</span>如用户在使用作品上传服务时违反任何上述规定，最影或其授权的人有权要求用户改正或不经通知直接采取一切必要的措施（包括但不限于删除上传的视频内容）以减轻和消除用户不当行为造成的影响。</li>
+                    <li><span class="level-none">5.2</span>如最影认为用户的作品上传行为严重违反了本协议，并给最影公司造成了损害，最影公司无需进行事先通知即可终止用户的密码、帐号或本服务之使用，且最影对用户或任何第三人均不承担任何责任。</li>
+                    <li><span class="level-none">5.3</span>最影公司有权启动必要的刑事及民事法律程序，维护最影公司的合法权益，追究违法用户的法律责任。</li>
+                  </ol>
+                </li>
+                <li>协议修改
+                  <ol class="text-level2">
+                    <li><span class="level-none">6.1</span>最影有权随时修改本协议的任何条款，一旦本协议的内容发生变动，最影将会通过适当方式向用户提示修改内容。</li>
+                    <li><span class="level-none">6.2</span>如果不同意最影对本协议相关条款所做的修改，用户有权停止使用网络服务。如果用户继续使用网络服务，则视为用户接受最影对本协议相关条款所做的修改。</li>
+                  </ol>
+                </li>
+                <li>通知送达
+                  <ol class="text-level2">
+                    <li><span class="level-none">7.1</span>本协议项下最影对于用户所有的通知均可通过公告、电子邮件、或常规的信件传送等方式进行；该等通知于发送之日视为已送达收件人。</li>
+                    <li><span class="level-none">7.2</span>用户对于最影的通知应当通过最影网站公布的通信地址、传真号码、电子邮件地址等联系信息进行送达。</li>
+                  </ol>
+                </li>
+                <li>其他
+                  <ol class="text-level2">
+                    <li><span class="level-none">8.1</span>用户对于最影的通知应当通过最影网站公布的通信地址、传真号码、电子邮件地址等联系信息进行送达。</li>
+                    <li><span class="level-none">8.2</span>如双方就本协议内容或其执行发生任何争议，双方应尽量友好协商解决；协商不成时，任何一方均可向最影所在地的人民法院提起诉讼。</li>
+                    <li><span class="level-none">8.3</span>百度未行使或执行本服务协议任何权利或规定，不构成对前述权利或权利之放弃。</li>
+                    <li><span class="level-none">8.4</span>如本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，本协议的其余条款仍应有效并且有约束力。</li>
+                  </ol>
+                </li>
+            </ol>
+          </div>
+          <div class="choice">
+            <router-link tag="span" class="nav-item" to="/show"><a href="javascript:;"><Button type="ghost" shape="circle" class="negative">返回</Button></a></router-link>
+            <router-link tag="span" class="nav-item" to="/login"><Button type="ghost" shape="circle" class="positive">同意</Button></router-link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script type="text/ECMAScript-6">
+  export default {};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style lang="stylus" rel="stylesheet/stylus">
+.treaty-box
+  margin: 50px auto
+  padding: 50px
+  width: 100%
+  line-height: 24px
+  h1
+    font-size: 18px
+  ol
+    margin: 5px 0
+    padding: 5px 10px
+    li
+      margin: 10px
+      padding: 0 5px
+  .choice
+    margin: 60px
+    text-align: center
+    .nav-item
+      margin: 0 20px
+    .ivu-btn
+      width: 200px
+	dl,dl dt
+		margin: 10px
+</style>

@@ -22,7 +22,7 @@
 @import "~common/stylus/variable"
 @import "~common/stylus/mixin"
 .label-list
-  margin-top: 40px
+  margin: 40px auto
   padding: 10px 30px
   width: 100%
   background: #fff;

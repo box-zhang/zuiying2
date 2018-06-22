@@ -1,30 +1,33 @@
 <template>
-	<div class="show-wrapper">
-			<div class="main">
+  <div class="bg-pink content-top more-user">
+      <div class="main">
         <v-label-list></v-label-list>
-				<div class="content-list">
-					<div class="good-work">
-						<v-card-user></v-card-user>
-						<v-card-user></v-card-user>
-						<v-card-user></v-card-user>
-						<v-card-user></v-card-user>
-						<v-card-user></v-card-user>
-						<v-card-user></v-card-user>
-						<v-card-user></v-card-user>
-						<v-card-user></v-card-user>
-					</div>
+        <div class="content-lr">
+          <div class="good-work">
+            <v-card-user></v-card-user>
+            <v-card-user></v-card-user>
+            <v-card-user></v-card-user>
+            <v-card-user></v-card-user>
+            <v-card-user></v-card-user>
+            <v-card-user></v-card-user>
+            <v-card-user></v-card-user>
+            <v-card-user></v-card-user>
+          </div>
           <v-page></v-page>
-				</div>
+        </div>
     </div>
-	</div>
+    <v-footer class="bg-white"></v-footer>
+  </div>
 </template>
 
 <script type="text/ECMAScript-6">
+  import vFooter from 'components/footer/footer';
   import vCardUser from 'components/card/cardUser';
   import vPage from 'components/page/page';
   import vLabelList from 'components/showAll/showLabelList';
   export default {
     components:{
+      vFooter,
       vCardUser,
       vPage,
       vLabelList
@@ -36,6 +39,12 @@
 <style lang="stylus" rel="stylesheet/stylus">
 @import "~common/stylus/variable"
 @import "~common/stylus/mixin"
+.more-user
+  .good-work
+    justify-content: flex-start
+  .card
+    margin: 10px 1%
+    width: 23%
 .label-list
   margin-top: 40px
   padding: 10px 30px

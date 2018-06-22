@@ -18,10 +18,10 @@
               <div class="choice">
                 <Row>
                   <i-col span="12">
-                    <router-link tag="span" class="nav-item" to="/show"><a href="javascript:;"><Button type="ghost" shape="circle" class="negative">随便看看</Button></a></router-link>
+                    <router-link tag="span" class="nav-item" to="/show"><a href="javascript:;"><Button type="primary" shape="circle">随便看看</Button></a></router-link>
                   </i-col>
                   <i-col span="12">
-                    <router-link tag="span" class="nav-item" to="/login"><Button type="ghost" shape="circle" class="positive">我要加入</Button></router-link>
+                    <router-link tag="span" class="nav-item" to="/login"><Button type="ghost" shape="circle" class="btn-gray">我要加入</Button></router-link>
                   </i-col>
                 </Row>
               </div>

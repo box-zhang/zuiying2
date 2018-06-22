@@ -1,32 +1,37 @@
 <template>
-	<div class="card card-main">
-		<Card :bordered="false">
-			<div slot="title">
-				<div class="card-pic">
-					<img src="./card_video.jpg" alt="">
-					<span class="card-time">5:06</span>
-				</div>
-				<div class="card-discribe">
-					<p class="card-name">标题</p>
-					<div class="sign">
-						<span>#短视频</span><i>/</i>
-						<span>#广告</span><i>/</i>
-						<span>#MV</span>
-					</div>
-				</div>
-			</div>
-			<div class="user-inf">
-				<dl>
-					<dt>
-		          <Avatar style="background-color: #eee" src="https://i.loli.net/2017/08/21/599a521472424.jpg"  icon="person" />
-					</dt>
-					<dd>
-						<p>尹小白</p>
-					</dd>
-				</dl>
-			</div>
-    </Card>
-	</div>
+  <div class="card card-works">
+      <Card :bordered="false">
+        <div slot="title">
+          <router-link tag="span" class="nav-item" to="/videoID">
+            <div class="card-pic">
+              <img src="./card_video.jpg" alt="">
+              <span class="card-label">5:06</span>
+            </div>
+          </router-link>
+          <div class="card-discribe">
+            <p class="card-name">标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</p>
+            <div class="sign">
+              <span>#短视频</span><i>/</i>
+              <span>#广告</span><i>/</i>
+              <span>#MV</span>
+            </div>
+          </div>
+        </div>
+        <div class="item-data">
+          <Row>
+            <i-col span="12">
+              <span class="data-c"><Icon type="heart"></Icon>683</span>
+              <span class="data-c"><Icon type="eye"></Icon>683</span>
+            </i-col>
+            <i-col span="12">
+              <span class="icon-star active">
+                <Icon type="ios-star"></Icon>
+              </span>
+            </i-col>
+          </Row>
+        </div>
+      </Card>
+  </div>
 </template>
 
 <script type="text/ECMAScript-6">
@@ -37,29 +42,28 @@
 <style lang="stylus" rel="stylesheet/stylus">
 @import "~common/stylus/variable"
 @import "~common/stylus/mixin"
-.card-main
-	width: 30%
-	.card-time
-		position: absolute
-		bottom: 10px
-		right: 5px
-		padding: 3px 10px
-		background: $color-theme-ll
-		color: $color-white
-		font-size: 10px
-		border-radius: 3px
-	.card-discribe
-		padding: 10px 16px
-		line-height: 20px
-		.sign
-			font-size: 12px
-			color: $color-theme-ll
-			i
-				padding: 0 5px
-				font-style: normal
-	dd
-		margin-top: -30px
-		padding-left: 40px
-		line-height: 30px
-		font-size: 12px
+.card-works
+  margin: 1.66%
+  width: 30%
+  .card-discribe
+    padding: 16px
+  .ivu-card-body
+    padding: 10px
+    .item-data
+      font-size: 12px
+      .data-c
+        padding: 0 5px
+      .ivu-icon
+        margin: 0 5px
+        font-size: 12px
+        color: $color-theme
+    .icon-star
+      margin: 0 5px
+      float: right
+      cursor: pointer
+      &:hover .ivu-icon-ios-star
+      &.active .ivu-icon-ios-star
+        color: $color-positive-background-ll
+      &:hover.active .ivu-icon-ios-star
+        color: $color-theme
 </style>

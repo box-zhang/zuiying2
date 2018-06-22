@@ -16,7 +16,7 @@
 .page
 	position: relative
 	z-index: 999
-	margin: 100px 0
+	margin: 80px 0 100px
 	font-size: 12px
 	text-align: center
 	a

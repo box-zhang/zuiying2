@@ -118,11 +118,11 @@
           </ul>
         </div>
         <div class="button-box">
-          <router-link tag="span" class="nav-item" to="/about"><Button type="ghost" shape="circle" class="positive">联系我们</Button></router-link>
+          <router-link tag="span" class="nav-item" to="/about"><Button type="primary" shape="circle" size="large">联系我们</Button></router-link>
         </div>
       </div>
     </div>
-    <v-footer :style="{background:'#F6F6F6'}"></v-footer>
+    <v-footer class="bg-pink"></v-footer>
   </div>
 </template>
 
@@ -180,7 +180,7 @@
   .instance-list
     margin: 50px 0
     li
-      margin: 1% 1.65%
+      margin: 0 1.65% 20px
       width: 30%
       .instance-img
         border-radius: 2px
@@ -190,7 +190,7 @@
       img
         width: 100%
   .partner
-    margin: 60px 30px
+    margin: 60px 30px 150px
     font-size: 0
     line-height: 0
     img
@@ -204,6 +204,6 @@
           width: 90%
     .button-box
         text-align: center
-      .positive
+      .ivu-btn-primary
         width: 200px
 </style>
