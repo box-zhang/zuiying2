@@ -12,6 +12,12 @@ import ActivitySignUp from 'components/activityMovie/activitySignUp';
 import ActivityStep from 'components/activityMovie/activityStep';
 import ActivityStep1 from 'components/activityMovie/activityStep1';
 import ActivityStep2 from 'components/activityMovie/activityStep2';
+import ActivityStep3 from 'components/activityMovie/activityStep3';
+import ActivityStep4 from 'components/activityMovie/activityStep4';
+import ActivityStep5 from 'components/activityMovie/activityStep5';
+import ActivityStep6 from 'components/activityMovie/activityStep6';
+import ActivityStepSucceed from 'components/activityMovie/activityStepSucceed';
+import ActivityStepPay from 'components/activityMovie/activityStepPay';
 
 import Propagandize from 'components/propagandize/propagandize';
 import Marketing from 'components/marketing/marketing';
@@ -34,6 +40,10 @@ import ShowUserIndex from 'components/showUser/showUserIndex';
 import ShowUserWorks from 'components/showUser/showUserWorks';
 import ShowUserWorksCollection from 'components/showUser/showUserWorksCollection';
 import ShowUserIntroduce from 'components/showUser/showUserIntroduce';
+
+// import Settings from 'components/settings/settings';
+// import SettingsPersonal from 'components/userSettings/userSettingsPersonal';
+// import SettingsVideo from 'components/userSettings/userSettingsVideo';
 
 Vue.use(VueRouter);
 
@@ -66,8 +76,29 @@ export default new VueRouter({
               path: '',
               component: ActivityStep1
             },{
+              path: 'step1',
+              component: ActivityStep1
+            },{
               path: 'step2',
               component: ActivityStep2
+            },{
+              path: 'step3',
+              component: ActivityStep3
+            },{
+              path: 'step4',
+              component: ActivityStep4
+            },{
+              path: 'step5',
+              component: ActivityStep5
+            },{
+              path: 'step6',
+              component: ActivityStep6
+            },{
+              path: 'succeed',
+              component: ActivityStepSucceed
+            },{
+              path: 'pay',
+              component: ActivityStepPay
             }
           ]
         },
@@ -76,6 +107,46 @@ export default new VueRouter({
           component: ActivityTreaty
         }
       ]
+    },
+    {
+      path: '/step1',
+      redirect: '/activity/activity-step/step1',
+      component: ActivityStep1
+    },
+    {
+      path: '/step2',
+      redirect: '/activity/activity-step/step2',
+      component: ActivityStep2
+    },
+    {
+      path: '/step3',
+      redirect: '/activity/activity-step/step3',
+      component: ActivityStep3
+    },
+    {
+      path: '/step4',
+      redirect: '/activity/activity-step/step4',
+      component: ActivityStep4
+    },
+    {
+      path: '/step5',
+      redirect: '/activity/activity-step/step5',
+      component: ActivityStep5
+    },
+    {
+      path: '/step6',
+      redirect: '/activity/activity-step/step6',
+      component: ActivityStep6
+    },
+    {
+      path: '/succeed',
+      redirect: '/activity/activity-step/succeed',
+      component: ActivityStepSucceed
+    },
+    {
+      path: '/pay',
+      redirect: '/activity/activity-step/pay',
+      component: ActivityStepPay
     },
     {
       path: '/introduce',
@@ -180,6 +251,42 @@ export default new VueRouter({
       path: '/videoID',
       redirect: '/show/videoID',
       component: ShowVideoIndex
-    }
+    },
+    // {
+      // path: '/settings',
+      // component: Settings,
+      // children: [{
+      //     path: '',
+      //     component: SettingsVideo
+      //   },
+      //   {
+      //     path: 'video',
+      //     component: SettingsVideo
+      //   },
+      //   {
+      //     path: 'personal',
+      //     component: SettingsPersonal
+      //   },
+      //   {
+      //     path: 'account',
+      //     component: SettingsAccount
+      //   }
+      // ]
+    // },
+    // {
+    //   path: '/video',
+    //   redirect: '/settings/video',
+    //   component: SettingsVideo
+    // },
+    // {
+    //   path: '/personal',
+    //   redirect: '/settings/personal',
+    //   component: SettingsPersonal
+    // },
+    // {
+    //   path: '/account',
+    //   redirect: '/settings/account',
+    //   component: SettingsAccount
+    // }
   ]
 });

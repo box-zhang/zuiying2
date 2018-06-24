@@ -27,13 +27,13 @@
                 <Step title="步骤6" content="物料信息"></Step>
             </Steps>
           </div>
-          <p>当前正在进行第 {{ current + 1 }} 步</p>
+          <p class="step-text">当前正在进行第 {{ current + 1 }}{{stepNum[current+1]}} 步</p>
           <div class="step-c">
             <router-view></router-view>
           </div>
           <div class="choose">
             <router-link tag="span" class="nav-item" to="/show"><a href="javascript:;"><Button type="ghost" shape="circle" >返回</Button></a></router-link>
-            <Button type="primary" shape="circle" @click="next">同意</Button>
+            <router-link tag="span" class="nav-item" :to=stepNum[current+1]><Button type="primary" shape="circle" @click="next">下一步</Button></router-link>
           </div>
         </div>
         </div>
@@ -48,12 +48,21 @@
   export default {
     data () {
         return {
-            current: 0
+            current: 0,
+            stepNum:[
+              '/step1',
+              '/step2',
+              '/step3',
+              '/step4',
+              '/step5',
+              '/step6',
+              '/succeed',
+            ]
         };
     },
     methods: {
         next () {
-            if (this.current == 6) {
+            if (this.current == 7) {
                 this.current = 0;
             } else {
                 this.current += 1;
@@ -82,6 +91,9 @@
       margin: 10px
       li
         padding: 10px
+  .step-text
+    margin: 10px auto
+    text-align: center
   .step
     margin: 60px
     .ivu-steps .ivu-steps-title
@@ -94,6 +106,6 @@
   .choose
      margin: 60px
   .step-c
-    margin: 0 auto
+    margin: 50px auto
     width: 80%
 </style>
