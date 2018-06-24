@@ -21,10 +21,10 @@
                    <div class="user-head-pic"><img src="./card_user.jpg" height="100%" width="100%" alt=""></div>
                 </a>
                 <DropdownMenu slot="list">
-                  <router-link tag="span" class="nav-item" to="/personal"><DropdownItem>个人主页</DropdownItem></router-link>
-                    <DropdownItem>视频管理</DropdownItem>
-                    <DropdownItem>个人设置</DropdownItem>
-                    <DropdownItem>退出</DropdownItem>
+                  <router-link tag="span" class="nav-item" to="/works"><DropdownItem>个人主页</DropdownItem></router-link>
+                  <router-link tag="span" class="nav-item" to="/video"><DropdownItem>视频管理</DropdownItem></router-link>
+                  <router-link tag="span" class="nav-item" to="/personal"><DropdownItem>个人设置</DropdownItem></router-link>
+                  <router-link tag="span" class="nav-item" to="/export"><DropdownItem>退出</DropdownItem></router-link>
                 </DropdownMenu>
               </Dropdown>
           </div>

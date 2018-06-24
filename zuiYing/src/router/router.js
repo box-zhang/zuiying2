@@ -41,9 +41,11 @@ import ShowUserWorks from 'components/showUser/showUserWorks';
 import ShowUserWorksCollection from 'components/showUser/showUserWorksCollection';
 import ShowUserIntroduce from 'components/showUser/showUserIntroduce';
 
-// import Settings from 'components/settings/settings';
-// import SettingsPersonal from 'components/userSettings/userSettingsPersonal';
-// import SettingsVideo from 'components/userSettings/userSettingsVideo';
+import UserSettings from 'components/settings/settings';
+import SettingsPersonal from 'components/settings/settingsPersonal';
+import SettingsVideo from 'components/settings/settingsVideo';
+import SettingsAccount from 'components/settings/settingsAccount';
+import SettingsActivityOrder from 'components/settings/settingsActivityOrder';
 
 Vue.use(VueRouter);
 
@@ -55,6 +57,51 @@ export default new VueRouter({
       path: '/home',
       component: Home
     }, {
+      path: '/settings',
+      component: UserSettings,
+      children: [{
+          path: '',
+          component: SettingsVideo
+        },
+        {
+          path: 'video',
+          component: SettingsVideo
+        },
+        {
+          path: 'personal',
+          component: SettingsPersonal
+        },
+        {
+          path: 'account',
+          component: SettingsAccount
+        },
+        {
+          path: 'activity-order',
+          component: SettingsActivityOrder
+        },
+      ]
+    },
+    {
+      path: '/video',
+      redirect: '/settings/video',
+      component: SettingsVideo
+    },
+    {
+      path: '/personal',
+      redirect: '/settings/personal',
+      component: SettingsPersonal
+    },
+    {
+      path: '/account',
+      redirect: '/settings/account',
+      component: SettingsAccount
+    },
+    {
+      path: '/activity-order',
+      redirect: '/settings/activity-order',
+      component: SettingsActivityOrder
+    },
+    {
       path: '/activity',
       component: ActivityMovieIndex,
       children: [{
