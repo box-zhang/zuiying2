@@ -13,8 +13,8 @@
         </i-col>
         <i-col span="12">
           <div class="layout-ceiling-main logining">
-              <router-link tag="span" class="nav-item" to="/upload"><a href="#">上传作品</a></router-link>
-              <router-link tag="span" class="nav-item" to="/download"><a href="#">下载APP</a></router-link>
+              <router-link tag="span" class="nav-item" to="/upload">上传作品</router-link>
+              <router-link tag="span" class="nav-item" to="/download">下载APP</router-link>
               <!-- <router-link tag="span" class="nav-item" to="/login"><a href="#">登陆/注册</a></router-link> -->
               <Dropdown placement="bottom-end">
                 <a href="javascript:void(0)">
@@ -22,8 +22,11 @@
                 </a>
                 <DropdownMenu slot="list">
                   <router-link tag="span" class="nav-item" to="/works"><DropdownItem>个人主页</DropdownItem></router-link>
-                  <router-link tag="span" class="nav-item" to="/video"><DropdownItem>视频管理</DropdownItem></router-link>
+                  <router-link tag="span" class="nav-item" to="/video-set"><DropdownItem>视频管理</DropdownItem></router-link>
                   <router-link tag="span" class="nav-item" to="/personal"><DropdownItem>个人设置</DropdownItem></router-link>
+                  <router-link tag="span" class="nav-item" to="/activity-order"><DropdownItem>电影节</DropdownItem></router-link>
+                  <router-link tag="span" class="nav-item" to="/account"><DropdownItem>我的账户</DropdownItem></router-link>
+                  <router-link tag="span" class="nav-item" to="/password"><DropdownItem>修改密码</DropdownItem></router-link>
                   <router-link tag="span" class="nav-item" to="/export"><DropdownItem>退出</DropdownItem></router-link>
                 </DropdownMenu>
               </Dropdown>
@@ -55,6 +58,9 @@
   border-top: 1px solid #fff
   .nav-item
     cursor: pointer
+    color: $color-white
+    &:hover
+      color: $color-white-ll
   a
     padding: 0 8px
     color: $color-white

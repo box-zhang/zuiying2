@@ -1,7 +1,7 @@
 <template>
   <div class="pop-s-u">
     <p class="text-hint">仅支持jpg，png大小不超过2M</p>
-    <div class="demo-upload-list" v-for="item in uploadList">
+    <div class="demo-upload-list" v-for="item in uploadList" :key="item.id">
       <template v-if="item.status === 'finished'">
         <img :src="item.url">
         <div class="demo-upload-list-cover">
@@ -31,12 +31,12 @@
           <p class="text-hint">仅支持jpg，png大小不超过2M</p>
       </div>
     </Upload>
-    <Modal title="View Image" v-model="visible">
-        <img :src="'https://o5wwk8baw.qnssl.com/' + imgName + '/large'" v-if="visible" style="width: 100%">
+    <Modal title="头像" v-model="visible">
+        <img :src="'https://o5wwk8baw.qnssl.com/' + imgName + '/large'" v-if="visible" style="width: 100%; z-index:99999">
     </Modal>
     <div slot="footer">
       <div class="choose">
-        <Button type="primary" :loading="loading" @on-ok="ok" shape="circle">确定</Button>
+        <Button type="primary" shape="circle" :loading="loading" @on-ok="ok">确定</Button>
         <Button type="ghost" shape="circle" @on-cancel="cancel" class="btn-gray">取消</Button>
       </div>
     </div>
@@ -45,65 +45,65 @@
 
 <script type="text/ECMAScript-6">
  export default {
-        data () {
-            return {
-              modal1: false,
-              defaultList: [
-                  {
-                      'name': 'a42bdcc1178e62b4694c830f028db5c0',
-                      'url': 'https://o5wwk8baw.qnssl.com/a42bdcc1178e62b4694c830f028db5c0/avatar'
-                  }
-              ],
-              imgName: '',
-              visible: false,
-              uploadList: []
-            };
-        },
-        methods: {
-            handleView (name) {
-                this.imgName = name;
-                this.visible = true;
-            },
-            handleRemove (file) {
-                const fileList = this.$refs.upload.fileList;
-                this.$refs.upload.fileList.splice(fileList.indexOf(file), 1);
-            },
-            handleSuccess (res, file) {
-                file.url = 'https://o5wwk8baw.qnssl.com/7eb99afb9d5f317c912f08b5212fd69a/avatar';
-                file.name = '7eb99afb9d5f317c912f08b5212fd69a';
-            },
-            handleFormatError (file) {
-                this.$Notice.warning({
-                    title: '文件格式不正确',
-                    desc: '图片 ' + file.name + ' 的格式不正确, 请选择 .jpg or .png 文件再次尝试上传'
-                });
-            },
-            handleMaxSize (file) {
-                this.$Notice.warning({
-                    title: '图片质量不符合标准',
-                    desc: '图片  ' + file.name + ' 的质量过大, 请上传小于 2M 的图片'
-                });
-            },
-            handleBeforeUpload () {
-                const check = this.uploadList.length < 1;
-                if (!check) {
-                    this.$Notice.warning({
-                        title: '只能上传一张封面图'
-                    });
-                }
-                return check;
-            },
-            ok () {
-                this.$Message.info('ok');
-            },
-            cancel () {
-                this.$Message.info('取消');
-            }
-        },
-        mounted () {
-            this.uploadList = this.$refs.upload.fileList;
+  data () {
+    return {
+      modal1: false,
+      defaultList: [
+        {
+          'name': 'a42bdcc1178e62b4694c830f028db5c0',
+          'url': 'https://o5wwk8baw.qnssl.com/a42bdcc1178e62b4694c830f028db5c0/avatar'
         }
+      ],
+      imgName: '',
+      visible: false,
+      uploadList: []
     };
+  },
+  methods: {
+    handleView (name) {
+      this.imgName = name;
+      this.visible = true;
+    },
+    handleRemove (file) {
+      const fileList = this.$refs.upload.fileList;
+      this.$refs.upload.fileList.splice(fileList.indexOf(file), 1);
+    },
+    handleSuccess (res, file) {
+      file.url = 'https://o5wwk8baw.qnssl.com/7eb99afb9d5f317c912f08b5212fd69a/avatar';
+      file.name = '7eb99afb9d5f317c912f08b5212fd69a';
+    },
+    handleFormatError (file) {
+      this.$Notice.warning({
+        title: '文件格式不正确',
+        desc: '图片 ' + file.name + ' 的格式不正确, 请选择 .jpg or .png 文件再次尝试上传'
+      });
+    },
+    handleMaxSize (file) {
+      this.$Notice.warning({
+        title: '图片质量不符合标准',
+        desc: '图片  ' + file.name + ' 的质量过大, 请上传小于 2M 的图片'
+      });
+    },
+    handleBeforeUpload () {
+      const check = this.uploadList.length < 1;
+      if (!check) {
+          this.$Notice.warning({
+            title: '只能上传一张封面图'
+          });
+      }
+      return check;
+    },
+    ok () {
+      this.$Message.info('ok');
+    },
+    cancel () {
+      this.$Message.info('取消');
+    }
+  },
+  mounted () {
+    this.uploadList = this.$refs.upload.fileList;
+  }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

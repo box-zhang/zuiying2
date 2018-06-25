@@ -29,6 +29,7 @@ module.exports = {
     'semi':['error','always'],
     'no-mixed-spaces-and-tabs': ["error", "smart-tabs"],
     'space-before-function-paren': 0,
-    'indent': 0
+    'indent': 0,
+    'vue/no-parsing-error': [2, { 'x-invalid-end-tag': false }]
   }
 }

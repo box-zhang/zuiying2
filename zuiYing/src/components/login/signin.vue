@@ -1,8 +1,8 @@
 <template>
   <div class="form-wrapper">
     <Form ref="formCustom" :model="formCustom" :rules="ruleCustom">
-      <FormItem prop="user">
-        <i-input type="text" v-model="formCustom.user" placeholder="用户名">
+      <FormItem prop="userName">
+        <i-input type="text" v-model="formCustom.userName" placeholder="用户名">
           <Icon type="ios-person-outline" slot="prepend"></Icon>
         </i-input>
       </FormItem>
@@ -52,13 +52,13 @@
 
         return {
             formCustom: {
-                user: '',
+                userName: '',
                 passwd: '',
                 passwdCheck: ''
             },
             ruleCustom: {
-                user: [
-                    { required: true, message: '请输入姓名', trigger: 'blur' }
+                userName: [
+                    { required: true, message: '用户名不能为空', trigger: 'blur' }
                 ],
                 passwd: [
                     { validator: validatePass, trigger: 'blur' }

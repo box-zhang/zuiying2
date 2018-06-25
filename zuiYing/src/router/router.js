@@ -46,6 +46,13 @@ import SettingsPersonal from 'components/settings/settingsPersonal';
 import SettingsVideo from 'components/settings/settingsVideo';
 import SettingsAccount from 'components/settings/settingsAccount';
 import SettingsActivityOrder from 'components/settings/settingsActivityOrder';
+import SettingsPassword from 'components/settings/settingsPassword';
+
+import SettingsCollections from 'components/settings/settingsVideoCollections';
+import SettingsVideoUpload from 'components/settings/settingsVideoUpload';
+import SettingsVideoCollectionItems from 'components/settings/settingsVideoCollectionItems';
+import SettingsVideoEdit from 'components/settings/settingsVideoEdit';
+import SettingsVideoAdd from 'components/settings/settingsVideoAdd';
 
 Vue.use(VueRouter);
 
@@ -64,8 +71,30 @@ export default new VueRouter({
           component: SettingsVideo
         },
         {
-          path: 'video',
-          component: SettingsVideo
+          path: 'video-set',
+          component: SettingsVideo,
+          children:[
+            {
+              path: '',
+              component: SettingsVideoEdit
+            },
+            {
+              path: 'video-edit',
+              component: SettingsVideoEdit
+            }, {
+              path: 'collections',
+              component: SettingsCollections
+            }, {
+              path: 'v-upload',
+              component: SettingsVideoUpload
+            }, {
+              path: 'v-items',
+              component: SettingsVideoCollectionItems
+            }, {
+              path: 'v-add',
+              component: SettingsVideoAdd
+            }
+          ]
         },
         {
           path: 'personal',
@@ -79,12 +108,41 @@ export default new VueRouter({
           path: 'activity-order',
           component: SettingsActivityOrder
         },
+        {
+          path: 'password',
+          component: SettingsPassword
+        },
       ]
     },
     {
-      path: '/video',
-      redirect: '/settings/video',
+      path: '/video-set',
+      redirect: '/settings/video-set',
       component: SettingsVideo
+    },
+    {
+      path: '/video-edit',
+      redirect: '/settings/video-set/video-edit',
+      component: SettingsVideoEdit
+    },
+    {
+      path: '/collections',
+      redirect: '/settings/video-set/collections',
+      component: SettingsCollections
+    },
+    {
+      path: '/v-upload',
+      redirect: '/settings/video-set/v-upload',
+      component: SettingsVideoUpload
+    },
+    {
+      path: '/v-items',
+      redirect: '/settings/video-set/v-items',
+      component: SettingsVideoCollectionItems
+    },
+    {
+      path: '/v-add',
+      redirect: '/settings/video-set/v-add',
+      component: SettingsVideoAdd
     },
     {
       path: '/personal',
@@ -100,6 +158,11 @@ export default new VueRouter({
       path: '/activity-order',
       redirect: '/settings/activity-order',
       component: SettingsActivityOrder
+    },
+    {
+      path: '/password',
+      redirect: '/settings/password',
+      component: SettingsPassword
     },
     {
       path: '/activity',

@@ -6,14 +6,14 @@
 	      <Button type="primary" :loading="loading" shape="circle" @click="modal1 = true">立即提现</Button>
 	    </div>
 		</div>
-    <Modal v-model="modal1" >
+    <Modal v-model="modal1" class="set-account" >
       <h2 slot="header">请输入体现金额</h2>
       <div>
 	      <InputNumber
-	            :max="10000"
-	            v-model="value9"
-	            :formatter="value => `${value}`.replace(/B(?=(d{3})+(?!d))/g, ',')"
-	            :parser="value => value.replace(/$s?|(,*)/g, '')"></InputNumber>
+	        :max="1000"
+	        v-model="value9"
+	        :formatter="value => `${value}`.replace(/B(?=(d{3})+(?!d))/g, ',')"
+	        :parser="value => value.replace(/$s?|(,*)/g, '')"></InputNumber>
 	      <p class="text-red">提现金额不能大于1000</p>
 	      <p>提现成功，稍后我们的运营人员将会联系您，请您耐心等待</p>
       </div>
@@ -48,7 +48,7 @@
 		font-weight: bold
 		color:$color-theme-ll
 	.choose
-		margin: 50px 0 0
+		margin: 20px 0
 	.ivu-input-number
 		margin: 20px
 		width: 80%
