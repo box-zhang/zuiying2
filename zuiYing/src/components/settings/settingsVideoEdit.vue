@@ -243,19 +243,25 @@
           ]
         };
     },
+    created(){
+      this.menu();
+    },
     methods: {
-        handleSelectAll (status) {
-            this.$refs.selection.selectAll(status);
-        },
-        show (index) {
-            this.$Modal.info({
-                title: '视频信息',
-                content: `视频名称：${this.data1[index].name}<br>视频长度：${this.data1[index].age}<br>视频发布时间：${this.data1[index].date}`
-            });
-        },
-        remove (index) {
-            this.data1.splice(index, 1);
-        }
+      menu() {
+        window.scrollTo(0,0);
+      },
+      handleSelectAll (status) {
+          this.$refs.selection.selectAll(status);
+      },
+      show (index) {
+          this.$Modal.info({
+              title: '视频信息',
+              content: `视频名称：${this.data1[index].name}<br>视频长度：${this.data1[index].age}<br>视频发布时间：${this.data1[index].date}`
+          });
+      },
+      remove (index) {
+          this.data1.splice(index, 1);
+      }
     }
   };
 </script>

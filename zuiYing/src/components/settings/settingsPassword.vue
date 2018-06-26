@@ -1,6 +1,6 @@
 <template>
   <div class="settings-router">
-    <div class="form-reset">
+    <div class="form-reset password-re">
         <h2>修改密码</h2>
         <Form ref="formCustom" :model="formCustom" :rules="ruleCustom">
             <FormItem label="输入旧密码" prop="passwdOld">
@@ -65,7 +65,13 @@
                 }
             };
         },
+        created(){
+          this.menu();
+        },
         methods: {
+            menu() {
+                window.scrollTo(0,0);
+            },
             handleSubmit (name) {
                 this.$refs[name].validate((valid) => {
                     if (valid) {
@@ -83,9 +89,7 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" rel="stylesheet/stylus">
 @import "~common/stylus/variable";
 @import "~common/stylus/mixin";
-.ivu-form .ivu-form-item-label
-    display: none
 </style>

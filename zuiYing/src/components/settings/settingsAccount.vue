@@ -32,7 +32,15 @@
 				value9: 1000,
 				modal1: false
 			};
-		}
+		},
+    created(){
+      this.menu();
+    },
+    methods: {
+      menu() {
+        window.scrollTo(0,0);
+      }
+    }
   };
 </script>
 

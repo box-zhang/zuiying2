@@ -1,9 +1,9 @@
 <template>
-  <div class="activity">
+  <div class="activity content-top">
     <v-header-focus></v-header-focus>
     <div class="main">
-      <div class="content">
-        <div class="activity-sign">
+      <div class="activity-content">
+        <div class="activity-sign-nav">
           <dl>
             <dt>所属类目：</dt>
             <dd>
@@ -48,16 +48,16 @@
                 <div class="activity-sing-label">
                   <label>
                     <span>国际：</span>
-                    <Select v-model="model8" clearable style="width:200px">
-                      <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+                    <Select style="width:200px">
+                      <Option v-for="item1 in cityList" :value="item1.value" :key="item1.value">{{ item1.label }}</Option>
                     </Select>
                   </label>
                 </div>
                 <div class="activity-sing-label">
                   <label>
                     <span>状态：</span>
-                    <Select v-model="model8" clearable style="width:200px">
-                      <Option v-for="item in status" :value="item.value" :key="item.value">{{ item.label }}</Option>
+                    <Select style="width:200px">
+                      <Option v-for="item2 in status" :value="item2.value" :key="item2.value">{{ item2.label }}</Option>
                     </Select>
                   </label>
                 </div>
@@ -86,56 +86,64 @@
   import vCardActivity from 'components/card/cardActivity';
   import vPage from 'components/page/page';
   export default {
-        data () {
-            return {
-                cityList: [
-                    {
-                        value: 'New York',
-                        label: 'New York'
-                    },
-                    {
-                        value: 'London',
-                        label: 'London'
-                    },
-                    {
-                        value: 'Sydney',
-                        label: 'Sydney'
-                    },
-                    {
-                        value: 'Ottawa',
-                        label: 'Ottawa'
-                    },
-                    {
-                        value: 'Paris',
-                        label: 'Paris'
-                    },
-                    {
-                        value: 'Canberra',
-                        label: 'Canberra'
-                    }
-                ],
-                status: [
-                    {
-                        value: 'on',
-                        label: '进行中'
-                    },
-                    {
-                        value: 'over',
-                        label: '已完成'
-                    },
-                    {
-                        value: 'end',
-                        label: '已结束'
-                    }
-                ],
-                model8: ''
-            };
-        },
+    data () {
+        return {
+            cityList: [
+                {
+                    value: 'New York',
+                    label: 'New York'
+                },
+                {
+                    value: 'London',
+                    label: 'London'
+                },
+                {
+                    value: 'Sydney',
+                    label: 'Sydney'
+                },
+                {
+                    value: 'Ottawa',
+                    label: 'Ottawa'
+                },
+                {
+                    value: 'Paris',
+                    label: 'Paris'
+                },
+                {
+                    value: 'Canberra',
+                    label: 'Canberra'
+                }
+            ],
+            status: [
+                {
+                    value: 'on',
+                    label: '进行中'
+                },
+                {
+                    value: 'over',
+                    label: '已完成'
+                },
+                {
+                    value: 'end',
+                    label: '已结束'
+                }
+            ],
+            model8: ''
+        };
+    },
     components:{
       vHeaderFocus,
       vFooter,
       vCardActivity,
       vPage,
+    },
+    created(){
+      this.menu();
+    },
+    methods: {
+      menu() {
+        window.scrollTo(0,0);
+      }
     }
   };
 </script>
@@ -144,12 +152,10 @@
 <style lang="stylus" rel="stylesheet/stylus">
 @import "~common/stylus/variable"
 @import "~common/stylus/mixin"
-.activity
-  .content-list
-    margin: 40px 40px 80px
-.activity-sign
+
+.activity-sign-nav
   position: relative
-  margin: 50px 0 30px
+  margin: 20px 0 40px
   line-height: 20px
   hr
     height: 0
@@ -174,27 +180,29 @@
       color: $color-emphasis-ll
   dl
     margin: 25px 0 5px
-    padding: 10px 0
-  dt
-    font-weight: bold
-  dd
-    position: relative
-    margin-top: -26px
-    padding: 0 80px
-    .item-sign
-      margin: 2px 5px
-      padding: 2px 15px
-      float: left
-      text-align: center
-      cursor: pointer
-      &:hover,
-      &.active
-        background: $color-emphasis-l
-        border-radius: 100px
-        color: $color-white
+    padding: 10px 0 0
+    dt
+      margin: 0
+      font-weight: bold
+      text-align: left
+    dd
+      position: relative
+      margin-top: -26px
+      padding: 0 80px
+      text-align: left
+      .item-sign
+        margin: 2px 5px
+        padding: 2px 15px
+        float: left
+        text-align: center
+        cursor: pointer
+        &:hover,
+        &.active
+          background: $color-emphasis-l
+          border-radius: 100px
+          color: $color-white
   .activity-sign-list
     .activity-sing-label
       float: left
       margin: 0 10px
-
 </style>

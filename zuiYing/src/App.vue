@@ -6,6 +6,9 @@
         <router-view></router-view>
       </Content>
     </Layout>
+    <template>
+      <BackTop></BackTop>
+    </template>
   </div>
 </template>
 

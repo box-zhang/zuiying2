@@ -42,12 +42,16 @@ import ShowUserWorksCollection from 'components/showUser/showUserWorksCollection
 import ShowUserIntroduce from 'components/showUser/showUserIntroduce';
 
 import UserSettings from 'components/settings/settings';
+import SettingsHomepage from 'components/settings/settingsHomepage';
 import SettingsPersonal from 'components/settings/settingsPersonal';
 import SettingsVideo from 'components/settings/settingsVideo';
 import SettingsAccount from 'components/settings/settingsAccount';
 import SettingsActivityOrder from 'components/settings/settingsActivityOrder';
+import SettingsActivityOrderPaid from 'components/settings/settingsActivityOrderPaid';
+import SettingsActivityOrderNoPaid from 'components/settings/settingsActivityOrderNoPaid';
 import SettingsPassword from 'components/settings/settingsPassword';
 
+import SettingsCollectionsIndex from 'components/settings/settingsVideoCollectionsIndex';
 import SettingsCollections from 'components/settings/settingsVideoCollections';
 import SettingsVideoUpload from 'components/settings/settingsVideoUpload';
 import SettingsVideoCollectionItems from 'components/settings/settingsVideoCollectionItems';
@@ -57,8 +61,9 @@ import SettingsVideoAdd from 'components/settings/settingsVideoAdd';
 Vue.use(VueRouter);
 
 export default new VueRouter({
+  linkActiveClass: 'active',
   routes: [{
-      path: '/',
+      path: '',
       redirect: '/home'
     }, {
       path: '/home',
@@ -71,98 +76,87 @@ export default new VueRouter({
           component: SettingsVideo
         },
         {
-          path: 'video-set',
+          path: '/settings/video-set',
           component: SettingsVideo,
-          children:[
-            {
+          children: [{
               path: '',
+              redirect: '/settings/video-set/video-edit',
               component: SettingsVideoEdit
             },
             {
-              path: 'video-edit',
+              path: '/settings/video-set/video-edit',
               component: SettingsVideoEdit
             }, {
-              path: 'collections',
-              component: SettingsCollections
-            }, {
-              path: 'v-upload',
-              component: SettingsVideoUpload
-            }, {
-              path: 'v-items',
-              component: SettingsVideoCollectionItems
-            }, {
-              path: 'v-add',
-              component: SettingsVideoAdd
-            }
+              path: '/settings/video-set/collections',
+              component: SettingsCollectionsIndex,
+              children: [
+                // {
+                //   path: '',
+                //   redirect: '/settings/video-set/collections/v-cs',
+                //   component: SettingsCollectionsIndex
+                // },{
+                //   path: '/settings/video-set/collections/v-cs',
+                //   component: SettingsCollectionsIndex
+                // },
+                {
+                  path: '',
+                  // redirect: '/settings/video-set/collections/v-cs',
+                  component: SettingsCollections
+                },
+                {
+                  path: '/settings/video-set/collections/v-items',
+                  component: SettingsVideoCollectionItems
+                },{
+                  path: '/settings/video-set/collections/v-upload',
+                  component: SettingsVideoUpload
+                },{
+                  path: '/settings/video-set/collections/v-add',
+                  component: SettingsVideoAdd
+                }
+              ]
+            },
+            // {
+            //   path: '/settings/video-set/v-upload',
+            //   component: SettingsVideoUpload
+            // }, {
+            //   path: '/settings/video-set/v-items',
+            //   component: SettingsVideoCollectionItems
+            // },
+
           ]
         },
         {
-          path: 'personal',
+          path: '/settings/personal',
           component: SettingsPersonal
         },
         {
-          path: 'account',
+          path: '/settings/homepage',
+          component: SettingsHomepage
+        },
+        {
+          path: '/settings/account',
           component: SettingsAccount
         },
         {
-          path: 'activity-order',
-          component: SettingsActivityOrder
+          path: '/settings/activity-order',
+          component: SettingsActivityOrder,
+          children: [{
+            path: '',
+            redirect: '/settings/activity-order/no-paid',
+            component: SettingsActivityOrderPaid
+          },{
+            path: '/settings/activity-order/no-paid',
+            component: SettingsActivityOrderNoPaid
+          },{
+            path: '/settings/activity-order/paid',
+            component: SettingsActivityOrderPaid
+          }]
         },
         {
-          path: 'password',
+          path: '/settings/password',
           component: SettingsPassword
         },
       ]
-    },
-    {
-      path: '/video-set',
-      redirect: '/settings/video-set',
-      component: SettingsVideo
-    },
-    {
-      path: '/video-edit',
-      redirect: '/settings/video-set/video-edit',
-      component: SettingsVideoEdit
-    },
-    {
-      path: '/collections',
-      redirect: '/settings/video-set/collections',
-      component: SettingsCollections
-    },
-    {
-      path: '/v-upload',
-      redirect: '/settings/video-set/v-upload',
-      component: SettingsVideoUpload
-    },
-    {
-      path: '/v-items',
-      redirect: '/settings/video-set/v-items',
-      component: SettingsVideoCollectionItems
-    },
-    {
-      path: '/v-add',
-      redirect: '/settings/video-set/v-add',
-      component: SettingsVideoAdd
-    },
-    {
-      path: '/personal',
-      redirect: '/settings/personal',
-      component: SettingsPersonal
-    },
-    {
-      path: '/account',
-      redirect: '/settings/account',
-      component: SettingsAccount
-    },
-    {
-      path: '/activity-order',
-      redirect: '/settings/activity-order',
-      component: SettingsActivityOrder
-    },
-    {
-      path: '/password',
-      redirect: '/settings/password',
-      component: SettingsPassword
     },
     {
       path: '/activity',
@@ -172,112 +166,56 @@ export default new VueRouter({
           component: ActivityMovie
         },
         {
-          path: 'introduce',
+          path: '/activity/introduce',
           component: ActivityIntroduce
         },
         {
-          path: 'activity-sign',
+          path: '/activity/activity-sign',
           component: ActivitySignUp
         },
         {
-          path: 'activity-step',
+          path: '/activity/activity-step',
           component: ActivityStep,
           children: [{
-              path: '',
-              component: ActivityStep1
-            },{
-              path: 'step1',
-              component: ActivityStep1
-            },{
-              path: 'step2',
-              component: ActivityStep2
-            },{
-              path: 'step3',
-              component: ActivityStep3
-            },{
-              path: 'step4',
-              component: ActivityStep4
-            },{
-              path: 'step5',
-              component: ActivityStep5
-            },{
-              path: 'step6',
-              component: ActivityStep6
-            },{
-              path: 'succeed',
-              component: ActivityStepSucceed
-            },{
-              path: 'pay',
-              component: ActivityStepPay
-            }
-          ]
+            path: '',
+            redirect: '/activity/activity-step/step1',
+            component: ActivityStep1
+          }, {
+            path: '/activity/activity-step/step0',
+            redirect: '/activity/activity-step/step1',
+          }, {
+            path: '/activity/activity-step/step1',
+            component: ActivityStep1
+          }, {
+            path: '/activity/activity-step/step2',
+            component: ActivityStep2
+          }, {
+            path: '/activity/activity-step/step3',
+            component: ActivityStep3
+          }, {
+            path: '/activity/activity-step/step4',
+            component: ActivityStep4
+          }, {
+            path: '/activity/activity-step/step5',
+            component: ActivityStep5
+          }, {
+            path: '/activity/activity-step/step6',
+            component: ActivityStep6
+          }, {
+            path: '/activity/activity-step/succeed',
+            component: ActivityStepSucceed
+          }, {
+            path: '/activity/activity-step/pay',
+            component: ActivityStepPay
+          }]
         },
         {
-          path: 'activity-treaty',
+          path: '/activity/activity-treaty',
           component: ActivityTreaty
         }
       ]
     },
     {
-      path: '/step1',
-      redirect: '/activity/activity-step/step1',
-      component: ActivityStep1
-    },
-    {
-      path: '/step2',
-      redirect: '/activity/activity-step/step2',
-      component: ActivityStep2
-    },
-    {
-      path: '/step3',
-      redirect: '/activity/activity-step/step3',
-      component: ActivityStep3
-    },
-    {
-      path: '/step4',
-      redirect: '/activity/activity-step/step4',
-      component: ActivityStep4
-    },
-    {
-      path: '/step5',
-      redirect: '/activity/activity-step/step5',
-      component: ActivityStep5
-    },
-    {
-      path: '/step6',
-      redirect: '/activity/activity-step/step6',
-      component: ActivityStep6
-    },
-    {
-      path: '/succeed',
-      redirect: '/activity/activity-step/succeed',
-      component: ActivityStepSucceed
-    },
-    {
-      path: '/pay',
-      redirect: '/activity/activity-step/pay',
-      component: ActivityStepPay
-    },
-    {
-      path: '/introduce',
-      redirect: '/activity/introduce',
-      component: ActivityIntroduce
-    },
-    {
-      path: '/activity-sign',
-      redirect: '/activity/activity-sign',
-      component: ActivitySignUp
-    },
-    {
-      path: '/activity-step',
-      redirect: '/activity/activity-step',
-      component: ActivityStep
-    },
-    {
-      path: '/activity-treaty',
-      redirect: '/activity/activity-treaty',
-      component: ActivityTreaty
-    }, {
       path: '/propagandize',
       component: Propagandize
     }, {
@@ -293,16 +231,14 @@ export default new VueRouter({
       path: '/login',
       component: LoginMain,
       children: [{
-          path: '',
-          component: Login
-        },
-        {
-          path: 'signin',
-          component: Signin
-        }
-      ]
+        path: '',
+        component: Login
+      }]
     }, {
-      path: '/passwordRetrieve',
+      path: '/signin',
+      component: Signin
+    }, {
+      path: '/password-retrieve',
       component: PasswordRetrieve
     }, {
       path: '/about',
@@ -314,89 +250,33 @@ export default new VueRouter({
           path: '',
           component: ShowAll
         }, {
-          path: 'videos',
+          path: '/show/videos',
           component: ShowVideoMore
         }, {
-          path: 'users',
+          path: '/show/users',
           component: ShowUserMore
+        },
+        {
+          path: '/show/videoID',
+          component: ShowVideoIndex
         }, {
-          path: 'userID',
+          path: '/show/userID',
           component: ShowUserIndex,
           children: [{
             path: '',
             component: ShowUserWorks
           }, {
-            path: 'works',
+            path: '/show/userID/works',
             component: ShowUserWorks
           }, {
-            path: 'collections',
+            path: '/show/userID/collections',
             component: ShowUserWorksCollection
           }, {
-            path: 'introduce',
+            path: '/show/userID/introduce',
             component: ShowUserIntroduce
           }]
-        },
-        {
-          path: 'videoID',
-          component: ShowVideoIndex
         }
       ]
-    },
-    {
-      path: '/videos',
-      redirect: '/show/videos',
-      component: ShowUserIndex
-    },
-    {
-      path: '/users',
-      redirect: '/show/users',
-      component: ShowUserIndex
-    },
-    {
-      path: '/works',
-      redirect: '/show/userID/works',
-      component: ShowUserIndex
-    },
-    {
-      path: '/videoID',
-      redirect: '/show/videoID',
-      component: ShowVideoIndex
-    },
-    // {
-      // path: '/settings',
-      // component: Settings,
-      // children: [{
-      //     path: '',
-      //     component: SettingsVideo
-      //   },
-      //   {
-      //     path: 'video',
-      //     component: SettingsVideo
-      //   },
-      //   {
-      //     path: 'personal',
-      //     component: SettingsPersonal
-      //   },
-      //   {
-      //     path: 'account',
-      //     component: SettingsAccount
-      //   }
-      // ]
-    // },
-    // {
-    //   path: '/video',
-    //   redirect: '/settings/video',
-    //   component: SettingsVideo
-    // },
-    // {
-    //   path: '/personal',
-    //   redirect: '/settings/personal',
-    //   component: SettingsPersonal
-    // },
-    // {
-    //   path: '/account',
-    //   redirect: '/settings/account',
-    //   component: SettingsAccount
-    // }
+    }
   ]
 });

@@ -103,7 +103,13 @@
             }
         };
     },
+    created(){
+      this.menu();
+    },
     methods: {
+        menu() {
+            window.scrollTo(0,0);
+        },
         handleSubmit (name) {
             this.$refs[name].validate((valid) => {
                 if (valid) {

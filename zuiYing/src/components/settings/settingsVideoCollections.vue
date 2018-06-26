@@ -4,7 +4,7 @@
     <div class="settings-card-box">
       <div class="s-c-box">
         <div class="content-circle-bg s-c-pic">
-          <router-link to="/v-items"><div class="s-c-pic-in"><img src="" alt=""></div></router-link>
+          <router-link to="/settings/video-set/collections/v-items"><div class="s-c-pic-in"><img src="" alt=""></div></router-link>
           <div class="s-c-btn">
             <Button type="ghost" shape="circle" class="btn-gray" size="small"  @click="modal2 = true">上传封面</Button>
           </div>
@@ -27,7 +27,7 @@
       </div>
       <div class="s-c-box">
         <div class="content-circle-bg s-c-pic">
-          <router-link to="/v-upload"><div class="s-c-pic-in"><img src="" alt=""></div></router-link>
+          <router-link to="/settings/video-set/collections/v-upload"><div class="s-c-pic-in"><img src="" alt=""></div></router-link>
           <div class="s-c-btn">
             <Button type="ghost" shape="circle" class="btn-gray" size="small"  @click="modal2 = true">上传封面</Button>
           </div>
@@ -76,6 +76,14 @@
       SettingsPopUpload,
       SettingsPopWorkSet,
       // SettingsVideoUpload
+    },
+    created(){
+      this.menu();
+    },
+    methods: {
+      menu() {
+        window.scrollTo(0,0);
+      }
     }
   };
 </script>
@@ -94,41 +102,4 @@
     margin: 20px 0
     display: flex
     flex-wrap: wrap
-  .s-c-box
-    margin: 10px
-  .s-c-pic
-    position: relative
-    padding: 10px
-    width: 268px
-    height: 180px
-    border-radius: 10px
-    a,.s-c-pic-in
-      display: block
-      width: 100%
-      height: 100%
-      border-radius: 5px
-      background: $color-positive-background-d
-    .s-c-btn
-      position: absolute
-      right: 20px
-      bottom: 20px
-      padding: 5px 10px
-      .btn-gray:hover
-        color: $color-white
-        background: $color-negative-background
-  .s-c-text
-    margin: 10px
-    padding: 5px
-    .collection-name
-      font-weight: bold
-      line-height: 24px
-    .collection-time
-      font-size: 12px
-      color: $color-text-article
-      line-height: 24px
-    .collection-works-num
-      text-align: right
-      .ivu-icon,span
-        font-size: 12px
-        padding: 5px 3px
 </style>

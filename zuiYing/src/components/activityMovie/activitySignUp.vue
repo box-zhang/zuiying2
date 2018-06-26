@@ -9,7 +9,7 @@
               <p>联系电话：010-1234567</p>
               <p>邮箱：xiaobai@gmail.com</p>
               <div class="choose">
-                <router-link to="/activity-step"><Button type="primary" shape="circle" class="positive" @click="modal2 = true">申请合作</Button></router-link>
+                <router-link to="/activity/activity-step"><Button type="primary" shape="circle" class="positive" @click="modal2 = true">申请合作</Button></router-link>
                 <!-- <Button type="primary" shape="circle" class="positive" @click="modal2 = true">申请合作</Button> -->
               </div>
             </div>
@@ -38,12 +38,18 @@
           modal2: false
       };
     },
-    methods: {
-    },
     components:{
       vFooter,
       vBarService,
       ActivityForm0
+    },
+    created(){
+      this.menu();
+    },
+    methods: {
+      menu() {
+        window.scrollTo(0,0);
+      }
     }
   };
 </script>
@@ -52,8 +58,9 @@
 <style lang="stylus" rel="stylesheet/stylus">
 @import '~common/stylus/variable';
 @import '~common/stylus/mixin';
-.service
+.main.service
   padding: 100px 0
+.service
   .service-text
     padding: 35px 40px 100px
     line-height: 28px

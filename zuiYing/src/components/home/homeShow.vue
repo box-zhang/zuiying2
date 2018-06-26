@@ -3,7 +3,7 @@
     <div class="show-top"></div>
     <div class="show-content">
       <div class="main">
-        <div class="content">
+        <div class="content-lr">
           <div class="show-bright">
             <h2 class="title-white">个性化展示空间</h2>
             <Row>
@@ -32,36 +32,18 @@
             <div class="show-workers">
               <ul>
                 <li>
-                  <div class="workers-pic">
-                    <img src="./works_pic.jpg" alt="">
-                  </div>
-                  <div class="workers-information">
-                    <h3>NEW ERA 青年电影季</h3>
-                    <p>NEW ERA NEW ERA 青年电影季，是一个为未来而建的青年影展，其使命是发现未成名的好电影，鼓励纯粹的创作，扶植优秀青年创作人。</p>
-                  </div>
+                  <v-discover-show-card></v-discover-show-card>
                 </li>
                 <li>
-                  <div class="workers-pic">
-                    <img src="./works_pic.jpg" alt="">
-                  </div>
-                  <div class="workers-information">
-                    <h3>NEW ERA 青年电影季</h3>
-                    <p>NEW ERA NEW ERA 青年电影季，是一个为未来而建的青年影展，其使命是发现未成名的好电影，鼓励纯粹的创作，扶植优秀青年创作人。</p>
-                  </div>
+                  <v-discover-show-card></v-discover-show-card>
                 </li>
                 <li>
-                  <div class="workers-pic">
-                    <img src="./works_pic.jpg" alt="">
-                  </div>
-                  <div class="workers-information">
-                    <h3>NEW ERA 青年电影季</h3>
-                    <p>NEW ERA NEW ERA 青年电影季，是一个为未来而建的青年影展，其使命是发现未成名的好电影，鼓励纯粹的创作，扶植优秀青年创作人。</p>
-                  </div>
+                  <v-discover-show-card></v-discover-show-card>
                 </li>
               </ul>
             </div>
             <div class="create-btn">
-              <router-link tag="span" class="nav-item" to="/activity-movie"><a href="#"><i-button type="ghost" shape="circle" class="hollow">浏览更多赛事</i-button></a></router-link>
+              <router-link tag="span" class="nav-item" to="/activity"><a href="#"><i-button type="ghost" shape="circle" class="hollow">浏览更多赛事</i-button></a></router-link>
             </div>
           </div>
 
@@ -73,10 +55,12 @@
   </div>
 </template>
 <script type="text/ECMAScript-6">
-  import circle2 from '../parts/circleMassive';
+  import vCircle2 from '../parts/circleMassive';
+  import vDiscoverShowCard from './homeShowCard';
   export default {
     components:{
-      'v-circle2': circle2
+      vCircle2,
+      vDiscoverShowCard
     }
   };
 </script>
@@ -86,7 +70,7 @@
 @import '../../common/stylus/mixin';
 .home-show
   position: relative
-  z-index: 1
+  z-index: 2
   width: 100%
   .show-top
     height: 75px
@@ -97,7 +81,7 @@
     background: url(./show_bg_bottom.png) no-repeat top center
     background-size: 100% 100%
   .show-content
-    padding: 50px 0 20px
+    padding: 20px 0
     background-image: linear-gradient(-180deg, #f64159 0%, #4e3f57 100%);
   .show-img
     margin: 0 auto
@@ -138,19 +122,5 @@
       box-shadow: 0 28px 10px -10px rgba(220,220,236,0.4)
       overflow: hidden
       background: #FFF0F2
-    .workers-pic
-      img
-        width: 100%
-    .workers-information
-      padding: 28px
-      h3
-        margin-bottom: 20px
-        font-size: 18px
-        text-align: center
-        color: #000
-        font-weight: bold
-      p
-        font-size: 14px
-        line-height: 20px
 
 </style>

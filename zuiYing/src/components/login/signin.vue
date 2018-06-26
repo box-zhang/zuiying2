@@ -1,32 +1,42 @@
 <template>
-  <div class="form-wrapper">
-    <Form ref="formCustom" :model="formCustom" :rules="ruleCustom">
-      <FormItem prop="userName">
-        <i-input type="text" v-model="formCustom.userName" placeholder="用户名">
-          <Icon type="ios-person-outline" slot="prepend"></Icon>
-        </i-input>
-      </FormItem>
-        <FormItem prop="passwd">
-            <i-input type="password" v-model="formCustom.passwd" placeholder="密码">
-              <Icon type="ios-locked-outline" slot="prepend"></Icon>
-            </i-input>
-        </FormItem>
-        <FormItem prop="passwdCheck">
-            <i-input type="password" v-model="formCustom.passwdCheck" placeholder="确认密码">
-              <Icon type="ios-locked-outline" slot="prepend"></Icon>
-            </i-input>
-        </FormItem>
-        <FormItem>
-          <Button type="ghost" shape="circle" class="positive" @click="handleSubmit('formCustom')">注册</Button>
-        </FormItem>
-    </Form>
-    <div class="login-choose">
-        <router-link tag="span" class="nav-item" to="/login"><a href="#">使用已有账户登录</a></router-link>
+  <div class="login-wrapper">
+    <div class="wrapper-main">
+      <div class="main form-icon">
+        <v-login-header></v-login-header>
+        <div class="form-wrapper">
+            <Form ref="formCustom" :model="formCustom" :rules="ruleCustom">
+              <FormItem prop="userName">
+                <i-input type="text" v-model="formCustom.userName" placeholder="用户名">
+                  <Icon type="ios-person-outline" slot="prepend"></Icon>
+                </i-input>
+              </FormItem>
+                <FormItem prop="passwd">
+                    <i-input type="password" v-model="formCustom.passwd" placeholder="密码">
+                      <Icon type="ios-locked-outline" slot="prepend"></Icon>
+                    </i-input>
+                </FormItem>
+                <FormItem prop="passwdCheck">
+                    <i-input type="password" v-model="formCustom.passwdCheck" placeholder="确认密码">
+                      <Icon type="ios-locked-outline" slot="prepend"></Icon>
+                    </i-input>
+                </FormItem>
+                <FormItem>
+                  <Button type="primary" shape="circle" @click="handleSubmit('formCustom')">注册</Button>
+                </FormItem>
+            </Form>
+            <div class="login-choose">
+                <router-link tag="span" class="nav-item" to="/login"><a href="#">使用已有账户登录</a></router-link>
+            </div>
+        </div>
+      </div>
+      <v-login-footer></v-login-footer>
     </div>
   </div>
 </template>
 
 <script type="text/ECMAScript-6">
+  import vLoginFooter from 'components/login/loginFooter';
+  import vLoginHeader from 'components/login/loginHeader';
   export default {
     data () {
         const validatePass = (rule, value, callback) => {
@@ -69,6 +79,9 @@
             }
         };
     },
+    created(){
+      this.menu();
+    },
     methods: {
         handleSubmit (name) {
             this.$refs[name].validate((valid) => {
@@ -81,7 +94,14 @@
         },
         handleReset (name) {
             this.$refs[name].resetFields();
+        },
+        menu() {
+            window.scrollTo(0,0);
         }
+    },
+    components:{
+        vLoginHeader,
+        vLoginFooter
     }
   };
 </script>

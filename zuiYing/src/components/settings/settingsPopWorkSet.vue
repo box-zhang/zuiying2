@@ -16,8 +16,9 @@
             <Checkbox label="标签1"></Checkbox>
             <Checkbox label="标签2"></Checkbox>
             <Checkbox label="标签3"></Checkbox>
+            <Checkbox label="标签4"></Checkbox>
           </CheckboxGroup>
-          <p class="text-hint">我的标签：标签1 标签2 标签3</p>
+          <p class="text-hint">我的标签：{{formValidate.workSetLabel}}</p>
         </FormItem>
         <FormItem label="简介" prop="workSetIntroduce">
           <Input v-model="formValidate.workSetIntroduce" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder='简单介绍一下此专辑'></Input>
@@ -38,7 +39,7 @@
                 formValidate: {
                     workSetName: '',
                     workSetClassification: '',
-                    workSetLabel: '',
+                    workSetLabel: [],
                     workSetIntroduce: '',
                 },
                 ruleValidate: {
@@ -50,7 +51,7 @@
                     ],
                     workSetLabel: [
                       { required: true, type: 'array', min: 1, message: '请为专辑添加标签', trigger: 'change' },
-                      { type: 'array', max: 1, message: '请至少选择一个标签', trigger: 'change' }
+                      { type: 'array', max: 3, message: '最多选择3个标签', trigger: 'change' }
                     ],
                     workSetIntroduce: [
                         { required: true, message: '请输入专辑简介', trigger: 'blur' },
@@ -59,7 +60,13 @@
                 }
             };
         },
+        created(){
+          this.menu();
+        },
         methods: {
+            menu() {
+                window.scrollTo(0,0);
+            },
             handleSubmit (name) {
                 this.$refs[name].validate((valid) => {
                     if (valid) {
@@ -88,9 +95,6 @@
 .pop-work-set
   padding: 10px 60px
   text-align: left
-  .text-hint
-    margin: 0
-    color: $color-theme-d
   .choose
     margin: 50px 0 30px
 </style>

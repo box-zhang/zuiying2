@@ -2,7 +2,7 @@
   <div class="set-collection-box">
     <div class="good-work">
       <div class="set-c-v-add ">
-        <router-link tag="div" to="/v-add">
+        <router-link tag="div" to="/settings/video-set/collections/v-add">
           <Upload
             multiple
             type="drag"
@@ -32,6 +32,14 @@
     components:{
       vCardVideo,
       vPage,
+    },
+    created(){
+      this.menu();
+    },
+    methods: {
+      menu() {
+        window.scrollTo(0,0);
+      }
     }
   };
 </script>

@@ -5,29 +5,29 @@
         <i-col span="12">
           <div class="layout-logo"><img src="./logo.png" height="24" width="24" alt=""></div>
           <div class="layout-ceiling-nav">
-              <router-link tag="span" class="nav-item" to="/home"><a href="#">最影</a></router-link>
-              <router-link tag="span" class="nav-item" to="/activity"><a href="#">电影节</a></router-link>
-              <router-link tag="span" class="nav-item" to="/propagandize"><a href="#">宣传发布</a></router-link>
-              <router-link tag="span" class="nav-item" to="/marketing"><a href="#">电影营销</a></router-link>
+              <router-link tag="a" class="nav-item" to="/home">最影</router-link>
+              <router-link tag="a" class="nav-item" to="/activity">电影节</router-link>
+              <router-link tag="a" class="nav-item" to="/propagandize"><a href="#">宣传发布</a></router-link>
+              <router-link tag="a" class="nav-item" to="/marketing"><a href="#">电影营销</a></router-link>
           </div>
         </i-col>
         <i-col span="12">
           <div class="layout-ceiling-main logining">
-              <router-link tag="span" class="nav-item" to="/upload">上传作品</router-link>
-              <router-link tag="span" class="nav-item" to="/download">下载APP</router-link>
-              <!-- <router-link tag="span" class="nav-item" to="/login"><a href="#">登陆/注册</a></router-link> -->
+              <router-link tag="a" class="nav-item" to="/login">上传作品</router-link>
+              <router-link tag="a" class="nav-item" to="/download">下载APP</router-link>
+              <router-link tag="a" class="nav-item" to="/login"><a href="#">登陆/注册</a></router-link>
               <Dropdown placement="bottom-end">
                 <a href="javascript:void(0)">
                    <div class="user-head-pic"><img src="./card_user.jpg" height="100%" width="100%" alt=""></div>
                 </a>
                 <DropdownMenu slot="list">
-                  <router-link tag="span" class="nav-item" to="/works"><DropdownItem>个人主页</DropdownItem></router-link>
-                  <router-link tag="span" class="nav-item" to="/video-set"><DropdownItem>视频管理</DropdownItem></router-link>
-                  <router-link tag="span" class="nav-item" to="/personal"><DropdownItem>个人设置</DropdownItem></router-link>
-                  <router-link tag="span" class="nav-item" to="/activity-order"><DropdownItem>电影节</DropdownItem></router-link>
-                  <router-link tag="span" class="nav-item" to="/account"><DropdownItem>我的账户</DropdownItem></router-link>
-                  <router-link tag="span" class="nav-item" to="/password"><DropdownItem>修改密码</DropdownItem></router-link>
-                  <router-link tag="span" class="nav-item" to="/export"><DropdownItem>退出</DropdownItem></router-link>
+                  <router-link tag="span" class="nav-item" to="/settings/homepage"><DropdownItem>个人主页</DropdownItem></router-link>
+                  <router-link tag="span" class="nav-item" to="/settings/video-set"><DropdownItem>视频管理</DropdownItem></router-link>
+                  <router-link tag="span" class="nav-item" to="/settings/personal"><DropdownItem>个人设置</DropdownItem></router-link>
+                  <router-link tag="span" class="nav-item" to="/settings/activity-order"><DropdownItem>电影节</DropdownItem></router-link>
+                  <router-link tag="span" class="nav-item" to="/settings/account"><DropdownItem>我的账户</DropdownItem></router-link>
+                  <router-link tag="span" class="nav-item" to="/settings/password"><DropdownItem>修改密码</DropdownItem></router-link>
+                  <router-link tag="span" class="nav-item" to="/"><DropdownItem>退出</DropdownItem></router-link>
                 </DropdownMenu>
               </Dropdown>
           </div>
@@ -37,9 +37,7 @@
   </div>
 </template>
 <script>
-    export default {
-
-    };
+    export default {};
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" rel="stylesheet/stylus" scoped>
@@ -64,7 +62,8 @@
   a
     padding: 0 8px
     color: $color-white
-    &:hover
+    &:hover,
+    &.active
       color: $color-white-ll
   .layout-ceiling-main
     float: right

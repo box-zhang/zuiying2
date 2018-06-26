@@ -6,13 +6,13 @@
         </div>
         <div class="user-inf">
           <div class="user-discribe">
-            <router-link to="/works">
+            <router-link to="/show/userID/works">
               <Avatar style="background-color: #eee" src="https://i.loli.net/2017/08/21/599a521472424.jpg"  icon="person" size="large"/>
             </router-link>
-            <p class="user-name"><router-link to="/works">尹小白</router-link></p>
+            <p class="user-name"><router-link tag="span" to="/show/userID/works">尹小白</router-link></p>
             <p class="user-area">北京</p>
             <div class="enjoy"><Button type="primary" shape="circle" size="small" class="btn-small" disabled>已关注</Button></div>
-            <p class="user-autograph">个性签名个性签名个性签名个性签名个性签名个性签名个性签名个性签名个性签名…</p>
+            <p class="user-autograph">个性签名个性签名个性签名个性签名个性签名个性签名个性签名…</p>
           </div>
         </div>
       </Card>

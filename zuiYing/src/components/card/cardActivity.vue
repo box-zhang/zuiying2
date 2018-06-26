@@ -2,14 +2,14 @@
 	<div class="card card-activity">
 			<Card :bordered="false">
 				<div slot="title">
-					<router-link tag="span" class="nav-item" to="introduce">
+					<router-link tag="span" class="nav-item" to="/activity/introduce">
 						<div class="card-pic">
 							<img src="./card_video.jpg" alt="">
 						</div>
 					</router-link>
 				</div>
 				<div class="activity-discribe">
-					<router-link tag="span" class="nav-item" to="introduce"><p class="card-name">标题</p></router-link>
+					<router-link tag="span" class="nav-item" to="/activity/introduce"><p class="card-name">标题</p></router-link>
 					<div class="activity-time">
 						<span>5月5日</span>&nbsp;至&nbsp;<span>5月8日</span>
 						<div class="activity-price">报名费 <span class="price">¥200</span></div>

@@ -20,6 +20,14 @@
     components:{
       vCardCollection,
       vPage,
+    },
+    created(){
+      this.menu();
+    },
+    methods: {
+      menu() {
+        window.scrollTo(0,0);
+      }
     }
   };
 </script>

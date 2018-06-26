@@ -3,81 +3,81 @@
     <div class="main service">
         <Row>
           <i-col span="16">
-            <h1>��������</h1>
+            <h1>关于我们</h1>
             <div class="content-circle-bg about-content">
               <Tabs value="name1">
-                <TabPane label="��ϵ����" name="name1">
-                  <h3>��ϵ����</h3>
+                <TabPane label="联系我们" name="name1">
+                  <h3>联系我们</h3>
                   <ul>
                       <li>
                         <dl>
-                          <dt>��Ӱ������������ֳɣ�����</dt>
+                          <dt>最影（北京）申请分成／发行</dt>
                           <dd>
-                            <p>��ϵ�ˣ���Ůʿ</p>
-                            <p>QQ��3528825199</p>
-                            <p>E-mail��yangyue@moviest.com</p>
+                            <p>联系人：杨女士</p>
+                            <p>QQ：3528825199</p>
+                            <p>E-mail：yangyue@moviest.com</p>
                           </dd>
                         </dl>
                       </li>
                       <li>
                         <dl>
-                          <dt>��Ӱ�����������񣯳���</dt>
+                          <dt>最影（北京）商务／场地</dt>
                           <dd>
-                            <p>��ϵ�ˣ�������</p>
-                            <p>��ϵ�绰��2464825507</p>
-                            <p>E-mail��lige@moviest.com</p>
+                            <p>联系人：李先生</p>
+                            <p>联系电话：2464825507</p>
+                            <p>E-mail：lige@moviest.com</p>
                           </dd>
                         </dl>
                       </li>
                       <li>
                         <dl>
-                          <dt>��Ӱ����������Ʒ��¼���Ƽ������ں����</dt>
+                          <dt>最影（北京）作品收录／推荐／公众号相关</dt>
                           <dd>
-                            <p>��ϵ�ˣ�Ф����</p>
-                            <p>QQ��962667594</p>
-                            <p>E-mail��xiaolongbo@moviest.com</p>
+                            <p>联系人：肖先生</p>
+                            <p>QQ：962667594</p>
+                            <p>E-mail：xiaolongbo@moviest.com</p>
                           </dd>
                         </dl>
                       </li>
                       <li>
                         <dl>
-                          <dt>��Ӱ����������棯����</dt>
+                          <dt>最影（保定）广告／其他</dt>
                           <dd>
-                            <p>E-mail��ad@moviest.com</p>
+                            <p>E-mail：ad@moviest.com</p>
                           </dd>
                         </dl>
                       </li>
                   </ul>
                   <div class="addr">
                     <dl>
-                      <dt>��ϵ��ַ</dt>
+                      <dt>联系地址</dt>
                       <dd>
                         <ol>
-                            <li><p>a. �����г�����������·11���׿�������A��611-612</p></li>
-                            <li><p>b. ���Ҹ����������и߿�����ҵ·259��5¥</p></li>
+                            <li><p>a. 北京市朝阳区朝阳北路11号首开东都汇A座611-612</p></li>
+                            <li><p>b. 国家高新区保定市高开区兴业路259号5楼</p></li>
                         </ol>
                       </dd>
                     </dl>
                   </div>
                 </TabPane>
-                <TabPane label="ʹ�ð���" name="name2">
-                  <h3>�˺�ע��</h3>
+                <TabPane label="使用帮助" name="name2">
+                  <h3>账号注册</h3>
                   <div class="service-help">
                     <ol class="text-level2">
-                        <li><span class="level-none">1��</span>���ע����Ӱ��
-                          <p>δ��¼״̬�£�����Ӱ��¼��ҳ���Կ�����ע�ᡱ�İ�ť�����������д�����Ϣ�������ע�ᡣ</p>
+                        <li><span class="level-none">1、</span>如何注册最影？
+                          <p>未登录状态下，在最影登录首页可以看见“注册”的按钮，点击它并填写相关信息就能完成注册。</p>
                         </li>
-                        <li>ע�������һֱû���յ�������֤����ô�죿
+                        <li>注册过程中一直没有收到短信验证码怎么办？
                           <ol class="text-level3">
-                              <li><span class="level-none">(1) </span>����ֻ��İ�ȫ�����Ƿ�������İ���ĵ绰���롣</li>
-                              <li><span class="level-none">(2) </span>�Եȼ����ӣ���������֤�뵹��ʱ����������û�յ���֤�룬�������·��͡�</li>
-                              <li><span class="level-none">(3) </span>���һֱ�ղ���������֤�룬����ϵ���ǵ�΢�ſͷ�����ӰС���� id��zuiying��</li>
+                              <li><span class="level-none">(1) </span>检查手机的安全设置是否屏蔽了陌生的电话号码。</li>
+                              <li><span class="level-none">(2) </span>稍等几分钟，若发送验证码倒计时结束后依旧没收到验证码，请点击重新发送。</li>
+                              <li><span class="level-none">(3) </span>如果一直收不到短信验证码，请联系我们的微信客服：最影小助手 id：zuiying。</li>
                           </ol>
                         </li>
                     </ol>
                   </div>
                 </TabPane>
-                <TabPane label="��������" name="name3">��������</TabPane>
+                <TabPane label="责任声明" name="name3">责任声明</TabPane>
               </Tabs>
             </div>
           </i-col>
@@ -97,6 +97,14 @@
     components:{
       vFooter,
       vBarService
+    },
+    created(){
+      this.menu();
+    },
+    methods: {
+      menu() {
+        window.scrollTo(0,0);
+      }
     }
   };
 </script>

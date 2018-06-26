@@ -59,7 +59,13 @@
       uploadList: []
     };
   },
+  created(){
+    this.menu();
+  },
   methods: {
+    menu() {
+      window.scrollTo(0,0);
+    },
     handleView (name) {
       this.imgName = name;
       this.visible = true;

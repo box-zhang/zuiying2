@@ -33,14 +33,23 @@
             </div>
         </div>
       <div class="choose">
-        <router-link tag="span" class="nav-item" to="/show"><a href="javascript:;"><Button type="ghost" shape="circle" >返回</Button></a></router-link>
-        <router-link tag="span" class="nav-item" to="/show"><Button type="primary" shape="circle">已完成支付</Button></router-link>
+        <router-link tag="span" class="nav-item" to="/activity/activity-step/succeed"><a href="javascript:;"><Button type="ghost" shape="circle" >返回</Button></a></router-link>
+        <router-link tag="span" class="nav-item" to="/activity/introduce"><Button type="primary" shape="circle">已完成支付</Button></router-link>
       </div>
 	</div>
 </template>
 
 <script type="text/ECMAScript-6">
-  export default {};
+export default {
+    created(){
+      this.menu();
+    },
+    methods: {
+      menu() {
+        window.scrollTo(0,0);
+      }
+    }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

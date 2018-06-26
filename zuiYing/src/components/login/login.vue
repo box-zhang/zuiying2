@@ -13,7 +13,7 @@
       </FormItem>
       <div class="login-choose clearfix">
         <div class="choose-l"><Checkbox v-model="single">自动登录</Checkbox></div>
-        <div class="choose-r"><router-link tag="span" class="nav-item" to="/passwordRetrieve"><a href="#">忘记密码</a></router-link></div>
+        <div class="choose-r"><router-link tag="span" class="nav-item" to="/password-retrieve"><a href="#">忘记密码</a></router-link></div>
       </div>
       <FormItem>
         <Button type="primary" shape="circle" class="positive" @click="handleSubmit('formInline')">登录</Button>
@@ -30,34 +30,40 @@
 <script type="text/ECMAScript-6">
   export default {
       data () {
-          return {
-              formInline: {
-                  user: '',
-                  password: ''
-              },
-              ruleInline: {
-                  user: [
-                      { required: true, message: '请输入姓名', trigger: 'blur' }
-                  ],
-                  password: [
-                      { required: true, message: '请输入密码', trigger: 'blur' },
-                      { type: 'string', min: 6, message: '密码长度不能少于6位', trigger: 'blur' }
-                  ]
-              },
-              single: false
-          };
+        return {
+          formInline: {
+              user: '',
+              password: ''
+          },
+          ruleInline: {
+              user: [
+                  { required: true, message: '请输入姓名', trigger: 'blur' }
+              ],
+              password: [
+                  { required: true, message: '请输入密码', trigger: 'blur' },
+                  { type: 'string', min: 6, message: '密码长度不能少于6位', trigger: 'blur' }
+              ]
+          },
+          single: false
+        };
+      },
+      created(){
+        this.menu();
       },
       methods: {
-          handleSubmit(name) {
-              this.$refs[name].validate((valid) => {
-                  if (valid) {
-                      this.$Message.success('Success!');
-                  } else {
-                      this.$Message.error('Fail!');
-                  }
-              });
-          }
-      }
+        handleSubmit(name) {
+            this.$refs[name].validate((valid) => {
+                if (valid) {
+                    this.$Message.success('Success!');
+                } else {
+                    this.$Message.error('Fail!');
+                }
+            });
+        },
+        menu() {
+          window.scrollTo(0,0);
+        }
+      },
   };
 </script>
 

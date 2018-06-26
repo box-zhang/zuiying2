@@ -54,7 +54,7 @@
             return {
                 value2: 0,
                 setting: {
-                  autoplay: false,
+                  autoplay: true,
                   autoplaySpeed: 3500,
                   dots: 'inside',
                   radiusDot: false,

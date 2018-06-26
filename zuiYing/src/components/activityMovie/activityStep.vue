@@ -27,13 +27,13 @@
                 <Step title="步骤6" content="物料信息"></Step>
             </Steps>
           </div>
-          <p class="step-text">当前正在进行第 {{ current + 1 }}{{stepNum[current+1]}} 步</p>
+          <p class="step-text">当前正在进行第 {{ current + 1 }} 步</p>
           <div class="step-c">
             <router-view></router-view>
           </div>
           <div class="choose">
-            <router-link tag="span" class="nav-item" to="/show"><a href="javascript:;"><Button type="ghost" shape="circle" >返回</Button></a></router-link>
-            <router-link tag="span" class="nav-item" :to=stepNum[current+1]><Button type="primary" shape="circle" @click="next">下一步</Button></router-link>
+            <router-link class="nav-item" :to="'/activity/activity-step/step'+ currentPrev" :disabled='current0'><Button type="ghost" shape="circle"  @click="prev">返回</Button></router-link>
+            <router-link class="nav-item" :to="'/activity/activity-step'+stepNum[current+1]"><Button type="primary" shape="circle" @click="next">下一步</Button></router-link>
           </div>
         </div>
         </div>
@@ -57,16 +57,33 @@
               '/step5',
               '/step6',
               '/succeed',
-            ]
+            ],
+            currentPrev: 1
         };
     },
+    created(){
+      this.menu();
+    },
     methods: {
+        menu() {
+          window.scrollTo(0,0);
+        },
+        prev () {
+          if (this.current <= 1) {
+            this.currentPrev=1;
+            this.current=0;
+          } else {
+            this.currentPrev -= 1;
+            this.current -= 1;
+          }
+        },
         next () {
-            if (this.current == 7) {
-                this.current = 0;
-            } else {
-                this.current += 1;
-            }
+          if (this.current == 7) {
+              this.current = 0;
+          } else {
+              this.currentPrev+=1;
+              this.current += 1;
+          }
         }
     },
     components:{

@@ -2,14 +2,14 @@
 	<div class="card card-video">
 			<Card :bordered="false">
 				<div slot="title">
-					<router-link tag="span" class="nav-item" to="/videoID">
+					<router-link class="nav-item" to="/show/videoID">
 						<div class="card-pic">
 							<img src="./card_video.jpg" alt="">
 							<span class="card-label">5:06</span>
 						</div>
 				  </router-link>
 					<div class="card-discribe">
-						<p class="card-name">标题</p>
+						<p class="card-name"><router-link tag="span" class="nav-item" to="/show/videoID">标题</router-link></p>
 						<div class="sign">
 							<span>#短视频</span><i>/</i>
 							<span>#广告</span><i>/</i>
@@ -20,12 +20,12 @@
 				<div class="user-inf">
 					<dl>
 						<dt>
-							<router-link to="/works">
+							<router-link to="/show/userID/works">
 			          <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg"  icon="person" />
 			        </router-link>
 						</dt>
 						<dd>
-							<p class="user-name"><router-link to="/works">尹小白</router-link></p>
+							<p class="user-name"><router-link to="/show/userID/works">尹小白</router-link></p>
 						</dd>
 					</dl>
 				</div>

@@ -2,32 +2,34 @@
   <div class="bg-pink content-top">
     <v-header-focus></v-header-focus>
     <div class="main">
-      <div class="content">
-        <div class="title-active">
-          <h3>每日优选</h3>
-          <router-link tag="span" class="nav-item" to="/videos"><span class="active-more link-a"><a href="#">更多</a></span></router-link>
-        </div>
-        <div class="good-work">
-          <v-card-video></v-card-video>
-          <v-card-video></v-card-video>
-          <v-card-video></v-card-video>
-          <v-card-video></v-card-video>
-          <v-card-video></v-card-video>
-          <v-card-video></v-card-video>
-        </div>
-        <div class="title-active">
-          <h3>明星用户</h3>
-          <router-link tag="span" class="nav-item" to="/users"><span class="active-more link-a"><a href="#">更多</a></span></router-link>
-        </div>
-        <div class="good-work">
-          <v-card-user></v-card-user>
-          <v-card-user></v-card-user>
-          <v-card-user></v-card-user>
-          <v-card-user></v-card-user>
-          <v-card-user></v-card-user>
-          <v-card-user></v-card-user>
-          <v-card-user></v-card-user>
-          <v-card-user></v-card-user>
+      <div class="content-lr">
+        <div class="show-all">
+          <div class="title-active">
+            <h3>每日优选</h3>
+            <router-link tag="a" class="active-more link-a" to="/show/videos">更多</router-link>
+          </div>
+          <div class="good-work">
+            <v-card-video></v-card-video>
+            <v-card-video></v-card-video>
+            <v-card-video></v-card-video>
+            <v-card-video></v-card-video>
+            <v-card-video></v-card-video>
+            <v-card-video></v-card-video>
+          </div>
+          <div class="title-active">
+            <h3>明星用户</h3>
+            <router-link tag="a" class="active-more link-a" to="/show/users">更多</router-link>
+          </div>
+          <div class="good-work">
+            <v-card-user></v-card-user>
+            <v-card-user></v-card-user>
+            <v-card-user></v-card-user>
+            <v-card-user></v-card-user>
+            <v-card-user></v-card-user>
+            <v-card-user></v-card-user>
+            <v-card-user></v-card-user>
+            <v-card-user></v-card-user>
+          </div>
         </div>
       </div>
     </div>
@@ -46,6 +48,14 @@
       vFooter,
       vCardVideo,
       vCardUser
+    },
+    created(){
+      this.menu();
+    },
+    methods: {
+      menu() {
+        window.scrollTo(0,0);
+      }
     }
   };
 </script>
@@ -59,4 +69,6 @@
   background: $color-positive-background-m
   .content-list
     margin: 40px 40px 80px
+.show-all
+  margin: 40px 0 80px
 </style>

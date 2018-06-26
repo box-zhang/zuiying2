@@ -1,7 +1,7 @@
 <template>
   <div class="home-service">
     <div class="main">
-      <div class="content">
+      <div class="content-lr">
         <div class="title-black">
           <h2>为创作人提供服务</h2>
         </div>
@@ -54,10 +54,10 @@
           <div class="choice">
             <Row>
               <i-col span="12">
-                <router-link tag="span" class="nav-item" to="/show-all"><a href="javascript:;"><Button type="primary" shape="circle">随便看看</Button></a></router-link>
+                <router-link class="nav-item" to="/show"><a href="javascript:;"><Button type="primary" shape="circle">随便看看</Button></a></router-link>
               </i-col>
               <i-col span="12">
-                <router-link tag="span" class="nav-item" to="/login"><a href="#"><Button type="ghost" shape="circle" class="btn-gray">我要加入</Button></a></router-link>
+                <router-link class="nav-item" to="/login"><a href="#"><Button type="ghost" shape="circle" class="btn-gray">我要加入</Button></a></router-link>
               </i-col>
             </Row>
           </div>
@@ -121,7 +121,7 @@
     background-size: auto 100%
     overflow: hidden
     .bottom-text
-      margin: 220px 0 90px
+      margin: 180px 0 90px
       text-align: center
       font-size: 24px
       line-height: 30px

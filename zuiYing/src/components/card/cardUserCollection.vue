@@ -2,14 +2,14 @@
   <div class="card card-collection">
       <Card :bordered="false">
         <div slot="title">
-          <router-link tag="span" class="nav-item" to="/videoID">
+          <router-link class="nav-item" to="/show/videoID">
             <div class="card-pic">
               <img src="./card_video.jpg" alt="">
               <span class="card-label">16个作品</span>
             </div>
           </router-link>
           <div class="card-discribe">
-            <p class="card-name">标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</p>
+            <p class="card-name"><router-link tag="span" class="nav-item" to="/show/videoID">标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</router-link></p>
             <div class="sign">
               <span>#短视频</span><i>/</i>
               <span>#广告</span><i>/</i>

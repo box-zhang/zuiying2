@@ -10,7 +10,8 @@
   width: 100%
   clearfix()
 .content-lr
-  margin: 0 40px
+  margin: 0 auto
+  padding: 0 40px
   width: 100%
   clearfix()
 .content-top
@@ -76,7 +77,7 @@
     right: 10px
     font-size: 14px
 
-.link-a a
+.link-a
   color: $color-emphasis-l
   &:hover
     color: $color-emphasis-ll
@@ -196,10 +197,16 @@
   .user-name a
     color: $color-theme
     font-weight: bold
+  .user-name,
+  .user-name a,
+  .user-area
+    no-wrap()
   .enjoy
     margin: 5px
   .user-autograph
     margin: 20px 0
+    height: 38px
+    overflow:hidden
 
 // commponents-card end
 hr
@@ -261,3 +268,9 @@ ol
   &:hover
     color: $color-negative-background
     background: transparent
+.ivu-form-item-content
+  .text-hint
+    margin: 0
+    color: $color-theme-d
+.ivu-back-top-inner
+  border-radius: 5px

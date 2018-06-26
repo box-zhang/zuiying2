@@ -10,7 +10,7 @@
       </div>
     </Upload>
     <div class="set-hint-read">
-      <Checkbox v-model="single">我已阅读并同意遵守 <router-link class="link-underline" to="/activity-treaty">《最影上传服务规则》</router-link></Checkbox>
+      <Checkbox v-model="single">我已阅读并同意遵守 <router-link class="link-underline" to="/activity/activity-treaty">《最影上传服务规则》</router-link></Checkbox>
     </div>
   </div>
 </template>
@@ -31,7 +31,13 @@
       uploadList: []
     };
   },
+  created(){
+    this.menu();
+  },
   methods: {
+    menu() {
+      window.scrollTo(0,0);
+    },
     handleView (name) {
       this.imgName = name;
       this.visible = true;

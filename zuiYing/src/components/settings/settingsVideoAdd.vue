@@ -6,7 +6,7 @@
           <p>正在上传0个视频，已完成0个...未填写资料<span class="text-red">1</span>个，上传失败<span class="text-red">0</span>个</p>
         </i-col>
         <i-col span="4">
-          <Button type="ghost" shape="circle" class="btn-gray" size="small">继续添加</Button>
+          <router-link tag="div" to="/settings/video-set/collections/v-add"><Button type="ghost" shape="circle" class="btn-gray" size="small">继续添加</Button></router-link>
         </i-col>
       </Row>
     </div>
@@ -36,8 +36,9 @@
                     <Checkbox label="标签1"></Checkbox>
                     <Checkbox label="标签2"></Checkbox>
                     <Checkbox label="标签3"></Checkbox>
+                    <Checkbox label="标签4"></Checkbox>
                   </CheckboxGroup>
-                  <p class="text-hint">我的标签：标签1 标签2 标签3</p>
+                  <p class="text-hint">我的标签：{{formValidate.workSetLabel}}</p>
                 </FormItem>
                 <FormItem label="简介" prop="workSetIntroduce">
                   <Input v-model="formValidate.workSetIntroduce" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder='简单介绍一下此专辑'></Input>
@@ -53,7 +54,7 @@
             <div class="video-add-show">
               <p>预览效果</p>
               <div class="video-add-show-img">
-                <img src="./iphone.png" width="100%" alt="">
+                <img src="../../common/images/page.jpg" width="100%" alt="">
               </div>
             </div>
           </i-col>
@@ -72,7 +73,7 @@
             formValidate: {
                 workSetName: '',
                 workSetClassification: '',
-                workSetLabel: '',
+                workSetLabel: [],
                 workSetIntroduce: '',
             },
             ruleValidate: {
@@ -84,7 +85,7 @@
                 ],
                 workSetLabel: [
                   { required: true, type: 'array', min: 1, message: '请为专辑添加标签', trigger: 'change' },
-                  { type: 'array', max: 1, message: '请至少选择一个标签', trigger: 'change' }
+                  { type: 'array', max: 3, message: '最多选择3个标签', trigger: 'change' }
                 ],
                 workSetIntroduce: [
                     { required: true, message: '请输入专辑简介', trigger: 'blur' },
@@ -93,24 +94,30 @@
             }
         };
     },
+    created(){
+      this.menu();
+    },
     methods: {
-        handleSubmit (name) {
-            this.$refs[name].validate((valid) => {
-                if (valid) {
-                    this.$Message.success('Success!');
-                } else {
-                    this.$Message.error('Fail!');
-                }
-            });
-        },
-        handleReset (name) {
-            this.$refs[name].resetFields();
-        },
-        asyncOK () {
-            setTimeout(() => {
-                // this.modal6 = false;
-            }, 2000);
-        }
+      menu() {
+        window.scrollTo(0,0);
+      },
+      handleSubmit (name) {
+          this.$refs[name].validate((valid) => {
+              if (valid) {
+                  this.$Message.success('Success!');
+              } else {
+                  this.$Message.error('Fail!');
+              }
+          });
+      },
+      handleReset (name) {
+          this.$refs[name].resetFields();
+      },
+      asyncOK () {
+          setTimeout(() => {
+              // this.modal6 = false;
+          }, 2000);
+      }
     }
   };
 </script>
@@ -120,6 +127,7 @@
 @import "~common/stylus/variable";
 @import "~common/stylus/mixin";
 .settings-video-add
+  margin: 20px 0
   .btn-gray
     float: right
   .video-add-content
@@ -148,8 +156,6 @@
   .video-add-form-list
     margin: 10px auto
     width: 70%
-  .text-hint
-    margin-bottom: 0
 .video-add-show
   padding: 20px
   font-size: 12px
@@ -157,9 +163,12 @@
   text-align: center
   .video-add-show-img
     margin: 20px auto 0
+    padding: 18% 4.5% 0
     width: 80%
     height: 300px
     overflow: hidden
+    background: url(../../common/images/iphone.png) no-repeat top
+    background-size: 100% auto
 
 
 </style>

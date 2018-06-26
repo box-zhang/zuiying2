@@ -24,10 +24,10 @@
         </article>
         <div class="activity-sign">
           <div class="activity-sign-h">
-            <router-link to="/activity-sign"><Button type="primary" shape="circle" class="positive">立即报名￥200</Button></router-link>
+            <router-link to="/activity/activity-sign"><Button type="primary" shape="circle" class="positive">立即报名￥200</Button></router-link>
           </div>
           <div class="activity-sign-h">
-            <Checkbox>报名即代表同意 <router-link to="/activity-treaty">《最影上传用户协议》</router-link></Checkbox>
+            <Checkbox>报名即代表同意 <router-link to="/activity/activity-treaty">《最影上传用户协议》</router-link></Checkbox>
           </div>
         </div>
       </div>
@@ -43,6 +43,14 @@
     components:{
       vHeaderFocus,
       vFooter,
+    },
+    created(){
+      this.menu();
+    },
+    methods: {
+      menu() {
+        window.scrollTo(0,0);
+      }
     }
   };
 </script>

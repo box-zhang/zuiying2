@@ -2,7 +2,7 @@
   <div class="user-i">
     <v-header-user></v-header-user>
     <div class="main">
-      <div class="content-lr">
+      <div class="">
         <div class="user-inf user-main">
           <div class="user-discribe">
             <v-avatar></v-avatar>
@@ -16,7 +16,7 @@
     </div>
     <div class="user-works-tab">
       <ul>
-        <li class="active"><router-link to="works">作品</router-link></li>
+        <li><router-link to="works">作品</router-link></li>
         <li><router-link to="collections">作品集</router-link></li>
         <li><router-link to="introduce">简介</router-link></li>
       </ul>
@@ -39,6 +39,14 @@
       vHeaderUser,
       vFooter,
       vAvatar
+    },
+    created(){
+      this.menu();
+    },
+    methods: {
+      menu() {
+        window.scrollTo(0,0);
+      }
     }
   };
 </script>
@@ -80,9 +88,9 @@
     border-bottom: 3px solid transparent
     a
       display: block
-    &:hover,
-    &.active
-      border-bottom: 3px solid $color-positive-background
+      &:hover,
+      &.active
+        border-bottom: 3px solid $color-positive-background
 .user-works-tab-content
   margin:10px 0
 </style>
