@@ -2,7 +2,35 @@
   <div class="video-detailed bg-pink">
     <div class="video-detailed-top">
       <div class="main">
-        <div class="video-play"></div>
+        <div class="video-play">
+          <video-player  class="video-player-box"
+               ref="videoPlayer"
+               :options="playerOptions"
+               :playsinline="true"
+          ></video-player>
+          <!-- <video-player
+            class="video-player-box"
+            ref="videoPlayer"
+            :options="playerOptions"
+            :playsinline="true"
+            customEventName="customstatechangedeventname"
+
+            @play="onPlayerPlay($event)"
+            @pause="onPlayerPause($event)"
+            @ended="onPlayerEnded($event)"
+            @waiting="onPlayerWaiting($event)"
+            @playing="onPlayerPlaying($event)"
+            @loadeddata="onPlayerLoadeddata($event)"
+            @timeupdate="onPlayerTimeupdate($event)"
+            @canplay="onPlayerCanplay($event)"
+            @canplaythrough="onPlayerCanplaythrough($event)"
+
+            @statechanged="playerStateChanged($event)"
+            @ready="playerReadied"
+            >
+          </video-player> -->
+
+        </div>
       </div>
     </div>
     <div class="main">
@@ -61,13 +89,52 @@
 <script type="text/ECMAScript-6">
   import vFooter from 'components/footer/footer';
   export default {
+    data() {
+      return {
+        playerOptions: {
+          // videojs options
+          muted: true,
+          language: 'en',
+          playbackRates: [0.7, 1.0, 1.5, 2.0],
+          sources: [{
+            type: "video/mp4",
+            src: "https://cdn.theguardian.tv/webM/2015/07/20/150716YesMen_synd_768k_vp8.webm"
+          }],
+          poster: "https://i.loli.net/2017/08/21/599a521472424.jpg",
+        }
+      };
+    },
+    computed: {
+      player() {
+        return this.$refs.videoPlayer.player;
+      }
+    },
     components:{
       vFooter
     },
     created(){
       this.menu();
     },
-    methods: {
+    methods: {// listen event
+      onPlayerPlay(player) {
+        // console.log('player play!', player)
+      },
+      onPlayerPause(player) {
+        // console.log('player pause!', player)
+      },
+      // ...player event
+
+      // or listen state event
+      playerStateChanged(playerCurrentState) {
+        // console.log('player current update state', playerCurrentState)
+      },
+
+      // player is ready
+      playerReadied(player) {
+        // console.log('the player is readied', player);
+        // you can use it to do something...
+        // player.[methods]
+      },
       menu() {
         window.scrollTo(0,0);
       }
@@ -86,11 +153,6 @@
   overflow-hidden
   .video-detailed-top
     background: $color-theme
-    .video-play
-      margin: 0 auto
-      width: 900px
-      height: 500px
-      background: $color-negative-background-d
   .video-inf
     padding: 20px 30px
     background: #fff

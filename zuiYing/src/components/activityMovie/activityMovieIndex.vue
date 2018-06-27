@@ -22,7 +22,7 @@
 
 .activity
   .activity-content
-    margin: 45px 40px 80px
+    padding: 45px 40px 80px
     width: auto
     overflow: hidden
   .content-list

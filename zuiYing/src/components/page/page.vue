@@ -1,7 +1,15 @@
 <template>
 	<div class="page">
-		<Page :total="100" show-elevator show-sizer></Page>
-		<!-- <Page :total="100" show-elevator show-sizer></Page> -->
+		<Page
+			total="100"
+			current="1"
+			page-size="10"
+			show-elevator
+			show-sizer
+			show-total
+			placement="top"
+			>
+		</Page>
 	</div>
 </template>
 
@@ -55,4 +63,5 @@
 			color: $color-white-ll
 	.ivu-icon
 		font-size: 12px
+		line-height: 18px
 </style>

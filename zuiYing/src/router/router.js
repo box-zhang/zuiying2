@@ -23,7 +23,7 @@ import Propagandize from 'components/propagandize/propagandize';
 import Marketing from 'components/marketing/marketing';
 import UpLoad from 'components/upLoad/upLoad';
 import DownLoad from 'components/downLoad/downLoad';
-import LoginMain from 'components/login/loginMain';
+import LoginIndex from 'components/login/loginIndex';
 import Login from 'components/login/login';
 import Signin from 'components/login/signin';
 import PasswordRetrieve from 'components/passwordRetrieve/passwordRetrieve';
@@ -90,14 +90,6 @@ export default new VueRouter({
               path: '/settings/video-set/collections',
               component: SettingsCollectionsIndex,
               children: [
-                // {
-                //   path: '',
-                //   redirect: '/settings/video-set/collections/v-cs',
-                //   component: SettingsCollectionsIndex
-                // },{
-                //   path: '/settings/video-set/collections/v-cs',
-                //   component: SettingsCollectionsIndex
-                // },
                 {
                   path: '',
                   // redirect: '/settings/video-set/collections/v-cs',
@@ -115,14 +107,6 @@ export default new VueRouter({
                 }
               ]
             },
-            // {
-            //   path: '/settings/video-set/v-upload',
-            //   component: SettingsVideoUpload
-            // }, {
-            //   path: '/settings/video-set/v-items',
-            //   component: SettingsVideoCollectionItems
-            // },
-
           ]
         },
         {
@@ -229,17 +213,17 @@ export default new VueRouter({
       component: DownLoad
     }, {
       path: '/login',
-      component: LoginMain,
+      component: LoginIndex,
       children: [{
         path: '',
         component: Login
+      }, {
+        path: '/login/Signin',
+        component: Signin
+      }, {
+        path: '/login/password-retrieve',
+        component: PasswordRetrieve
       }]
-    }, {
-      path: '/signin',
-      component: Signin
-    }, {
-      path: '/password-retrieve',
-      component: PasswordRetrieve
     }, {
       path: '/about',
       component: About

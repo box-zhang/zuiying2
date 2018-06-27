@@ -21,6 +21,8 @@
   min-width: 900px
   color: $color-text-dd
   font-size: 12px
+  p
+    padding-bottom: 20px
   ul
     display: flex
     justify-content: center

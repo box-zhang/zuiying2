@@ -61,6 +61,14 @@
     components:{
       vCircle2,
       vDiscoverShowCard
+    },
+    created(){
+      this.menu();
+    },
+    methods: {
+      menu() {
+        window.scrollTo(0,0);
+      }
     }
   };
 </script>
@@ -82,7 +90,9 @@
     background-size: 100% 100%
   .show-content
     padding: 20px 0
-    background-image: linear-gradient(-180deg, #f64159 0%, #4e3f57 100%);
+    background: #4e3f57; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #4e3f57, #f64159); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(-180deg, #f64159 0%, #4e3f57 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   .show-img
     margin: 0 auto
     width: 380px

@@ -1,12 +1,24 @@
 <template>
-  <div class="login-wrapper">
-    <div class="wrapper-main">
-      <div class="main form-icon">
-        <v-login-header></v-login-header>
-        <router-view></router-view>
-      </div>
-      <v-login-footer></v-login-footer>
-    </div>
+  <div class="login-wrapper bg-pink">
+    <router-view></router-view>
+    <vue-particles
+      class="bg-canvas"
+      color="#CFDAE6"
+      :particleOpacity="0.2"
+      :particlesNumber="50"
+      shapeType="circle"
+      :particleSize="10"
+      linesColor="#CFDAE6"
+      :linesWidth="1"
+      :lineLinked="true"
+      :lineOpacity="0.4"
+      :linesDistance="150"
+      :moveSpeed="3"
+      :hoverEffect="true"
+      hoverMode="grab"
+      :clickEffect="true"
+      clickMode="repulse">
+    </vue-particles>
   </div>
 </template>
 
@@ -38,7 +50,16 @@
   min-height: 100vh
   background: $color-pink
   text-align: center
+  .bg-canvas
+    position: fixed
+    z-index: 0
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
   .main
+    width:  500px
+    min-width: 500px
     min-height: calc(90vh - 2.5em - 7em);
     /* Avoid padding/borders screwing up our height: */
     box-sizing: border-box;
