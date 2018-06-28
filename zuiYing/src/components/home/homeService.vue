@@ -118,8 +118,8 @@
             color: $color-text
             text-align: center
         dl dd
-          margin-top: 10px
-          padding: 18px 0
+          // margin-top: 10px
+          padding: 25px 0 10px
           border-top: 1px solid $color-text-d
           font-size: 14px
           color: $color-text-ll
