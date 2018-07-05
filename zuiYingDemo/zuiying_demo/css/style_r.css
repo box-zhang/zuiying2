@@ -195,7 +195,7 @@ button:active {
     /*display: inline-block;*/
 /*}*/
 body.bg-pink {
-    background: rgba(255,66,89,.08);
+    background: #FFF4F5;
 }
 .bg-pink .footer-wrapper {
     background: #fff;
@@ -696,6 +696,33 @@ body.bg-pink {
     background: url(../static/img/show_bg_bottom.de36716.png) no-repeat top center;
     background-size: 100% 100%;
 }
+
+.show-top-m {
+    height: 50px;
+    background: url(../static/img/show-top-m.png) no-repeat top center;
+    background-size: 100% 100%;
+}
+.show-bottom-m {
+    height: 70px;
+    background: url(../static/img/show-bottom-m.png) no-repeat top center;
+    background-size: 100% 100%;
+}
+.marketing-show {
+    position: relative;
+    overflow: hidden;
+}
+.marketing-show .show-img {
+    margin: 0 auto;
+    width: 70%;
+}
+.marketing-show .show-content {
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    background: #fa4050; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(linear, left top, left bottom, from(#fc4156), to(#e33527));
+    background: linear-gradient(-180deg, #fc4156 0%, #e33527 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 .home-show .show-content {
     padding: 20px 0;
     background: #4e3f57; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
@@ -761,7 +788,6 @@ body.bg-pink {
 .home-show .show-workers ul li {
     display: inline-block;
     margin: 0 20px 30px;
-    width: 300px;
     border-radius: 10px;
     -webkit-box-shadow: 0 28px 10px -10px rgba(220,220,236,0.4);
     box-shadow: 0 28px 10px -10px rgba(220,220,236,0.4);
@@ -778,7 +804,7 @@ body.bg-pink {
     position: absolute;
     top: 250px;
     left: 0;
-    width: 100%;
+    right: 0;
 }
 .circle-massive .circle {
     position: relative;
@@ -820,6 +846,9 @@ body.bg-pink {
 .circle-massive .mini-circle.mini5 {
     bottom: 18%;
     left: 10%;
+}
+.show-discover-card a {
+    display: block;
 }
 .show-discover-card .workers-pic img {
     width: 100%;
@@ -990,53 +1019,6 @@ body.bg-pink {
     overflow: hidden;
 }
 
-.circle-massive {
-    position: absolute;
-    top: 250px;
-    left: 0;
-    width: 100%;
-}
-.circle-massive .circle {
-    position: relative;
-    width: 620px;
-    height: 620px;
-    border-radius: 620px;
-    border: 1px solid #fff0f2;
-}
-.circle-massive .circle1 {
-    margin-left: -100px;
-}
-.circle-massive .circle2 {
-    float: right;
-    margin-right: -120px;
-}
-.circle-massive .mini-circle {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
-    background: #fff;
-}
-.circle-massive .mini-circle.mini1 {
-    top: -5px;
-    left: 50%;
-}
-.circle-massive .mini-circle.mini2 {
-    bottom: 53px;
-    right: 20%;
-}
-.circle-massive .mini-circle.mini3 {
-    top: 51px;
-    left: 20%;
-}
-.circle-massive .mini-circle.mini4 {
-    bottom: 2px;
-    right: 60%;
-}
-.circle-massive .mini-circle.mini5 {
-    bottom: 18%;
-    left: 10%;
-}
 
 .ivu-tooltip {
     position: relative;
@@ -1411,7 +1393,7 @@ body.bg-pink {
     align-items: flex-start;
 }
 .card {
-    margin: 10px 0;
+    margin: 10px auto;
     display: inline-block;
     color: #786e6e;
     line-height: 24px;
@@ -1465,7 +1447,6 @@ body.bg-pink {
 }
 .ivu-card {
     background: #fff;
-    border-radius: 4px;
     font-size: 14px;
     position: relative;
     transition: all .2s ease-in-out;
@@ -1473,6 +1454,9 @@ body.bg-pink {
     -webkit-box-shadow: 0 0 8px 0 rgba(220,220,236,0.4);
     box-shadow: 0 0 8px 0 rgba(220,220,236,0.4);
     border-radius: 10px;
+}
+.card-pd .ivu-card {
+    padding: 20px
 }
 .ivu-card-head {
     border-bottom: 1px solid #e9eaec;
@@ -1555,8 +1539,196 @@ hr {
     background: 0 0;
 }
 
+.landing-page .home .carousel-caption h1 {
+    color: rgba(255,255,255,.65);
+}
+.landing-page .home .carousel-caption p {
+    color: #3e3d54;
+}
+.landing-page .marketing .carousel-caption {
+    top: 200px;
+    color: #fff;
+}
 
+.flex-box {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.flex-box.flex-wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.marketing .title-black{
+    margin: 60px 0 30px
+}
+.flex-box .marketing-item {
+    position: relative;
+}
+.marketing-list-box {
+    margin: 60px 0;
+}
+.marketing-item-1 {
+    padding: 5%;
+    flex:1;
+    width: 100%;
+    text-align: center;
+}
+.row .card {
+    width: 100%;
+}
 
+.marketing {
+    padding-bottom: 100px;
+}
+.marketing-i-box {
+    position: relative;
+}
+
+.marketing .marketing-item-1 .ivu-card {
+    min-height: 260px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.marketing .marketing-item-1 .m-i-h3 {
+    padding: 20px 0;
+    font-size: 18px;
+    color: #3E3D54;
+}
+.marketing .marketing-item-1 .m-i-top-icon {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left: -40px;
+    padding: 5px;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    background: #fff;
+}
+
+.marketing .marketing-item-2 {
+    margin: 1%;
+    flex:1;
+}
+
+.marketing .marketing-item-2 .m-i-h3 {
+    font-size: 18px;
+    text-align: left;
+}
+.marketing .marketing-item-2 .text-red {
+    padding: 20px 0;
+    font-size: 54px;
+    line-height: 60px;
+    text-align: left;
+}
+.marketing .marketing-item-2 .m-i-top-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    margin-left: -40px;
+    padding: 5px;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    background: #fff;
+}
+
+.marketing .marketing-item-3 {
+    margin: 5% 20%;
+    width: 60%;
+}
+
+.marketing .marketing-item-3 .m-i-h3 {
+    margin: 15px 0;
+    font-size: 18px;
+    text-align: left;
+    color: #3E3D54;
+}
+.marketing .marketing-item-3 p {
+    padding: 15px 0;
+}
+.marketing .marketing-item-3 .m-i-top-icon {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    font-size: 42px;
+}
+.ivu-icon-laptop:before {
+    content: "\F1FC";
+}
+.ivu-icon-android-locate:before {
+    content: "\F2E9";
+}
+
+.marketing .marketing-item-4 {
+    flex:1;
+    color: #3E3D54;
+}
+
+.marketing .marketing-item-4 .ivu-card{
+    height: 440px;
+    padding: 30px
+}
+.marketing .marketing-item-4 .m-i-h3 {
+    margin: 15px 0;
+    padding: 3px 0;
+    font-size: 14px;
+    text-align: left;
+    color: #FD3333;
+    border-left: 5px solid #FD3333;
+}
+.marketing .marketing-item-4 .m-i-h3 span {
+    margin: 0 10px
+}
+.marketing .marketing-item-4 .channels-list {
+    padding: 15px 0;
+    font-size: 12px;
+}
+.marketing .marketing-item-4 .channels-list dl {
+    margin: 15px 0
+}
+.marketing .marketing-item-4 .channels-list dt {
+    margin: 5px 0;
+    font-weight: 200;
+}
+.marketing .marketing-item-4 p {
+    padding: 15px 0;
+}
+
+.marketing .marketing-item-5 {
+    width: 100%;
+}
+
+.marketing .marketing-item-5 .ivu-card {
+    padding: 3% 15%;
+}
+.marketing .marketing-item-5 .ivu-card h4 {
+    margin: 10px 0 30px;
+    text-align: center;
+    color: #3E3D54;
+    font-size: 24px;
+}
+.marketing .marketing-item-5 .ivu-card li {
+    margin: 10px;
+    float: left;
+    height: 30px;
+}
+.marketing .marketing-item-5 .ivu-card li a {
+    height: 100%;
+}
+.marketing .marketing-item-5 .ivu-card li img{
+    width: auto;
+    height: 100%;
+}
 
 
 
@@ -1592,16 +1764,19 @@ hr {
     .landing-page .navbar-wrapper .navbar {
         border-radius: 4px;
     }
-    .landing-page .carousel-caption p {
+    .landing-page .home .carousel-caption p {
         margin: 50px 0;
         font-size: 14px;
         line-height: 1.4;
     }
-    .landing-page .carousel-caption .focus-text p {
+    .landing-page .home .carousel-caption .focus-text p {
         margin: 0;
     }
-    .landing-page .featurette-heading {
+    .landing-page .home .featurette-heading {
         font-size: 50px;
+    }
+    .landing-page .marketing .carousel-caption p {
+        margin: 40px 0;
     }
 }
 @media (max-width: 992px) {
