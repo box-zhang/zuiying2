@@ -923,11 +923,11 @@
 
 .activity-sign-nav .activity-sign-list {
     margin-bottom: 10px;
-    overflow: hidden
 }
 
 .activity-sign-nav .activity-sign-list .activity-sing-label {
-    float: left;
+    position: relative;
+    display: inline-block;
     margin: 0 10px
 }
 

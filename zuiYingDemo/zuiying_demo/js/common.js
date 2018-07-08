@@ -38,8 +38,8 @@ $(document).ready(function () {
         selectDown.find('li').click(function () {
             var txt = $(this).text();
             console.log(txt);
-            selectBox.find('span').html(txt).addClass('ivu-select-selected-value').removeClass('ivu-select-placeholder');
-            selectBox.find('input').val(txt);
+            _this.find('span').html(txt).addClass('ivu-select-selected-value').removeClass('ivu-select-placeholder');
+            _this.find('input').val(txt);
             selectDown.slideUp("fast");
         });
 
