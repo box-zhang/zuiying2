@@ -14,7 +14,7 @@ $(document).ready(function () {
     });
 
     // Page scrolling feature
-    $('a.page-scroll').bind('click', function (event) {
+    $('a.page-scroll').bind('click', function (e) {
         var link = $(this);
         $('html, body').stop().animate({
             scrollTop: $(link.attr('href')).offset().top - 50
@@ -26,21 +26,21 @@ $(document).ready(function () {
     // selected
     var selectBox = $('.ivu-select');
     selectBox.bind('click', function (e) {
-        var _this=$(this);
-        var selectDown = _this.find('.ivu-select-dropdown');
-        if (selectDown.css("display") == "none") {
-            selectDown.slideDown("fast");
+        var _this = $(this);
+        var _selectDown = _this.find('.ivu-select-dropdown');
+        if (_selectDown.css("display") == "none") {
+            _selectDown.slideDown("fast");
             _this.addClass('ivu-select-visible');
         } else {
-            selectDown.slideUp("fast");
+            _selectDown.slideUp("fast");
             _this.removeClass('ivu-select-visible');
         }
-        selectDown.find('li').click(function () {
+        _selectDown.find('li').click(function () {
             var txt = $(this).text();
             console.log(txt);
             _this.find('span').html(txt).addClass('ivu-select-selected-value').removeClass('ivu-select-placeholder');
             _this.find('input').val(txt);
-            selectDown.slideUp("fast");
+            _selectDown.slideUp("fast");
         });
 
     });
@@ -61,7 +61,6 @@ $(document).ready(function () {
                 _this.find('input').attr('checked', 'true');
             }
         })()
-
     });
     //input
     (function () {
@@ -74,16 +73,199 @@ $(document).ready(function () {
 
             }
         });
-        $(":input").blur(function(){
-            if (_this.val()==''&& !_this.parents('.ivu-form-item').hasClass('ivu-form-item-error')) {
+        $(":input").blur(function () {
+            if (_this.val() == '' && !_this.parents('.ivu-form-item').hasClass('ivu-form-item-error')) {
                 _this.parents('.ivu-form-item').addClass('ivu-form-item-error');
-                _this.parents('.ivu-form-item-content').append('<div class="ivu-form-item-error-tip">'+'请输入...'+'</div>');
+                _this.parents('.ivu-form-item-content').append('<div class="ivu-form-item-error-tip">' + '请输入...' + '</div>');
             }
-            if(_this.find('.ivu-form-item-error-tip')){
+            if (_this.find('.ivu-form-item-error-tip')) {
             }
         });
     })();
+    //brn-show
+    var btnShow = $('.btnShow');
+    btnShow.bind('click', function (e) {
+        console.log(0);
+        if ($('.activity-sign-list').hasClass('active')) {
+            $('.activity-sign-list').removeClass('active');
+        } else {
+            $('.activity-sign-list').addClass('active');
+        }
+    });
+    // video
 
+    /*if('https:' == document.location.protocol) {
+        document.write("<script type='text/javascript' charset='utf-8' src='https://s.yuntv.letv.com/player/vod/bcloud.js'></script>");
+    } else {
+        document.write("<script type='text/javascript' charset='utf-8' src='http://yuntv.letv.com/player/vod/bcloud.js'></script>");
+    }
+    var videoPlay = {
+        opts:{
+            concernid:'',
+            albumId:0,
+            subscribeApi:'',
+            concernApi:'',
+            commentApi:'',
+            collectApi:'',
+            loginApi:'/site/login.html',
+            isLogin:0
+        },
+        subscribe:function(){
+            $('#subscribe').click(function(){
+                var subscribeObj = this;
+                if(! videoPlay.opts.isLogin) {videoPlay.login();return;}
+                //判断是否已经订阅
+                var isSubscribe = parseInt($(this).data('subscribe'));
+                if(isSubscribe > 0) return ;
+                $.post(videoPlay.opts.subscribeApi,{albumId:videoPlay.opts.albumId},function(result){
+                    console.log(result);
+                    if(result.code != 200) {alert(result.resultDesc);return;}
+                    $(subscribeObj).html('已订阅');
+                    $(subscribeObj).data('subscribe',1);
+                    $(subscribeObj).removeClass('hand');
+                    //订阅数加1
+                    var subscribeNumObj = $('#subscribe-num'),
+                        subscribeNum    = parseInt(subscribeNumObj.data('subscribe-num')) + 1;
+                    subscribeNumObj.data('subscribe-num',subscribeNum);
+                    videoPlay.parseSubscribeNum();
+                },'json');
+            });
+        },
+        concern:function () {
+            $('#concern').click(function () {
+                var concernObj = this;
+                if(! videoPlay.opts.isLogin) {videoPlay.login();return;}
+                //判断是否已经关注
+                var isConcern = $(this).data('concern');
+                if(isConcern) return;
+                $.post(videoPlay.opts.concernApi,{concernid:videoPlay.opts.concernid},function(result){
+                    console.log(result);
+                    if(result.code != 200) {alert(result.resultDesc);return;}
+                    $(concernObj).html('已关注');
+                    $(concernObj).data('concern',1);
+                    $(concernObj).removeClass('hand');
+                    //订阅数加1
+                    var concernNumObj = $('#concernNum'),
+                        concernNum    = parseInt(concernNumObj.data('concern-num')) + 1;
+                    concernNumObj.data('concern-num',concernNum);
+                    videoPlay.parseconcernNum();
+                },'json');
+
+            });
+        },
+        comment:function(){
+            $('#comment').click(function(){
+                if(! videoPlay.opts.isLogin) {videoPlay.login();return;}
+                var content = $.trim($('#comment-input').val()),
+                    contentLength = content.length;
+                if(! contentLength) return;
+                $.post(videoPlay.opts.commentApi,{albumId:videoPlay.opts.albumId,content:content},function(result){
+                    if(result.code != 200){alert(result.resultDesc);return;}
+                    //删除评论框内容
+                    $('#comment-input').val('');
+                    //刷新最新评论
+                    comment.isInit = false;
+                    comment.currentPage = 0;
+                    comment.get_data();
+                },'json');
+            });
+        },
+        collect:function(){
+            $('#collect').click(function(){
+                var collectObj = this;
+                if(! videoPlay.opts.isLogin) {videoPlay.login();return;}
+                var isCollected = parseInt($(this).data('collected'));
+                if(isCollected > 0) return ;
+                $.post(videoPlay.opts.collectApi,{albumId:videoPlay.opts.albumId},function(result){
+                    if(result.code != 200){alert(result.resultDesc);return;}
+
+                    //$(collectObj).text('已收藏');
+                    $(collectObj).data('collected',1);
+                    $(collectObj).addClass('collections');
+                    $(collectObj).removeClass('hand');
+                    $(collectObj).removeClass('collection');
+                },'json');
+            });
+        },
+        parseSubscribeNum:function(){
+            var subscribeObj = $('#subscribe-num'),
+                subscribeNum = parseInt(subscribeObj.data('subscribe-num'));
+            if(subscribeNum >= 10000){
+                subscribeNum = (subscribeNum / 10000).toFixed(1) + '万';
+            }
+
+            subscribeNum += " 粉丝";
+            subscribeObj.html(subscribeNum);
+        },
+        parseconcernNum:function () {
+            var  concernObj = $("#concernNum"),
+                concernNum = parseInt(concernObj.data('concern-num'));
+            if(concernNum >= 10000){
+                concernNum = (concernNum / 10000).toFixed(1) + '万';
+            }
+
+            concernNum += " 粉丝";
+            concernObj.html(concernNum);
+
+        },
+        login:function(){
+            location.href = this.opts.loginApi;
+        },
+        init:function(opts){
+            $.extend(this.opts,opts);
+            this.subscribe();
+            this.concern();
+            this.comment();
+            this.collect();
+            this.parseSubscribeNum();
+        }
+    };
+    $.videoPlay = function(opt){
+        videoPlay.init(opt);
+        return videoPlay;
+    };*/
+    //加载播放器
+    /*var uu  = $('#video-play').data('uu'),
+        vu  = $('#video-play').data('vu'),
+        snum = $('#video-play').data('snum'),
+        lecloud_player_conf = {
+            vu:vu,
+            // uu:uu,
+            // auto_play:1,
+            //"gpcflag":1,
+            "width": $('#video-play').width(),
+            "height":$('#video-play').height(),
+        },
+        player = new CloudVodPlayer();
+    if (snum == 0) {
+        lecloud_player_conf['uu'] = 'fvaz7udkhj';
+        lecloud_player_conf['pu'] = 'e7ecb80b17';
+    }
+    if (snum == 1) {
+        lecloud_player_conf['uu'] = 'fvaz7udkhj';
+        lecloud_player_conf['p']  = '102';
+        lecloud_player_conf['pu'] = '3108';
+    }
+    if (snum == 2) {
+        lecloud_player_conf['uu'] = '624310fa63';
+        lecloud_player_conf['pu'] = '31ff838ee5';
+    }
+    player.init(lecloud_player_conf,'video-play');
+
+    //播放选集
+    $('.albums').click(function(){
+        var uu = $(this).data('uu'),
+            vu = $(this).data('vu');
+
+        var videoid = $(this).data('videoid');
+        var albumid = $(this).data('albumid');
+        player.sdk.playNewId({uu:uu,vu:vu});
+        //修改样式
+        $('.albums').removeClass('active');
+        $(this).addClass('active');
+        clickrate(videoid,albumid);
+    });*/
+    // video end
     var cbpAnimatedHeader = (function () {
         var docElem = document.documentElement,
             header = document.querySelector('.navbar-default'),

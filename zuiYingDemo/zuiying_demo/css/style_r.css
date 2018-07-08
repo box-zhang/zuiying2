@@ -924,6 +924,11 @@
 .activity-sign-nav .activity-sign-list {
     margin-bottom: 10px;
 }
+.activity-sign-nav .activity-sign-list.active {
+    height: 30px;
+    overflow: hidden;
+    transition: height .2s ease-in-out;
+}
 
 .activity-sign-nav .activity-sign-list .activity-sing-label {
     position: relative;
@@ -1821,13 +1826,12 @@ dl dt {
 }
 
 .video-detailed {
-    margin-top: 45px;
     font-size: 14px;
     line-height: 28px
 }
 
 .video-detailed .video-detailed-top,
-.video-detailed overflow-hidden {
+.video-detailed .overflow-hidden {
     background: #3e3d54
 }
 
@@ -1851,8 +1855,10 @@ dl dt {
 }
 
 .video-detailed .video-inf .video-title .label {
+    padding: 3px 0;
     margin-bottom: 5px;
-    color: #786e6e
+    color: #786e6e;
+    font-size: 14px;
 }
 
 .video-detailed .video-inf .video-title .label-i {

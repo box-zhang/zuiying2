@@ -1042,11 +1042,10 @@ button.dim:active:before {
   outline: none !important;
 }
 .label {
-  background-color: #d1dade;
+  /*background-color: #d1dade;*/
   color: #5e5e5e;
   font-family: 'Open Sans';
   font-size: 10px;
-  
   padding: 3px 8px;
   text-shadow: none;
 }
