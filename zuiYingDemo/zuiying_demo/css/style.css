@@ -40,6 +40,28 @@ h5 {
   
 }
 
+@font-face {
+  font-family: Ionicons;
+  src: url(../fonts/ionicons.2c2ae06.eot);
+  src: url(../fonts/ionicons.2c2ae06.eot#iefix) format("embedded-opentype"), url(../fonts/ionicons.24712f6.ttf) format("truetype"), url(../fonts/ionicons.05acfdb.woff) format("woff"), url(../static/img/ionicons.621bd38.svg#Ionicons) format("svg");
+  font-weight: 400;
+  font-style: normal
+}
+
+.ivu-icon {
+  display: inline-block;
+  font-family: Ionicons;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
 .nav > li > a {
   /*color: #a7b1c2;*/
   /*padding: 14px 20px 14px 25px;*/
@@ -49,8 +71,8 @@ h5 {
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus {
-  background-color: #293846;
-  color: white;
+  /*background-color: #293846;*/
+  /*color: white;*/
 }
 .nav .open > a,
 .nav .open > a:hover,
@@ -159,7 +181,7 @@ h5 {
 }
 .nav-header {
   padding: 33px 25px;
-  background: url("patterns/header-profile.png") no-repeat;
+  /*background: url("patterns/header-profile.png") no-repeat;*/
 }
 .pace-done .nav-header {
   transition: all 0.4s;
@@ -167,6 +189,10 @@ h5 {
 .nav > li.active {
   border-left: 4px solid #19aa8d;
   background: #293846;
+}
+.nav li:hover,
+.nav li a:hover {
+  background-color: transparent!important;
 }
 .nav.nav-second-level > li.active {
   border: none;
@@ -2412,7 +2438,7 @@ label.error {
 }
 #toast-container > .toast:before {
   position: fixed;
-  font-family: FontAwesome;
+  font-family: Ionicons;
   font-size: 24px;
   line-height: 24px;
   float: left;
@@ -2421,16 +2447,16 @@ label.error {
   margin: auto 0.5em auto -1.5em;
 }
 #toast-container > .toast-warning:before {
-  content: "\f0e7";
+  content: "\F3E6";
 }
 #toast-container > .toast-error:before {
-  content: "\f071";
+  content: "\F3BC";
 }
 #toast-container > .toast-info:before {
-  content: "\f005";
+  content: "\F2FC";
 }
 #toast-container > .toast-success:before {
-  content: "\f00C";
+  content: "\F3FF";
 }
 #toast-container > div {
   -moz-box-shadow: 0 0 3px #999;
@@ -6538,28 +6564,6 @@ body.body-small .vote-icon {
   -o-transition: width 1s;
   transition: width 1s;
 }
-body.landing-page {
-  /*font-family: 'Open Sans', helvetica, arial, sans-serif;*/
-  background-color: #fff;
-}
-.landing-page {
-  /* CUSTOMIZE THE NAVBAR
-  -------------------------------------------------- */
-  /* Flip around the padding for proper display in narrow viewports */
-  /* BACKGROUNDS SLIDER
-  -------------------------------------------------- */
-  /* CUSTOMIZE THE CAROUSEL
-  -------------------------------------------------- */
-  /* Carousel base class */
-  /* Since positioning the image, we need to help out the caption */
-  /* Declare heights because of positioning of img element */
-  /* Sections
-  ------------------------- */
-  /* Buttons - only primary custom button
-  ------------------------- */
-  /* RESPONSIVE CSS
-  -------------------------------------------------- */
-}
 .landing-page span.navy {
   color: #ff5757;
 }
@@ -6612,6 +6616,14 @@ body.landing-page {
   -webkit-transition:all 0.3s ease-in-out 0s; /* Safari and Chrome */
   -o-transition:all 0.3s ease-in-out 0s; /* Opera */
   transition: all 0.3s ease-in-out 0s;
+}
+.nabar-bg .page-scroll {
+  color: #fff!important;
+}
+.nabar-bg .page-scroll:hover,
+.nabar-bg .page-scroll:active {
+  color: #fff!important;
+  background: rgba(0,0,0,0.6)!important;
 }
 .landing-page .navbar-default.navbar-scroll {
   padding: 15px 0;

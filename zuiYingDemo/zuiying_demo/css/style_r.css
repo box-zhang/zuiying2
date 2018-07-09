@@ -1014,7 +1014,7 @@
 }
 
 .treaty-box {
-    margin: 50px auto;
+    margin: 120px auto;
     padding: 50px;
     width: 100%;
     line-height: 24px
@@ -1044,7 +1044,7 @@
 }
 
 .treaty-box .choice .ivu-btn {
-    width: 200px
+    margin: 10px;
 }
 
 dl,
@@ -1058,6 +1058,7 @@ dl dt {
 
 .service .service-text {
     padding: 35px 40px 100px;
+    font-size: 14px;
     line-height: 28px
 }
 
@@ -1067,7 +1068,7 @@ dl dt {
 }
 
 .service .service-text p.margin-tb20 {
-    margin: 20px 0
+    margin: 20px 0;
 }
 
 .service .choose {
@@ -1075,7 +1076,7 @@ dl dt {
 }
 
 .service .choose .ivu-btn {
-    width: 150px
+    width: 200px
 }
 
 .ivu-tabs-nav .ivu-tabs-tab-active,
@@ -1113,21 +1114,20 @@ dl dt {
 .ivu-tabs-tabpane .addr {
     clear: both
 }
-
+.service .service-text,
 .marketing-list,
 .service-list {
-    margin-left: 30px;
     margin-bottom: 10px
 }
 
 .marketing-list h2,
 .service-list h2 {
-    margin-bottom: 20px
+    margin-bottom: 25px
 }
 
 .marketing-list li,
 .service-list li {
-    margin: 15px 5px
+    margin: 15px 5px;
 }
 
 .marketing-list a.about-link,
@@ -1138,12 +1138,15 @@ dl dt {
     border-radius: 100px;
     text-align: center;
     color: #fff;
-    line-height: 20px
+    font-size: 14px;
+    line-height: 20px;
+    transition: background 1.5s ease-in-out
 }
 
 .marketing-list a.about-link:hover,
 .service-list a.about-link:hover {
-    background-image: linear-gradient(-90deg, #ec2039, #2d2952)
+    background-image: linear-gradient(-90deg, #ec2039, #2d2952);
+    transition: background 1.5s ease-in-out
 }
 
 .service-list h2 {
@@ -1155,9 +1158,9 @@ dl dt {
 }
 
 .marketing-list ul li {
-    margin: 5px 1% 30px;
+    margin: 5px .5% 30px;
     float: left;
-    width: 23%;
+    width: 24%;
     font-size: 12px;
     text-align: center
 }
@@ -2018,7 +2021,7 @@ dl dt {
 }
 
 .settings {
-    margin: 65px 0 0
+    margin: 120px 0 100px
 }
 
 .settings .icon-p {
@@ -2115,10 +2118,11 @@ dl dt {
 }
 
 .settings-nav .settings-nav-list .settings-nav-tab {
-    margin: 10px 15px;
-    padding: 15px 20px;
+    margin: 10px 2%;
+    padding: 15px 20%;
+    width: 84%;
     border-radius: 100px;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .settings-nav .settings-nav-list .settings-nav-tab.active,
@@ -2132,7 +2136,6 @@ dl dt {
 }
 
 .settings-router {
-    border-left: 1px solid #eaeaea;
     padding: 0 0 100px 50px
 }
 
@@ -2273,12 +2276,12 @@ dl dt {
     margin: 10px 0
 }
 
-.form-reset-avator[data-v-5025960e] {
+.form-reset-avator {
     margin: 0 auto 50px;
     text-align: center
 }
 
-.form-reset-avator .ivu-avatar[data-v-5025960e] {
+.form-reset-avator .ivu-avatar {
     margin: 20px 0;
     width: 100px;
     height: 100px;
@@ -2286,7 +2289,7 @@ dl dt {
 }
 
 .set-account {
-    padding: 80px;
+    padding: 80px 20px;
     text-align: center
 }
 
@@ -2976,28 +2979,6 @@ kbd,
 pre,
 samp {
     font-family: Consolas, Menlo, Courier, monospace
-}
-
-@font-face {
-    font-family: Ionicons;
-    src: url(../fonts/ionicons.2c2ae06.eot);
-    src: url(../fonts/ionicons.2c2ae06.eot#iefix) format("embedded-opentype"), url(../fonts/ionicons.24712f6.ttf) format("truetype"), url(../fonts/ionicons.05acfdb.woff) format("woff"), url(../static/img/ionicons.621bd38.svg#Ionicons) format("svg");
-    font-weight: 400;
-    font-style: normal
-}
-
-.ivu-icon {
-    display: inline-block;
-    font-family: Ionicons;
-    speak: none;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    text-rendering: auto;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
 }
 
 .ivu-icon-alert:before {
@@ -6673,7 +6654,6 @@ samp {
     -ms-user-select: none;
     user-select: none;
     padding: 6px 15px;
-    font-size: 12px;
     border-radius: 4px;
     transition: color .2s linear, background-color .2s linear, border .2s linear, box-shadow .2s linear;
     color: #495060;
@@ -9275,6 +9255,9 @@ span.ivu-radio+* {
 .ivu-checkbox-small .ivu-checkbox-inner:after {
     top: 0;
     left: 3px
+}
+.activity-sign .ivu-form-item-error .ivu-checkbox-inner {
+    border-color:#ff4545
 }
 
 .ivu-checkbox-input {
@@ -15898,14 +15881,14 @@ html {
 }
 
 .bg-pink {
-    background: #FFF4F5;
+    background: #FFF4F5!important;
 }
 .bg-pink .footer-wrapper {
     background: #fff;
 }
 
 .content-circle-bg {
-    padding: 25px 30px;
+    padding: 35px 30px;
     box-shadow: 0 0 8px 0 rgba(220, 220, 236, .4);
     border-radius: 15px;
     background: #fff
@@ -16260,9 +16243,15 @@ ol.text-level3 li {
     list-style-position: inside
 }
 
+ol.text-level1 li dt {
+    margin: 10px 0
+}
 ol .level-none {
     display: none;
     margin: 0 10px
+}
+.treaty-t {
+    padding: 0 3%
 }
 
 .nav-item {
@@ -19058,7 +19047,8 @@ html,body {
         font-size: 28px;
     }
     .landing-page .navbar.navbar-scroll .navbar-brand {
-        margin-top: 6px;
+        position: absolute;
+        margin-top: 2px;
     }
     .landing-page .navbar-default {
         background-color: #fff;
@@ -19091,10 +19081,14 @@ html,body {
         padding: 20px 10px;
     }
     .landing-page .navbar .navbar-brand {
-        margin-top: 6px;
+        position: absolute;
+        margin-top: 2px;
         border-radius: 5px;
         padding: 10px;
         height: auto;
+    }
+    .navbar-collapse {
+        padding-left: 30px!important;
     }
     .landing-page .navbar-wrapper .navbar {
         padding-left: 15px;
@@ -19526,6 +19520,34 @@ body.rtls.top-navigation .footer.fixed {
     .login-wrapper .main {
         margin: 0 auto;
         width: 80%;
+    }
+    .video-play {
+        width: 100%
+    }
+    .video-detailed .video-inf .video-introduce-text {
+        padding: 10px 10px 20px 10px;
+    }
+    .video-detailed .video-inf {
+        margin: 10px
+    }
+    .settings-router {
+        padding: 0
+    }
+    .settings-router .form-reset {
+        width: 80%;
+    }
+    .settings-nav .settings-nav-list .settings-nav-tab {
+        padding: 5px 2%;
+        width: 5rem;
+    }
+    .content-circle-bg {
+        padding: 25px 15px
+    }
+    .treaty-box ol {
+        padding: 5px 0
+    }
+    ol.text-level2 li {
+        margin: 5px 0
     }
 }
 @media (max-width: 350px) {
