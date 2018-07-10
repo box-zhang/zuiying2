@@ -114,6 +114,7 @@ $(document).ready(function () {
     // selected
     var selectBox = $('.ivu-select');
     var checkboxBox = $('.ivu-checkbox-wrapper');
+    var radioItem = $('.ivu-radio-wrapper');
     var btnShow = $('.btnShow');
     selectBox.bind('click', function (e) {
         var _this = $(this);
@@ -137,20 +138,33 @@ $(document).ready(function () {
     //checkbox
     checkboxBox.bind('click', function (e) {
         var _this = $(this);
-        (function () {
-            if (_this.hasClass('ivu-checkbox-wrapper-checked')) {
-                _this.removeClass('ivu-checkbox-wrapper-checked');
-                _this.find('.ivu-checkbox').removeClass('ivu-checkbox-checked');
-                _this.find('input').prop('checked', false);
-            } else {
-                _this.addClass('ivu-checkbox-wrapper-checked');
-                _this.find('.ivu-checkbox').addClass('ivu-checkbox-checked');
-                _this.parent().parent().removeClass('ivu-form-item-error');
-                _this.find('.ivu-form-item-error-tip').remove();
+        if (_this.hasClass('ivu-checkbox-wrapper-checked')) {
+            _this.removeClass('ivu-checkbox-wrapper-checked');
+            _this.find('.ivu-checkbox').removeClass('ivu-checkbox-checked');
+            _this.find('input').prop('checked', false);
+        } else {
+            _this.addClass('ivu-checkbox-wrapper-checked');
+            _this.find('.ivu-checkbox').addClass('ivu-checkbox-checked');
+            _this.parent().parent().removeClass('ivu-form-item-error');
+            _this.find('.ivu-form-item-error-tip').remove();
+            _this.find('input').prop('checked', true);
+        }
+    });
+    //radioBox
+    radioItem.bind('click', function (e) {
+        var _this = $(this);
+        var radioBox = _this.parent('.ivu-radio-group');
+        var radioBoxItem = radioBox.find('.ivu-radio-group-item');
+        for (var i = 0; i < radioBoxItem.length; i++) {
+            if (_this.index() == i) {
+                _this.addClass('ivu-radio-wrapper-checked');
+                _this.find('.ivu-radio').addClass('ivu-radio-checked');
                 _this.find('input').prop('checked', true);
+                _this.siblings().removeClass('ivu-radio-wrapper-checked');
+                _this.siblings().find('.ivu-radio').removeClass('ivu-radio-checked');
+                _this.siblings().find('input').prop('checked', false);
             }
-            // console.log(_this.find('input').prop('checked'))
-        })(e)
+        }
     });
     //input
     (function () {
@@ -219,5 +233,19 @@ $(document).ready(function () {
     // video
 
     // video end
+    var viewport = document.querySelector("meta[name=viewport]");
+    //下面是根据设备像素设置viewport
+    if (window.devicePixelRatio == 1) {
+        viewport.setAttribute('content', 'width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no');
+    }
+    if (window.devicePixelRatio == 2) {
+        viewport.setAttribute('content', 'width=device-width,initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no');
+    }
+    if (window.devicePixelRatio == 3) {
+        viewport.setAttribute('content', 'width=device-width,initial-scale=0.3333333333333333, maximum-scale=0.3333333333333333, minimum-scale=0.3333333333333333, user-scalable=no');
+    }
+    var docEl = document.documentElement;
+    var fontsize = 10 * (docEl.clientWidth / 320) + 'px';
+    docEl.style.fontSize = fontsize;
 
 });
