@@ -608,8 +608,8 @@
     position: relative;
     z-index: 0;
     margin-top: -100px;
-    padding: 180px 0 20px;
-    background: #fff4f5
+    padding: 150px 0 100px;
+    background: #fbebed
 }
 
 .home-service .service-list {
@@ -631,6 +631,7 @@
     padding: 30px 40px;
     background: #fff;
     border-radius: 10px;
+    box-shadow: 0px 0px 30px 0px #ddd;
     overflow: hidden;
 }
 
@@ -689,7 +690,8 @@
 }
 
 .footer-wrapper .footer-main {
-    padding: 80px 10px 25px
+    padding: 80px 10px 25px;
+    font-size: 16px
 }
 .footer-wrapper .main {
     width: 1240px;
@@ -962,9 +964,10 @@
     font-size: 18px;
     color: red
 }
-
+.activity .video-article p,
 .activity .video-article {
-    padding: 40px;
+    margin: 40px;
+    font-size: 14px;
     line-height: 30px
 }
 
@@ -986,7 +989,6 @@
 }
 
 .activity .video-article p {
-    margin: 30px 0;
     text-indent: 2rem
 }
 
@@ -1122,7 +1124,9 @@ dl dt {
 
 .marketing-list h2,
 .service-list h2 {
-    margin-bottom: 25px
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .marketing-list li,
@@ -1170,7 +1174,7 @@ dl dt {
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    background: #eee;
+    background: #ddd;
     overflow: hidden
 }
 
@@ -8564,6 +8568,7 @@ fieldset[disabled] .ivu-btn-info>a:only-child:after {
 }
 
 .ivu-card {
+	/*padding: 10px 25px; */
     background: #fff;
     border-radius: 4px;
     font-size: 14px;
@@ -15846,7 +15851,8 @@ html {
     line-height: 1;
     font-weight: 200;
     font-family: PingFang SC, STHeitiSC-Light, Helvetica-Light, arial, sans-serif;
-    color: #3e3d54
+    color: #3e3d54;
+    font-size: 14px;
 }
 
 .clearfix {
@@ -15887,7 +15893,7 @@ html {
 }
 
 .bg-pink {
-    background: #FFF4F5!important;
+    background: #fbebed!important;
 }
 .bg-pink .footer-wrapper {
     background: #fff;
@@ -16050,7 +16056,7 @@ html {
 
 .ivu-icon {
     font-size: 18px;
-    color: rgba(0, 0, 0, .25)
+    color: #ccc
 }
 
 .form-icon .ivu-input {
@@ -16101,7 +16107,10 @@ html {
     margin: 10px 0;
     display: inline-block;
     color: #786e6e;
-    line-height: 24px
+    line-height: 24px;
+    /*background: #fff;*/
+    border-radius: 10px;
+    box-shadow: 0 0 18px 0 rgba(220, 220, 236, .6);
 }
 
 .card .ivu-card-head {
@@ -16159,8 +16168,8 @@ html {
 }
 
 .ivu-card {
-    border: 1px solid hsla(240, 8%, 44%, .08);
-    box-shadow: 0 0 8px 0 rgba(220, 220, 236, .4);
+    border: 1px solid hsla(240, 8%, 44%, .1);
+    box-shadow: 0 0 8px 0 rgba(220, 220, 236, .6);
     border-radius: 10px
 }
 
@@ -16270,7 +16279,7 @@ ol .level-none {
 
 .ivu-modal-header h2 {
     padding: 5px;
-    font-weight: 700
+    font-size: 18px
 }
 
 .ivu-modal-footer {
@@ -18756,13 +18765,18 @@ c
     margin: 60px 0;
 }
 .marketing-item-1 {
+	margin: 20px 0;
     padding: 5%;
     flex:1;
     width: 100%;
     text-align: center;
 }
+.marketing-item-1 .ivu-card {
+	padding: 20px 20px; 
+}
+
 .row .card {
-    width: 100%;
+    width: 96%;
 }
 
 .marketing {
@@ -18774,8 +18788,7 @@ c
 
 .marketing .marketing-item-1 .ivu-card {
     min-height: 260px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 20px;
 }
 .marketing .marketing-item-1 .m-i-h3 {
     padding: 20px 0;
@@ -18797,6 +18810,9 @@ c
 .marketing .marketing-item-2 {
     margin: 1%;
     flex:1;
+}
+.marketing .marketing-item-2 .ivu-card {
+	padding: 20px 30px; 
 }
 
 .marketing .marketing-item-2 .m-i-h3 {
@@ -18822,8 +18838,12 @@ c
 }
 
 .marketing .marketing-item-3 {
-    margin: 5% 20%;
-    width: 60%;
+	display: block;
+    margin: 5% auto;
+    width: 80%;
+}
+.marketing .marketing-item-3 .ivu-card {
+	padding: 20px 12%; 
 }
 
 .marketing .marketing-item-3 .m-i-h3 {
@@ -18838,7 +18858,7 @@ c
 .marketing .marketing-item-3 .m-i-top-icon {
     position: absolute;
     top: 20px;
-    right: 30px;
+    right: 12%;
     padding: 5px;
     width: 50px;
     height: 50px;
@@ -18855,6 +18875,7 @@ c
 .marketing .marketing-item-4 {
     flex:1;
     color: #3E3D54;
+    text-align: left;
 }
 
 .marketing .marketing-item-4 .ivu-card{
@@ -18891,8 +18912,11 @@ c
     width: 100%;
 }
 
+.marketing .marketing-item-5 .flex-box.flex-wrap {
+    justify-content: center;
+}
 .marketing .marketing-item-5 .ivu-card {
-    padding: 3% 15%;
+    padding: 3% 8%;
 }
 .marketing .marketing-item-5 .ivu-card h4 {
     margin: 10px 0 30px;
@@ -18901,9 +18925,9 @@ c
     font-size: 24px;
 }
 .marketing .marketing-item-5 .ivu-card li {
-    margin: 10px;
+    margin: 15px 20px;
     float: left;
-    height: 30px;
+    height: 36px;
 }
 .marketing .marketing-item-5 .ivu-card li a {
     height: 100%;
@@ -18928,10 +18952,10 @@ c
     position: relative;
 }
 .phone-box .ivu-icon {
-    color: #efefef;
+    color: #ddd;
 }
 .phone-box .ivu-input-group .ivu-input {
-    padding-left: 70px;
+    padding-left: 65px;
 }
 .phone-box .phone-nc {
     position: absolute;
@@ -19543,6 +19567,45 @@ body.rtls.top-navigation .footer.fixed {
     ol.text-level2 li {
         margin: 5px 0
     }
+    .marketing {
+    	padding-bottom: 50px
+    }
+
+	.marketing .marketing-item-5 .ivu-card li {
+	    margin: 15px 10px;
+	    float: left;
+	    height: 26px;
+	}
+	.footer-wrapper .footer-main .footer-list dt {
+		font-size: 14px
+	}
+	.show-top-m,
+	.show-bottom-m {
+		height: 10px
+	}
+
+	.circle-box .circle {
+	    width: 300px;
+	    height: 300px;
+	    border-radius: 300px;
+	    border: 40px solid rgba(255, 66, 90, .06)
+	}
+	.circle-massive .circle {
+		width: 300px;
+	    height: 300px;
+	    border-radius: 300px;
+	}
+	.circle-massive .circle2 {
+    	float: right;
+    	margin-right: -60px;
+	}
+	.circle-massive .mini-circle.mini3 {
+		top: 19px;
+	}
+	.circle-massive .mini-circle.mini4 {
+		bottom: -1px
+	}
+
 }
 @media (max-width: 350px) {
     .timeline-item .date {

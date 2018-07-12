@@ -370,6 +370,9 @@
 
         feedVal: function () {
             this.$element.val(this.getVal());
+            this.$element.parents('.ivu-select').removeClass('ivu-form-item-error');
+            this.$element.parents('.ivu-select').find('.ivu-form-item-error-tip').remove()
+
         },
 
         output: function (type) {
