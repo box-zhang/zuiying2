@@ -17,13 +17,11 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
-    <link href="css/plugins/cityPicker/city-picker.css" rel="stylesheet">
     <link href="css/style_r.css" rel="stylesheet">
 </head>
-<body id="page-top" class="landing-page spread">
+<body id="page-top" class="landing-page bg-pink">
 
-<div class="navbar-wrapper nabar-bg">
+<div class="navbar-wrapper">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header page-scroll">
@@ -82,119 +80,263 @@
         </div>
     </nav>
 </div>
+<div id="carousel1" class="carousel carousel-fade show" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel1" data-slide-to="1"></li>
+        <li data-target="#carousel1" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption">
+                    <div class="focus-text"><h4>标题</h4>
+                        <p>文字文字文字0000000</p></div>
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back one"></div>
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption">
+                    <div class="focus-text"><h4>标题</h4>
+                        <p>文字文字文字121212</p></div>
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back two"></div>
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption">
+                    <div class="focus-text"><h4>标题</h4>
+                        <p>文字文字文字33333332</p></div>
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back three"></div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#carousel1" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">上一页</span>
+    </a>
+    <a class="right carousel-control" href="#carousel1" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">下一页</span>
+    </a>
+</div>
 <section>
     <div class="container main">
-        <div class="settings">
-            <div class="row">
-                <div class="col-lg-3 col-sm-3 col-xs-12">
-                    <div class="settings-nav">
-                        <div class="settings-user"><span class="ivu-avatar ivu-avatar-circle ivu-avatar-large"><span
-                                class="ivu-avatar-string"
-                                style="transform: scale(1); position: absolute; display: inline-block; left: calc(50% - 0px);"></span></span>
-                            <p class="settings-user-name">xiaobai<span class="icon-p"><img
-                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH5JREFUSA3NVmtoXEUUPufuut2aZ4mWIiiKFSmJUbSUoiFuqlirVmppmsQXiEJ90RYUERSliBSUtD9KyQ+t1Fok6dI0GLCgbXeb1kIhCyJYBR8/rLYYTbVJ2m52997jN7O5r+zsZptfzo87M+d853xzzpyZuUTzbHLf43XS3n3jPM2J52MoHV3rifldEr6BSHbShL2bM8mLV+OrIrEkElHiJRtJaKF2yhTBUtcS8WNhEvmBRD7GQnxyh77ikf6zYZw/i/pDw8ha0gOSfXPnhZchA70hnEVJeNxo8KpFZSOWxLpG4vgoHN5azriyXGxynIc5feCICWeZhFrG8TfmT6o8cISsyPuS6Kw1cZRELB09zSiYt5A2pAnG5ZpQFqop4K4rB9FyoQw59jY+fmA4iPOIpbkzRoujIJQtIGwIgoxjkUEU3ddkcZ9RXyocooJsdgvOT/X12fqqSbVTZw+RvR/k50s5jJJ1FHFWuBqfuChR6auiyXd0dvIop5NTAO+vwqAIEbJdrE88HXewenEVFXtHPuKfD09rjOQ+wRm+UhHvKtly3KF/jhfadUSR4kUx4xHLOIf9XuCCvd7OH3THnD74IwqyH+RrgA0uPIdpY6heWJpcOz9iiYWLSqWFaQ/lJ5pporCMsoUWkkI7Kn6YTgz+6TrQ/VjhRcrazRqj8OPjtwH3Chb+TwhHvFVaH6pRMh0x7t47QbIpBGJW0b9H19TdQtHsa5weuiCJ7lZE8AuOgpcyZcPfJ3PoLqixarKq6yV020PRag23UtMixbNDHydZ1Y3rjTdonekj9C2ifQ4XwoNkOxmcyZQRtuKJJqqJ70AQz5r0M7Ixyhdaiql2aLQCEGuiu4ijx5C6R6mQNWKlo/sBqo2n5iBFOuQMRf6aLBbX5KVd1FDzJBiQyjKNaRFen9/4my8mgwi5Z+21sH0ZutWQ3xHUlY5FnYQ3OZ3O6og5M3wZKXwbqymUggMSsQ8FZiQdnbdTfe2HsPsV6XsevTrX5ZvwXk71n1YAv6qnZARpGq9ghUq+ctLVS6LnaVzln5M4fZwaGKSTyd/xqJxx9eZevnTlPnEMj3ylC0ToOKeH/5a2zpuwn/uw5M+wNXcTW7tR7ct1pQPjOjb24nh83kADmcNz39pBNEOS6HqKYpFTGD/jqZja8VAche5VRD8CeeioeTg1CPj3by5nCvvb8C+0i0NgPZE8srGZLGtlqU5L6qHbhT0eBQ43FsUNOCzI/zXyIuTThydQ64/AGK+OqAsh0HBtMpcj9XHMy82kcgJv8mpK9XvnX18gvmVxhL+GNhROH8haZuuubi6Xgd9KF3/ay5lMPmhrJFYAHJX78WgcAbm/HUHLqsZOLx8beN0E9VI9W8mpJCqUB2bLq5/LH5TNfVAOXzkaO7eNojF1m9Vg79WTpxZ6M7JgyJScQ2H577LQdj51aKwcscFBGCpL1yyghmjxpy8/zdTU2Ab+d0B+bxGpCKWXLuU+JbvgEevbMOwqNJuTOISemRR/DK0XsBVL8WrvdH/gTNj/new/zAqBV8xZHhQAAAAASUVORK5CYII="
-                                    height="100%" width="100%" alt=""></span></p></div>
-                        <hr>
-                        <div class="settings-nav-list">
-                            <ul>
-                                <li class="settings-nav-tab">个人主页</li>
-                                <li class="settings-nav-tab">视频管理</li>
-                                <li class="settings-nav-tab router-link-exact-active active">个人设置</li>
-                                <li class="settings-nav-tab">电影节</li>
-                                <li class="settings-nav-tab">我的账户</li>
-                                <li class="settings-nav-tab">修改密码</li>
-                            </ul>
+        <div class="label-list clearfix wow fadeInDown">
+            <ul>
+                <li class="active"><span>全部</span></li>
+                <li><span>广告</span></li>
+                <li><span>短片</span></li>
+                <li><span>短视频</span></li>
+                <li><span>MV</span></li>
+                <li><span>系列短视频</span></li>
+                <li><span>动画</span></li>
+                <li><span>纪录片</span></li>
+            </ul>
+        </div>
+        <div class="content-lr">
+            <div class="good-work wow fadeInDown">
+                <div class="card card-video">
+                    <div class="ivu-card">
+                        <div class="ivu-card-head">
+                            <div><a href="javascript:;" target="_blank" class="nav-item">
+                                <div class="card-pic"><img src="./static/img/card_video.60419c6.jpg" alt=""> <span
+                                        class="card-label">5:06</span></div>
+                            </a>
+                                <div class="card-discribe"><p class="card-name"><span class="nav-item">标题</span></p>
+                                    <div class="sign"><span>#短视频</span><i>/</i> <span>#广告</span><i>/</i>
+                                        <span>#MV</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ivu-card-body">
+                            <div class="user-inf">
+                                <dl>
+                                    <dt><a href="#/show/userID/works" class=""><span
+                                            class="ivu-avatar ivu-avatar-circle ivu-avatar-default ivu-avatar-image ivu-avatar-icon"><img
+                                            src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a></dt>
+                                    <dd><p class="user-name"><a href="#/show/userID/works" class="">尹小白</a></p></dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-9 col-sm-9 col-xs-12">
-                    <div class="settings-router">
-                        <div class="form-reset">
-                            <div class="form-reset-avator"><span
-                                    class="ivu-avatar ivu-avatar-circle ivu-avatar-large"><span
-                                    class="ivu-avatar-string"
-                                    style="transform: scale(1); position: absolute; display: inline-block; left: calc(50% - 0px);"></span></span>
-                                <p class="settings-user-name">（仅支持JPG、PNG文件小于6M）</p></div>
-                            <form autocomplete="off" class="ivu-form ivu-form-label-right">
-                                <div class="ivu-form-item"><label class="ivu-form-item-label"
-                                                                  style="width: 80px;">昵称</label>
-                                    <div class="ivu-form-item-content" style="margin-left: 80px;">
-                                        <div class="ivu-input-wrapper ivu-input-type">
-                                            <input autocomplete="off" spellcheck="false" type="text" placeholder="请输入昵称"
-                                                   class="ivu-input"></div>
-                                    </div>
+                <div class="card card-video">
+                    <div class="ivu-card">
+                        <div class="ivu-card-head">
+                            <div><a href="javascript:;" target="_blank" class="nav-item">
+                                <div class="card-pic"><img src="./static/img/card_video.60419c6.jpg" alt=""> <span
+                                        class="card-label">5:06</span></div>
+                            </a>
+                                <div class="card-discribe"><p class="card-name"><span class="nav-item">标题</span></p>
+                                    <div class="sign"><span>#短视频</span><i>/</i> <span>#广告</span><i>/</i>
+                                        <span>#MV</span></div>
                                 </div>
-                                <div class="ivu-form-item"><label class="ivu-form-item-label"
-                                                                  style="width: 80px;">性别</label>
-                                    <div class="ivu-form-item-content" style="margin-left: 80px;">
-                                        <div name="ivuRadioGroup_1531061376914_0"
-                                             class="ivu-radio-group"><label
-                                                class="ivu-radio-wrapper ivu-radio-group-item"><span
-                                                class="ivu-radio"><span class="ivu-radio-inner"></span> <input
-                                                type="radio" class="ivu-radio-input"
-                                                name="ivuRadioGroup_1531061376914_0"></span>男</label> <label
-                                                class="ivu-radio-wrapper ivu-radio-group-item"><span
-                                                class="ivu-radio"><span class="ivu-radio-inner"></span> <input
-                                                type="radio" class="ivu-radio-input"
-                                                name="ivuRadioGroup_1531061376914_0"></span>女</label></div>
-                                    </div>
-                                </div>
-                                <div class="ivu-select ivu-form-item" id="distpicker"><label class="ivu-form-item-label"
-                                                                             style="width: 80px;">所在地区</label>
-                                    <div class="ivu-form-item-content" style="margin-left: 80px;">
-                                        <div class="ivu-cascader">
-                                            <div class="ivu-cascader-rel">
-                                                <div class="ivu-input-wrapper ivu-input-type"><i class="ivu-icon ivu-icon-load-c ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
-                                                    <input id="city-picker3" data-toggle="city-picker" autocomplete="off" spellcheck="false" type="text"
-                                                           placeholder="请选择所在地区" readonly="readonly" class="ivu-input">
-                                                </div>
-                                                <div class="ivu-cascader-label" style="display: none;"></div>
-                                                <i class="ivu-icon ivu-icon-ios-close ivu-cascader-arrow"
-                                                   style="display: none;"></i> <i
-                                                        class="ivu-icon ivu-icon-arrow-down-b ivu-cascader-arrow"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ivu-form-item"><label class="ivu-form-item-label"
-                                                                  style="width: 80px;">出生日期</label>
-                                    <div class="ivu-form-item-content" style="margin-left: 80px;">
-                                        <div class="ivu-date-picker" style="width: 100%;">
-                                            <div class="ivu-date-picker-rel">
-                                                <div class="ivu-input-wrapper ivu-input-type ivu-date-picker-editor">
-                                                    <i class="ivu-icon ivu-icon-ios-calendar-outline ivu-input-icon ivu-input-icon-normal"></i>
-                                                    <input id="date_added" name='date_added' autocomplete="off"
-                                                           spellcheck="false"
-                                                           type="text" placeholder="请选择出生年月" class="ivu-input">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ivu-form-item"><label class="ivu-form-item-label"
-                                                                  style="width: 80px;">个性签名</label>
-                                    <div class="ivu-form-item-content" style="margin-left: 80px;">
-                                        <div class="ivu-input-wrapper ivu-input-type"><textarea
-                                                wrap="soft" autocomplete="off" spellcheck="false" placeholder="个性签名"
-                                                rows="2" class="ivu-input"
-                                                style="height: 52px; min-height: 52px; max-height: 115px;"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ivu-form-item">
-                                    <div class="ivu-form-item-content" style="margin-left: 80px;">
-                                        <button type="button"
-                                                class="ivu-btn ivu-btn-primary ivu-btn-circle">
-                                            <span>保存</span></button>
-                                        <button type="button"
-                                                class="btn-gray ivu-btn ivu-btn-ghost ivu-btn-circle"
-                                                style="margin-left: 8px;"><span>重置</span></button>
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
+                        </div>
+                        <div class="ivu-card-body">
+                            <div class="user-inf">
+                                <dl>
+                                    <dt><a href="#/show/userID/works" class=""><span
+                                            class="ivu-avatar ivu-avatar-circle ivu-avatar-default ivu-avatar-image ivu-avatar-icon"><img
+                                            src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a></dt>
+                                    <dd><p class="user-name"><a href="#/show/userID/works" class="">尹小白</a></p></dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="card card-video">
+                    <div class="ivu-card">
+                        <div class="ivu-card-head">
+                            <div><a href="javascript:;" target="_blank" class="nav-item">
+                                <div class="card-pic"><img src="./static/img/card_video.60419c6.jpg" alt=""> <span
+                                        class="card-label">5:06</span></div>
+                            </a>
+                                <div class="card-discribe"><p class="card-name"><span class="nav-item">标题</span></p>
+                                    <div class="sign"><span>#短视频</span><i>/</i> <span>#广告</span><i>/</i>
+                                        <span>#MV</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ivu-card-body">
+                            <div class="user-inf">
+                                <dl>
+                                    <dt><a href="#/show/userID/works" class=""><span
+                                            class="ivu-avatar ivu-avatar-circle ivu-avatar-default ivu-avatar-image ivu-avatar-icon"><img
+                                            src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a></dt>
+                                    <dd><p class="user-name"><a href="#/show/userID/works" class="">尹小白</a></p></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-video">
+                    <div class="ivu-card">
+                        <div class="ivu-card-head">
+                            <div><a href="javascript:;" target="_blank" class="nav-item">
+                                <div class="card-pic"><img src="./static/img/card_video.60419c6.jpg" alt=""> <span
+                                        class="card-label">5:06</span></div>
+                            </a>
+                                <div class="card-discribe"><p class="card-name"><span class="nav-item">标题</span></p>
+                                    <div class="sign"><span>#短视频</span><i>/</i> <span>#广告</span><i>/</i>
+                                        <span>#MV</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ivu-card-body">
+                            <div class="user-inf">
+                                <dl>
+                                    <dt><a href="#/show/userID/works" class=""><span
+                                            class="ivu-avatar ivu-avatar-circle ivu-avatar-default ivu-avatar-image ivu-avatar-icon"><img
+                                            src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a></dt>
+                                    <dd><p class="user-name"><a href="#/show/userID/works" class="">尹小白</a></p></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-video">
+                    <div class="ivu-card">
+                        <div class="ivu-card-head">
+                            <div><a href="javascript:;" target="_blank" class="nav-item">
+                                <div class="card-pic"><img src="./static/img/card_video.60419c6.jpg" alt=""> <span
+                                        class="card-label">5:06</span></div>
+                            </a>
+                                <div class="card-discribe"><p class="card-name"><span class="nav-item">标题</span></p>
+                                    <div class="sign"><span>#短视频</span><i>/</i> <span>#广告</span><i>/</i>
+                                        <span>#MV</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ivu-card-body">
+                            <div class="user-inf">
+                                <dl>
+                                    <dt><a href="#/show/userID/works" class=""><span
+                                            class="ivu-avatar ivu-avatar-circle ivu-avatar-default ivu-avatar-image ivu-avatar-icon"><img
+                                            src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a></dt>
+                                    <dd><p class="user-name"><a href="#/show/userID/works" class="">尹小白</a></p></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-video">
+                    <div class="ivu-card">
+                        <div class="ivu-card-head">
+                            <div><a href="javascript:;" target="_blank" class="nav-item">
+                                <div class="card-pic"><img src="./static/img/card_video.60419c6.jpg" alt=""> <span
+                                        class="card-label">5:06</span></div>
+                            </a>
+                                <div class="card-discribe"><p class="card-name"><span class="nav-item">标题</span></p>
+                                    <div class="sign"><span>#短视频</span><i>/</i> <span>#广告</span><i>/</i>
+                                        <span>#MV</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ivu-card-body">
+                            <div class="user-inf">
+                                <dl>
+                                    <dt><a href="#/show/userID/works" class=""><span
+                                            class="ivu-avatar ivu-avatar-circle ivu-avatar-default ivu-avatar-image ivu-avatar-icon"><img
+                                            src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a></dt>
+                                    <dd><p class="user-name"><a href="#/show/userID/works" class="">尹小白</a></p></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page wow fadeInDown">
+                <ul class="ivu-page"><span class="ivu-page-total">共 100 条</span>
+                    <li title="上一页" class="ivu-page-prev"><a><i class="ivu-icon ivu-icon-ios-arrow-left"></i></a></li>
+                    <li title="1" class="ivu-page-item"><a>1</a></li>
+                    <li title="向前 5 页" class="ivu-page-item-jump-prev"><a><i
+                            class="ivu-icon ivu-icon-ios-arrow-left"></i></a></li>
+                    <li title="4" class="ivu-page-item"><a>4</a></li>
+                    <li title="5" class="ivu-page-item"><a>5</a></li>
+                    <li title="6" class="ivu-page-item ivu-page-item-active"><a>6</a></li>
+                    <li title="7" class="ivu-page-item"><a>7</a></li>
+                    <li title="8" class="ivu-page-item"><a>8</a></li>
+                    <li title="向后 5 页" class="ivu-page-item-jump-next"><a><i
+                            class="ivu-icon ivu-icon-ios-arrow-right"></i></a></li>
+                    <li title="10" class="ivu-page-item"><a>10</a></li>
+                    <li title="下一页" class="ivu-page-next"><a><i class="ivu-icon ivu-icon-ios-arrow-right"></i></a></li>
+                    <div class="ivu-page-options">
+                        <div class="ivu-page-options-sizer">
+                            <div class="ivu-select ivu-select-single ivu-select-default">
+                                <div tabindex="0" class="ivu-select-selection"><input type="hidden" value="">
+                                    <div><span class="ivu-select-placeholder">请选择</span>   <i
+                                            class="ivu-icon ivu-icon-arrow-down-b ivu-select-arrow"></i></div>
+                                </div>
+                                <div class="ivu-select-dropdown" style="display: none;">
+                                    <ul class="ivu-select-not-found" style="display: none;">
+                                        <li>无匹配数据</li>
+                                    </ul>
+                                    <ul class="ivu-select-dropdown-list">
+                                        <li class="ivu-select-item" style="text-align: center;">10 条/页</li>
+                                        <li class="ivu-select-item" style="text-align: center;">20 条/页</li>
+                                        <li class="ivu-select-item" style="text-align: center;">30 条/页</li>
+                                        <li class="ivu-select-item" style="text-align: center;">40 条/页</li>
+                                    </ul>
+                                    <ul class="ivu-select-loading" style="display: none;">加载中</ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ivu-page-options-elevator">
+                            跳至
+                            <input type="text" autocomplete="off" spellcheck="false">
+                            页
+                        </div>
+                    </div>
+                </ul>
             </div>
         </div>
     </div>
@@ -203,7 +345,7 @@
     <div class="footer-main">
         <div class="main">
             <div class="row">
-                <div class="col-lg-6  col-sm-6  col-xs-12 wow fadeInLeft">
+                <div class="col-lg-6 col-sm-6 col-xs-12 wow fadeInLeft">
                     <div class="footer-nav">
                         <dl>
                             <dt><a href="javascript:;"><img
@@ -340,50 +482,7 @@
 <script src="js/inspinia.js"></script>
 <script src="js/plugins/pace/pace.min.js"></script>
 <script src="js/plugins/wow/wow.min.js"></script>
-<!-- Toastr script -->
-<script src="js/plugins/toastr/toastr.min.js"></script>
-<!-- Data picker -->
-<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
-<!-- city picker -->
-<script src="js/data/city-picker.data.js"></script>
-<script src="js/plugins/cityPicker/city-picker.js"></script>
 <script src="js/common.js"></script>
-<script>
-    $.fn.datepicker.dates['cn'] = {   //切换为中文显示
-        days: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
-        daysShort: ["日", "一", "二", "三", "四", "五", "六", "七"],
-        daysMin: ["日", "一", "二", "三", "四", "五", "六", "七"],
-        months: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
-        monthsShort: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
-        today: "今天",
-        clear: "清除"
-    };
-
-    $('#date_added').datepicker({
-        autoclose: true, //自动关闭
-        beforeShowDay: $.noop,    //在显示日期之前调用的函数
-        calendarWeeks: false,     //是否显示今年是第几周
-        clearBtn: false,          //显示清除按钮
-        daysOfWeekDisabled: [],   //星期几不可选
-        endDate: Infinity,        //日历结束日期
-        forceParse: true,         //是否强制转换不符合格式的字符串
-        format: 'yyyy-mm-dd',     //日期格式
-        keyboardNavigation: true, //是否显示箭头导航
-        language: 'cn',           //语言
-        minViewMode: 0,
-        orientation: "auto",      //方向
-        rtl: false,
-        startDate: -Infinity,     //日历开始日期
-        startView: 0,             //开始显示
-        todayBtn: "linked",          //今天按钮
-        todayHighlight: true,    //今天高亮
-        weekStart: 0              //星期几是开始
-    }).on('changeDate', function (e) {
-        var _this = $(this);
-        _this.parents('.ivu-form-item').removeClass('ivu-form-item-error');
-        _this.parents('.ivu-form-item').find('.ivu-form-item-error-tip').remove();
-    });
-</script>
 
 </body>
 </html>

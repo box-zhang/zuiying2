@@ -176,6 +176,7 @@ h5 {
 .dropdown-alerts li em {
   font-size: 10px;
 }
+
 .nav.navbar-top-links .dropdown-alerts a {
   font-size: 12px;
 }
@@ -2865,38 +2866,33 @@ a.forum-item-title:hover {
   }
 }
 /* Tabs */
+.tabs-container .tab-content {
+  margin: 30px 0;
+}
 .tabs-container .panel-body {
   background: #fff;
-  border: 1px solid #e7eaec;
   border-radius: 2px;
-  padding: 20px;
+  padding: 10px 0;
   position: relative;
-}
-.tabs-container .nav-tabs > li.active > a,
-.tabs-container .nav-tabs > li.active > a:hover,
-.tabs-container .nav-tabs > li.active > a:focus {
-  border: 1px solid #e7eaec;
-  border-bottom-color: transparent;
-  background-color: #fff;
 }
 .tabs-container .nav-tabs > li {
   float: left;
   margin-bottom: -1px;
 }
+.tabs-container.user-works-tab .nav-tabs{
+  width: 100%;
+  text-align: center;
+}
+.tabs-container.user-works-tab .nav-tabs > li {
+  float: none;
+}
+
 .tabs-container .tab-pane .panel-body {
   border-top: none;
-}
-.tabs-container .nav-tabs > li.active > a,
-.tabs-container .nav-tabs > li.active > a:hover,
-.tabs-container .nav-tabs > li.active > a:focus {
-  border: 1px solid #e7eaec;
-  border-bottom-color: transparent;
 }
 .tabs-container .nav-tabs {
-  border-bottom: 1px solid #e7eaec;
-}
-.tabs-container .tab-pane .panel-body {
-  border-top: none;
+  display: block!important;
+  border-bottom: 1px solid #ddd;
 }
 .tabs-container .tabs-left .tab-pane .panel-body,
 .tabs-container .tabs-right .tab-pane .panel-body {
@@ -2993,15 +2989,6 @@ a.forum-item-title:hover {
   border-color: #e7eaec #e7eaec #e7eaec transparent;
   *border-left-color: #ffffff;
   z-index: 1;
-}
-@media (max-width: 767px) {
-  .tabs-container .nav-tabs > li {
-    float: none !important;
-  }
-  .tabs-container .nav-tabs > li.active > a {
-    border-bottom: 1px solid #e7eaec !important;
-    margin: 0;
-  }
 }
 /* jsvectormap */
 .jvectormap-container {
@@ -3616,11 +3603,9 @@ body.body-small .footer.fixed {
   -moz-border-right-colors: none;
   -moz-border-top-colors: none;
   background: none;
-  border-color: #dddddd #dddddd rgba(0, 0, 0, 0);
-  border-bottom: #f3f3f4;
-  border-image: none;
-  border-style: solid;
-  border-width: 1px;
+  border:0;
+  border-bottom: 2px solid #3e3d54;
+  font-weight: bold;
   color: #555555;
   cursor: default;
 }
@@ -6644,8 +6629,8 @@ body.body-small .vote-icon {
 }
 .landing-page .navbar-default .nav li:hover a,
 .landing-page .navbar-default .nav li:hover {
-  background: transparent!important;
-  color:rgba(255,255,255,0.8)!important;
+  background: transparent;
+  color:rgba(255,255,255,0.8);
 }
 .landing-page .navbar-nav > li > a {
   padding-top: 25px;
@@ -6707,6 +6692,9 @@ body.body-small .vote-icon {
 .landing-page .nav > li.active {
   border: none;
   background: inherit;
+}
+.landing-page .setings-activity .nav > li > a {
+  padding: 10px 30px;
 }
 .landing-page .nav > li > a {
   padding: 10px;

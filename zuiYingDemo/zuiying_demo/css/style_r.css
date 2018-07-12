@@ -2041,13 +2041,15 @@ dl dt {
 
 .settings .s-c-box {
     display: inline-block;
-    margin: 10px;
-    width: 260px
+    margin: 0 1% 20px;
+    width: 30%;
+    min-width: 230px;
 }
 
 .settings .s-c-box .s-c-pic {
     position: relative;
     padding: 10px;
+    width: 100%;
     height: 180px;
     border-radius: 10px
 }
@@ -2103,7 +2105,7 @@ dl dt {
     margin-right: -1px;
     text-align: center;
     line-height: 18px;
-    border-right: 1px solid #eaeaea
+    border-right: 1px solid #ddd
 }
 
 .settings-nav .settings-user {
@@ -2141,7 +2143,7 @@ dl dt {
 }
 
 .settings-router {
-    padding: 0 0 100px 50px
+    padding: 0 0 100px 10px
 }
 
 .settings-router .choose {
@@ -2172,7 +2174,7 @@ dl dt {
 
 .settings-router .settings-video-nav {
     margin-bottom: 30px;
-    border-bottom: 1px solid #eaeaea
+    border-bottom: 1px solid #ddd
 }
 
 .settings-router .settings-video-nav .settings-video-nav-tab {
@@ -2230,18 +2232,17 @@ dl dt {
     line-height: 24px
 }
 
-.user-main .user-discribe {
+.user-i .user-main-page .user-discribe {
     margin-top: -80px;
-    text-align: center
 }
 
-.user-main .ivu-avatar {
+.user-i .user-main-page .ivu-avatar {
     width: 160px;
     height: 160px;
     border-radius: 160px
 }
 
-.user-main .user-name {
+.user-i .user-main-page .user-name {
     margin: 20px 0;
     font-size: 24px
 }
@@ -2257,27 +2258,20 @@ dl dt {
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
-    box-shadow: 0 2px 2px 0 rgba(220, 220, 236, .8)
+}
+.user-i .card-works {
+    margin: 1.66%
+}
+.user-i .card-collection {
+    margin: 1%
 }
 
 .user-works-tab li {
     display: inline-block;
     margin: 0 20px;
-    height: 50px;
-    line-height: 50px;
     width: 100px;
     text-align: center;
     cursor: pointer;
-    border-bottom: 3px solid transparent
-}
-
-.user-works-tab li a {
-    display: block
-}
-
-.user-works-tab li a.active,
-.user-works-tab li a:hover {
-    border-bottom: 3px solid #ff4545
 }
 
 .user-works-tab-content {
@@ -2335,6 +2329,11 @@ dl dt {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap
+}
+.settings-card-box .s-c-box a {
+    display: inline-block;
+    color: #3e3d54;
+    font-weight: bold;
 }
 
 .pop-s-u .choose {
@@ -2528,7 +2527,7 @@ dl dt {
 .settings-video-add .video-add-item {
     padding: 30px;
     background: #fcfcfc;
-    border-bottom: 1px solid #eaeaea
+    border-bottom: 1px solid #ddd
 }
 
 .settings-video-add .video-add-item .video-add-item-name {
@@ -10628,10 +10627,18 @@ textarea.ivu-input-number {
 }
 
 .ivu-page-options-sizer {
+    position: relative;
     display: inline-block;
     margin-right: 10px
 }
+.ivu-page-options-sizer .ivu-select-dropdown {
+    position: absolute;
+    top:100%;
+    left:50%;
+    margin-left: -50px;
+    width: 100px;
 
+}
 .ivu-page-options-elevator {
     display: inline-block;
     vertical-align: middle;
@@ -13662,23 +13669,22 @@ tr.ivu-table-row-highlight.ivu-table-row-hover td {
 .ivu-dropdown-transfer {
     width: auto
 }
-
-.ivu-dropdown-item a {
+.landing-page .navbar-default .nav li.ivu-dropdown-item a{
     display: block;
     margin: 0;
     line-height: normal;
     padding: 7px 16px;
     clear: both;
-    color: #495060!important;
-    font-size: 12px!important;
+    color: #495060;
+    font-size: 12px;
     white-space: nowrap;
     list-style: none;
     cursor: pointer;
     transition: background .2s ease-in-out
 }
-
+.landing-page .navbar-default .nav li:hover,
 .ivu-dropdown-item-focus,
-.ivu-dropdown-item:hover {
+.ivu-dropdown-item:hover a {
     background: #f3f3f3
 }
 
@@ -15893,7 +15899,7 @@ html {
 }
 
 .bg-pink {
-    background: #fbebed!important;
+    background: #f9e6e9!important;
 }
 .bg-pink .footer-wrapper {
     background: #fff;
@@ -15901,7 +15907,7 @@ html {
 
 .content-circle-bg {
     padding: 35px 30px;
-    box-shadow: 0 0 8px 0 rgba(220, 220, 236, .4);
+    box-shadow: 0 0 8px rgba(104,104,122,0.5);
     border-radius: 15px;
     background: #fff
 }
@@ -16104,7 +16110,7 @@ html {
 }
 
 .card {
-    margin: 10px 0;
+    margin: 10px 0 20px;
     display: inline-block;
     color: #786e6e;
     line-height: 24px;
@@ -16131,7 +16137,9 @@ html {
 
 .card .card-pic {
     position: relative;
+    width: 100%;
     height: 200px;
+    text-align: center;
     border-radius: 10px 10px 0 0;
     background-color: hsla(240, 8%, 44%, .08);
     overflow: hidden;
@@ -16228,7 +16236,7 @@ hr {
     height: 0;
     line-height: 0;
     border: 0;
-    border-bottom: 1px solid #eaeaea
+    border-bottom: 1px solid #ddd
 }
 
 .text-red {
@@ -16270,6 +16278,7 @@ ol .level-none {
 }
 
 .nav-item {
+    display: block;
     cursor: pointer
 }
 
@@ -16363,7 +16372,7 @@ ol .level-none {
 .page .ivu-page-options-elevator input,
 .page .ivu-page-prev,
 .page .ivu-select-single .ivu-select-selection {
-    border-color: hsla(240, 8%, 44%, .08)
+    border-color: #ddd
 }
 
 .page .ivu-page-item-jump-next:hover,
@@ -18755,6 +18764,10 @@ c
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.flex-box.flex-wrap-l {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
 .marketing .title-black{
     margin: 60px 0 30px
 }
@@ -19556,7 +19569,13 @@ body.rtls.top-navigation .footer.fixed {
     }
     .settings-nav .settings-nav-list .settings-nav-tab {
         padding: 5px 2%;
-        width: 5rem;
+        width: 6rem;
+    }
+    .settings-nav {
+        border-right: 0;
+    }
+    .settings .s-c-box {
+        width: 47%;
     }
     .content-circle-bg {
         padding: 25px 15px
