@@ -227,122 +227,248 @@
                                     </div>
                                 </div>
                                 <div id="tab-2" class="tab-pane">
-                                    <div class="panel-body">
-                                        <div class="settings-card-box flex-box flex-wrap">
-                                            <div class="s-c-box">
-                                                <div class="content-circle-bg s-c-pic">
-                                                    <div class="s-c-pic-in">
-                                                        <a href="javascript:;" target="_blank"><img src="" width="100%"
-                                                                                                    alt=""></a>
+                                    <div class="settings-video-main">
+                                        <div class="set-card-box">
+                                            <div>
+                                                <button type="button" class="ivu-btn ivu-btn-ghost" data-toggle="modal"
+                                                        data-target="#popAddAlbum"><i
+                                                        class="ivu-icon ivu-icon-ios-plus-empty"></i>
+                                                    <span>创 建 专 辑</span></button>
+                                            </div>
+                                            <div class="settings-card-box">
+                                                <div class="s-c-box">
+                                                    <div class="content-circle-bg s-c-pic"><a
+                                                            href="javascript:;" target="_blank" class="">
+                                                        <div class="s-c-pic-in"><img src="" alt=""></div>
+                                                    </a>
+                                                        <div class="s-c-btn">
+                                                            <button type="button"
+                                                                    class="btn-gray ivu-btn ivu-btn-ghost ivu-btn-circle ivu-btn-small"
+                                                                    data-toggle="modal"
+                                                                    data-target="#popAddAlbumPic">
+                                                                <span>上传封面</span></button>
+                                                        </div>
                                                     </div>
-                                                    <div class="s-c-btn"></div>
-                                                </div>
-                                                <div class="s-c-text">
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
-                                                            <div class="collection-inf">
-                                                                <p class="collection-name">
-                                                                    <a href="javascript:;" target="_blank"> ***电影节 </a>
-                                                                </p>
-                                                                <p class="collection-time">2018/09/09</p>
+                                                    <div class="s-c-text">
+                                                        <div class="row">
+                                                            <div class="ivu-col ivu-col-span-12">
+                                                                <div class="collection-inf"><p class="collection-name">
+                                                                    专辑名称</p>
+                                                                    <p class="collection-time">2018/09/09</p></div>
+                                                            </div>
+                                                            <div class="ivu-col ivu-col-span-12">
+                                                                <div class="collection-works-num"><i
+                                                                        class="ivu-icon ivu-icon-ios-videocam"></i><span>30</span>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
-                                                            <div class="collection-works-num">
-                                                                <button type="button"
-                                                                        class="ivu-btn ivu-btn-small ivu-btn-primary ivu-btn-circle"
-                                                                        disabled>
-                                                                    <span>已完成</span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="s-c-box">
+                                                    <div class="content-circle-bg s-c-pic"><a
+                                                            href="#/settings/video-set/collections/v-upload" class="">
+                                                        <div class="s-c-pic-in"><img src="" alt=""></div>
+                                                    </a>
+                                                        <div class="s-c-btn">
+                                                            <button type="button"
+                                                                    class="btn-gray ivu-btn ivu-btn-ghost ivu-btn-circle ivu-btn-small"
+                                                                    data-toggle="modal"
+                                                                    data-target="#popAddAlbumPic">
+                                                                <span>上传封面</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="s-c-text">
+                                                        <div class="row">
+                                                            <div class="ivu-col ivu-col-span-12">
+                                                                <div class="collection-inf"><p class="collection-name">
+                                                                    专辑名称</p>
+                                                                    <p class="collection-time">2018/09/09</p></div>
+                                                            </div>
+                                                            <div class="ivu-col ivu-col-span-12">
+                                                                <div class="collection-works-num"><i
+                                                                        class="ivu-icon ivu-icon-ios-videocam"></i><span>30</span>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="s-c-box">
-                                                <div class="content-circle-bg s-c-pic">
-                                                    <div class="s-c-pic-in">
-                                                        <a href="javascript:;" target="_blank"><img src="" width="100%"
-                                                                                                    alt=""></a>
-                                                    </div>
-                                                    <div class="s-c-btn"></div>
-                                                </div>
-                                                <div class="s-c-text">
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
-                                                            <div class="collection-inf">
-                                                                <p class="collection-name">
-                                                                    <a href="javascript:;" target="_blank"> ***电影节 </a>
-                                                                </p>
-                                                                <p class="collection-time">2018/09/09</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal" id="popAddAlbum" tabindex="-1" role="dialog" aria-hidden="true"
+                                         style="display: none">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content animated fadeInDownBig">
+                                                <a class="ivu-modal-close" data-dismiss="modal"><i
+                                                        class="ivu-icon ivu-icon-ios-close-empty"
+                                                        aria-hidden="true"></i></a>
+                                                <div class="ivu-modal-header"><h2>创建作品集</h2></div>
+                                                <div class="ivu-modal-body">
+                                                    <div class="pop-work-set">
+                                                        <form autocomplete="off" class="ivu-form ivu-form-label-right">
+                                                            <div class="ivu-form-item ivu-form-item-required ivu-form-item-error">
+                                                                <label class="ivu-form-item-label" style="width: 60px;">标题</label>
+                                                                <div class="ivu-form-item-content"
+                                                                     style="margin-left: 65px;">
+                                                                    <div class="ivu-input-wrapper ivu-input-type">
+                                                                        <i
+                                                                                class="ivu-icon ivu-icon-load-c ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                                                        <input autocomplete="off" spellcheck="false"
+                                                                               type="text" placeholder="撰写作品集标题"
+                                                                               autofocus="autofocus" class="ivu-input">
+                                                                    </div>
+                                                                    <div class="ivu-form-item-error-tip">专辑名称不能为空</div>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
-                                                            <div class="collection-works-num">
+                                                            <div class="ivu-form-item ivu-form-item-required"><label
+                                                                    class="ivu-form-item-label"
+                                                                    style="width: 60px;">分类:</label>
+                                                                <div class="ivu-form-item-content"
+                                                                     style="margin-left: 65px;">
+                                                                    <div class="ivu-select ivu-select-single">
+                                                                        <div tabindex="0" class="ivu-select-selection">
+                                                                            <input type="hidden" value="">
+                                                                            <div><span class="ivu-select-placeholder">选择专辑类别</span>
+                                                                                <i
+                                                                                        class="ivu-icon ivu-icon-arrow-down-b ivu-select-arrow"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="ivu-select-dropdown"
+                                                                             style="display: none;">
+                                                                            <ul class="ivu-select-not-found"
+                                                                                style="display: none;">
+                                                                                <li>无匹配数据</li>
+                                                                            </ul>
+                                                                            <ul class="ivu-select-dropdown-list">
+                                                                                <li class="ivu-select-item">故事片</li>
+                                                                                <li class="ivu-select-item">动漫片</li>
+                                                                                <li class="ivu-select-item">实验片</li>
+                                                                            </ul>
+                                                                            <ul class="ivu-select-loading"
+                                                                                style="display: none;">加载中
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ivu-form-item ivu-form-item-required"><label
+                                                                    class="ivu-form-item-label"
+                                                                    style="width: 60px;">标签</label>
+                                                                <div class="ivu-form-item-content"
+                                                                     style="margin-left: 65px;">
+                                                                    <div class="ivu-checkbox-group">
+                                                                        <div class="ivu-checkbox-wrapper">
+                                                                            <label><span class="ivu-checkbox"><span
+                                                                                    class="ivu-checkbox-inner"></span> </span>
+                                                                                标签1</label>
+                                                                            <input type="checkbox"
+                                                                                   class="ivu-checkbox-input">
+                                                                        </div>
+                                                                        <div class="ivu-checkbox-wrapper">
+                                                                            <label><span class="ivu-checkbox"><span
+                                                                                    class="ivu-checkbox-inner"></span> </span>
+                                                                                标签2</label>
+                                                                            <input type="checkbox"
+                                                                                   class="ivu-checkbox-input">
+                                                                        </div>
+                                                                        <div class="ivu-checkbox-wrapper">
+                                                                            <label><span class="ivu-checkbox"><span
+                                                                                    class="ivu-checkbox-inner"></span> </span>
+                                                                                标签3</label>
+                                                                            <input type="checkbox"
+                                                                                   class="ivu-checkbox-input">
+                                                                        </div>
+                                                                        <div class="ivu-checkbox-wrapper">
+                                                                            <label><span class="ivu-checkbox"><span
+                                                                                    class="ivu-checkbox-inner"></span> </span>
+                                                                                标签4</label>
+                                                                            <input type="checkbox"
+                                                                                   class="ivu-checkbox-input">
+                                                                        </div>
+                                                                        <div class="ivu-checkbox-wrapper">
+                                                                            <label><span class="ivu-checkbox"><span
+                                                                                    class="ivu-checkbox-inner"></span> </span>
+                                                                                标签5</label>
+                                                                            <input type="checkbox"
+                                                                                   class="ivu-checkbox-input">
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ivu-form-item ivu-form-item-required"><label
+                                                                    class="ivu-form-item-label"
+                                                                    style="width: 60px;">简介</label>
+                                                                <div class="ivu-form-item-content"
+                                                                     style="margin-left: 65px;">
+                                                                    <div class="ivu-input-wrapper ivu-input-type">
+                                                                        <textarea wrap="soft" autocomplete="off"
+                                                                                  spellcheck="false"
+                                                                                  placeholder="简单介绍一下此专辑" rows="2"
+                                                                                  class="ivu-input"
+                                                                                  style="height: 52px; min-height: 52px; max-height: 115px;"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="choose">
                                                                 <button type="button"
-                                                                        class="ivu-btn ivu-btn-small ivu-btn-primary ivu-btn-circle"
-                                                                        disabled>
-                                                                    <span>已完成</span></button>
+                                                                        class="ivu-btn ivu-btn-primary ivu-btn-circle">
+                                                                    <span>确定</span></button>
+                                                                <button type="button"
+                                                                        class="btn-gray ivu-btn ivu-btn-ghost ivu-btn-circle">
+                                                                    <span>重置</span></button>
                                                             </div>
-                                                        </div>
+                                                        </form>
                                                     </div>
+                                                </div>
+                                                <div class="ivu-modal-footer">
+                                                    <div></div>
                                                 </div>
                                             </div>
-                                            <div class="s-c-box">
-                                                <div class="content-circle-bg s-c-pic">
-                                                    <div class="s-c-pic-in">
-                                                        <a href="javascript:;" target="_blank"><img src="" width="100%"
-                                                                                                    alt=""></a>
-                                                    </div>
-                                                    <div class="s-c-btn"></div>
-                                                </div>
-                                                <div class="s-c-text">
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
-                                                            <div class="collection-inf">
-                                                                <p class="collection-name">
-                                                                    <a href="javascript:;" target="_blank"> ***电影节 </a>
-                                                                </p>
-                                                                <p class="collection-time">2018/09/09</p>
+                                        </div>
+                                    </div>
+                                    <div class="modal" id="popAddAlbumPic" tabindex="-1" role="dialog"
+                                         aria-hidden="true"
+                                         style="display: none">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content animated fadeInDownBig">
+                                                <a class="ivu-modal-close" data-dismiss="modal"><i
+                                                        class="ivu-icon ivu-icon-ios-close-empty"
+                                                        aria-hidden="true"></i></a>
+                                                <div class="ivu-modal-header"><h2>上传作品集封面</h2></div>
+                                                <div class="ivu-modal-body">
+                                                    <div class="pop-s-u"><p class="text-hint">仅支持jpg，png大小不超过2M</p>
+                                                        <div class="demo-upload-list"><img
+                                                                src="https://o5wwk8baw.qnssl.com/a42bdcc1178e62b4694c830f028db5c0/avatar">
+                                                            <div class="demo-upload-list-cover"><i
+                                                                    class="ivu-icon ivu-icon-ios-eye-outline"></i>
+                                                                <i class="ivu-icon ivu-icon-ios-trash-outline"></i>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
-                                                            <div class="collection-works-num">
+                                                        <div class="ivu-upload">
+                                                            <div class="ivu-upload ivu-upload-drag"><input
+                                                                    type="file" class="ivu-upload-input">
+                                                                <div><i class="ivu-icon ivu-icon-ios-cloud-upload"
+                                                                        style="font-size: 34px;"></i>
+                                                                    <p class="text-hint">仅支持jpg，png大小不超过2M</p></div>
+                                                            </div>
+                                                        </div>
+                                                        <div slot="footer">
+                                                            <div class="choose">
                                                                 <button type="button"
-                                                                        class="ivu-btn ivu-btn-small ivu-btn-primary ivu-btn-circle"
-                                                                        disabled>
-                                                                    <span>已完成</span></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="s-c-box">
-                                                <div class="content-circle-bg s-c-pic">
-                                                    <div class="s-c-pic-in">
-                                                        <a href="javascript:;" target="_blank"><img src="" width="100%"
-                                                                                                    alt=""></a>
-                                                    </div>
-                                                    <div class="s-c-btn"></div>
-                                                </div>
-                                                <div class="s-c-text">
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
-                                                            <div class="collection-inf">
-                                                                <p class="collection-name">
-                                                                    <a href="javascript:;" target="_blank"> ***电影节 </a>
-                                                                </p>
-                                                                <p class="collection-time">2018/09/09</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
-                                                            <div class="collection-works-num">
+                                                                        class="ivu-btn ivu-btn-primary ivu-btn-circle">
+                                                                    <span>确定</span></button>
                                                                 <button type="button"
-                                                                        class="ivu-btn ivu-btn-small ivu-btn-primary ivu-btn-circle"
-                                                                        disabled>
-                                                                    <span>已完成</span></button>
+                                                                        class="btn-gray ivu-btn ivu-btn-ghost ivu-btn-circle"
+                                                                        data-dismiss="modal">
+                                                                    <span>取消</span></button>
                                                             </div>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="ivu-modal-footer">
+                                                    <div></div>
                                                 </div>
                                             </div>
                                         </div>

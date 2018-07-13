@@ -139,6 +139,7 @@ $(document).ready(function () {
     checkboxBox.bind('click', function (e) {
         var _this = $(this);
         if (_this.hasClass('ivu-checkbox-wrapper-checked')) {
+            console.log(0)
             _this.removeClass('ivu-checkbox-wrapper-checked');
             _this.find('.ivu-checkbox').removeClass('ivu-checkbox-checked');
             _this.find('input').prop('checked', false);

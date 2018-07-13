@@ -19,8 +19,9 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style_r.css" rel="stylesheet">
 </head>
-<body id="page-top" class="landing-page">
-<div class="navbar-wrapper">
+<body id="page-top" class="landing-page spread">
+
+<div class="navbar-wrapper nabar-bg">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header page-scroll">
@@ -36,7 +37,6 @@
                         height="26" width="26" alt="">最影</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-
                 <ul class="nav navbar-nav navbar-left">
                     <li><a class="page-scroll" href="javascript:;">最影</a></li>
                     <li><a class="page-scroll" href="javascript:;">电影节</a></li>
@@ -79,402 +79,328 @@
         </div>
     </nav>
 </div>
-<div id="box" class="bg-pink">
-    <div id="carousel1" class="carousel carousel-fade show bg-pink" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carousel1" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel1" data-slide-to="1"></li>
-            <li data-target="#carousel1" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <div class="focus-text"><h4>标题</h4>
-                            <p>文字文字文字0000000</p></div>
+<section>
+    <div class="container main">
+        <div class="settings">
+            <div class="row">
+                <div class="col-lg-3 col-sm-3 col-xs-12">
+                    <div class="settings-nav">
+                        <div class="settings-user"><span class="ivu-avatar ivu-avatar-circle ivu-avatar-large"><span
+                                class="ivu-avatar-string"
+                                style="transform: scale(1); position: absolute; display: inline-block; left: calc(50% - 0px);"></span></span>
+                            <p class="settings-user-name">xiaobai<span class="icon-p"><img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH5JREFUSA3NVmtoXEUUPufuut2aZ4mWIiiKFSmJUbSUoiFuqlirVmppmsQXiEJ90RYUERSliBSUtD9KyQ+t1Fok6dI0GLCgbXeb1kIhCyJYBR8/rLYYTbVJ2m52997jN7O5r+zsZptfzo87M+d853xzzpyZuUTzbHLf43XS3n3jPM2J52MoHV3rifldEr6BSHbShL2bM8mLV+OrIrEkElHiJRtJaKF2yhTBUtcS8WNhEvmBRD7GQnxyh77ikf6zYZw/i/pDw8ha0gOSfXPnhZchA70hnEVJeNxo8KpFZSOWxLpG4vgoHN5azriyXGxynIc5feCICWeZhFrG8TfmT6o8cISsyPuS6Kw1cZRELB09zSiYt5A2pAnG5ZpQFqop4K4rB9FyoQw59jY+fmA4iPOIpbkzRoujIJQtIGwIgoxjkUEU3ddkcZ9RXyocooJsdgvOT/X12fqqSbVTZw+RvR/k50s5jJJ1FHFWuBqfuChR6auiyXd0dvIop5NTAO+vwqAIEbJdrE88HXewenEVFXtHPuKfD09rjOQ+wRm+UhHvKtly3KF/jhfadUSR4kUx4xHLOIf9XuCCvd7OH3THnD74IwqyH+RrgA0uPIdpY6heWJpcOz9iiYWLSqWFaQ/lJ5pporCMsoUWkkI7Kn6YTgz+6TrQ/VjhRcrazRqj8OPjtwH3Chb+TwhHvFVaH6pRMh0x7t47QbIpBGJW0b9H19TdQtHsa5weuiCJ7lZE8AuOgpcyZcPfJ3PoLqixarKq6yV020PRag23UtMixbNDHydZ1Y3rjTdonekj9C2ifQ4XwoNkOxmcyZQRtuKJJqqJ70AQz5r0M7Ixyhdaiql2aLQCEGuiu4ijx5C6R6mQNWKlo/sBqo2n5iBFOuQMRf6aLBbX5KVd1FDzJBiQyjKNaRFen9/4my8mgwi5Z+21sH0ZutWQ3xHUlY5FnYQ3OZ3O6og5M3wZKXwbqymUggMSsQ8FZiQdnbdTfe2HsPsV6XsevTrX5ZvwXk71n1YAv6qnZARpGq9ghUq+ctLVS6LnaVzln5M4fZwaGKSTyd/xqJxx9eZevnTlPnEMj3ylC0ToOKeH/5a2zpuwn/uw5M+wNXcTW7tR7ct1pQPjOjb24nh83kADmcNz39pBNEOS6HqKYpFTGD/jqZja8VAche5VRD8CeeioeTg1CPj3by5nCvvb8C+0i0NgPZE8srGZLGtlqU5L6qHbhT0eBQ43FsUNOCzI/zXyIuTThydQ64/AGK+OqAsh0HBtMpcj9XHMy82kcgJv8mpK9XvnX18gvmVxhL+GNhROH8haZuuubi6Xgd9KF3/ay5lMPmhrJFYAHJX78WgcAbm/HUHLqsZOLx8beN0E9VI9W8mpJCqUB2bLq5/LH5TNfVAOXzkaO7eNojF1m9Vg79WTpxZ6M7JgyJScQ2H577LQdj51aKwcscFBGCpL1yyghmjxpy8/zdTU2Ab+d0B+bxGpCKWXLuU+JbvgEevbMOwqNJuTOISemRR/DK0XsBVL8WrvdH/gTNj/new/zAqBV8xZHhQAAAAASUVORK5CYII="
+                                    height="100%" width="100%" alt=""></span></p></div>
+                        <hr>
+                        <div class="settings-nav-list">
+                            <ul>
+                                <li class="settings-nav-tab">个人主页</li>
+                                <li class="settings-nav-tab">视频管理</li>
+                                <li class="settings-nav-tab">个人设置</li>
+                                <li class="settings-nav-tab router-link-exact-active active">电影节</li>
+                                <li class="settings-nav-tab">我的账户</li>
+                                <li class="settings-nav-tab">修改密码</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <!-- Set background for slide in css -->
-                <div class="header-back one"></div>
-            </div>
-            <div class="item">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <div class="focus-text"><h4>标题</h4>
-                            <p>文字文字文字121212</p></div>
+                <div class="col-lg-9 col-sm-9 col-xs-12">
+                    <div class="settings-router">
+                        <div class="tabs-container setings-activity">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#tab-1"> 视频(<span>4</span>)</a></li>
+                                <li class=""><a data-toggle="tab" href="#tab-2">作品集(<span>5</span>)</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab-1" class="tab-pane active">
+                                    <div class="panel-body">
+                                        <div class="settings-card-box flex-box flex-wrap">
+                                            <div class="s-c-box">
+                                                <div class="content-circle-bg s-c-pic">
+                                                    <div class="s-c-pic-in"><a href="javascript:;" target="_blank"><img
+                                                            src="" width="100%" alt=""></a></div>
+                                                    <div class="s-c-btn"></div>
+                                                </div>
+                                                <div class="s-c-text">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-inf">
+                                                                <p class="collection-name">
+                                                                    <a href="javascript:;" target="_blank">***电影节</a>
+                                                                </p>
+                                                                <p class="collection-time">2018/09/09</p></div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-works-num">
+                                                                <div class="">
+                                                                    <button type="button"
+                                                                            class="ivu-btn ivu-btn-small ivu-btn-primary ivu-btn-circle">
+                                                                        <span>立即支付</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="s-c-box">
+                                                <div class="content-circle-bg s-c-pic">
+                                                    <div class="s-c-pic-in"><a href="javascript:;" target="_blank"><img
+                                                            src="" width="100%" alt=""></a></div>
+                                                    <div class="s-c-btn"></div>
+                                                </div>
+                                                <div class="s-c-text">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-inf">
+                                                                <p class="collection-name">
+                                                                    <a href="javascript:;" target="_blank">***电影节</a>
+                                                                </p>
+                                                                <p class="collection-time">2018/09/09</p></div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-works-num">
+                                                                <div class="">
+                                                                    <button type="button"
+                                                                            class="ivu-btn ivu-btn-small ivu-btn-primary ivu-btn-circle">
+                                                                        <span>立即支付</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="s-c-box">
+                                                <div class="content-circle-bg s-c-pic">
+                                                    <div class="s-c-pic-in"><a href="javascript:;" target="_blank"><img
+                                                            src="" width="100%" alt=""></a></div>
+                                                    <div class="s-c-btn"></div>
+                                                </div>
+                                                <div class="s-c-text">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-inf">
+                                                                <p class="collection-name">
+                                                                    <a href="javascript:;" target="_blank">***电影节</a>
+                                                                </p>
+                                                                <p class="collection-time">2018/09/09</p></div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-works-num">
+                                                                <div class="">
+                                                                    <button type="button"
+                                                                            class="ivu-btn ivu-btn-small ivu-btn-primary ivu-btn-circle">
+                                                                        <span>立即支付</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="s-c-box">
+                                                <div class="content-circle-bg s-c-pic">
+                                                    <div class="s-c-pic-in"><a href="javascript:;" target="_blank"><img
+                                                            src="" width="100%" alt=""></a></div>
+                                                    <div class="s-c-btn"></div>
+                                                </div>
+                                                <div class="s-c-text">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-inf">
+                                                                <p class="collection-name">
+                                                                    <a href="javascript:;" target="_blank">***电影节</a>
+                                                                </p>
+                                                                <p class="collection-time">2018/09/09</p></div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-works-num">
+                                                                <div class="">
+                                                                    <button type="button"
+                                                                            class="ivu-btn ivu-btn-small ivu-btn-primary ivu-btn-circle">
+                                                                        <span>立即支付</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-2" class="tab-pane">
+                                    <div class="settings-video-main">
+                                        <div class="settings-video-add">
+                                            <div class="video-add-inf">
+                                                <div class="row">
+                                                    <div class="col-lg-10 col-sm-10 col-xs-10">
+                                                            <p>正在上传0个视频，已完成0个...未填写资料<span
+                                                                    class="text-red">1</span>个，上传失败<span
+                                                                    class="text-red">0</span>个</p>
+                                                    </div>
+                                                    <div class="col-lg-2 col-sm-2 col-xs-2">
+                                                        <div class="router-link-exact-active active">
+                                                            <button type="button"
+                                                                    class="btn-gray ivu-btn ivu-btn-ghost ivu-btn-circle ivu-btn-small">
+                                                                <span>继续添加</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="video-add-content">
+                                                <div class="video-add-item"><p class="video-add-item-name">
+                                                    [猫砂好朋友]-淘宝详情页视频.mp4</p>
+                                                    <div class="ivu-progress ivu-progress-active ivu-progress-show-info">
+                                                        <div class="ivu-progress-outer">
+                                                            <div class="ivu-progress-inner">
+                                                                <div class="ivu-progress-bg"
+                                                                     style="width: 45%; height: 10px;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <span class="ivu-progress-text"><span
+                                                                class="ivu-progress-text-inner">
+                45%
+            </span></span></div>
+                                                    <p class="add-progress-hint">视频上传成功，正在进行转码和审核</p></div>
+                                                <div class="video-add-form">
+                                                    <div class="row">
+                                                        <div class="col-lg-7 col-sm-7 col-xs-12">
+                                                            <div class="video-add-form-list">
+                                                                <form autocomplete="off"
+                                                                      class="ivu-form ivu-form-label-right">
+                                                                    <div class="ivu-form-item ivu-form-item-required">
+                                                                        <label class="ivu-form-item-label"
+                                                                               style="width: 60px;">标题</label>
+                                                                        <div class="ivu-form-item-content"
+                                                                             style="margin-left: 65px;">
+                                                                            <div class="ivu-input-wrapper ivu-input-type">
+                                                                                <i
+                                                                                        class="ivu-icon ivu-icon-load-c ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                                                                <input autocomplete="off"
+                                                                                       spellcheck="false" type="text"
+                                                                                       placeholder="撰写作品集标题"
+                                                                                       autofocus="autofocus"
+                                                                                       class="ivu-input"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="ivu-form-item ivu-form-item-required">
+                                                                        <label class="ivu-form-item-label"
+                                                                               style="width: 60px;">分类:</label>
+                                                                        <div class="ivu-form-item-content"
+                                                                             style="margin-left: 65px;">
+                                                                            <div class="ivu-select ivu-select-single">
+                                                                                <div tabindex="0"
+                                                                                     class="ivu-select-selection"><input
+                                                                                        type="hidden" value="">
+                                                                                    <div><span
+                                                                                            class="ivu-select-placeholder">选择专辑类别</span>
+                                                                                        <i
+                                                                                                class="ivu-icon ivu-icon-arrow-down-b ivu-select-arrow"></i>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="ivu-select-dropdown"
+                                                                                     style="display: none;">
+                                                                                    <ul class="ivu-select-not-found"
+                                                                                        style="display: none;">
+                                                                                        <li>无匹配数据</li>
+                                                                                    </ul>
+                                                                                    <ul class="ivu-select-dropdown-list">
+                                                                                        <li class="ivu-select-item">
+                                                                                            故事片
+                                                                                        </li>
+                                                                                        <li class="ivu-select-item">
+                                                                                            动漫片
+                                                                                        </li>
+                                                                                        <li class="ivu-select-item">
+                                                                                            实验片
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                    <ul class="ivu-select-loading"
+                                                                                        style="display: none;">加载中
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="ivu-form-item ivu-form-item-required">
+                                                                        <label class="ivu-form-item-label"
+                                                                               style="width: 60px;">标签</label>
+                                                                        <div class="ivu-form-item-content"
+                                                                             style="margin-left: 65px;">
+                                                                            <div class="ivu-checkbox-group">
+                                                                                <div class="ivu-checkbox-wrapper">
+                                                                                    <label><span class="ivu-checkbox"><span class="ivu-checkbox-inner"></span> </span>
+                                                                                        标签1</label>
+                                                                                    <input type="checkbox" class="ivu-checkbox-input">
+                                                                                </div>
+                                                                                <div class="ivu-checkbox-wrapper">
+                                                                                    <label><span class="ivu-checkbox"><span class="ivu-checkbox-inner"></span> </span>
+                                                                                        标签2</label>
+                                                                                    <input type="checkbox" class="ivu-checkbox-input">
+                                                                                </div>
+                                                                                <div class="ivu-checkbox-wrapper">
+                                                                                    <label><span class="ivu-checkbox"><span class="ivu-checkbox-inner"></span> </span>
+                                                                                        标签3</label>
+                                                                                    <input type="checkbox" class="ivu-checkbox-input">
+                                                                                </div>
+                                                                                <div class="ivu-checkbox-wrapper">
+                                                                                    <label><span class="ivu-checkbox"><span class="ivu-checkbox-inner"></span> </span>
+                                                                                        标签4</label>
+                                                                                    <input type="checkbox" class="ivu-checkbox-input">
+                                                                                </div>
+                                                                                <div class="ivu-checkbox-wrapper">
+                                                                                    <label><span class="ivu-checkbox"><span class="ivu-checkbox-inner"></span> </span>
+                                                                                        标签5</label>
+                                                                                    <input type="checkbox" class="ivu-checkbox-input">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="ivu-form-item ivu-form-item-required">
+                                                                        <label class="ivu-form-item-label"
+                                                                               style="width: 60px;">简介</label>
+                                                                        <div class="ivu-form-item-content"
+                                                                             style="margin-left: 65px;">
+                                                                            <div class="ivu-input-wrapper ivu-input-type">
+                                                                                <textarea wrap="soft" autocomplete="off"
+                                                                                          spellcheck="false"
+                                                                                          placeholder="简单介绍一下此专辑"
+                                                                                          rows="2" class="ivu-input"
+                                                                                          style="height: 52px; min-height: 52px; max-height: 115px;"></textarea>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="choose">
+                                                                        <button type="button"
+                                                                                class="ivu-btn ivu-btn-primary ivu-btn-circle">
+                                                                            <span>确定</span></button>
+                                                                        <button type="button"
+                                                                                class="btn-gray ivu-btn ivu-btn-ghost ivu-btn-circle">
+                                                                            <span>重置</span></button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-5 col-sm-5 col-xs-12">
+                                                            <div class="video-add-show"><p>预览效果</p>
+                                                                <div class="video-add-show-img"><img
+                                                                        src="./static/img/page.1357a45.jpg" width="100%"
+                                                                        alt=""></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- Set background for slide in css -->
-                <div class="header-back two"></div>
-            </div>
-            <div class="item">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <div class="focus-text"><h4>标题</h4>
-                            <p>文字文字文字33333332</p></div>
-                    </div>
-                </div>
-                <!-- Set background for slide in css -->
-                <div class="header-back three"></div>
             </div>
         </div>
-        <a class="left carousel-control" href="#carousel1" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">上一页</span>
-        </a>
-        <a class="right carousel-control" href="#carousel1" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">下一页</span>
-        </a>
     </div>
-    <section>
-        <div class="container main">
-            <div class="show-all">
-                <div class="title-active wow fadeInUp"><h3>每日优选</h3> <a href="#/show/videos" class="active-more link-a">更多 &raquo;</a></div>
-                <div class="good-work wow fadeInUp">
-                    <div class="card card-video">
-                        <div class="ivu-card">
-                            <div class="ivu-card-head">
-                                <div><a href="#/show/videoID" class="nav-item">
-                                    <div class="card-pic"><img src="./static/img/card_video.60419c6.jpg" alt=""> <span
-                                            class="card-label">5:06</span></div>
-                                </a>
-                                    <div class="card-discribe"><p class="card-name"><span class="nav-item">标题</span></p>
-                                        <div class="sign"><span>#短视频</span><i>/</i> <span>#广告</span><i>/</i>
-                                            <span>#MV</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ivu-card-body">
-                                <div class="user-inf">
-                                    <dl>
-                                        <dt><a href="#/show/userID/works" class=""><span
-                                                class="ivu-avatar ivu-avatar-circle ivu-avatar-default ivu-avatar-image ivu-avatar-icon"><img
-                                                src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a></dt>
-                                        <dd><p class="user-name"><a href="#/show/userID/works" class="">尹小白</a></p></dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-video">
-                        <div class="ivu-card">
-                            <div class="ivu-card-head">
-                                <div><a href="#/show/videoID" class="nav-item">
-                                    <div class="card-pic"><img src="./static/img/card_video.60419c6.jpg" alt=""> <span
-                                            class="card-label">5:06</span></div>
-                                </a>
-                                    <div class="card-discribe"><p class="card-name"><span class="nav-item">标题</span></p>
-                                        <div class="sign"><span>#短视频</span><i>/</i> <span>#广告</span><i>/</i>
-                                            <span>#MV</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ivu-card-body">
-                                <div class="user-inf">
-                                    <dl>
-                                        <dt><a href="#/show/userID/works" class=""><span
-                                                class="ivu-avatar ivu-avatar-circle ivu-avatar-default ivu-avatar-image ivu-avatar-icon"><img
-                                                src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a></dt>
-                                        <dd><p class="user-name"><a href="#/show/userID/works" class="">尹小白</a></p></dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-video">
-                        <div class="ivu-card">
-                            <div class="ivu-card-head">
-                                <div><a href="#/show/videoID" class="nav-item">
-                                    <div class="card-pic"><img src="./static/img/card_video.60419c6.jpg" alt=""> <span
-                                            class="card-label">5:06</span></div>
-                                </a>
-                                    <div class="card-discribe"><p class="card-name"><span class="nav-item">标题</span></p>
-                                        <div class="sign"><span>#短视频</span><i>/</i> <span>#广告</span><i>/</i>
-                                            <span>#MV</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ivu-card-body">
-                                <div class="user-inf">
-                                    <dl>
-                                        <dt><a href="#/show/userID/works" class=""><span
-                                                class="ivu-avatar ivu-avatar-circle ivu-avatar-default ivu-avatar-image ivu-avatar-icon"><img
-                                                src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a></dt>
-                                        <dd><p class="user-name"><a href="#/show/userID/works" class="">尹小白</a></p></dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-video">
-                        <div class="ivu-card">
-                            <div class="ivu-card-head">
-                                <div><a href="#/show/videoID" class="nav-item">
-                                    <div class="card-pic"><img src="./static/img/card_video.60419c6.jpg" alt=""> <span
-                                            class="card-label">5:06</span></div>
-                                </a>
-                                    <div class="card-discribe"><p class="card-name"><span class="nav-item">标题</span></p>
-                                        <div class="sign"><span>#短视频</span><i>/</i> <span>#广告</span><i>/</i>
-                                            <span>#MV</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ivu-card-body">
-                                <div class="user-inf">
-                                    <dl>
-                                        <dt><a href="#/show/userID/works" class=""><span
-                                                class="ivu-avatar ivu-avatar-circle ivu-avatar-default ivu-avatar-image ivu-avatar-icon"><img
-                                                src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a></dt>
-                                        <dd><p class="user-name"><a href="#/show/userID/works" class="">尹小白</a></p></dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-video">
-                        <div class="ivu-card">
-                            <div class="ivu-card-head">
-                                <div><a href="#/show/videoID" class="nav-item">
-                                    <div class="card-pic"><img src="./static/img/card_video.60419c6.jpg" alt=""> <span
-                                            class="card-label">5:06</span></div>
-                                </a>
-                                    <div class="card-discribe"><p class="card-name"><span class="nav-item">标题</span></p>
-                                        <div class="sign"><span>#短视频</span><i>/</i> <span>#广告</span><i>/</i>
-                                            <span>#MV</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ivu-card-body">
-                                <div class="user-inf">
-                                    <dl>
-                                        <dt><a href="#/show/userID/works" class=""><span
-                                                class="ivu-avatar ivu-avatar-circle ivu-avatar-default ivu-avatar-image ivu-avatar-icon"><img
-                                                src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a></dt>
-                                        <dd><p class="user-name"><a href="#/show/userID/works" class="">尹小白</a></p></dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-video">
-                        <div class="ivu-card">
-                            <div class="ivu-card-head">
-                                <div><a href="#/show/videoID" class="nav-item">
-                                    <div class="card-pic"><img src="./static/img/card_video.60419c6.jpg" alt=""> <span
-                                            class="card-label">5:06</span></div>
-                                </a>
-                                    <div class="card-discribe"><p class="card-name"><span class="nav-item">标题</span></p>
-                                        <div class="sign"><span>#短视频</span><i>/</i> <span>#广告</span><i>/</i>
-                                            <span>#MV</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ivu-card-body">
-                                <div class="user-inf">
-                                    <dl>
-                                        <dt><a href="#/show/userID/works" class=""><span
-                                                class="ivu-avatar ivu-avatar-circle ivu-avatar-default ivu-avatar-image ivu-avatar-icon"><img
-                                                src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a></dt>
-                                        <dd><p class="user-name"><a href="#/show/userID/works" class="">尹小白</a></p></dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="title-active wow fadeInUp"><h3>明星用户</h3> <a href="#/show/users" class="active-more link-a">更多 &raquo;</a></div>
-                <div class="good-work wow fadeInUp">
-                    <div class="card card-user">
-                        <div class="ivu-card">
-                            <div class="ivu-card-head">
-                                <div>
-                                    <div class="user-bg"><img src="./static/img/card_user_bg.2591a31.jpg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="ivu-card-body">
-                                <div class="user-inf">
-                                    <div class="user-discribe"><a href="#/show/userID/works" class=""><span
-                                            class="ivu-avatar ivu-avatar-circle ivu-avatar-large ivu-avatar-image ivu-avatar-icon"
-                                            style="background-color: rgb(238, 238, 238);"><img
-                                            src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a>
-                                        <p class="user-name"><span class="">尹小白</span></p>
-                                        <p class="user-area">北京</p>
-                                        <div class="enjoy">
-                                            <button type="button" class="btn btn-primary btn-rounded btn-xs">关注</button>
-                                        </div>
-                                        <p class="user-autograph">个性签名个性签名个性签名个性签名个性签名个性签名个性签名…</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-user">
-                        <div class="ivu-card">
-                            <div class="ivu-card-head">
-                                <div>
-                                    <div class="user-bg"><img src="./static/img/card_user_bg.2591a31.jpg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="ivu-card-body">
-                                <div class="user-inf">
-                                    <div class="user-discribe"><a href="#/show/userID/works" class=""><span
-                                            class="ivu-avatar ivu-avatar-circle ivu-avatar-large ivu-avatar-image ivu-avatar-icon"
-                                            style="background-color: rgb(238, 238, 238);"><img
-                                            src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a>
-                                        <p class="user-name"><span class="">尹小白</span></p>
-                                        <p class="user-area">北京</p>
-                                        <div class="enjoy">
-                                            <button type="button" class="btn btn-primary btn-rounded btn-xs" disabled="disabled">已关注</button>
-                                        </div>
-                                        <p class="user-autograph">个性签名个性签名个性签名个性签名个性签名个性签名个性签名…</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-user">
-                        <div class="ivu-card">
-                            <div class="ivu-card-head">
-                                <div>
-                                    <div class="user-bg"><img src="./static/img/card_user_bg.2591a31.jpg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="ivu-card-body">
-                                <div class="user-inf">
-                                    <div class="user-discribe"><a href="#/show/userID/works" class=""><span
-                                            class="ivu-avatar ivu-avatar-circle ivu-avatar-large ivu-avatar-image ivu-avatar-icon"
-                                            style="background-color: rgb(238, 238, 238);"><img
-                                            src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a>
-                                        <p class="user-name"><span class="">尹小白</span></p>
-                                        <p class="user-area">北京</p>
-                                        <div class="enjoy">
-                                            <button type="button" class="btn btn-primary btn-rounded btn-xs">关注</button>
-                                        </div>
-                                        <p class="user-autograph">个性签名个性签名个性签名个性签名个性签名个性签名个性签名…</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-user">
-                        <div class="ivu-card">
-                            <div class="ivu-card-head">
-                                <div>
-                                    <div class="user-bg"><img src="./static/img/card_user_bg.2591a31.jpg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="ivu-card-body">
-                                <div class="user-inf">
-                                    <div class="user-discribe"><a href="#/show/userID/works" class=""><span
-                                            class="ivu-avatar ivu-avatar-circle ivu-avatar-large ivu-avatar-image ivu-avatar-icon"
-                                            style="background-color: rgb(238, 238, 238);"><img
-                                            src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a>
-                                        <p class="user-name"><span class="">尹小白</span></p>
-                                        <p class="user-area">北京</p>
-                                        <div class="enjoy">
-                                            <button type="button" class="btn btn-primary btn-rounded btn-xs" disabled="disabled">已关注</button>
-                                        </div>
-                                        <p class="user-autograph">个性签名个性签名个性签名个性签名个性签名个性签名个性签名…</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-user">
-                        <div class="ivu-card">
-                            <div class="ivu-card-head">
-                                <div>
-                                    <div class="user-bg"><img src="./static/img/card_user_bg.2591a31.jpg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="ivu-card-body">
-                                <div class="user-inf">
-                                    <div class="user-discribe"><a href="#/show/userID/works" class=""><span
-                                            class="ivu-avatar ivu-avatar-circle ivu-avatar-large ivu-avatar-image ivu-avatar-icon"
-                                            style="background-color: rgb(238, 238, 238);"><img
-                                            src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a>
-                                        <p class="user-name"><span class="">尹小白</span></p>
-                                        <p class="user-area">北京</p>
-                                        <div class="enjoy">
-                                            <button type="button" class="btn btn-primary btn-rounded btn-xs">关注</button>
-                                        </div>
-                                        <p class="user-autograph">个性签名个性签名个性签名个性签名个性签名个性签名个性签名…</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-user">
-                        <div class="ivu-card">
-                            <div class="ivu-card-head">
-                                <div>
-                                    <div class="user-bg"><img src="./static/img/card_user_bg.2591a31.jpg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="ivu-card-body">
-                                <div class="user-inf">
-                                    <div class="user-discribe"><a href="#/show/userID/works" class=""><span
-                                            class="ivu-avatar ivu-avatar-circle ivu-avatar-large ivu-avatar-image ivu-avatar-icon"
-                                            style="background-color: rgb(238, 238, 238);"><img
-                                            src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a>
-                                        <p class="user-name"><span class="">尹小白</span></p>
-                                        <p class="user-area">北京</p>
-                                        <div class="enjoy">
-                                            <button type="button" class="btn btn-primary btn-rounded btn-xs" disabled="disabled">已关注</button>
-                                        </div>
-                                        <p class="user-autograph">个性签名个性签名个性签名个性签名个性签名个性签名个性签名…</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-user">
-                        <div class="ivu-card">
-                            <div class="ivu-card-head">
-                                <div>
-                                    <div class="user-bg"><img src="./static/img/card_user_bg.2591a31.jpg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="ivu-card-body">
-                                <div class="user-inf">
-                                    <div class="user-discribe"><a href="#/show/userID/works" class=""><span
-                                            class="ivu-avatar ivu-avatar-circle ivu-avatar-large ivu-avatar-image ivu-avatar-icon"
-                                            style="background-color: rgb(238, 238, 238);"><img
-                                            src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a>
-                                        <p class="user-name"><span class="">尹小白</span></p>
-                                        <p class="user-area">北京</p>
-                                        <div class="enjoy">
-                                            <button type="button" class="btn btn-primary btn-rounded btn-xs">关注</button>
-                                        </div>
-                                        <p class="user-autograph">个性签名个性签名个性签名个性签名个性签名个性签名个性签名…</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-user">
-                        <div class="ivu-card">
-                            <div class="ivu-card-head">
-                                <div>
-                                    <div class="user-bg"><img src="./static/img/card_user_bg.2591a31.jpg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="ivu-card-body">
-                                <div class="user-inf">
-                                    <div class="user-discribe"><a href="#/show/userID/works" class=""><span
-                                            class="ivu-avatar ivu-avatar-circle ivu-avatar-large ivu-avatar-image ivu-avatar-icon"
-                                            style="background-color: rgb(238, 238, 238);"><img
-                                            src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span></a>
-                                        <p class="user-name"><span class="">尹小白</span></p>
-                                        <p class="user-area">北京</p>
-                                        <div class="enjoy">
-                                            <button type="button" class="btn btn-primary btn-rounded btn-xs" disabled="disabled">已关注</button>
-                                        </div>
-                                        <p class="user-autograph">个性签名个性签名个性签名个性签名个性签名个性签名个性签名…</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-<section class="footer-wrapper bg-white" id="footer">
+</section>
+<section class="footer-wrapper" id="footer">
     <div class="footer-main">
         <div class="main">
             <div class="row">

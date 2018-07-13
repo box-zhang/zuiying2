@@ -2070,6 +2070,9 @@ dl dt {
     padding: 5px 10px
 }
 
+.settings .s-c-box .s-c-pic .s-c-btn {
+    padding: 2px 15px;
+}
 .settings .s-c-box .s-c-pic .s-c-btn .btn-gray:hover {
     color: #fff;
     background: #68687a
@@ -2324,7 +2327,7 @@ dl dt {
 }
 
 .set-card-box .settings-card-box {
-    margin: 20px 0;
+    margin: 30px 0;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -2438,9 +2441,9 @@ dl dt {
 }
 
 .set-collection-box .set-c-v-add {
-    margin: 10px 0;
+    margin: 10px 1.15%;
     padding: 32px 0;
-    width: 30%;
+    width: 31%;
     text-align: center
 }
 
@@ -2511,6 +2514,9 @@ dl dt {
 .settings-video-add {
     margin: 20px 0
 }
+.video-add-inf p {
+    line-height: 26px;
+}
 
 .settings-video-add .btn-gray {
     float: right
@@ -2518,7 +2524,7 @@ dl dt {
 
 .settings-video-add .video-add-content {
     margin: 30px 0;
-    box-shadow: 0 0 8px 0 rgba(220, 220, 236, .4);
+    box-shadow: 0 0 8px rgba(104,104,122,0.5);
     border-radius: 15px;
     background: #fff;
     overflow: hidden
@@ -2526,7 +2532,7 @@ dl dt {
 
 .settings-video-add .video-add-item {
     padding: 30px;
-    background: #fcfcfc;
+    background: #eee;
     border-bottom: 1px solid #ddd
 }
 
@@ -9618,7 +9624,7 @@ textarea.ivu-input-number {
     height: auto;
     min-height: 32px;
     vertical-align: bottom;
-    font-size: 14px
+    font-size: 12px
 }
 
 .ivu-input-number-large {
@@ -10308,7 +10314,7 @@ textarea.ivu-input-number {
 .ivu-progress-inner {
     display: inline-block;
     width: 100%;
-    background-color: #f3f3f3;
+    background-color: #f8f8f8;
     border-radius: 100px;
     vertical-align: middle
 }
@@ -12200,7 +12206,7 @@ textarea.ivu-input {
     height: auto;
     min-height: 32px;
     vertical-align: bottom;
-    font-size: 14px
+    font-size: 12px
 }
 
 .ivu-input-large {
@@ -12391,9 +12397,9 @@ textarea.ivu-input {
     border-radius: 3px
 }
 
-.ivu-form-item-error .ivu-input {
-    border: 1px solid #ed3f14
-}
+/*.ivu-form-item-error .ivu-input {*/
+    /*border: 1px solid #ed3f14*/
+/*}*/
 
 .ivu-form-item-error .ivu-input:hover {
     border-color: #ed3f14
@@ -14875,7 +14881,7 @@ span.ivu-date-picker-cells-cell-disabled.ivu-date-picker-cells-cell-selected em 
 }
 
 .ivu-form-item .ivu-form-item .ivu-form-item-content {
-    margin-left: 0!important
+    /*margin-left: 0!important*/
 }
 
 .ivu-form-item-error-tip {
@@ -16288,7 +16294,8 @@ ol .level-none {
 
 .ivu-modal-header h2 {
     padding: 5px;
-    font-size: 18px
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .ivu-modal-footer {
@@ -18671,8 +18678,9 @@ c
 .show-all {
     margin: 40px 0 80px;
 }
-.card-video {
-    width: 30%;
+.settings-video-main .set-collection-box .card-video {
+    margin: 1% 1.15%;
+    width: 31%;
 }
 .card-video dd {
     margin-top: -30px;
@@ -18788,7 +18796,7 @@ c
 	padding: 20px 20px; 
 }
 
-.row .card {
+.marketing-item-1 .card {
     width: 96%;
 }
 
