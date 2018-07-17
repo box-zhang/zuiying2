@@ -181,10 +181,9 @@
 .discover-person .discover-nav .discover-nav-text .more a:hover {
     color: rgba(255, 0, 0, .65)
 }
-
 .discover-person .discover-person-list ul {
     display: -ms-flexbox;
-    display: flex;
+    display: block;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     -ms-flex-line-pack: center;
@@ -194,13 +193,10 @@
 }
 
 .discover-person .discover-person-list ul li {
-    display: inline-block;
+    float: left;
     position: relative;
-    -ms-flex: 1;
-    flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    margin: 4px 1px
+    margin: 4px .5%;
+    width: 24%;
 }
 
 .discover-person .discover-person-list ul li :active:before,
@@ -334,11 +330,11 @@
     transition-timing-function: ease-out
 }
 
-.discover-video .video-list ul li :hover.user-information .user-information-text {
+.discover-video .video-list ul li:hover.user-information .user-information-text {
     position: absolute;
-    top: 50%;
+    padding: 40% 5%;
     margin: -20px 0 0;
-    width: 100%
+    width: 90%
 }
 
 .discover-video .video-nav {
@@ -590,7 +586,8 @@
 }
 
 .show-discover-card .workers-information {
-    padding: 28px
+    padding: 28px;
+    min-height: 160px;
 }
 
 .show-discover-card .workers-information h3 {
@@ -628,6 +625,7 @@
     -webkit-box-flex: 1;
     -ms-flex: auto;
     flex: auto;
+    height: 400px;
     padding: 30px 40px;
     background: #fff;
     border-radius: 10px;
@@ -728,6 +726,9 @@
 
 .footer-wrapper .footer-main .footer-list {
     text-align: center
+}
+.footer-wrapper .footer-main .footer-list ul {
+    display: block;
 }
 
 .footer-wrapper .footer-main .footer-list dt {
@@ -1061,7 +1062,8 @@ dl dt {
 .service .service-text {
     padding: 35px 40px 100px;
     font-size: 14px;
-    line-height: 28px
+    line-height: 28px;
+    min-height: 615px;
 }
 
 .service .service-text h2 {
@@ -2103,6 +2105,12 @@ dl dt {
     font-size: 12px;
     padding: 5px 3px
 }
+.settings .col-lg-10,
+.settings .col-lg-2,
+.settings .col-sm-10,
+.settings .col-sm-2 {
+    padding: 0
+}
 
 .settings-nav {
     margin-right: -1px;
@@ -2128,7 +2136,7 @@ dl dt {
 
 .settings-nav .settings-nav-list .settings-nav-tab {
     margin: 5px 2%;
-    padding: 15px 20%;
+    padding: 10px 1%;
     width: 84%;
     border-radius: 100px;
     cursor: pointer;
@@ -2144,9 +2152,13 @@ dl dt {
     background: rgba(255, 69, 69, .85);
     background-image: linear-gradient(-90deg, #ff4259, #413f57)
 }
+.settings-nav .settings-nav-list .settings-nav-tab.active a {
+    color: #fff
+}
 
 .settings-router {
-    padding: 0 0 100px 10px
+    padding: 0 0 100px 50px;
+    border-left: 1px solid #eaeaea;
 }
 
 .settings-router .choose {
@@ -2492,7 +2504,6 @@ dl dt {
 .settings-router .set1 .ivu-table-border td,
 .settings-router .set1 .ivu-table-border th {
     padding: 10px 0;
-    border-right: 0;
     line-height: 18px
 }
 
@@ -2510,7 +2521,28 @@ dl dt {
     border-radius: 100px;
     overflow: hidden
 }
-
+.table-v-inf .table-v-text {
+    margin: 5px
+}
+.table-v-inf .table-v-pic {
+    width: 100%;
+    height: 140px;
+    background: rgb(255, 244, 245);
+    overflow: hidden;
+}
+.table-i-box i,
+.table-i-box span {
+    display: inline-block;
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: top;
+}
+.dataTables_filter {
+    float: right;
+}
 .settings-video-add {
     margin: 20px 0
 }
@@ -8220,6 +8252,9 @@ fieldset[disabled] .ivu-btn-info>a:only-child:after {
     border-bottom-left-radius: 0;
     padding-top: 8px
 }
+.btn-group-xs>.btn, .btn-xs {
+    padding: 1px 15px;
+}
 
 .ivu-affix,
 .ivu-back-top {
@@ -11616,7 +11651,8 @@ textarea.ivu-page-options-elevator input {
 
 .ivu-select-dropdown-list {
     min-width: 100%;
-    list-style: none
+    list-style: none;
+    display: block;
 }
 
 .ivu-select-item {
@@ -18520,7 +18556,7 @@ c
     border: 0;
 }
 
-.spread .main ul {
+.spread .main ul.flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -18917,6 +18953,9 @@ c
 .marketing .marketing-item-4 .channels-list {
     padding: 15px 0;
     font-size: 12px;
+}
+.marketing .marketing-item-4 .channels-list ul {
+    display: block;
 }
 .marketing .marketing-item-4 .channels-list dl {
     margin: 15px 0

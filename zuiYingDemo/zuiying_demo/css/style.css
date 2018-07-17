@@ -1615,6 +1615,11 @@ table.dataTable thead .sorting_asc_disabled,
 table.dataTable thead .sorting_desc_disabled {
   background: transparent;
 }
+.sorting_desc .ivu-icon-arrow-up-b,
+.sorting_asc .ivu-icon-arrow-down-b{
+  display: none;
+}
+
 .dataTables_wrapper {
   padding-bottom: 30px;
 }
@@ -2902,6 +2907,21 @@ a.forum-item-title:hover {
   background: transparent;
   border-color: transparent;
 }
+.tabs-container.about-us .nav-tabs {
+  border-bottom: 0
+}
+.tabs-container.about-us .nav-tabs > li {
+  padding: 10px 20px
+}
+.tabs-container.about-us .nav-tabs > li a{
+  border-bottom: 2px solid transparent;
+}
+.tabs-container.about-us .nav-tabs > li:hover > a,
+.tabs-container.about-us .nav-tabs > li.active > a {
+  border-bottom: 2px solid #ff4545;
+  color: #ff4545;
+}
+
 .tabs-container .tabs-below > .nav-tabs,
 .tabs-container .tabs-right > .nav-tabs,
 .tabs-container .tabs-left > .nav-tabs {
@@ -3557,20 +3577,26 @@ body.body-small .footer.fixed {
 }
 /* TABLES */
 .table-bordered {
-  border: 1px solid #EBEBEB;
+  border: 0;
+}
+.table-bordered > thead > tr > td:first-child,
+.sorting_1 {
+  text-align: center;
+}
+.dataTables_info {
+  display: none;
+}
+.dataTables_paginate {
+  text-align: right;
+}
+.dataTables_length,
+.dataTables_filter {
+  margin-bottom: 10px;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
   background-color: #F5F5F6;
   border-bottom-width: 1px;
-}
-.table-bordered > thead > tr > th,
-.table-bordered > tbody > tr > th,
-.table-bordered > tfoot > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > td {
-  border: 1px solid #e7e7e7;
 }
 .table > thead > tr > th {
   border-bottom: 1px solid #DDDDDD;
@@ -3582,10 +3608,9 @@ body.body-small .footer.fixed {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  border-top: 1px solid #e7eaec;
-  line-height: 1.42857;
-  padding: 8px;
-  vertical-align: top;
+  border: 0;
+  border-bottom: 1px solid #e9eaec;
+  vertical-align: middle;
 }
 /* PANELS */
 .panel.blank-panel {
