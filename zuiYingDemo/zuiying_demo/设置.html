@@ -81,7 +81,7 @@
 </div>
 <section>
     <div class="container main">
-        <div class="settings">
+        <div class="settings tabs-container">
             <div class="row">
                 <div class="col-lg-2 col-sm-2 col-xs-12">
                     <div class="settings-nav">
@@ -94,41 +94,64 @@
                         <hr>
                         <div class="settings-nav-list">
                             <ul>
-                                <li class="settings-nav-tab">个人主页</li>
-                                <li class="settings-nav-tab router-link-exact-active active">视频管理</li>
-                                <li class="settings-nav-tab">个人设置</li>
-                                <li class="settings-nav-tab">电影节</li>
-                                <li class="settings-nav-tab">我的账户</li>
-                                <li class="settings-nav-tab">修改密码</li>
+                                <li class="settings-nav-tab active" data-toggle="tab" href="#tab-main">个人主页</li>
+                                <li class="settings-nav-tab" data-toggle="tab" href="#tab-video">视频管理</li>
+                                <li class="settings-nav-tab" data-toggle="tab" href="#tab-user">个人设置</li>
+                                <li class="settings-nav-tab" data-toggle="tab" href="#tab-active">电影节</li>
+                                <li class="settings-nav-tab" data-toggle="tab" href="#tab-account">我的账户</li>
+                                <li class="settings-nav-tab" data-toggle="tab" href="#tab-password">修改密码</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-10 col-sm-10 col-xs-12">
-                    <div class="settings-router" style="display: block">
-                        <div class="tabs-container setings-activity">
+                <div class="col-lg-10 col-sm-10 col-xs-12 tab-content">
+                    <div class="settings-router active" id="tab-main">
+                        <div class="user-i">
+                            <div class="header header-user"><img src="./static/img/header_user_bg.2591a31.jpg"
+                                                                 width="100%"></div>
+                            <div>
+                                <div class="user-inf user-main">
+                                    <div class="user-discribe">
+                                        <div class="avatar-box"><span
+                                                class="ivu-avatar ivu-avatar-square ivu-avatar-large ivu-avatar-image"><img
+                                                src="https://i.loli.net/2017/08/21/599a521472424.jpg"></span>
+                                            <sub></sub></div>
+                                        <p class="user-name">尹小白</p>
+                                        <p class="user-area">北京</p>
+                                        <p class="user-autograph">个性签名个性签名个性签名个性签名个性签名个性签名个性签名个性签名个性签名…</p>
+                                        <div class="enjoy">
+                                            <button type="button" disabled="disabled"
+                                                    class="btn-small ivu-btn ivu-btn-primary ivu-btn-circle ivu-btn-small">
+                                                <span>已关注</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings-router" id="tab-video">
+                        <div class="tabs-container setings-activity" >
                             <ul class="nav nav-tabs">
-                                <li class=""><a data-toggle="tab" href="#tab-1"> 视频(<span>4</span>)</a></li>
-                                <li class="active"><a data-toggle="tab" href="#tab-2">作品集(<span>5</span>)</a></li>
+                                <li class="active"><a data-toggle="tab" href="#tab-1"> 视频(<span>4</span>)</a></li>
+                                <li class=""><a data-toggle="tab" href="#tab-2">作品集(<span>5</span>)</a></li>
                             </ul>
                             <div class="tab-content">
-                                <div id="tab-1" class="tab-pane ">
+                                <div id="tab-1" class="tab-pane active">
                                     <div class="set1">
                                         <div class="ivu-table-wrapper">
                                             <div class="ivu-table ivu-table-border">
                                                 <div class="table-responsive ivu-table-header">
-                                                    <table class="table table-striped table-bordered table-hover "
-                                                           id="editable">
+                                                    <table class="table table-striped table-bordered table-hover " id="editable" >
                                                         <thead>
                                                         <tr>
                                                             <th class="ivu-table-column-center" width="10%">
-                                                                <!-- <div class="ivu-checkbox-wrapper">
-                                                                     <label><span class="ivu-checkbox"><span
-                                                                             class="ivu-checkbox-inner"></span> </span>
-                                                                     </label>
-                                                                     <input type="checkbox"
-                                                                            class="ivu-checkbox-input">
-                                                                 </div>-->
+                                                               <!-- <div class="ivu-checkbox-wrapper">
+                                                                    <label><span class="ivu-checkbox"><span
+                                                                            class="ivu-checkbox-inner"></span> </span>
+                                                                    </label>
+                                                                    <input type="checkbox"
+                                                                           class="ivu-checkbox-input">
+                                                                </div>-->
                                                             </th>
                                                             <th width="35%">
                                                                 <div class="ivu-table-cell"><span>视频截图</span>
@@ -167,9 +190,7 @@
                                                                 <div class="ivu-table-cell">
                                                                     <div class="table-v-inf">
                                                                         <p class="table-v-text">视频名称</p>
-                                                                        <div class="table-v-pic"><img
-                                                                                src="./static/img/user_words_pic.60419c6.jpg"
-                                                                                width="100%" alt="">
+                                                                        <div class="table-v-pic"><img src="./static/img/user_words_pic.60419c6.jpg" width="100%" alt="">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -226,9 +247,7 @@
                                                                 <div class="ivu-table-cell">
                                                                     <div class="table-v-inf">
                                                                         <p class="table-v-text">视频名称1</p>
-                                                                        <div class="table-v-pic"><img
-                                                                                src="./static/img/user_words_pic.60419c6.jpg"
-                                                                                width="100%" alt="">
+                                                                        <div class="table-v-pic"><img src="./static/img/user_words_pic.60419c6.jpg" width="100%" alt="">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -285,9 +304,7 @@
                                                                 <div class="ivu-table-cell">
                                                                     <div class="table-v-inf">
                                                                         <p class="table-v-text">视频名称2</p>
-                                                                        <div class="table-v-pic"><img
-                                                                                src="./static/img/user_words_pic.60419c6.jpg"
-                                                                                width="100%" alt="">
+                                                                        <div class="table-v-pic"><img src="./static/img/user_words_pic.60419c6.jpg" width="100%" alt="">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -344,9 +361,7 @@
                                                                 <div class="ivu-table-cell">
                                                                     <div class="table-v-inf">
                                                                         <p class="table-v-text">视频名称3</p>
-                                                                        <div class="table-v-pic"><img
-                                                                                src="./static/img/user_words_pic.60419c6.jpg"
-                                                                                width="100%" alt="">
+                                                                        <div class="table-v-pic"><img src="./static/img/user_words_pic.60419c6.jpg" width="100%" alt="">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -403,9 +418,7 @@
                                                                 <div class="ivu-table-cell">
                                                                     <div class="table-v-inf">
                                                                         <p class="table-v-text">视频名称</p>
-                                                                        <div class="table-v-pic"><img
-                                                                                src="./static/img/user_words_pic.60419c6.jpg"
-                                                                                width="100%" alt="">
+                                                                        <div class="table-v-pic"><img src="./static/img/user_words_pic.60419c6.jpg" width="100%" alt="">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -462,9 +475,7 @@
                                                                 <div class="ivu-table-cell">
                                                                     <div class="table-v-inf">
                                                                         <p class="table-v-text">视频名称</p>
-                                                                        <div class="table-v-pic"><img
-                                                                                src="./static/img/user_words_pic.60419c6.jpg"
-                                                                                width="100%" alt="">
+                                                                        <div class="table-v-pic"><img src="./static/img/user_words_pic.60419c6.jpg" width="100%" alt="">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -521,9 +532,7 @@
                                                                 <div class="ivu-table-cell">
                                                                     <div class="table-v-inf">
                                                                         <p class="table-v-text">视频名称</p>
-                                                                        <div class="table-v-pic"><img
-                                                                                src="./static/img/user_words_pic.60419c6.jpg"
-                                                                                width="100%" alt="">
+                                                                        <div class="table-v-pic"><img src="./static/img/user_words_pic.60419c6.jpg" width="100%" alt="">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -580,9 +589,7 @@
                                                                 <div class="ivu-table-cell">
                                                                     <div class="table-v-inf">
                                                                         <p class="table-v-text">视频名称</p>
-                                                                        <div class="table-v-pic"><img
-                                                                                src="./static/img/user_words_pic.60419c6.jpg"
-                                                                                width="100%" alt="">
+                                                                        <div class="table-v-pic"><img src="./static/img/user_words_pic.60419c6.jpg" width="100%" alt="">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -639,9 +646,7 @@
                                                                 <div class="ivu-table-cell">
                                                                     <div class="table-v-inf">
                                                                         <p class="table-v-text">视频名称</p>
-                                                                        <div class="table-v-pic"><img
-                                                                                src="./static/img/user_words_pic.60419c6.jpg"
-                                                                                width="100%" alt="">
+                                                                        <div class="table-v-pic"><img src="./static/img/user_words_pic.60419c6.jpg" width="100%" alt="">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -698,9 +703,7 @@
                                                                 <div class="ivu-table-cell">
                                                                     <div class="table-v-inf">
                                                                         <p class="table-v-text">视频名称</p>
-                                                                        <div class="table-v-pic"><img
-                                                                                src="./static/img/user_words_pic.60419c6.jpg"
-                                                                                width="100%" alt="">
+                                                                        <div class="table-v-pic"><img src="./static/img/user_words_pic.60419c6.jpg" width="100%" alt="">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -757,9 +760,7 @@
                                                                 <div class="ivu-table-cell">
                                                                     <div class="table-v-inf">
                                                                         <p class="table-v-text">视频名称</p>
-                                                                        <div class="table-v-pic"><img
-                                                                                src="./static/img/user_words_pic.60419c6.jpg"
-                                                                                width="100%" alt="">
+                                                                        <div class="table-v-pic"><img src="./static/img/user_words_pic.60419c6.jpg" width="100%" alt="">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -816,9 +817,7 @@
                                                                 <div class="ivu-table-cell">
                                                                     <div class="table-v-inf">
                                                                         <p class="table-v-text">视频名称</p>
-                                                                        <div class="table-v-pic"><img
-                                                                                src="./static/img/user_words_pic.60419c6.jpg"
-                                                                                width="100%" alt="">
+                                                                        <div class="table-v-pic"><img src="./static/img/user_words_pic.60419c6.jpg" width="100%" alt="">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -868,7 +867,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="tab-2" class="tab-pane active">
+                                <div id="tab-2" class="tab-pane">
                                     <div class="settings-video-main">
                                         <div class="set-card-box">
                                             <div>
@@ -893,12 +892,12 @@
                                                     </div>
                                                     <div class="s-c-text">
                                                         <div class="row">
-                                                            <div class="ivu-col ivu-col-span-12">
+                                                            <div class="col-lg-6 col-sm-6 col-xs-6">
                                                                 <div class="collection-inf"><p class="collection-name">
                                                                     专辑名称</p>
                                                                     <p class="collection-time">2018/09/09</p></div>
                                                             </div>
-                                                            <div class="ivu-col ivu-col-span-12">
+                                                            <div class="col-lg-6 col-sm-6 col-xs-6">
                                                                 <div class="collection-works-num"><i
                                                                         class="ivu-icon ivu-icon-ios-videocam"></i><span>30</span>
                                                                 </div>
@@ -921,12 +920,12 @@
                                                     </div>
                                                     <div class="s-c-text">
                                                         <div class="row">
-                                                            <div class="ivu-col ivu-col-span-12">
+                                                            <div class="col-lg-6 col-sm-6 col-xs-6">
                                                                 <div class="collection-inf"><p class="collection-name">
                                                                     专辑名称</p>
                                                                     <p class="collection-time">2018/09/09</p></div>
                                                             </div>
-                                                            <div class="ivu-col ivu-col-span-12">
+                                                            <div class="col-lg-6 col-sm-6 col-xs-6">
                                                                 <div class="collection-works-num"><i
                                                                         class="ivu-icon ivu-icon-ios-videocam"></i><span>30</span>
                                                                 </div>
@@ -1079,74 +1078,35 @@
                                                         class="ivu-icon ivu-icon-ios-close-empty"
                                                         aria-hidden="true"></i></a>
                                                 <div class="ivu-modal-header"><h2>上传作品集封面</h2></div>
-                                                <div class="ivu-modal-body" id="avatar-modal" aria-hidden="true"
-                                                     aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
-
-                                                    <form class="avatar-form" action="{{url('admin/upload-logo')}}"
-                                                          enctype="multipart/form-data" method="post">
-                                                        <div class="avatar-body">
-                                                            <div class="row">
-                                                                <div class="col-md-9">
-                                                                    <div class="ivu-upload">
-                                                                        <div class="ivu-upload ivu-upload-drag avatar-upload">
-                                                                            <input class="avatar-src" name="avatar_src"
-                                                                                   type="hidden">
-                                                                            <input class="avatar-data"
-                                                                                   name="avatar_data"
-                                                                                   type="hidden">
-                                                                            <input class="avatar-input" id="avatarInput"
-                                                                                   name="avatar_file" type="file">
-                                                                            <div>
-                                                                                <i class="ivu-icon ivu-icon-ios-cloud-upload"
-                                                                                   style="font-size: 34px;"></i>
-                                                                                <p class="text-hint">点击上传/更换封面图<br>仅支持jpg，png大小不超过2M
-                                                                                </p></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="avatar-wrapper"></div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="flex-box">
-                                                                        <div class="album-pic preview-lg"></div>
-                                                                        <div class="album-pic preview-md"></div>
-                                                                        <div class="album-pic preview-sm"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row avatar-btns">
-                                                                <div class="col-md-9">
-                                                                    <div class="btn-group">
-                                                                        <button class="btn" data-method="rotate"
-                                                                                data-option="-90" type="button"
-                                                                                title="Rotate -90 degrees"><i
-                                                                                class="fa fa-undo"></i> 向左旋转
-                                                                        </button>
-                                                                    </div>
-                                                                    <div class="btn-group">
-                                                                        <button class="btn" data-method="rotate"
-                                                                                data-option="90" type="button"
-                                                                                title="Rotate 90 degrees"><i
-                                                                                class="fa fa-repeat"></i> 向右旋转
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div slot="footer">
-                                                                        <div class="choose">
-                                                                            <button type="submit"
-                                                                                    class="ivu-btn ivu-btn-primary ivu-btn-circle avatar-save">
-                                                                                <span>确定</span></button>
-                                                                            <button type="button"
-                                                                                    class="btn-gray ivu-btn ivu-btn-ghost ivu-btn-circle"
-                                                                                    data-dismiss="modal">
-                                                                                <span>取消</span></button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                <div class="ivu-modal-body">
+                                                    <div class="pop-s-u"><p class="text-hint">仅支持jpg，png大小不超过2M</p>
+                                                        <div class="demo-upload-list"><img
+                                                                src="https://o5wwk8baw.qnssl.com/a42bdcc1178e62b4694c830f028db5c0/avatar">
+                                                            <div class="demo-upload-list-cover"><i
+                                                                    class="ivu-icon ivu-icon-ios-eye-outline"></i>
+                                                                <i class="ivu-icon ivu-icon-ios-trash-outline"></i>
                                                             </div>
                                                         </div>
-                                                        <!--src="https://o5wwk8baw.qnssl.com/a42bdcc1178e62b4694c830f028db5c0/avatar">-->
-                                                    </form>
+                                                        <div class="ivu-upload">
+                                                            <div class="ivu-upload ivu-upload-drag"><input
+                                                                    type="file" class="ivu-upload-input">
+                                                                <div><i class="ivu-icon ivu-icon-ios-cloud-upload"
+                                                                        style="font-size: 34px;"></i>
+                                                                    <p class="text-hint">仅支持jpg，png大小不超过2M</p></div>
+                                                            </div>
+                                                        </div>
+                                                        <div slot="footer">
+                                                            <div class="choose">
+                                                                <button type="button"
+                                                                        class="ivu-btn ivu-btn-primary ivu-btn-circle">
+                                                                    <span>确定</span></button>
+                                                                <button type="button"
+                                                                        class="btn-gray ivu-btn ivu-btn-ghost ivu-btn-circle"
+                                                                        data-dismiss="modal">
+                                                                    <span>取消</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="ivu-modal-footer">
                                                     <div></div>
@@ -1158,6 +1118,425 @@
                             </div>
                         </div>
                     </div>
+                    <div class="settings-router" id="tab-user">
+                        <div class="form-reset">
+                            <div class="form-reset-avator"><span
+                                    class="ivu-avatar ivu-avatar-circle ivu-avatar-large"><span
+                                    class="ivu-avatar-string"
+                                    style="transform: scale(1); position: absolute; display: inline-block; left: calc(50% - 0px);"></span></span>
+                                <p class="settings-user-name">（仅支持JPG、PNG文件小于6M）</p></div>
+                            <form autocomplete="off" class="ivu-form ivu-form-label-right">
+                                <div class="ivu-form-item"><label class="ivu-form-item-label"
+                                                                  style="width: 80px;">昵称</label>
+                                    <div class="ivu-form-item-content" style="margin-left: 80px;">
+                                        <div class="ivu-input-wrapper ivu-input-type">
+                                            <input autocomplete="off" spellcheck="false" type="text" placeholder="请输入昵称"
+                                                   class="ivu-input"></div>
+                                    </div>
+                                </div>
+                                <div class="ivu-form-item"><label class="ivu-form-item-label"
+                                                                  style="width: 80px;">性别</label>
+                                    <div class="ivu-form-item-content" style="margin-left: 80px;">
+                                        <div name="ivuRadioGroup_1531061376914_0"
+                                             class="ivu-radio-group"><label
+                                                class="ivu-radio-wrapper ivu-radio-group-item"><span
+                                                class="ivu-radio"><span class="ivu-radio-inner"></span> <input
+                                                type="radio" class="ivu-radio-input"
+                                                name="ivuRadioGroup_1531061376914_0"></span>男</label> <label
+                                                class="ivu-radio-wrapper ivu-radio-group-item"><span
+                                                class="ivu-radio"><span class="ivu-radio-inner"></span> <input
+                                                type="radio" class="ivu-radio-input"
+                                                name="ivuRadioGroup_1531061376914_0"></span>女</label></div>
+                                    </div>
+                                </div>
+                                <div class="ivu-select ivu-form-item" id="distpicker"><label class="ivu-form-item-label"
+                                                                                             style="width: 80px;">所在地区</label>
+                                    <div class="ivu-form-item-content" style="margin-left: 80px;">
+                                        <div class="ivu-cascader">
+                                            <div class="ivu-cascader-rel">
+                                                <div class="ivu-input-wrapper ivu-input-type"><i class="ivu-icon ivu-icon-load-c ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
+                                                    <input id="city-picker3" data-toggle="city-picker" autocomplete="off" spellcheck="false" type="text"
+                                                           placeholder="请选择所在地区" readonly="readonly" class="ivu-input">
+                                                </div>
+                                                <div class="ivu-cascader-label" style="display: none;"></div>
+                                                <i class="ivu-icon ivu-icon-ios-close ivu-cascader-arrow"
+                                                   style="display: none;"></i> <i
+                                                    class="ivu-icon ivu-icon-arrow-down-b ivu-cascader-arrow"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ivu-form-item"><label class="ivu-form-item-label"
+                                                                  style="width: 80px;">出生日期</label>
+                                    <div class="ivu-form-item-content" style="margin-left: 80px;">
+                                        <div class="ivu-date-picker" style="width: 100%;">
+                                            <div class="ivu-date-picker-rel">
+                                                <div class="ivu-input-wrapper ivu-input-type ivu-date-picker-editor">
+                                                    <i class="ivu-icon ivu-icon-ios-calendar-outline ivu-input-icon ivu-input-icon-normal"></i>
+                                                    <input id="date_added" name='date_added' autocomplete="off"
+                                                           spellcheck="false"
+                                                           type="text" placeholder="请选择出生年月" class="ivu-input">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ivu-form-item"><label class="ivu-form-item-label"
+                                                                  style="width: 80px;">个性签名</label>
+                                    <div class="ivu-form-item-content" style="margin-left: 80px;">
+                                        <div class="ivu-input-wrapper ivu-input-type"><textarea
+                                                wrap="soft" autocomplete="off" spellcheck="false" placeholder="个性签名"
+                                                rows="2" class="ivu-input"
+                                                style="height: 52px; min-height: 52px; max-height: 115px;"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ivu-form-item">
+                                    <div class="ivu-form-item-content" style="margin-left: 80px;">
+                                        <button type="button"
+                                                class="ivu-btn ivu-btn-primary ivu-btn-circle">
+                                            <span>保存</span></button>
+                                        <button type="button"
+                                                class="btn-gray ivu-btn ivu-btn-ghost ivu-btn-circle"
+                                                style="margin-left: 8px;"><span>重置</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="settings-router" id="tab-active">
+                        <div class="tabs-container setings-activity">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#tab-activity-nopaid"> 未支付(<span>4</span>)</a></li>
+                                <li class=""><a data-toggle="tab" href="#tab-activity-paid">已完成(<span>5</span>)</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab-activity-nopaid" class="tab-pane active">
+                                    <div class="panel-body">
+                                        <div class="settings-card-box flex-box flex-wrap">
+                                            <div class="s-c-box" name="s_c_box">
+                                                <div class="content-circle-bg s-c-pic">
+                                                    <div class="s-c-pic-in"><a href="javascript:;" target="_blank"><img
+                                                            src="" width="100%" alt=""></a></div>
+                                                    <div class="s-c-btn"></div>
+                                                </div>
+                                                <div class="s-c-text">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-inf">
+                                                                <p class="collection-name">
+                                                                    <a href="javascript:;" target="_blank">***电影节</a>
+                                                                </p>
+                                                                <p class="collection-time">2018/09/09</p></div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-works-num">
+                                                                <div class="">
+                                                                    <button type="button"
+                                                                            class="ivu-btn ivu-btn-small ivu-btn-primary ivu-btn-circle">
+                                                                        <span>立即支付</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="s-c-box" name="s_c_box">
+                                                <div class="content-circle-bg s-c-pic">
+                                                    <div class="s-c-pic-in"><a href="javascript:;" target="_blank"><img
+                                                            src="" width="100%" alt=""></a></div>
+                                                    <div class="s-c-btn"></div>
+                                                </div>
+                                                <div class="s-c-text">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-inf">
+                                                                <p class="collection-name">
+                                                                    <a href="javascript:;" target="_blank">***电影节</a>
+                                                                </p>
+                                                                <p class="collection-time">2018/09/09</p></div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-works-num">
+                                                                <div class="">
+                                                                    <button type="button"
+                                                                            class="ivu-btn ivu-btn-small ivu-btn-primary ivu-btn-circle">
+                                                                        <span>立即支付</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="s-c-box">
+                                                <div class="content-circle-bg s-c-pic">
+                                                    <div class="s-c-pic-in"><a href="javascript:;" target="_blank"><img
+                                                            src="" width="100%" alt=""></a></div>
+                                                    <div class="s-c-btn"></div>
+                                                </div>
+                                                <div class="s-c-text">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-inf">
+                                                                <p class="collection-name">
+                                                                    <a href="javascript:;" target="_blank">***电影节</a>
+                                                                </p>
+                                                                <p class="collection-time">2018/09/09</p></div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-works-num">
+                                                                <div class="">
+                                                                    <button type="button"
+                                                                            class="ivu-btn ivu-btn-small ivu-btn-primary ivu-btn-circle">
+                                                                        <span>立即支付</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="s-c-box">
+                                                <div class="content-circle-bg s-c-pic">
+                                                    <div class="s-c-pic-in"><a href="javascript:;" target="_blank"><img
+                                                            src="" width="100%" alt=""></a></div>
+                                                    <div class="s-c-btn"></div>
+                                                </div>
+                                                <div class="s-c-text">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-inf">
+                                                                <p class="collection-name">
+                                                                    <a href="javascript:;" target="_blank">***电影节</a>
+                                                                </p>
+                                                                <p class="collection-time">2018/09/09</p></div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-works-num">
+                                                                <div class="">
+                                                                    <button type="button"
+                                                                            class="ivu-btn ivu-btn-small ivu-btn-primary ivu-btn-circle">
+                                                                        <span>立即支付</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-activity-paid" class="tab-pane">
+                                    <div class="panel-body">
+                                        <div class="settings-card-box flex-box flex-wrap">
+                                            <div class="s-c-box">
+                                                <div class="content-circle-bg s-c-pic">
+                                                    <div class="s-c-pic-in">
+                                                        <a href="javascript:;" target="_blank"><img src="" width="100%"
+                                                                                                    alt=""></a>
+                                                    </div>
+                                                    <div class="s-c-btn"></div>
+                                                </div>
+                                                <div class="s-c-text">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-inf">
+                                                                <p class="collection-name">
+                                                                    <a href="javascript:;" target="_blank"> ***电影节 </a>
+                                                                </p>
+                                                                <p class="collection-time">2018/09/09</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-works-num">
+                                                                <button type="button"
+                                                                        class="ivu-btn ivu-btn-small ivu-btn-primary ivu-btn-circle"
+                                                                        disabled>
+                                                                    <span>已完成</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="s-c-box">
+                                                <div class="content-circle-bg s-c-pic">
+                                                    <div class="s-c-pic-in">
+                                                        <a href="javascript:;" target="_blank"><img src="" width="100%"
+                                                                                                    alt=""></a>
+                                                    </div>
+                                                    <div class="s-c-btn"></div>
+                                                </div>
+                                                <div class="s-c-text">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-inf">
+                                                                <p class="collection-name">
+                                                                    <a href="javascript:;" target="_blank"> ***电影节 </a>
+                                                                </p>
+                                                                <p class="collection-time">2018/09/09</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-works-num">
+                                                                <button type="button"
+                                                                        class="ivu-btn ivu-btn-small ivu-btn-primary ivu-btn-circle"
+                                                                        disabled>
+                                                                    <span>已完成</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="s-c-box">
+                                                <div class="content-circle-bg s-c-pic">
+                                                    <div class="s-c-pic-in">
+                                                        <a href="javascript:;" target="_blank"><img src="" width="100%"
+                                                                                                    alt=""></a>
+                                                    </div>
+                                                    <div class="s-c-btn"></div>
+                                                </div>
+                                                <div class="s-c-text">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-inf">
+                                                                <p class="collection-name">
+                                                                    <a href="javascript:;" target="_blank"> ***电影节 </a>
+                                                                </p>
+                                                                <p class="collection-time">2018/09/09</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-works-num">
+                                                                <button type="button"
+                                                                        class="ivu-btn ivu-btn-small ivu-btn-primary ivu-btn-circle"
+                                                                        disabled>
+                                                                    <span>已完成</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="s-c-box">
+                                                <div class="content-circle-bg s-c-pic">
+                                                    <div class="s-c-pic-in">
+                                                        <a href="javascript:;" target="_blank"><img src="" width="100%"
+                                                                                                    alt=""></a>
+                                                    </div>
+                                                    <div class="s-c-btn"></div>
+                                                </div>
+                                                <div class="s-c-text">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-inf">
+                                                                <p class="collection-name">
+                                                                    <a href="javascript:;" target="_blank"> ***电影节 </a>
+                                                                </p>
+                                                                <p class="collection-time">2018/09/09</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                            <div class="collection-works-num">
+                                                                <button type="button"
+                                                                        class="ivu-btn ivu-btn-small ivu-btn-primary ivu-btn-circle"
+                                                                        disabled>
+                                                                    <span>已完成</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings-router" id="tab-account">
+                        <div class="set-account bg-pink">
+                            <div class="account-num">¥ 1,000,000</div>
+                            <div class="choose">
+                                <button type="button" class="ivu-btn ivu-btn-primary ivu-btn-circle" data-toggle="modal"
+                                        data-target="#popAccount">
+                                    <span>立即提现</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings-router" id="tab-password">
+                        <div class="form-reset password-re"><h2>修改密码</h2>
+                            <form autocomplete="off" class="ivu-form ivu-form-label-right">
+                                <div class="ivu-form-item ivu-form-item-error"><label
+                                        class="ivu-form-item-label">输入旧密码</label>
+                                    <div class="ivu-form-item-content">
+                                        <div class="ivu-input-wrapper ivu-input-type">
+                                            <input autocomplete="off" spellcheck="false" type="password"
+                                                   placeholder="输入旧密码" class="ivu-input">
+                                        </div>
+                                        <div class="ivu-form-item-error-tip">请选择输入旧密码</div>
+                                    </div>
+                                </div>
+                                <h3>请输入新密码</h3>
+                                <div class="ivu-form-item"><label class="ivu-form-item-label">输入新密码</label>
+                                    <div class="ivu-form-item-content">
+                                        <div class="ivu-input-wrapper ivu-input-type">
+                                            <input autocomplete="off" spellcheck="false" type="password"
+                                                   placeholder="输入新密码" class="ivu-input"></div>
+                                    </div>
+                                </div>
+                                <div class="ivu-form-item"><label class="ivu-form-item-label">确认新密码</label>
+                                    <div class="ivu-form-item-content">
+                                        <div class="ivu-input-wrapper ivu-input-type">
+                                            <input autocomplete="off" spellcheck="false" type="password"
+                                                   placeholder="确认新密码" class="ivu-input"></div>
+                                    </div>
+                                </div>
+                                <div class="ivu-form-item">
+                                    <div class="ivu-form-item-content">
+                                        <button type="button" class="ivu-btn ivu-btn-primary ivu-btn-circle">
+                                            <span>保存</span></button>
+                                        <button type="button" class="btn-gray ivu-btn ivu-btn-ghost ivu-btn-circle"
+                                                style="margin-left: 8px;"><span>重置</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="popAccount" tabindex="-1" role="dialog" aria-hidden="true" style="display: none">
+        <div class="modal-dialog">
+            <div class="modal-content set-account-pop animated fadeInDownBig">
+                <a class="ivu-modal-close" data-dismiss="modal"><i class="ivu-icon ivu-icon-ios-close-empty"
+                                                                   aria-hidden="true"></i></a>
+                <div class="ivu-modal-header"><h2>请输入提现金额</h2></div>
+                <div class="ivu-modal-body">
+                    <div>
+                        <div class="ivu-input-number-box">
+                            <div class="ivu-input-number">
+                                <div class="ivu-form-item">
+                                    <div class="ivu-form-item-content">
+                                        <div class="ivu-input-wrapper ivu-input-type">
+                                            <input autocomplete="off" spellcheck="false" type="number"
+                                                   placeholder="1000" class="ivu-input"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-red">提现金额不能大于1000</p>
+                        <p>提现成功，稍后我们的运营人员将会联系您，请您耐心等待</p></div>
+                    <div class="choose">
+                        <button type="button" class="ivu-btn ivu-btn-primary ivu-btn-circle"><span>确定</span>
+                        </button>
+                        <button type="button" class="btn-gray ivu-btn ivu-btn-ghost ivu-btn-circle" data-dismiss="modal">
+                            <span>取消</span></button>
+                    </div>
+                </div>
+                <div class="ivu-modal-footer">
+                    <button type="button" class="ivu-btn ivu-btn-text ivu-btn-large" data-dismiss="modal"><span>取消</span>
+                    </button>
+                    <button type="button" class="ivu-btn ivu-btn-primary ivu-btn-large">
+                        <span>确定</span></button>
                 </div>
             </div>
         </div>
@@ -1311,22 +1690,15 @@
 <!--独立js-->
 <script src="js/plugins/jeditable/jquery.jeditable.js"></script>
 <script src="js/plugins/dataTables/datatables.min.js"></script>
-<!-- uploadPic -->
-<script src="js/plugins/uploadPic/cropper.min.js"></script>
-<script src="js/plugins/uploadPic/sitelogo.js"></script>
-
 <script>
 
     $(document).ready(function () {
         /* Init DataTables */
         var oTable = $('#editable').DataTable(
                 {
-                    'ordering': true,
-                    columnDefs: [{targets: 0, "orderable": false}, {targets: 1, "orderable": false}, {
-                        targets: 2,
-                        "orderable": false
-                    }, {targets: 4, "orderable": false}],
-                    "order": [[1, 'asc']]
+                    'ordering' : true,
+                    columnDefs : [ { targets : 0, "orderable" : false },{ targets : 1, "orderable" : false },{ targets : 2, "orderable" : false },{ targets : 4, "orderable" : false }],
+                    "order" : [ [ 1, 'asc' ]]
                 }
         );
 
