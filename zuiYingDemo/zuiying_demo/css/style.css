@@ -6740,10 +6740,19 @@ body.body-small .vote-icon {
   height: auto;
 }
 .landing-page .header-back {
+  position: relative;
   margin: 0 auto;
-  /*min-width: 1170px;*/
-  min-height: 500px;
+  /*min-width: 1200px;*/
+  height: 500px;
   width: 100%;
+  overflow: hidden;
+}
+.landing-page .header-back img {
+  position: relative;
+  top:0;
+  left: 50%;
+  width: 1400px;
+  margin-left: -700px;
 }
 .landing-page .home .header-back.one {
   background: url('../static/img/header_bg.63b8689.jpg') 50% 0 no-repeat;
@@ -6781,23 +6790,20 @@ body.body-small .vote-icon {
 .landing-page .show .header-back.three {
   background: url('../static/img/header_two.jpg') 50% 0 no-repeat;
 }
-.landing-page .activity .header-back.one {
-  background: url('../static/img/marketing_focus1.jpg') 50% 0 no-repeat;
-}
-.landing-page .activity .header-back.two {
-  background: url('../static/img/focus1.ad557d2.jpg') 50% 0 no-repeat;
-}
-.landing-page .activity .header-back.three {
-  background: url('../static/img/header_two.jpg') 50% 0 no-repeat;
-}
+/*.landing-page .activity .header-back.one {*/
+  /*background: url('../static/img/marketing_focus1.jpg') 50% 0 no-repeat;*/
+/*}*/
+/*.landing-page .activity .header-back.two {*/
+  /*background: url('../static/img/focus1.ad557d2.jpg') 50% 0 no-repeat;*/
+/*}*/
+/*.landing-page .activity .header-back.three {*/
+  /*background: url('../static/img/header_two.jpg') 50% 0 no-repeat;*/
+/*}*/
 .landing-page .carousel {
   /*height: 470px;*/
 }
 .landing-page .carousel-caption {
   z-index: 10;
-}
-.landing-page .carousel .item {
-  /*height: 470px;*/
 }
 .landing-page .carousel-inner > .item > img {
   position: absolute;
@@ -6807,6 +6813,7 @@ body.body-small .vote-icon {
   height: 470px;
 }
 .landing-page .carousel-fade .carousel-inner .item {
+  position: relative;
   opacity: 0;
   -webkit-transition-property: opacity;
   transition-property: opacity;
@@ -6847,9 +6854,7 @@ body.body-small .vote-icon {
 }
 .landing-page .carousel-caption {
   position: absolute;
-  top: 130px;
   left: 0;
-  bottom: auto;
   right: 0;
   text-align: center;
 }

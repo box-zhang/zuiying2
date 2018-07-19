@@ -926,11 +926,12 @@
 
 .activity-sign-nav .activity-sign-list {
     margin-bottom: 10px;
+    transition: all .2s ease-in-out;
 }
 .activity-sign-nav .activity-sign-list.active {
     height: 30px;
+    transition: all .2s ease-in-out;
     overflow: hidden;
-    transition: height .2s ease-in-out;
 }
 
 .activity-sign-nav .activity-sign-list .activity-sing-label {
@@ -2062,7 +2063,13 @@ dl dt {
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    background: rgba(255, 69, 69, .25)
+    background: rgba(255, 69, 69, .25);
+    overflow: hidden;
+    text-align: center;
+}
+.settings .s-c-box .s-c-pic .s-c-pic-in img {
+    margin: 0 auto;
+    height: 100%;
 }
 
 .settings .s-c-box .s-c-pic .s-c-btn {
@@ -2418,6 +2425,16 @@ dl dt {
     border-radius: 4px;
     background-color: #fff;
     overflow: hidden;
+}
+.album-pic img,
+.avatar-preview img {
+    width: 100%;
+}
+.nodata {
+    text-align: center;
+    margin: 50px auto;
+    color: #ccc;
+    font-size: 12px;
 }
 .avatar-preview.preview-lg {
     height: 120px;
@@ -11519,9 +11536,10 @@ textarea.ivu-page-options-elevator input {
     box-shadow: 0 0 0 2px hsla(235, 8%, 72%, .2)
 }
 
+.btn-show.active .ivu-icon-arrow-down-b,
 .ivu-select-visible .ivu-select-arrow {
     transform: rotate(180deg);
-    display: inline-block
+    display: inline-block;
 }
 
 .ivu-select-disabled .ivu-select-selection {
@@ -18485,7 +18503,7 @@ html,body {
     height: 100%;
 }
 .carousel .focus-text {
-    margin: 20% 15%;
+    margin: 1% 15%;
     width: 70%;
     color: rgba(255,255,255,0.85);
     font-size: 14px;
@@ -19193,7 +19211,7 @@ c
     .landing-page .carousel-caption,
     .landing-page .carousel-caption.blank {
         /*left: 5%;*/
-        top: 80px;
+        top: 80%;
     }
     .landing-page .carousel-caption h1 {
         font-size: 28px;
@@ -19557,6 +19575,15 @@ body.rtls.top-navigation .footer.fixed {
         float: none;
         text-align: right;
         display: block;
+    }
+    .landing-page .header-back {
+        width: 100%;
+        height: auto;
+    }
+    .landing-page .header-back img {
+        width: 100%;
+        left: 50%;
+        margin-left: -50%;
     }
     .home-show .show-list {
         margin: 30px auto;

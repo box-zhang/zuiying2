@@ -879,16 +879,17 @@
                                             </div>
                                             <div class="settings-card-box">
                                                 <div class="s-c-box">
-                                                    <div class="content-circle-bg s-c-pic"><a
-                                                            href="javascript:;" target="_blank" class="">
-                                                        <div class="s-c-pic-in"><img src="" alt=""></div>
-                                                    </a>
-                                                        <div class="s-c-btn">
+                                                    <div class="content-circle-bg s-c-pic">
+                                                        <a href="javascript:;" target="_blank" class="">
+                                                            <div class="s-c-pic-in"><img src="https://o5wwk8baw.qnssl.com/a42bdcc1178e62b4694c830f028db5c0/avatar" alt=""></div>
+                                                        </a>
+                                                        <div class="s-c-btn" name="uploadPagePic">
                                                             <button type="button"
                                                                     class="btn-gray ivu-btn ivu-btn-ghost ivu-btn-circle ivu-btn-small"
                                                                     data-toggle="modal"
                                                                     data-target="#popAddAlbumPic">
-                                                                <span>上传封面</span></button>
+                                                                <span>上传封面</span>
+                                                            </button>
                                                         </div>
                                                     </div>
                                                     <div class="s-c-text">
@@ -1072,16 +1073,15 @@
                                     </div>
                                     <div class="modal" id="popAddAlbumPic" tabindex="-1" role="dialog"
                                          aria-hidden="true"
-                                         style="display: none">
+                                         style="display: none"
+                                         aria-labelledby="avatar-modal-label">
                                         <div class="modal-dialog">
                                             <div class="modal-content animated fadeInDownBig">
                                                 <a class="ivu-modal-close" data-dismiss="modal"><i
                                                         class="ivu-icon ivu-icon-ios-close-empty"
                                                         aria-hidden="true"></i></a>
                                                 <div class="ivu-modal-header"><h2>上传作品集封面</h2></div>
-                                                <div class="ivu-modal-body" id="avatar-modal" aria-hidden="true"
-                                                     aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
-
+                                                <div class="ivu-modal-body">
                                                     <form class="avatar-form" action="{{url('admin/upload-logo')}}"
                                                           enctype="multipart/form-data" method="post">
                                                         <div class="avatar-body">
