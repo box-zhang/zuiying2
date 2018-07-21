@@ -29,9 +29,6 @@ $(document).ready(function () {
             previous: "上一步",
             loading: "正在加载 ..."
         },
-        transitionEffect: "slideLeft", // 步骤切换动画
-        forceMoveForward: true, // 防止跳转到下一步
-        preloadContent: true,
         onStepChanging: function (event, currentIndex, newIndex) {
             // Always allow going backward even if the current step contains invalid fields!
             if (currentIndex > newIndex) {

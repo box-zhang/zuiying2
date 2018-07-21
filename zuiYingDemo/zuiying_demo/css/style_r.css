@@ -1271,7 +1271,7 @@ dl dt {
 
 .succeed-hint .succeed-hint-icon .ivu-icon {
     margin: 25px auto;
-    font-size: 72px;
+    font-size: 90px;
     color: #ff4545
 }
 
@@ -15095,8 +15095,12 @@ span.ivu-date-picker-cells-cell-disabled.ivu-date-picker-cells-cell-selected em 
 }
 .form-group .form-control,
 .form-group .single-line {
-    width: 80%;
+    width: 70%;
     border-radius: 5px;
+}
+.form-group .btn-add {
+    margin: 20px 0;
+    width: 200px;
 }
 
 .ivu-carousel {
@@ -16113,7 +16117,7 @@ html {
 }
 
 .content-circle-bg {
-    padding: 35px 30px;
+    padding: 35px 40px;
     box-shadow: 0 0 8px rgba(104,104,122,0.5);
     border-radius: 15px;
     background: #fff
