@@ -309,7 +309,7 @@
     /*flex: 1;*/
     /*-ms-flex-positive: 1;*/
     /*flex-grow: 1;*/
-    margin: 0 1px;
+    margin: 1px;
     width: 24%;
 }
 
@@ -16126,7 +16126,8 @@ html {
 .content {
     margin: 45px auto 80px;
     width: 100%;
-    display: inline-block
+    max-width: 1100px;
+    /*display: inline-block*/
 }
 
 .content:after {
@@ -19052,7 +19053,7 @@ c
     flex:1;
 }
 .marketing .marketing-item-2 .ivu-card {
-	padding: 20px 30px; 
+	padding: 20px 30px 80px;
 }
 
 .marketing .marketing-item-2 .m-i-h3 {
@@ -19157,6 +19158,7 @@ c
 
 .marketing .marketing-item-5 .flex-box.flex-wrap {
     justify-content: center;
+    align-items: center;
 }
 .marketing .marketing-item-5 .ivu-card {
     padding: 3% 8%;
