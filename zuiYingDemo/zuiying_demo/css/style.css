@@ -2395,12 +2395,15 @@ div.dt-button-info {
 }
 /* Validation */
 label.error {
-  color: #cc5965;
+  position: absolute;
+  color: rgba(255, 69, 69, .65);
   display: inline-block;
   margin-left: 5px;
+  bottom: -18px;
+  font-size: 12px;
 }
 .form-control.error {
-  border: 1px dotted #cc5965;
+  border: 1px solid rgba(255, 69, 69, .65);
 }
 /* ngGrid */
 .gridStyle {
@@ -6748,7 +6751,7 @@ body.body-small .vote-icon {
   overflow: hidden;
 }
 .landing-page .header-back img {
-  position: relative;
+  position: absolute;
   top:0;
   left: 50%;
   width: 1400px;
@@ -6856,6 +6859,8 @@ body.body-small .vote-icon {
   position: absolute;
   left: 0;
   right: 0;
+  top: 0;
+  bottom: 0;
   text-align: center;
 }
 .landing-page .carousel-caption.blank {
@@ -6868,6 +6873,16 @@ body.body-small .vote-icon {
 }
 .landing-page .carousel-indicators {
   /*padding-right: 60px;*/
+}
+.home-focus-text {
+  margin-top: 160px;
+  color:rgba(255,255,255,0.65)
+}
+.home-focus-text-data {
+  margin: 35px 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: #3e3d54
 }
 .landing-page .carousel-caption h1 {
   font-size: 30px;

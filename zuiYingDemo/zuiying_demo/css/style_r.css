@@ -1202,9 +1202,15 @@ dl dt {
     font-size: 24px;
     font-weight: 700
 }
-
+.wizard-big {
+    width: 100%;
+}
 .a-page .step-introduce {
     color: #786e6e
+}
+.wizard-big .audible,
+.wizard-big .title {
+    display: none;
 }
 
 .a-page .step-introduce .text-level2 {
@@ -1224,7 +1230,7 @@ dl dt {
     margin: 60px
 }
 
-.a-page .step .ivu-steps .ivu-steps-title {
+.a-page .step .steps .ivu-steps-title {
     display: none
 }
 
@@ -1241,7 +1247,7 @@ dl dt {
 
 .a-page .step-c {
     margin: 50px auto;
-    width: 80%
+    width: 60%
 }
 
 .step-succeed {
@@ -2165,6 +2171,7 @@ dl dt {
 
 .settings-router {
     display: none;
+    /*display: block;*/
     padding: 0 0 100px 50px;
     border-left: 1px solid #eaeaea;
 }
@@ -10945,12 +10952,38 @@ textarea.ivu-page-options-elevator input {
     width: 44px
 }
 
-.ivu-steps {
+.steps {
+    margin: 0 8%;
     font-size: 0;
-    width: 100%;
+    width: 90%;
     line-height: 1.5
 }
-
+.steps li {
+    float: left;
+    width: 16.667%;
+}
+.steps li,
+.steps li:active {
+    outline: none;
+}
+.steps li.last .ivu-steps-tail {
+    display: none;
+}
+.steps li a,
+.steps li .ivu-steps-item {
+    width: 100%;
+}
+.fieldset-box {
+    margin: 0 auto;
+    width: 60%;
+}
+.fieldset-box .ivu-form-item-label {
+    text-align: right;
+}
+.fieldset-box .ivu-form-item-content {
+    margin-top: -25px;
+    margin-bottom: 25px;
+}
 .ivu-steps-item {
     display: inline-block;
     position: relative;
@@ -10975,16 +11008,39 @@ textarea.ivu-page-options-elevator input {
     background-color: #e9eaec
 }
 
-.ivu-steps-item.ivu-steps-status-process .ivu-steps-head-inner {
+.done .ivu-steps-item .ivu-steps-head-inne,
+.current .ivu-steps-item .ivu-steps-head-inner {
     border-color: hsla(240, 8%, 44%, .65);
-    background: #68687a
-}
-
-.ivu-steps-item.ivu-steps-status-process .ivu-steps-head-inner>.ivu-steps-icon,
-.ivu-steps-item.ivu-steps-status-process .ivu-steps-head-inner span {
+    background: #68687a;
     color: #fff;
     font-size: 18px
 }
+.done .ivu-steps-item .ivu-steps-tail>i,
+.current .ivu-steps-item .ivu-steps-tail>i {
+    background-color: hsla(240, 8%, 44%, .08);
+}
+.form-group .ivu-form-item-label {
+    margin: 10px 0;
+}
+.actions {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+.actions li {
+    display: inline-block;
+    margin: 5px 10px;
+    min-width: 120px;
+}
+
+.actions li a {
+    width: 100%;
+}
+/*.ivu-steps-item.ivu-steps-status-process .ivu-steps-head-inner>.ivu-steps-icon,*/
+/*.ivu-steps-item.ivu-steps-status-process .ivu-steps-head-inner span {*/
+    /*color: #fff;*/
+    /*font-size: 18px*/
+/*}*/
 
 .ivu-steps-item.ivu-steps-status-process .ivu-steps-content,
 .ivu-steps-item.ivu-steps-status-process .ivu-steps-title {
@@ -11056,24 +11112,24 @@ textarea.ivu-page-options-elevator input {
 }
 
 .ivu-steps-item:last-child .ivu-steps-tail {
-    display: none
+    /*display: none*/
 }
 
-.ivu-steps .ivu-steps-head,
-.ivu-steps .ivu-steps-main {
+.steps .ivu-steps-head,
+.steps .ivu-steps-main {
     position: relative;
     display: inline-block;
     vertical-align: top
 }
 
-.ivu-steps .ivu-steps-head {
+.steps .ivu-steps-head {
     padding: 8px;
     border-radius: 50%;
     box-shadow: 0 0 15px 0 hsla(240, 8%, 44%, .08);
     background: #fff
 }
 
-.ivu-steps .ivu-steps-head-inner {
+.steps .ivu-steps-head-inner {
     display: block;
     width: 38px;
     height: 38px;
@@ -11085,31 +11141,31 @@ textarea.ivu-page-options-elevator input {
     transition: background-color .2s ease-in-out
 }
 
-.ivu-steps .ivu-steps-head-inner>.ivu-steps-icon {
+.steps .ivu-steps-head-inner>.ivu-steps-icon {
     line-height: 1;
     position: relative
 }
 
-.ivu-steps .ivu-steps-head-inner>.ivu-steps-icon.ivu-icon {
+.steps .ivu-steps-head-inner>.ivu-steps-icon.ivu-icon {
     font-size: 36px
 }
 
-.ivu-steps .ivu-steps-head-inner>.ivu-steps-icon.ivu-icon-ios-checkmark-empty,
-.ivu-steps .ivu-steps-head-inner>.ivu-steps-icon.ivu-icon-ios-close-empty {
+.steps .ivu-steps-head-inner>.ivu-steps-icon.ivu-icon-ios-checkmark-empty,
+.steps .ivu-steps-head-inner>.ivu-steps-icon.ivu-icon-ios-close-empty {
     font-weight: 700
 }
 
-.ivu-steps .ivu-steps-main {
+.steps .ivu-steps-main {
     margin-top: 2.5px;
     display: inline
 }
 
-.ivu-steps .ivu-steps-custom .ivu-steps-title {
+.steps .ivu-steps-custom .ivu-steps-title {
     margin-top: 2.5px
 }
 
-.ivu-steps .ivu-steps-title {
-    display: inline-block;
+.steps .ivu-steps-title {
+    display: none;
     margin-bottom: 4px;
     padding-right: 10px;
     font-size: 14px;
@@ -11118,29 +11174,31 @@ textarea.ivu-page-options-elevator input {
     background: #fff
 }
 
-.ivu-steps .ivu-steps-title>a:first-child:last-child {
+.steps .ivu-steps-title>a:first-child:last-child {
     color: #666
 }
 
-.ivu-steps .ivu-steps-item-last .ivu-steps-title {
+.steps .ivu-steps-item-last .ivu-steps-title {
     padding-right: 0;
     width: 100%
 }
 
-.ivu-steps .ivu-steps-content {
+.steps .ivu-steps-content {
+    padding: 5px 0;
+    width: 56px;
     font-size: 12px;
-    color: #999
+    text-align: center;
 }
 
-.ivu-steps .ivu-steps-tail {
+.steps .ivu-steps-tail {
     width: 100%;
-    padding: 0 10px;
+    padding: 0 0 0 10px;
     position: absolute;
     left: 0;
     top: 20px
 }
 
-.ivu-steps .ivu-steps-tail>i {
+.steps .ivu-steps-tail>i {
     display: inline-block;
     width: 100%;
     height: 16px;
@@ -11151,7 +11209,7 @@ textarea.ivu-page-options-elevator input {
     box-shadow: 0 0 15px 0 hsla(240, 8%, 44%, .08)
 }
 
-.ivu-steps .ivu-steps-tail>i:after {
+.steps .ivu-steps-tail>i:after {
     content: "";
     width: 0;
     height: 100%;
@@ -11205,7 +11263,7 @@ textarea.ivu-page-options-elevator input {
     border-radius: 1px
 }
 
-.ivu-steps .ivu-steps-item.ivu-steps-custom .ivu-steps-head-inner,
+.steps .ivu-steps-item.ivu-steps-custom .ivu-steps-head-inner,
 .ivu-steps.ivu-steps-small .ivu-steps-item.ivu-steps-custom .ivu-steps-head-inner {
     width: inherit;
     height: inherit;
@@ -14998,6 +15056,9 @@ span.ivu-date-picker-cells-cell-disabled.ivu-date-picker-cells-cell-selected em 
     line-height: 32px;
     font-size: 12px
 }
+.step-c .ivu-form-item-content {
+    margin-top: -23px;
+}
 
 .ivu-form-item .ivu-form-item {
     margin-bottom: 0
@@ -15015,7 +15076,14 @@ span.ivu-date-picker-cells-cell-disabled.ivu-date-picker-cells-cell-selected em 
     padding-top: 6px;
     color: #ed3f14
 }
-
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+.form-group .checkbox-text {
+    padding: 0 5px
+}
+.form-group .ivu-form-item-label:before,
 .ivu-form-item-required .ivu-form-item-label:before {
     content: "*";
     display: inline-block;
@@ -15024,6 +15092,11 @@ span.ivu-date-picker-cells-cell-disabled.ivu-date-picker-cells-cell-selected em 
     font-family: SimSun;
     font-size: 12px;
     color: #ed3f14
+}
+.form-group .form-control,
+.form-group .single-line {
+    width: 80%;
+    border-radius: 5px;
 }
 
 .ivu-carousel {
@@ -18503,7 +18576,9 @@ html,body {
     height: 100%;
 }
 .carousel .focus-text {
-    margin: 1% 15%;
+    position: absolute;
+    bottom: 5%;
+    margin: 1% 25%;
     width: 70%;
     color: rgba(255,255,255,0.85);
     font-size: 14px;
@@ -18898,6 +18973,18 @@ c
 .flex-box.flex-wrap {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    justify-content: space-between;
+}
+.spread .partner .partner-list ul,
+.spread .instance-list ul {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.spread .instance-list ul {
+
+}
+.spread .partner .partner-list ul {
     justify-content: space-between;
 }
 .flex-box.flex-wrap-l {

@@ -19,9 +19,8 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style_r.css" rel="stylesheet">
 </head>
-<body id="page-top" class="landing-page">
-
-<div class="navbar-wrapper">
+<body id="page-top" class="landing-page bg-pink">
+<div class="navbar-wrapper nabar-bg">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header page-scroll">
@@ -80,176 +79,273 @@
         </div>
     </nav>
 </div>
-<div id="inSlider" class="carousel carousel-fade activity" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#inSlider" data-slide-to="0" class="active"></li>
-        <li data-target="#inSlider" data-slide-to="1"></li>
-        <li data-target="#inSlider" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <div class="header-back one">
-                <img src="./static/img/marketing_focus1.jpg" alt="">
-                <div class="carousel-caption">
-                    <div class="focus-text"><h4>电影节</h4>
-                        <p>电影节文字文字文字0000000</p></div>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="header-back two">
-                <img src="./static/img/focus1.ad557d2.jpg" alt="">
-                <div class="carousel-caption">
-                    <div class="focus-text"><h4>电影节</h4>
-                        <p>电影节文字文字文字1111</p></div>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="header-back three">
-                <img src="./static/img/header_two.jpg" alt="">
-                <div class="carousel-caption">
-                    <div class="focus-text"><h4>电影节</h4>
-                        <p>电影节文字文字文字222</p></div>
+<section>
+    <div class="main">
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12">
+                    <div class="a-page"><h1>****电影节报名</h1>
+                        <div class="content-circle-bg">
+                            <div class="step-introduce">
+                                <dl>
+                                    <dt>参赛须知：</dt>
+                                    <dd>
+                                        <ol class="text-level2">
+                                            <li><span class="level-none">1）</span>拍摄国家为影片拍摄所属的国家，影片格式的类型是供筛选电影节的。</li>
+                                            <li><span class="level-none">2）</span>完成日期通常是影片首次完成的日期，如果电影未完成给它大致的完成日期或者运行时间。
+                                            </li>
+                                            <li><span class="level-none">3）</span>必填字段有（*）</li>
+                                        </ol>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <form id="steps" action="#" class="wizard-big">
+                                <h1>
+                                    <div class="ivu-steps-item">
+                                        <div class="ivu-steps-tail"><i></i></div>
+                                        <div class="ivu-steps-head">
+                                            <div class="ivu-steps-head-inner"><span>1</span></div>
+                                        </div>
+                                        <div class="ivu-steps-main">
+                                            <div class="ivu-steps-title">步骤1</div>
+                                            <div class="ivu-steps-content">影片</div>
+                                        </div>
+                                    </div>
+                                </h1>
+                                <fieldset>
+                                    <div class="fieldset-box">
+                                        <div class="form-group">
+                                            <label class="ivu-form-item-label" style="width: 100px;">电影名称：</label>
+                                            <input id="" name="userName" type="text"
+                                                   class="label-item form-control required" placeholder="请输入影片全称">
+                                        </div>
+                                        <div class="form-group ivu-form-item-required">
+                                            <label class="ivu-form-item-label" style="width: 100px;">影片语言：</label>
+                                            <select name="" id="" class="label-item form-control required">
+                                                <option value="">中文</option>
+                                                <option value="">英文</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group ivu-form-item-required">
+                                            <label class="ivu-form-item-label" style="width: 100px;">影片分类：</label>
+                                            <label><input type="checkbox" name="check" id="" value="" /><span class="checkbox-text">故事片</span></label>
+                                            <label><input type="checkbox" name="check" id="" value="" /><span class="checkbox-text">动漫片</span></label>
+                                            <label><input type="checkbox" name="check" id="" value="" /><span class="checkbox-text">试验片</span></label>
+                                        </div>
+                                        <div class="form-group ivu-form-item-required">
+                                            <label class="ivu-form-item-label" style="width: 100px;">影片类型：</label>
+                                            <label><input type="checkbox" name="check" id="" value="" /><span class="checkbox-text">故事片</span></label>
+                                            <label><input type="checkbox" name="check" id="" value="" /><span class="checkbox-text">动漫片</span></label>
+                                            <label><input type="checkbox" name="check" id="" value="" /><span class="checkbox-text">试验片</span></label>
+                                        </div>
+                                        <div class="form-group ivu-form-item-required">
+                                            <label class="ivu-form-item-label" style="width: 100px;">影片题材：</label>
+                                            <label><input type="checkbox" name="check" id="" value="" /><span class="checkbox-text">故事片</span></label>
+                                            <label><input type="checkbox" name="check" id="" value="" /><span class="checkbox-text">动漫片</span></label>
+                                            <label><input type="checkbox" name="check" id="" value="" /><span class="checkbox-text">试验片</span></label>
+                                        </div>
+                                        <div class="form-group ivu-form-item-required">
+                                            <label class="ivu-form-item-label" style="width: 100px;">对白字幕：</label>
+                                            <select name="" id="" class="label-item form-control required" placholder="选择对白字幕所用语言">
+                                                <option value="">中文</option>
+                                                <option value="">英文</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="ivu-form-item-label" style="width: 100px;">片长：</label>
+                                            <input id="" name="userName" type="text"
+                                                   class="label-item form-control required" placeholder="请输入影片全称">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <h1>
+                                    <div class="ivu-steps-item">
+                                        <div class="ivu-steps-tail"><i></i></div>
+                                        <div class="ivu-steps-head">
+                                            <div class="ivu-steps-head-inner"><span>2</span></div>
+                                        </div>
+                                        <div class="ivu-steps-main">
+                                            <div class="ivu-steps-title">步骤2</div>
+                                            <div class="ivu-steps-content">导演</div>
+                                        </div>
+                                    </div>
+                                </h1>
+                                <fieldset>
+                                    <h2>Profile Information</h2>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label>First name *</label>
+                                                <input id="name" name="name" type="text" class="form-control required">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Last name *</label>
+                                                <input id="surname" name="surname" type="text"
+                                                       class="form-control required">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label>Email *</label>
+                                                <input id="email" name="email" type="text"
+                                                       class="form-control required email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Address *</label>
+                                                <input id="address" name="address" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <h1>
+                                    <div class="ivu-steps-item">
+                                        <div class="ivu-steps-tail"><i></i></div>
+                                        <div class="ivu-steps-head">
+                                            <div class="ivu-steps-head-inner"><span>3</span></div>
+                                        </div>
+                                        <div class="ivu-steps-main">
+                                            <div class="ivu-steps-title">步骤3</div>
+                                            <div class="ivu-steps-content">主演</div>
+                                        </div>
+                                    </div>
+                                </h1>
+                                <fieldset>
+                                    <div class="text-center" style="margin-top: 120px">
+                                        <h2>You did it Man :-)</h2>
+                                    </div>
+                                </fieldset>
+
+                                <h1>
+                                    <div class="ivu-steps-item">
+                                        <div class="ivu-steps-tail"><i></i></div>
+                                        <div class="ivu-steps-head">
+                                            <div class="ivu-steps-head-inner"><span>4</span></div>
+                                        </div>
+                                        <div class="ivu-steps-main">
+                                            <div class="ivu-steps-title">步骤4</div>
+                                            <div class="ivu-steps-content">出品团队</div>
+                                        </div>
+                                    </div>
+                                </h1>
+                                <fieldset>
+                                    <h2>Terms and Conditions</h2>
+                                    <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label
+                                        for="acceptTerms">I agree with the Terms and Conditions.</label>
+                                </fieldset>
+                                <h1>
+                                    <div class="ivu-steps-item">
+                                        <div class="ivu-steps-tail"><i></i></div>
+                                        <div class="ivu-steps-head">
+                                            <div class="ivu-steps-head-inner"><span>5</span></div>
+                                        </div>
+                                        <div class="ivu-steps-main">
+                                            <div class="ivu-steps-title">步骤5</div>
+                                            <div class="ivu-steps-content">主创信息</div>
+                                        </div>
+                                    </div>
+                                </h1>
+                                <fieldset>
+                                    <h2>Terms and Conditions</h2>
+                                    <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label
+                                        for="acceptTerms">I agree with the Terms and Conditions.</label>
+                                </fieldset>
+                                <h1>
+                                    <div class="ivu-steps-item">
+                                        <div class="ivu-steps-tail"><i></i></div>
+                                        <div class="ivu-steps-head">
+                                            <div class="ivu-steps-head-inner"><span>6</span></div>
+                                        </div>
+                                        <div class="ivu-steps-main">
+                                            <div class="ivu-steps-title">步骤6</div>
+                                            <div class="ivu-steps-content">物料信息</div>
+                                        </div>
+                                    </div>
+                                </h1>
+                                <fieldset>
+                                    <h2>Terms and Conditions</h2>
+                                    <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label
+                                        for="acceptTerms">I agree with the Terms and Conditions.</label>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">上一页</span>
-    </a>
-    <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">下一页</span>
-    </a>
-</div>
-<section>
-    <div class="container main activity">
-        <div class="activity-content">
-            <div class="activity-sign-nav">
-                <dl>
-                    <dt>所属类目：</dt>
-                    <dd>
-                        <div class="activity-sign-list clearfix">
-                            <ul>
-                                <li class="item-sign active"><span>全部</span></li>
-                                <li class="item-sign"><span>类目一</span></li>
-                                <li class="item-sign"><span>类目二</span></li>
-                                <li class="item-sign"><span>类目一</span></li>
-                                <li class="item-sign"><span>类目一</span></li>
-                                <li class="item-sign"><span>类目一</span></li>
-                                <li class="item-sign"><span>类目一</span></li>
-                                <li class="item-sign"><span>类目一</span></li>
-                                <li class="item-sign"><span>类目一</span></li>
-                                <li class="item-sign"><span>类目一</span></li>
-                                <li class="item-sign"><span>类目一</span></li>
-                                <li class="item-sign"><span>类目一</span></li>
-                                <li class="item-sign"><span>类目一</span></li>
-                                <li class="item-sign"><span>类目一</span></li>
-                                <li class="item-sign"><span>类目一</span></li>
-                                <li class="item-sign"><span>类目一</span></li>
-                            </ul>
-                        </div>
-                        <div class="btn-show" id="btnShow"><span>展开</span><i
-                                class="ivu-icon ivu-icon-arrow-down-b"></i>
-                        </div>
-                    </dd>
-                </dl>
-                <hr>
-                <dl>
-                    <dt>其他选项：</dt>
-                    <dd>
-                        <div class="activity-sign-list">
-                            <div class="activity-sing-label">
-                                <label><span>国际：</span>
-                                    <div class="ivu-select ivu-select-single" style="width: 200px;">
-                                        <div tabindex="0" class="ivu-select-selection"><input type="hidden" value="">
-                                            <div><span class="ivu-select-placeholder">请选择</span> <i
-                                                    class="ivu-icon ivu-icon-arrow-down-b ivu-select-arrow"></i></div>
-                                        </div>
-                                        <div class="ivu-select-dropdown" style="display: none;">
-                                            <ul class="ivu-select-dropdown-list">
-                                                <li class="ivu-select-item">New York</li>
-                                                <li class="ivu-select-item">London</li>
-                                                <li class="ivu-select-item">Sydney</li>
-                                                <li class="ivu-select-item">Ottawa</li>
-                                                <li class="ivu-select-item">Paris</li>
-                                                <li class="ivu-select-item">Canberra</li>
-                                            </ul>
-                                            <ul class="ivu-select-loading" style="display: none;">加载中</ul>
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="activity-sing-label"><label><span>状态：</span>
-                                <div class="ivu-select ivu-select-single" style="width: 200px;">
-                                    <div tabindex="0" class="ivu-select-selection"><input type="hidden" value="">
-                                        <div><span class="ivu-select-placeholder">请选择</span> <i
-                                                class="ivu-icon ivu-icon-arrow-down-b ivu-select-arrow"></i></div>
-                                    </div>
-                                    <div class="ivu-select-dropdown" style="display: none;">
-                                        <ul class="ivu-select-not-found" style="display: none;">
-                                            <li>无匹配数据</li>
-                                        </ul>
-                                        <ul class="ivu-select-dropdown-list">
-                                            <li class="ivu-select-item">进行中</li>
-                                            <li class="ivu-select-item">已完成</li>
-                                            <li class="ivu-select-item">已结束</li>
-                                        </ul>
-                                        <ul class="ivu-select-loading" style="display: none;">加载中</ul>
-                                    </div>
-                                </div>
-                            </label></div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </dd>
-                </dl>
-            </div>
-            <div class="good-work" id="activitiesList"></div>
-            <div class="nodata" style="display: none"></div>
-            <div class="page">
-                <ul class="ivu-page"><span class="ivu-page-total">共 120 条</span>
-                    <li title="上一页" class="ivu-page-prev ivu-page-disabled"><a><i
-                            class="ivu-icon ivu-icon-ios-arrow-left"></i></a></li>
-                    <li title="1" class="ivu-page-item ivu-page-item-active"><a>1</a></li>
-
-                    <li title="2" class="ivu-page-item"><a>2</a></li>
-                    <li title="3" class="ivu-page-item"><a>3</a></li>
-                    <li title="向后 5 页" class="ivu-page-item-jump-next"><a><i
-                            class="ivu-icon ivu-icon-ios-arrow-right"></i></a></li>
-                    <li title="12" class="ivu-page-item"><a>12</a></li>
-                    <li title="下一页" class="ivu-page-next"><a><i class="ivu-icon ivu-icon-ios-arrow-right"></i></a></li>
-                    <div class="ivu-page-options">
-                        <div class="ivu-page-options-sizer">
-                            <div class="ivu-select ivu-select-single ivu-select-default">
-                                <div tabindex="0" class="ivu-select-selection"><input type="hidden" value="10">
-                                    <div><span class="ivu-select-selected-value">10 条/页</span> <i
-                                            class="ivu-icon ivu-icon-arrow-down-b ivu-select-arrow"></i></div>
-                                </div>
-                                <div class="ivu-select-dropdown" style="display: none;">
-                                    <ul class="ivu-select-not-found" style="display: none;">
-                                        <li>无匹配数据</li>
-                                    </ul>
-                                    <ul class="ivu-select-dropdown-list">
-                                        <li class="ivu-select-item ivu-select-item-selected"
-                                            style="text-align: center;">10 条/页
-                                        </li>
-                                        <li class="ivu-select-item" style="text-align: center;">20 条/页</li>
-                                        <li class="ivu-select-item" style="text-align: center;">30 条/页</li>
-                                        <li class="ivu-select-item" style="text-align: center;">40 条/页</li>
-                                    </ul>
-                                    <ul class="ivu-select-loading" style="display: none;">加载中</ul>
+    <div class="modal" id="popActivitySign" tabindex="-1" role="dialog" aria-hidden="true" style="display: none">
+        <div class="modal-dialog">
+            <div class="modal-content animated fadeInDownBig">
+                <a class="ivu-modal-close" data-dismiss="modal"><i class="ivu-icon ivu-icon-ios-close-empty"
+                                                                   aria-hidden="true"></i></a>
+                <div class="ivu-modal-header"><h2>电影节报名</h2></div>
+                <div class="ivu-modal-body">
+                    <div class="pop-form">
+                        <form autocomplete="off" class="ivu-form ivu-form-label-right">
+                            <div class="ivu-form-item ivu-form-item-required ivu-form-item-error">
+                                <label class="ivu-form-item-label" style="width: 80px;">联系人</label>
+                                <div class="ivu-form-item-content" style="margin-left: 80px;">
+                                    <div class="ivu-input-wrapper ivu-input-type">
+                                        <input autocomplete="off" spellcheck="false" type="text"
+                                               placeholder="请输入联系人姓名" autofocus="autofocus"
+                                               class="ivu-input"></div>
+                                    <div class="ivu-form-item-error-tip">联系人不能为空</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="ivu-page-options-elevator">
-                            跳至
-                            <input type="text" autocomplete="off" spellcheck="false">
-                            页
-                        </div>
+                            <div class="ivu-form-item ivu-form-item-required"><label
+                                    class="ivu-form-item-label" style="width: 80px;">联系电话</label>
+                                <div class="ivu-form-item-content" style="margin-left: 80px;">
+                                    <div class="ivu-input-wrapper ivu-input-type">
+                                        <input autocomplete="off" spellcheck="false" type="text"
+                                               placeholder="请输入手机号码" class="ivu-input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ivu-form-item ivu-form-item-required"><label
+                                    class="ivu-form-item-label" style="width: 80px;">微信号</label>
+                                <div class="ivu-form-item-content" style="margin-left: 80px;">
+                                    <div class="ivu-input-wrapper ivu-input-type">
+                                        <input autocomplete="off" spellcheck="false" type="text"
+                                               placeholder="请填写您正在使用的微信号" class="ivu-input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ivu-form-item ivu-form-item-required"><label
+                                    class="ivu-form-item-label" style="width: 80px;">公司名称</label>
+                                <div class="ivu-form-item-content" style="margin-left: 80px;">
+                                    <div class="ivu-input-wrapper ivu-input-type">
+                                        <input autocomplete="off" spellcheck="false" type="text"
+                                               placeholder="请填写您的公司全称" class="ivu-input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ivu-form-item ivu-form-item-required"><label
+                                    class="ivu-form-item-label" style="width: 80px;">其他</label>
+                                <div class="ivu-form-item-content" style="margin-left: 80px;">
+                                    <div class="ivu-input-wrapper ivu-input-type"><textarea
+                                            wrap="soft" autocomplete="off" spellcheck="false"
+                                            placeholder="请输入..." rows="2"
+                                            class="ivu-input"
+                                            style="height: 52px; min-height: 52px; max-height: 115px;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choose">
+                                <button type="button"
+                                        class="ivu-btn ivu-btn-primary ivu-btn-circle">
+                                    <span>确定</span></button>
+                                <button type="button"
+                                        class="btn-gray ivu-btn ivu-btn-ghost ivu-btn-circle">
+                                    <span>重置</span></button>
+                            </div>
+                        </form>
                     </div>
-                </ul>
+                </div>
+                <div class="ivu-modal-footer">
+                    <div></div>
+                </div>
             </div>
         </div>
     </div>
@@ -397,82 +493,13 @@
 <script src="js/plugins/wow/wow.min.js"></script>
 <!-- Toastr script -->
 <script src="js/plugins/toastr/toastr.min.js"></script>
+<!-- Steps -->
+<script src="js/plugins/steps/jquery.steps.min.js"></script>
+<!-- Jquery Validate -->
+<script src="js/plugins/validate/jquery.validate.min.js"></script>
 
 <script src="js/common.js"></script>
-
-<script>
-
-    (function ($) {
-        var pos = 0;
-        var LIST_ITEM_SIZE = 100;
-        //滚动条距底部的距离
-        var BOTTOM_OFFSET = 0;
-        var i = 1;
-        var activiesItem = 0;
-
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                var $currentWindow = $(window);
-                //当前窗口的高度
-                var windowHeight = $currentWindow.height();
-                //当前滚动条从上往下滚动的距离
-                var scrollTop = $currentWindow.scrollTop();
-                //当前文档的高度
-                var docHeight = $(document).height();
-                //页脚高度
-                var footerHeight = $('.footer-wrapper').height();
-                $.ajaxSettings.async = false;
-                if ((BOTTOM_OFFSET + scrollTop) >= docHeight - windowHeight - footerHeight - 240) {
-                    $.getJSON("test.json", {
-                        page: 1,
-                        global: false
-                    }, function (json) {
-                        if (json['activity'] && activiesItem < json['activity'].length) {
-                            var str = "";
-                            var index = activiesItem;
-                            $.each(json['activity'], function (index, array) {
-                                if (activiesItem < i * 6) {
-                                    var str = '<div class="card card-activity">' +
-                                            '<div class="ivu-card">' +
-                                            '<div class="ivu-card-head">' +
-                                            '<div><span class="nav-item"><div class="card-pic">' +
-                                            '<img src="./static/img/card_video.60419c6.jpg" alt="">' +
-                                            '</div></span></div>' +
-                                            '</div>' +
-                                            '<div class="ivu-card-body">' +
-                                            '<div class="activity-discribe"><span class="nav-item"><p class="card-name">' +
-                                            json['activity'][activiesItem]['name'] +
-                                            '</p></span>' +
-                                            '<div class="activity-time"><span>5月5日</span>&nbsp;至&nbsp;<span>5月8日</span>' +
-                                            '<div class="activity-price">报名费 <span class="price">¥200</span></div>' +
-                                            '</div>' +
-                                            '</div>' +
-                                            '</div>' +
-                                            '</div>' +
-                                            '</div>';
-                                    $("#activitiesList").append(str);
-                                    activiesItem++
-                                } else {
-                                }
-                            });
-                            i++;
-                        } else {
-                            $(".nodata").show().html("数据加载完毕...");
-                            return false;
-                        }
-                    });
-                }
-            });
-
-        })
-    })(jQuery);
-
-    $('#btnShow').click(function () {
-        $(this).toggleClass("active");
-        $(this).parent().find('.activity-sign-list').toggleClass("active");
-
-    })
-</script>
+<script src="js/steps_main.js"></script>
 
 </body>
 </html>

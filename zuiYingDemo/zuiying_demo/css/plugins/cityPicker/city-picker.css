@@ -43,7 +43,7 @@
 
 .city-picker-dropdown {
     position: absolute;
-    width: 315px;
+    width: 315px!important;
     left: -9999px;
     top: -9999px;
     outline: 0;
