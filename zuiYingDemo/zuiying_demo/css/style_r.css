@@ -16353,7 +16353,9 @@ html {
     height: 200px;
     text-align: center;
     border-radius: 10px 10px 0 0;
-    background-color: hsla(240, 8%, 44%, .08);
+    /*background-color: #eee;*/
+    /*background: url(http://img.moviest.com/videos-poster/77a7796….jpg) no-repeat center center;*/
+    background-size: 100% auto;
     overflow: hidden;
     cursor: pointer
 }
@@ -19170,7 +19172,7 @@ c
     font-size: 24px;
 }
 .marketing .marketing-item-5 .ivu-card li {
-    margin: 15px 20px;
+    margin: 15px 18px;
     float: left;
     height: 36px;
 }
