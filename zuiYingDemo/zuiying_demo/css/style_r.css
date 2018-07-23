@@ -10975,7 +10975,7 @@ textarea.ivu-page-options-elevator input {
 }
 .fieldset-box {
     margin: 0 auto;
-    width: 60%;
+    width: 100%;
 }
 .fieldset-box .ivu-form-item-label {
     text-align: right;
@@ -11008,19 +11008,49 @@ textarea.ivu-page-options-elevator input {
     background-color: #e9eaec
 }
 
-.done .ivu-steps-item .ivu-steps-head-inne,
+.done .ivu-steps-item .ivu-steps-head-inner {
+    background-color: #fff;
+    border-color: #ff5757;
+}
+.done .ivu-steps-item .ivu-steps-head-inner span:before {
+    content: "\F3FD";
+}
+.done .ivu-steps-item .ivu-steps-head-inner .ivu-icon {
+    font-size: 34px;
+    font-weight: bold;
+    color: #ff5757
+}
+.done .ivu-steps-item .ivu-steps-head-inner span em {
+    display: none;
+}
+.ivu-steps-item .ivu-steps-head-inner span em {
+    font-style: normal;
+}
+.ivu-steps-item .ivu-steps-head-inner .ivu-icon{
+    font-size: 14px;
+}
 .current .ivu-steps-item .ivu-steps-head-inner {
-    border-color: hsla(240, 8%, 44%, .65);
+    border-color: rgba(104,104,122,0.65);
     background: #68687a;
-    color: #fff;
-    font-size: 18px
+    color:#fff;
+}
+.current .ivu-steps-item .ivu-steps-head-inner .ivu-icon{
+    color:#fff;
+    font-size: 18px;
+    line-height: 36px;
 }
 .done .ivu-steps-item .ivu-steps-tail>i,
 .current .ivu-steps-item .ivu-steps-tail>i {
     background-color: hsla(240, 8%, 44%, .08);
 }
+
 .form-group .ivu-form-item-label {
+    float: right;
     margin: 10px 0;
+}
+.form-group .label-item {
+    margin: 8px 5px 10px 0;
+
 }
 .actions {
     margin: 0 auto;
@@ -15078,7 +15108,7 @@ span.ivu-date-picker-cells-cell-disabled.ivu-date-picker-cells-cell-selected em 
 }
 .form-group {
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 .form-group .checkbox-text {
     padding: 0 5px
@@ -15095,12 +15125,15 @@ span.ivu-date-picker-cells-cell-disabled.ivu-date-picker-cells-cell-selected em 
 }
 .form-group .form-control,
 .form-group .single-line {
-    width: 70%;
+    width: 80%;
     border-radius: 5px;
 }
 .form-group .btn-add {
     margin: 20px 0;
     width: 200px;
+}
+.form-group .btn-add .ivu-icon {
+    font-size: 12px;
 }
 
 .ivu-carousel {
@@ -16032,6 +16065,8 @@ a {
 }
 
 a,
+a:link,
+a:visited,
 a:active,
 a:hover {
     text-decoration: none;

@@ -105,7 +105,8 @@
                                     <div class="ivu-steps-item">
                                         <div class="ivu-steps-tail"><i></i></div>
                                         <div class="ivu-steps-head">
-                                            <div class="ivu-steps-head-inner"><span>1</span></div>
+                                            <div class="ivu-steps-head-inner"><span class="ivu-icon"><em>1</em></span>
+                                            </div>
                                         </div>
                                         <div class="ivu-steps-main">
                                             <div class="ivu-steps-title">步骤1</div>
@@ -114,106 +115,248 @@
                                     </div>
                                 </h1>
                                 <fieldset>
-                                    <div class="fieldset-box">
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">电影名称：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入影片全称">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-sm-0 col-xs-0">&nbsp;</div>
+                                        <div class="col-lg-8 col-sm-12 col-xs-12">
+                                            <div class="fieldset-box">
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">电影名称：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="请输入影片全称">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">影片语言：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">中文</option>
+                                                            <option value="">英文</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">影片分类：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">故事片</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">动漫片</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">试验片</span></label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">影片类型：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">剧情片</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">动作片</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">喜剧片</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">战争片</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">科幻片</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">伦理片</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">恐怖片</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">惊悚片</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">动画片</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">冒险片</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">犯罪片</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">家庭</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">音乐</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">历史</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">其他</span></label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">影片题材：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">环境保护</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">儿童</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">人文</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">动物</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">美食</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">女性主题</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">教育</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">都市</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">校园</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">体育</span></label>
+                                                        <label class="label-item"><input type="checkbox" name="check"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">其他</span></label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">对白字幕：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <select name="" id="" class="form-control ">
+                                                            <option value="">中文</option>
+                                                            <option value="">英文</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">片长：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="ab" name="userName" type="text"
+                                                               class="form-control required" placeholder="10:00:00">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">声音规格：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <select name="" id="" class="form-control required">
+                                                            <option value="">Momo</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">影片形式：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <select name="" id="" class="form-control required">
+                                                            <option value="">2D</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">影片规格：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <select name="" id="" class="form-control required">
+                                                            <option value="">数字</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">画面颜色：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <select name="" id="" class="form-control required">
+                                                            <option value="">黑白</option>
+                                                            <option value="">彩色</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">视频格式：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <select name="video" id="" class="form-control ">
+                                                            <option value="">HDV</option>
+                                                            <option value="">MOV</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">拍摄国家：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="fromCountry" name="fromCountry" type="text" class="form-control required"
+                                                               placeholder="中国">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">上线日期：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="dataOnline" name="dataOnline" type="text" class="form-control required"
+                                                               placeholder="2018-10-10">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">完成日期：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="dataEnd" name="dataEnd" type="text" class="form-control required"
+                                                               placeholder="2018-12-12">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-group ivu-form-item-required">
-                                            <label class="ivu-form-item-label" style="width: 130px;">影片语言：</label>
-                                            <select name="" id="" class="label-item form-control ">
-                                                <option value="">中文</option>
-                                                <option value="">英文</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group ivu-form-item-required">
-                                            <label class="ivu-form-item-label" style="width: 130px;">影片分类：</label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">故事片</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">动漫片</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">试验片</span></label>
-                                        </div>
-                                        <div class="form-group ivu-form-item-required">
-                                            <label class="ivu-form-item-label" style="width: 130px;">影片类型：</label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">剧情片</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">动作片</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">喜剧片</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">战争片</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">科幻片</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">伦理片</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">恐怖片</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">惊悚片</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">动画片</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">冒险片</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">犯罪片</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">家庭</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">音乐</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">历史</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">其他</span></label>
-                                        </div>
-                                        <div class="form-group ivu-form-item-required">
-                                            <label class="ivu-form-item-label" style="width: 130px;">影片题材：</label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">环境保护</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">儿童</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">人文</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">动物</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">美食</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">女性主题</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">教育</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">都市</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">校园</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">体育</span></label>
-                                            <label><input type="checkbox" name="check" id="" value=""/><span
-                                                    class="checkbox-text">其他</span></label>
-                                        </div>
-                                        <div class="form-group ivu-form-item-required">
-                                            <label class="ivu-form-item-label" style="width: 130px;">对白字幕：</label>
-                                            <select name="" id="" class="label-item form-control "
-                                                    placholder="选择对白字幕所用语言">
-                                                <option value="">中文</option>
-                                                <option value="">英文</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">片长：</label>
-                                            <input id="" name="userName" type="text"
-                                                   class="label-item form-control " placeholder="10:00:00">
-                                        </div>
+                                        <div class="col-lg-2 col-sm-0 col-xs-0">&nbsp;</div>
                                     </div>
                                 </fieldset>
                                 <h1>
                                     <div class="ivu-steps-item">
                                         <div class="ivu-steps-tail"><i></i></div>
                                         <div class="ivu-steps-head">
-                                            <div class="ivu-steps-head-inner"><span>2</span></div>
+                                            <div class="ivu-steps-head-inner"><span class="ivu-icon"><em>2</em></span>
+                                            </div>
                                         </div>
                                         <div class="ivu-steps-main">
                                             <div class="ivu-steps-title">步骤2</div>
@@ -222,54 +365,90 @@
                                     </div>
                                 </h1>
                                 <fieldset>
-                                    <div class="fieldset-box">
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">No.1 导演姓名：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入姓名">
-                                        </div>
-                                        <div class="form-group ivu-form-item-required">
-                                            <label class="ivu-form-item-label" style="width: 130px;">性别：</label>
-                                            <label><input type="radio" name="check" id="" value=""/><span
-                                                    class="checkbox-text">男</span></label>
-                                            <label><input type="radio" name="check" id="" value=""/><span
-                                                    class="checkbox-text">女</span></label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">首都：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="例如：北京">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">国籍：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="例如：中国">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">生日：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="例如：1990-01-01">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">地址：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入常用地址">
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="btn-add" style="margin-left: 135px;">
-                                                <button type="button" class="ivu-btn ivu-btn-dashed ivu-btn-long">
-                                                    <i class="ivu-icon ivu-icon-plus-round"></i>
-                                                    <span>添加导演</span></button>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-sm-0 col-xs-0">&nbsp;</div>
+                                        <div class="col-lg-8 col-sm-12 col-xs-12">
+                                            <div class="person-inf-box">
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">导演姓名：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="请输入姓名">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">性别：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <label class="label-item"><input type="radio" name="radio"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">男</span></label>
+                                                        <label class="label-item"><input type="radio" name="radio"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">女</span></label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">首都：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="例如：北京">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">国籍：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="例如：中国">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">生日：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="例如：1990-01-01">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">地址：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="请输入常用地址">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-3 col-sm-3 col-xs-12">&nbsp;</div>
+                                                <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                    <div class="btn-add">
+                                                        <button type="button"
+                                                                class="ivu-btn ivu-btn-dashed ivu-btn-long">
+                                                            <i class="ivu-icon ivu-icon-plus-round"></i>
+                                                            <span>添加导演</span></button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="col-lg-2 col-sm-0 col-xs-0">&nbsp;</div>
                                     </div>
                                 </fieldset>
-
                                 <h1>
                                     <div class="ivu-steps-item">
                                         <div class="ivu-steps-tail"><i></i></div>
                                         <div class="ivu-steps-head">
-                                            <div class="ivu-steps-head-inner"><span>3</span></div>
+                                            <div class="ivu-steps-head-inner"><span class="ivu-icon"><em>3</em></span>
+                                            </div>
                                         </div>
                                         <div class="ivu-steps-main">
                                             <div class="ivu-steps-title">步骤3</div>
@@ -278,46 +457,82 @@
                                     </div>
                                 </h1>
                                 <fieldset>
-                                    <div class="fieldset-box">
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">No.1 演员姓名：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入姓名">
-                                        </div>
-                                        <div class="form-group ivu-form-item-required">
-                                            <label class="ivu-form-item-label" style="width: 130px;">性别：</label>
-                                            <label><input type="radio" name="check" id="" value=""/><span
-                                                    class="checkbox-text">男</span></label>
-                                            <label><input type="radio" name="check" id="" value=""/><span
-                                                    class="checkbox-text">女</span></label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">首都：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="例如：北京">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">国籍：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="例如：中国">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">生日：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="例如：1990-01-01">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">地址：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入常用地址">
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="btn-add" style="margin-left: 135px;">
-                                                <button type="button" class="ivu-btn ivu-btn-dashed ivu-btn-long">
-                                                    <i class="ivu-icon ivu-icon-plus-round"></i>
-                                                    <span>添加导演</span></button>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-sm-0 col-xs-0">&nbsp;</div>
+                                        <div class="col-lg-8 col-sm-12 col-xs-12">
+                                            <div class="person-inf-box">
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">主演姓名：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="请输入姓名">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">性别：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <label class="label-item"><input type="radio" name="radio"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">男</span></label>
+                                                        <label class="label-item"><input type="radio" name="radio"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">女</span></label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">首都：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="例如：北京">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">国籍：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="例如：中国">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">生日：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="例如：1990-01-01">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">地址：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="请输入常用地址">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-3 col-sm-3 col-xs-12">&nbsp;</div>
+                                                <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                    <div class="btn-add">
+                                                        <button type="button"
+                                                                class="ivu-btn ivu-btn-dashed ivu-btn-long">
+                                                            <i class="ivu-icon ivu-icon-plus-round"></i>
+                                                            <span>添加演员</span></button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="col-lg-2 col-sm-0 col-xs-0">&nbsp;</div>
                                     </div>
                                 </fieldset>
 
@@ -325,7 +540,8 @@
                                     <div class="ivu-steps-item">
                                         <div class="ivu-steps-tail"><i></i></div>
                                         <div class="ivu-steps-head">
-                                            <div class="ivu-steps-head-inner"><span>4</span></div>
+                                            <div class="ivu-steps-head-inner"><span class="ivu-icon"><em>4</em></span>
+                                            </div>
                                         </div>
                                         <div class="ivu-steps-main">
                                             <div class="ivu-steps-title">步骤4</div>
@@ -333,62 +549,108 @@
                                         </div>
                                     </div>
                                 </h1>
+
                                 <fieldset>
-                                    <div class="fieldset-box">
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">出品公司名称：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-sm-0 col-xs-0">&nbsp;</div>
+                                        <div class="col-lg-8 col-sm-12 col-xs-12">
+                                            <div class="person-inf-box">
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">出品公司名称：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="请输入">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">出品公司地址：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="请输入">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">出品公司电话：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="请输入">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">出品公司传真：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="请输入">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">出品公司邮箱：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="请输入">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">联系人：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="请输入">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">性别：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <label class="label-item"><input type="radio" name="radio"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">男</span></label>
+                                                        <label class="label-item"><input type="radio" name="radio"
+                                                                                         id="" value=""/><span
+                                                                class="checkbox-text">女</span></label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">联系人所在部门：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="请输入">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                        <label class="ivu-form-item-label">联系人所属职务：</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                        <input id="" name="" type="text" class="form-control required"
+                                                               placeholder="请输入">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">出品公司地址：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">出品公司电话：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="tel:13800138000">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">出品公司传真：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">出品公司邮箱：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">联系人：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">性别：</label>
-                                            <label><input type="radio" name="check" id="" value=""/><span
-                                                    class="checkbox-text">男</span></label>
-                                            <label><input type="radio" name="check" id="" value=""/><span
-                                                    class="checkbox-text">女</span></label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">联系人所在部门：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">联系人所属职务：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入">
-                                        </div>
+                                        <div class="col-lg-2 col-sm-0 col-xs-0">&nbsp;</div>
                                     </div>
                                 </fieldset>
                                 <h1>
                                     <div class="ivu-steps-item">
                                         <div class="ivu-steps-tail"><i></i></div>
                                         <div class="ivu-steps-head">
-                                            <div class="ivu-steps-head-inner"><span>5</span></div>
+                                            <div class="ivu-steps-head-inner"><span class="ivu-icon"><em>5</em></span>
+                                            </div>
                                         </div>
                                         <div class="ivu-steps-main">
                                             <div class="ivu-steps-title">步骤5</div>
@@ -397,61 +659,100 @@
                                     </div>
                                 </h1>
                                 <fieldset>
-                                    <div class="fieldset-box">
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">制片人：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-sm-0 col-xs-0">&nbsp;</div>
+                                        <div class="col-lg-8 col-sm-12 col-xs-12">
+                                            <div class="form-group row">
+                                                <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                    <label class="ivu-form-item-label">制片人：</label>
+                                                </div>
+                                                <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                    <input id="" name="" type="text" class="form-control required"
+                                                           placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                    <label class="ivu-form-item-label">摄影师：</label>
+                                                </div>
+                                                <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                    <input id="" name="" type="text" class="form-control required"
+                                                           placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                    <label class="ivu-form-item-label">编剧：</label>
+                                                </div>
+                                                <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                    <input id="" name="" type="text" class="form-control required"
+                                                           placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                    <label class="ivu-form-item-label">美术师：</label>
+                                                </div>
+                                                <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                    <input id="" name="" type="text" class="form-control required"
+                                                           placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                    <label class="ivu-form-item-label">剪辑师：</label>
+                                                </div>
+                                                <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                    <input id="" name="" type="text" class="form-control required"
+                                                           placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                    <label class="ivu-form-item-label">艺术指导：</label>
+                                                </div>
+                                                <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                    <input id="" name="" type="text" class="form-control required"
+                                                           placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                    <label class="ivu-form-item-label">动画制作：</label>
+                                                </div>
+                                                <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                    <input id="" name="" type="text" class="form-control required"
+                                                           placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                    <label class="ivu-form-item-label">特效制作：</label>
+                                                </div>
+                                                <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                    <input id="" name="" type="text" class="form-control required"
+                                                           placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-3 col-sm-3 col-xs-12">
+                                                    <label class="ivu-form-item-label">原创音乐：</label>
+                                                </div>
+                                                <div class="col-lg-9 col-sm-9 col-xs-12">
+                                                    <input id="" name="" type="text" class="form-control required"
+                                                           placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">摄影师：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">编剧：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="tel:13800138000">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">美术师：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">剪辑师：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">艺术指导：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">动画制作：</label>
-                                            <label><input type="radio" name="check" id="" value=""/><span
-                                                    class="checkbox-text">男</span></label>
-                                            <label><input type="radio" name="check" id="" value=""/><span
-                                                    class="checkbox-text">女</span></label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">特效制作：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="ivu-form-item-label" style="width: 130px;">原创音乐：</label>
-                                            <input id="" name="" type="text"
-                                                   class="label-item form-control " placeholder="请输入">
-                                        </div>
+                                        <div class="col-lg-2 col-sm-0 col-xs-0">&nbsp;</div>
                                     </div>
                                 </fieldset>
                                 <h1>
                                     <div class="ivu-steps-item">
                                         <div class="ivu-steps-tail"><i></i></div>
                                         <div class="ivu-steps-head">
-                                            <div class="ivu-steps-head-inner"><span>6</span></div>
+                                            <div class="ivu-steps-head-inner"><span class="ivu-icon"><em>6</em></span>
+                                            </div>
                                         </div>
                                         <div class="ivu-steps-main">
                                             <div class="ivu-steps-title">步骤6</div>
@@ -461,90 +762,22 @@
                                 </h1>
                                 <fieldset>
                                     <div class="fieldset-box">
-                                        <div class="form-group">
+
+                                        <div class="row">
+                                            <div class="col-lg-2 col-sm-0 col-xs-0">&nbsp;</div>
+                                            <div class="col-lg-8 col-sm-12 col-xs-12">
+                                                <div class="form-group">
                                             <textarea wrap="soft" autocomplete="off" spellcheck="false"
                                                       placeholder="请添加百度网盘链接或在线链接" rows="2" class="ivu-input"
-                                                      style="height: 115px; min-height: 262px; max-height: 115px;"></textarea>
+                                                      style="height: 115px; min-height: 100px; max-height: 200px;"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-sm-0 col-xs-0">&nbsp;</div>
                                         </div>
-                                    </div>
                                 </fieldset>
                             </form>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal" id="popActivitySign" tabindex="-1" role="dialog" aria-hidden="true" style="display: none">
-        <div class="modal-dialog">
-            <div class="modal-content animated fadeInDownBig">
-                <a class="ivu-modal-close" data-dismiss="modal"><i class="ivu-icon ivu-icon-ios-close-empty"
-                                                                   aria-hidden="true"></i></a>
-                <div class="ivu-modal-header"><h2>电影节报名</h2></div>
-                <div class="ivu-modal-body">
-                    <div class="pop-form">
-                        <form autocomplete="off" class="ivu-form ivu-form-label-right">
-                            <div class="ivu-form-item ivu-form-item-required ivu-form-item-error">
-                                <label class="ivu-form-item-label" style="width: 80px;">联系人</label>
-                                <div class="ivu-form-item-content" style="margin-left: 80px;">
-                                    <div class="ivu-input-wrapper ivu-input-type">
-                                        <input autocomplete="off" spellcheck="false" type="text"
-                                               placeholder="请输入联系人姓名" autofocus="autofocus"
-                                               class="ivu-input"></div>
-                                    <div class="ivu-form-item-error-tip">联系人不能为空</div>
-                                </div>
-                            </div>
-                            <div class="ivu-form-item ivu-form-item-required"><label
-                                    class="ivu-form-item-label" style="width: 80px;">联系电话</label>
-                                <div class="ivu-form-item-content" style="margin-left: 80px;">
-                                    <div class="ivu-input-wrapper ivu-input-type">
-                                        <input autocomplete="off" spellcheck="false" type="text"
-                                               placeholder="请输入手机号码" class="ivu-input">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ivu-form-item ivu-form-item-required"><label
-                                    class="ivu-form-item-label" style="width: 80px;">微信号</label>
-                                <div class="ivu-form-item-content" style="margin-left: 80px;">
-                                    <div class="ivu-input-wrapper ivu-input-type">
-                                        <input autocomplete="off" spellcheck="false" type="text"
-                                               placeholder="请填写您正在使用的微信号" class="ivu-input">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ivu-form-item ivu-form-item-required"><label
-                                    class="ivu-form-item-label" style="width: 80px;">公司名称</label>
-                                <div class="ivu-form-item-content" style="margin-left: 80px;">
-                                    <div class="ivu-input-wrapper ivu-input-type">
-                                        <input autocomplete="off" spellcheck="false" type="text"
-                                               placeholder="请填写您的公司全称" class="ivu-input">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ivu-form-item ivu-form-item-required"><label
-                                    class="ivu-form-item-label" style="width: 80px;">其他</label>
-                                <div class="ivu-form-item-content" style="margin-left: 80px;">
-                                    <div class="ivu-input-wrapper ivu-input-type"><textarea
-                                            wrap="soft" autocomplete="off" spellcheck="false"
-                                            placeholder="请输入..." rows="2"
-                                            class="ivu-input"
-                                            style="height: 52px; min-height: 52px; max-height: 115px;"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="choose">
-                                <button type="button"
-                                        class="ivu-btn ivu-btn-primary ivu-btn-circle">
-                                    <span>确定</span></button>
-                                <button type="button"
-                                        class="btn-gray ivu-btn ivu-btn-ghost ivu-btn-circle">
-                                    <span>重置</span></button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="ivu-modal-footer">
-                    <div></div>
                 </div>
             </div>
         </div>
@@ -700,6 +933,5 @@
 
 <script src="js/common.js"></script>
 <script src="js/steps_main.js"></script>
-
 </body>
 </html>

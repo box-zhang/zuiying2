@@ -249,4 +249,9 @@ $(document).ready(function () {
     var fontsize = 10 * (docEl.clientWidth / 320) + 'px';
     docEl.style.fontSize = fontsize;
 
+
+
+    $("#fenlei").click(function () {
+        alert(0)
+    })
 });
