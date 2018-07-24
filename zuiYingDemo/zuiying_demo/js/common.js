@@ -251,7 +251,7 @@ $(document).ready(function () {
 
 
 
-    $("#fenlei").click(function () {
+    $(".btn-add").click(function () {
         alert(0)
     })
 });

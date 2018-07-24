@@ -11029,19 +11029,26 @@ textarea.ivu-page-options-elevator input {
 .ivu-steps-item .ivu-steps-head-inner .ivu-icon{
     font-size: 14px;
 }
-.current .ivu-steps-item .ivu-steps-head-inner {
+.active .ivu-steps-item .ivu-steps-head-inner {
     border-color: rgba(104,104,122,0.65);
     background: #68687a;
     color:#fff;
 }
-.current .ivu-steps-item .ivu-steps-head-inner .ivu-icon{
+.active .ivu-steps-item .ivu-steps-head-inner .ivu-icon{
     color:#fff;
     font-size: 18px;
     line-height: 36px;
 }
-.done .ivu-steps-item .ivu-steps-tail>i,
-.current .ivu-steps-item .ivu-steps-tail>i {
+.active .ivu-steps-content {
+    color: #68687a;
+    font-weight: bold;
+}
+.active .ivu-steps-item .ivu-steps-tail>i,
+.done .ivu-steps-item .ivu-steps-tail>i {
     background-color: hsla(240, 8%, 44%, .08);
+}
+.landing-page .wizard-navigation .steps li a{
+    padding: 0;
 }
 
 .form-group .ivu-form-item-label {
@@ -11063,8 +11070,12 @@ textarea.ivu-page-options-elevator input {
     min-width: 120px;
 }
 
-.actions li a {
+.actions li a,
+.actions li input {
     width: 100%;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background: transparent;
 }
 /*.ivu-steps-item.ivu-steps-status-process .ivu-steps-head-inner>.ivu-steps-icon,*/
 /*.ivu-steps-item.ivu-steps-status-process .ivu-steps-head-inner span {*/
@@ -11155,7 +11166,7 @@ textarea.ivu-page-options-elevator input {
 .steps .ivu-steps-head {
     padding: 8px;
     border-radius: 50%;
-    box-shadow: 0 0 15px 0 hsla(240, 8%, 44%, .08);
+    box-shadow: 0 0 15px 0 hsla(240, 8%, 44%, .15);
     background: #fff
 }
 

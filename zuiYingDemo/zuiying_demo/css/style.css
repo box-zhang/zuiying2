@@ -68,6 +68,7 @@ h5 {
 }
 .nav > li.active > a {
   color: #ffffff;
+  background: transparent;
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus {
@@ -2400,6 +2401,7 @@ label.error {
   display: inline-block;
   margin-left: 5px;
   bottom: -18px;
+  left: 15px;
   font-size: 12px;
 }
 .form-control.error {
