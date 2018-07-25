@@ -1655,9 +1655,6 @@ div.dt-button-info {
     float: none;
     margin-top: 10px;
   }
-  .dataTables_length {
-    float: none;
-  }
 }
 /* CIRCLE */
 .img-circle {
@@ -2400,7 +2397,7 @@ label.error {
   color: rgba(255, 69, 69, .65);
   display: inline-block;
   margin-left: 5px;
-  bottom: -18px;
+  bottom: -15px;
   left: 15px;
   font-size: 12px;
 }
@@ -6748,7 +6745,7 @@ body.body-small .vote-icon {
   position: relative;
   margin: 0 auto;
   /*min-width: 1200px;*/
-  height: 500px;
+  height: 550px;
   width: 100%;
   overflow: hidden;
 }
@@ -6917,7 +6914,6 @@ body.body-small .vote-icon {
 }
 .landing-page .services {
   padding-top: 60px;
-  overflow: hidden;
 }
 .landing-page .services h2 {
   font-size: 28px;

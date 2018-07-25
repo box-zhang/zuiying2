@@ -250,8 +250,4 @@ $(document).ready(function () {
     docEl.style.fontSize = fontsize;
 
 
-
-    $(".btn-add").click(function () {
-        alert(0)
-    })
 });

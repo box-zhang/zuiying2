@@ -17,6 +17,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
     <link href="css/style_r.css" rel="stylesheet">
 </head>
 <body id="page-top" class="landing-page bg-pink">
@@ -79,7 +80,7 @@
         </div>
     </nav>
 </div>
-<section>
+<section class="sticky-box">
     <div class="main">
         <div class="content">
             <div class="row">
@@ -216,8 +217,8 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="tab-content content clearfix">
-                                        <div class="tab-pane " id="steps1">
+                                    <div class="tab-content clearfix">
+                                        <div class="tab-pane active" id="steps1">
                                             <div class="row">
                                                 <div class="col-lg-2 col-sm-1 col-xs-1">&nbsp;</div>
                                                 <div class="col-lg-8 col-sm-10 col-xs-10">
@@ -227,7 +228,7 @@
                                                                 <label class="ivu-form-item-label">电影名称：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
+                                                                <input id="videoName" name="videoName" type="text"
                                                                        class="form-control required"
                                                                        placeholder="请输入影片全称">
                                                             </div>
@@ -237,9 +238,10 @@
                                                                 <label class="ivu-form-item-label">影片语言：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <select name="" id="" class="form-control">
-                                                                    <option value="">中文</option>
-                                                                    <option value="">英文</option>
+                                                                <select name="videoLanguage" id="videoLanguage" class="form-control required">
+                                                                    <option value="">请选择影片所用语言</option>
+                                                                    <option value="中文">中文</option>
+                                                                    <option value="英文">英文</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -249,16 +251,16 @@
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoClassification"
+                                                                                                 id="videoClassificationGS" value="故事片"/><span
                                                                         class="checkbox-text">故事片</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoClassification"
+                                                                                                 id="videoClassificationDM" value="动漫片"/><span
                                                                         class="checkbox-text">动漫片</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoClassification"
+                                                                                                 id="videoClassificationSY" value="试验片"/><span
                                                                         class="checkbox-text">试验片</span></label>
                                                             </div>
                                                         </div>
@@ -268,64 +270,64 @@
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoCategory"
+                                                                                                 id="videoCategoryJQ" value="剧情片"/><span
                                                                         class="checkbox-text">剧情片</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoCategory"
+                                                                                                 id="videoCategoryDZ" value="动作片"/><span
                                                                         class="checkbox-text">动作片</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoCategory"
+                                                                                                 id="videoCategoryXJ" value="喜剧片"/><span
                                                                         class="checkbox-text">喜剧片</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoCategory"
+                                                                                                 id="videoCategoryZZ" value="战争片"/><span
                                                                         class="checkbox-text">战争片</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoCategory"
+                                                                                                 id="videoCategoryKH" value="科幻片"/><span
                                                                         class="checkbox-text">科幻片</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoCategory"
+                                                                                                 id="videoCategoryLL" value="伦理片"/><span
                                                                         class="checkbox-text">伦理片</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoCategory"
+                                                                                                 id="videoCategoryKB" value="恐怖片"/><span
                                                                         class="checkbox-text">恐怖片</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoCategory"
+                                                                                                 id="videoCategoryJS" value="惊悚片"/><span
                                                                         class="checkbox-text">惊悚片</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoCategory"
+                                                                                                 id="videoCategoryDH" value="动画片"/><span
                                                                         class="checkbox-text">动画片</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoCategory"
+                                                                                                 id="videoCategoryMX" value="冒险片"/><span
                                                                         class="checkbox-text">冒险片</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoCategory"
+                                                                                                 id="videoCategoryFZ" value="犯罪片"/><span
                                                                         class="checkbox-text">犯罪片</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoCategory"
+                                                                                                 id="videoCategoryJT" value="家庭"/><span
                                                                         class="checkbox-text">家庭</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoCategory"
+                                                                                                 id="videoCategoryYY" value="音乐"/><span
                                                                         class="checkbox-text">音乐</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoCategory"
+                                                                                                 id="videoCategoryLS" value="历史"/><span
                                                                         class="checkbox-text">历史</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoCategory"
+                                                                                                 id="videoCategoryOthers" value="其他"/><span
                                                                         class="checkbox-text">其他</span></label>
                                                             </div>
                                                         </div>
@@ -335,48 +337,48 @@
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoSubject"
+                                                                                                 id="videoSubjectHJ" value="环境保护"/><span
                                                                         class="checkbox-text">环境保护</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoSubject"
+                                                                                                 id="videoSubjectET" value="儿童"/><span
                                                                         class="checkbox-text">儿童</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoSubject"
+                                                                                                 id="videoSubjectRW" value="人文"/><span
                                                                         class="checkbox-text">人文</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoSubject"
+                                                                                                 id="videoSubjectDW" value="动物"/><span
                                                                         class="checkbox-text">动物</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoSubject"
+                                                                                                 id="videoSubjectMS" value="美食"/><span
                                                                         class="checkbox-text">美食</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoSubject"
+                                                                                                 id="videoSubjectNX" value="女性主题"/><span
                                                                         class="checkbox-text">女性主题</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoSubject"
+                                                                                                 id="videoSubjectJY" value="教育"/><span
                                                                         class="checkbox-text">教育</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoSubject"
+                                                                                                 id="videoSubjectDS" value="都市"/><span
                                                                         class="checkbox-text">都市</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoSubject"
+                                                                                                 id="videoSubjectXY" value="校园"/><span
                                                                         class="checkbox-text">校园</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoSubject"
+                                                                                                 id="videoSubjectTY" value="体育"/><span
                                                                         class="checkbox-text">体育</span></label>
                                                                 <label class="label-item"><input type="checkbox"
-                                                                                                 name="check"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="videoSubject"
+                                                                                                 id="videoSubjectQT" value="其他"/><span
                                                                         class="checkbox-text">其他</span></label>
                                                             </div>
                                                         </div>
@@ -385,9 +387,10 @@
                                                                 <label class="ivu-form-item-label">对白字幕：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <select name="" id="" class="form-control ">
-                                                                    <option value="">中文</option>
-                                                                    <option value="">英文</option>
+                                                                <select name="videoSubtitle" id="videoSubtitle" class="form-control required">
+                                                                    <option value="">请选择</option>
+                                                                    <option value="中文">中文</option>
+                                                                    <option value="英文">英文</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -396,9 +399,9 @@
                                                                 <label class="ivu-form-item-label">片长：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="ab" name="userName" type="text"
+                                                                <input id="videoLength" name="videoLength" type="text"
                                                                        class="form-control required"
-                                                                       placeholder="10:00:00">
+                                                                       placeholder="00:00:00">
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -406,8 +409,9 @@
                                                                 <label class="ivu-form-item-label">声音规格：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <select name="" id="" class="form-control required">
-                                                                    <option value="">Momo</option>
+                                                                <select name="soundFormat" id="soundFormat" class="form-control required">
+                                                                    <option value="">请选择</option>
+                                                                    <option value="Momo">Momo</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -416,8 +420,9 @@
                                                                 <label class="ivu-form-item-label">影片形式：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <select name="" id="" class="form-control required">
-                                                                    <option value="">2D</option>
+                                                                <select name="videoForms" id="videoForms" class="form-control required">
+                                                                    <option value="">请选择</option>
+                                                                    <option value="2D">2D</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -426,8 +431,9 @@
                                                                 <label class="ivu-form-item-label">影片规格：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <select name="" id="" class="form-control required">
-                                                                    <option value="">数字</option>
+                                                                <select name="videoSpecifications" id="videoSpecifications" class="form-control required">
+                                                                    <option value="">请选择</option>
+                                                                    <option value="数字">数字</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -436,9 +442,10 @@
                                                                 <label class="ivu-form-item-label">画面颜色：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <select name="" id="" class="form-control required">
-                                                                    <option value="">黑白</option>
-                                                                    <option value="">彩色</option>
+                                                                <select name="videoColor" id="videoColor" class="form-control required">
+                                                                    <option value="">请选择</option>
+                                                                    <option value="黑白">黑白</option>
+                                                                    <option value="彩色">彩色</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -447,9 +454,10 @@
                                                                 <label class="ivu-form-item-label">视频格式：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <select name="video" id="" class="form-control ">
-                                                                    <option value="">HDV</option>
-                                                                    <option value="">MOV</option>
+                                                                <select name="videoFormat" id="videoFormat" class="form-control required">
+                                                                    <option value="">请选择</option>
+                                                                    <option value="HDV">HDV</option>
+                                                                    <option value="MOV">MOV</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -458,9 +466,9 @@
                                                                 <label class="ivu-form-item-label">拍摄国家：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="fromCountry" name="fromCountry" type="text"
+                                                                <input id="filmingCountry" name="filmingCountry" type="text"
                                                                        class="form-control required"
-                                                                       placeholder="中国">
+                                                                       placeholder="例如：中国">
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -469,8 +477,8 @@
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
                                                                 <input id="dataOnline" name="dataOnline" type="text"
-                                                                       class="form-control required"
-                                                                       placeholder="2018-10-10">
+                                                                       class="form-control date-add required"
+                                                                       placeholder="2018-01-01" readonly>
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -478,9 +486,9 @@
                                                                 <label class="ivu-form-item-label">完成日期：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="dataEnd" name="dataEnd" type="text"
-                                                                       class="form-control required"
-                                                                       placeholder="2018-12-12">
+                                                                <input id="dataFinish" name="dataFinish" type="text"
+                                                                       class="form-control date-add required"
+                                                                       placeholder="2018-01-01" readonly>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -488,74 +496,78 @@
                                                 <div class="col-lg-2 col-sm-1 col-xs-1">&nbsp;</div>
                                             </div>
                                         </div>
-                                        <div class="tab-pane active" id="steps2">
+                                        <div class="tab-pane" id="steps2">
                                             <div class="row">
                                                 <div class="col-lg-2 col-sm-1 col-xs-1">&nbsp;</div>
                                                 <div class="col-lg-8 col-sm-10 col-xs-10">
-                                                    <div class="person-inf-box">
-                                                        <div class="form-group row">
-                                                            <div class="col-lg-3 col-sm-3 col-xs-3">
-                                                                <label class="ivu-form-item-label">导演姓名：</label>
+                                                    <div id="directorBox">
+                                                        <div class="person-inf-box">
+                                                            <div class="form-group row">
+                                                                <div class="col-lg-3 col-sm-3 col-xs-3">
+                                                                    <label class="ivu-form-item-label" id="directorLabel1">导演姓名：</label>
+                                                                </div>
+                                                                <div class="col-lg-9 col-sm-9 col-xs-9">
+                                                                    <input id="directorName1" name="directorName1" type="text"
+                                                                           class="form-control required"
+                                                                           placeholder="请输入姓名">
+                                                                </div>
                                                             </div>
-                                                            <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
-                                                                       class="form-control required"
-                                                                       placeholder="请输入姓名">
+                                                            <div class="form-group row">
+                                                                <div class="col-lg-3 col-sm-3 col-xs-3">
+                                                                    <label class="ivu-form-item-label">性别：</label>
+                                                                </div>
+                                                                <div class="col-lg-9 col-sm-9 col-xs-9">
+                                                                    <label class="label-item"><input type="radio"
+                                                                                                     name="directorSex1"
+                                                                                                     id="directorSexMan1"
+                                                                                                     value="男"/><span
+                                                                            class="checkbox-text">男</span></label>
+                                                                    <label class="label-item"><input type="radio"
+                                                                                                     name="directorSex1"
+                                                                                                     id="directorSexWoman1"
+                                                                                                     value="女"/><span
+                                                                            class="checkbox-text">女</span></label>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="col-lg-3 col-sm-3 col-xs-3">
-                                                                <label class="ivu-form-item-label">性别：</label>
+                                                            <div class="form-group row">
+                                                                <div class="col-lg-3 col-sm-3 col-xs-3">
+                                                                    <label class="ivu-form-item-label">首都：</label>
+                                                                </div>
+                                                                <div class="col-lg-9 col-sm-9 col-xs-9">
+                                                                    <input id="directorCapital1" name="directorCapital1" type="text"
+                                                                           class="form-control required"
+                                                                           placeholder="例如：北京">
+                                                                </div>
                                                             </div>
-                                                            <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <label class="label-item"><input type="radio"
-                                                                                                 name="radio"
-                                                                                                 id="" value=""/><span
-                                                                        class="checkbox-text">男</span></label>
-                                                                <label class="label-item"><input type="radio"
-                                                                                                 name="radio"
-                                                                                                 id="" value=""/><span
-                                                                        class="checkbox-text">女</span></label>
+                                                            <div class="form-group row">
+                                                                <div class="col-lg-3 col-sm-3 col-xs-3">
+                                                                    <label class="ivu-form-item-label">国籍：</label>
+                                                                </div>
+                                                                <div class="col-lg-9 col-sm-9 col-xs-9">
+                                                                    <input id="directorNationality1" name="directorNationality1" type="text"
+                                                                           class="form-control required"
+                                                                           placeholder="例如：中国">
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="col-lg-3 col-sm-3 col-xs-3">
-                                                                <label class="ivu-form-item-label">首都：</label>
+                                                            <div class="form-group row">
+                                                                <div class="col-lg-3 col-sm-3 col-xs-3">
+                                                                    <label class="ivu-form-item-label">生日：</label>
+                                                                </div>
+                                                                <div class="col-lg-9 col-sm-9 col-xs-9">
+                                                                    <input id="directorBirthday1" name="directorBsirthday1" type="text"
+                                                                           class="form-control date-add required"
+                                                                           placeholder="例如：1990-01-01">
+                                                                </div>
                                                             </div>
-                                                            <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
-                                                                       class="form-control required"
-                                                                       placeholder="例如：北京">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="col-lg-3 col-sm-3 col-xs-3">
-                                                                <label class="ivu-form-item-label">国籍：</label>
-                                                            </div>
-                                                            <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
-                                                                       class="form-control required"
-                                                                       placeholder="例如：中国">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="col-lg-3 col-sm-3 col-xs-3">
-                                                                <label class="ivu-form-item-label">生日：</label>
-                                                            </div>
-                                                            <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
-                                                                       class="form-control required"
-                                                                       placeholder="例如：1990-01-01">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="col-lg-3 col-sm-3 col-xs-3">
-                                                                <label class="ivu-form-item-label">地址：</label>
-                                                            </div>
-                                                            <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
-                                                                       class="form-control required"
-                                                                       placeholder="请输入常用地址">
+                                                            <div class="form-group row">
+                                                                <div class="col-lg-3 col-sm-3 col-xs-3">
+                                                                    <label class="ivu-form-item-label">地址：</label>
+                                                                </div>
+                                                                <div class="col-lg-9 col-sm-9 col-xs-9">
+                                                                    <input id="directorAddress1" name="directorAddress1" type="text"
+                                                                           class="form-control required"
+                                                                           placeholder="请输入常用地址">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -578,70 +590,74 @@
                                             <div class="row">
                                                 <div class="col-lg-2 col-sm-1 col-xs-1">&nbsp;</div>
                                                 <div class="col-lg-8 col-sm-10 col-xs-10">
-                                                    <div class="person-inf-box">
-                                                        <div class="form-group row">
-                                                            <div class="col-lg-3 col-sm-3 col-xs-3">
-                                                                <label class="ivu-form-item-label">主演姓名：</label>
+                                                    <div id="performerBox">
+                                                        <div class="person-inf-box">
+                                                            <div class="form-group row">
+                                                                <div class="col-lg-3 col-sm-3 col-xs-3">
+                                                                    <label class="ivu-form-item-label" id="performerLabel1">演员姓名：</label>
+                                                                </div>
+                                                                <div class="col-lg-9 col-sm-9 col-xs-9">
+                                                                    <input id="performerName1" name="performerName1" type="text"
+                                                                           class="form-control required"
+                                                                           placeholder="请输入姓名">
+                                                                </div>
                                                             </div>
-                                                            <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
-                                                                       class="form-control required"
-                                                                       placeholder="请输入姓名">
+                                                            <div class="form-group row">
+                                                                <div class="col-lg-3 col-sm-3 col-xs-3">
+                                                                    <label class="ivu-form-item-label">性别：</label>
+                                                                </div>
+                                                                <div class="col-lg-9 col-sm-9 col-xs-9">
+                                                                    <label class="label-item"><input type="radio"
+                                                                                                     name="performerSex1"
+                                                                                                     id="performerSexMan1"
+                                                                                                     value="男"/><span
+                                                                            class="checkbox-text">男</span></label>
+                                                                    <label class="label-item"><input type="radio"
+                                                                                                     name="performerSex1"
+                                                                                                     id="performerSexWoman1"
+                                                                                                     value="女"/><span
+                                                                            class="checkbox-text">女</span></label>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="col-lg-3 col-sm-3 col-xs-3">
-                                                                <label class="ivu-form-item-label">性别：</label>
+                                                            <div class="form-group row">
+                                                                <div class="col-lg-3 col-sm-3 col-xs-3">
+                                                                    <label class="ivu-form-item-label">首都：</label>
+                                                                </div>
+                                                                <div class="col-lg-9 col-sm-9 col-xs-9">
+                                                                    <input id="performerCapital1" name="performerCapital1" type="text"
+                                                                           class="form-control required"
+                                                                           placeholder="例如：北京">
+                                                                </div>
                                                             </div>
-                                                            <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <label class="label-item"><input type="radio"
-                                                                                                 name="radio"
-                                                                                                 id="" value=""/><span
-                                                                        class="checkbox-text">男</span></label>
-                                                                <label class="label-item"><input type="radio"
-                                                                                                 name="radio"
-                                                                                                 id="" value=""/><span
-                                                                        class="checkbox-text">女</span></label>
+                                                            <div class="form-group row">
+                                                                <div class="col-lg-3 col-sm-3 col-xs-3">
+                                                                    <label class="ivu-form-item-label">国籍：</label>
+                                                                </div>
+                                                                <div class="col-lg-9 col-sm-9 col-xs-9">
+                                                                    <input id="performerNationality1" name="performerNationality1" type="text"
+                                                                           class="form-control required"
+                                                                           placeholder="例如：中国">
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="col-lg-3 col-sm-3 col-xs-3">
-                                                                <label class="ivu-form-item-label">首都：</label>
+                                                            <div class="form-group row">
+                                                                <div class="col-lg-3 col-sm-3 col-xs-3">
+                                                                    <label class="ivu-form-item-label">生日：</label>
+                                                                </div>
+                                                                <div class="col-lg-9 col-sm-9 col-xs-9">
+                                                                    <input id="performerBirthday1" name="performerBsirthday1" type="text"
+                                                                           class="form-control date-add required"
+                                                                           placeholder="例如：1990-01-01">
+                                                                </div>
                                                             </div>
-                                                            <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
-                                                                       class="form-control required"
-                                                                       placeholder="例如：北京">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="col-lg-3 col-sm-3 col-xs-3">
-                                                                <label class="ivu-form-item-label">国籍：</label>
-                                                            </div>
-                                                            <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
-                                                                       class="form-control required"
-                                                                       placeholder="例如：中国">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="col-lg-3 col-sm-3 col-xs-3">
-                                                                <label class="ivu-form-item-label">生日：</label>
-                                                            </div>
-                                                            <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
-                                                                       class="form-control required"
-                                                                       placeholder="例如：1990-01-01">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <div class="col-lg-3 col-sm-3 col-xs-3">
-                                                                <label class="ivu-form-item-label">地址：</label>
-                                                            </div>
-                                                            <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
-                                                                       class="form-control required"
-                                                                       placeholder="请输入常用地址">
+                                                            <div class="form-group row">
+                                                                <div class="col-lg-3 col-sm-3 col-xs-3">
+                                                                    <label class="ivu-form-item-label">地址：</label>
+                                                                </div>
+                                                                <div class="col-lg-9 col-sm-9 col-xs-9">
+                                                                    <input id="performerAddress1" name="performerAddress1" type="text"
+                                                                           class="form-control required"
+                                                                           placeholder="请输入常用地址">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -670,7 +686,7 @@
                                                                 <label class="ivu-form-item-label">出品公司名称：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
+                                                                <input id="productionCompany" name="productionCompany" type="text"
                                                                        class="form-control required"
                                                                        placeholder="请输入">
                                                             </div>
@@ -680,7 +696,7 @@
                                                                 <label class="ivu-form-item-label">出品公司地址：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
+                                                                <input id="productionAddr" name="productionAddr" type="text"
                                                                        class="form-control required"
                                                                        placeholder="请输入">
                                                             </div>
@@ -690,7 +706,7 @@
                                                                 <label class="ivu-form-item-label">出品公司电话：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
+                                                                <input id="productionPhone" name="productionPhone" type="tel"
                                                                        class="form-control required"
                                                                        placeholder="请输入">
                                                             </div>
@@ -700,7 +716,7 @@
                                                                 <label class="ivu-form-item-label">出品公司传真：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
+                                                                <input id="productionFaxNumber" name="productionFaxNumber" type="text"
                                                                        class="form-control required"
                                                                        placeholder="请输入">
                                                             </div>
@@ -710,8 +726,8 @@
                                                                 <label class="ivu-form-item-label">出品公司邮箱：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
-                                                                       class="form-control required"
+                                                                <input id="productionMail" name="productionMail" type="email"
+                                                                       class="form-control required email"
                                                                        placeholder="请输入">
                                                             </div>
                                                         </div>
@@ -720,7 +736,7 @@
                                                                 <label class="ivu-form-item-label">联系人：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
+                                                                <input id="productionPrincipal" name="productionPrincipal" type="text"
                                                                        class="form-control required"
                                                                        placeholder="请输入">
                                                             </div>
@@ -731,12 +747,12 @@
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
                                                                 <label class="label-item"><input type="radio"
-                                                                                                 name="radio"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="productionGender"
+                                                                                                 id="productionGenderMan" value=""/><span
                                                                         class="checkbox-text">男</span></label>
                                                                 <label class="label-item"><input type="radio"
-                                                                                                 name="radio"
-                                                                                                 id="" value=""/><span
+                                                                                                 name="productionGender"
+                                                                                                 id="productionGenderWoman" value=""/><span
                                                                         class="checkbox-text">女</span></label>
                                                             </div>
                                                         </div>
@@ -745,7 +761,7 @@
                                                                 <label class="ivu-form-item-label">联系人所在部门：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
+                                                                <input id="productionDepartment" name="productionDepartment" type="text"
                                                                        class="form-control required"
                                                                        placeholder="请输入">
                                                             </div>
@@ -755,7 +771,7 @@
                                                                 <label class="ivu-form-item-label">联系人所属职务：</label>
                                                             </div>
                                                             <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                                <input id="" name="" type="text"
+                                                                <input id="productionDepartmentTitle" name="productionDepartmentTitle" type="text"
                                                                        class="form-control required"
                                                                        placeholder="请输入">
                                                             </div>
@@ -774,7 +790,7 @@
                                                             <label class="ivu-form-item-label">制片人：</label>
                                                         </div>
                                                         <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                            <input id="" name="" type="text"
+                                                            <input id="workerProduction" name="workerProduction" type="text"
                                                                    class="form-control required"
                                                                    placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
                                                         </div>
@@ -784,7 +800,7 @@
                                                             <label class="ivu-form-item-label">摄影师：</label>
                                                         </div>
                                                         <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                            <input id="" name="" type="text"
+                                                            <input id="workerCamerist" name="workerCamerist" type="text"
                                                                    class="form-control required"
                                                                    placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
                                                         </div>
@@ -794,7 +810,7 @@
                                                             <label class="ivu-form-item-label">编剧：</label>
                                                         </div>
                                                         <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                            <input id="" name="" type="text"
+                                                            <input id="workerWriter" name="workerWriter" type="text"
                                                                    class="form-control required"
                                                                    placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
                                                         </div>
@@ -804,7 +820,7 @@
                                                             <label class="ivu-form-item-label">美术师：</label>
                                                         </div>
                                                         <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                            <input id="" name="" type="text"
+                                                            <input id="workerMakeUpArtist" name="workerMakeUpArtist" type="text"
                                                                    class="form-control required"
                                                                    placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
                                                         </div>
@@ -814,7 +830,7 @@
                                                             <label class="ivu-form-item-label">剪辑师：</label>
                                                         </div>
                                                         <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                            <input id="" name="" type="text"
+                                                            <input id="workerFilmCutter" name="workerFilmCutter" type="text"
                                                                    class="form-control required"
                                                                    placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
                                                         </div>
@@ -824,7 +840,7 @@
                                                             <label class="ivu-form-item-label">艺术指导：</label>
                                                         </div>
                                                         <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                            <input id="" name="" type="text"
+                                                            <input id="workerArtist" name="workerArtist" type="text"
                                                                    class="form-control required"
                                                                    placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
                                                         </div>
@@ -834,7 +850,7 @@
                                                             <label class="ivu-form-item-label">动画制作：</label>
                                                         </div>
                                                         <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                            <input id="" name="" type="text"
+                                                            <input id="workerAnimation" name="workerAnimation" type="text"
                                                                    class="form-control required"
                                                                    placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
                                                         </div>
@@ -844,7 +860,7 @@
                                                             <label class="ivu-form-item-label">特效制作：</label>
                                                         </div>
                                                         <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                            <input id="" name="" type="text"
+                                                            <input id="workerSpecialEffects" name="workerSpecialEffects" type="text"
                                                                    class="form-control required"
                                                                    placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
                                                         </div>
@@ -854,7 +870,7 @@
                                                             <label class="ivu-form-item-label">原创音乐：</label>
                                                         </div>
                                                         <div class="col-lg-9 col-sm-9 col-xs-9">
-                                                            <input id="" name="" type="text"
+                                                            <input id="workerMusic" name="workerMusic" type="text"
                                                                    class="form-control required"
                                                                    placeholder="例如：张三、李四（请将姓名用中文顿号隔开）">
                                                         </div>
@@ -868,9 +884,9 @@
                                                 <div class="col-lg-2 col-sm-1 col-xs-1">&nbsp;</div>
                                                 <div class="col-lg-8 col-sm-10 col-xs-10">
                                                     <div class="form-group">
-                                            <textarea wrap="soft" autocomplete="off" spellcheck="false"
-                                                      placeholder="请添加百度网盘链接或在线链接" rows="2" class="ivu-input"
-                                                      style="height: 115px; min-height: 100px; max-height: 200px;"></textarea>
+                                                        <textarea id="notesText" name="notesText" wrap="soft" autocomplete="off" spellcheck="false"
+                                                          placeholder="请添加百度网盘链接或在线链接" rows="2" class="ivu-input"
+                                                          style="height: 115px; min-height: 100px; max-height: 200px;"></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-2 col-sm-1 col-xs-1">&nbsp;</div>
@@ -1066,6 +1082,8 @@
 <script src="js/plugins/toastr/toastr.min.js"></script>
 <!-- Steps -->
 <script src="js/plugins/bootstrapWizard/jquery.bootstrap.wizard.js"></script>
+<!-- date -->
+<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
 <!-- Jquery Validate -->
 <script src="js/plugins/validate/jquery.validate.min.js"></script>
 

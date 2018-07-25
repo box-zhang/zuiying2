@@ -416,7 +416,6 @@
     position: relative;
     z-index: 2;
     width: 100%;
-    overflow: hidden;
 }
 
 .show-top {
@@ -681,7 +680,14 @@
     line-height: 30px;
     color: rgba(0, 0, 0, .85)
 }
-
+.landing-page {
+    display: flex;
+    min-height: 100vh;
+    flex-flow: column;
+}
+.sticky-box {
+    flex: 1
+}
 .footer-wrapper {
     width: 100%;
     background: #fff4f5;
@@ -1251,8 +1257,8 @@ dl dt {
 }
 
 .step-succeed {
-    margin: 0 auto;
-    width: 600px;
+    margin: 10px auto;
+    width: 100%;
     line-height: 28px
 }
 
@@ -2160,7 +2166,7 @@ dl dt {
 .settings-nav .settings-nav-list .settings-nav-tab.router-link-exact-active,
 .settings-nav .settings-nav-list .settings-nav-tab:active,
 .settings-nav .settings-nav-list .settings-nav-tab:hover {
-    display: block;
+    display: inline-block;
     color: #fff;
     background: rgba(255, 69, 69, .85);
     background-image: linear-gradient(-90deg, #ff4259, #413f57)
@@ -11045,7 +11051,7 @@ textarea.ivu-page-options-elevator input {
 }
 .active .ivu-steps-item .ivu-steps-tail>i,
 .done .ivu-steps-item .ivu-steps-tail>i {
-    background-color: hsla(240, 8%, 44%, .08);
+    background-color: hsla(240, 8%, 44%, .2);
 }
 .landing-page .wizard-navigation .steps li a{
     padding: 0;
@@ -11166,7 +11172,7 @@ textarea.ivu-page-options-elevator input {
 .steps .ivu-steps-head {
     padding: 8px;
     border-radius: 50%;
-    box-shadow: 0 0 15px 0 hsla(240, 8%, 44%, .15);
+    box-shadow: 0 0 15px 0 hsla(240, 8%, 44%, .2);
     background: #fff
 }
 
@@ -11194,6 +11200,16 @@ textarea.ivu-page-options-elevator input {
 .steps .ivu-steps-head-inner>.ivu-steps-icon.ivu-icon-ios-checkmark-empty,
 .steps .ivu-steps-head-inner>.ivu-steps-icon.ivu-icon-ios-close-empty {
     font-weight: 700
+}
+
+.person-inf-box {
+    border-bottom: 1px dashed #eee;
+    margin-bottom: 25px;
+}
+
+.person-inf-box:last-child {
+    border-bottom: 0;
+    margin-bottom: 25px;
 }
 
 .steps .ivu-steps-main {
@@ -11247,7 +11263,7 @@ textarea.ivu-page-options-elevator input {
     background: transparent;
     border-radius: 1px;
     position: relative;
-    box-shadow: 0 0 15px 0 hsla(240, 8%, 44%, .08)
+    box-shadow: 0 0 15px 0 hsla(240, 8%, 44%, .2)
 }
 
 .steps .ivu-steps-tail>i:after {
@@ -15385,6 +15401,11 @@ span.ivu-date-picker-cells-cell-disabled.ivu-date-picker-cells-cell-selected em 
 
 .ivu-upload input[type=file] {
     /*display: none*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 .ivu-upload .text-hint {
     display: inline-block;
@@ -16174,6 +16195,13 @@ html {
     width: 100%;
     max-width: 1100px;
     /*display: inline-block*/
+}
+.wizard-card {
+    padding-bottom: 80px;
+}
+.wizard-card .tab-content {
+    margin: 45px auto 30px;
+    width: 100%;
 }
 
 .content:after {
@@ -19389,9 +19417,16 @@ c
         color: rgba(62,61,84,0.85);
         background: #eee;
     }
+    .landing-page .nabar-bg .navbar-default .nav li a {
+        color: #fff;
+    }
+    .landing-page .nabar-bg .navbar-default .nav li a:hover,
+    .landing-page .nabar-bg .navbar-default .nav li a:active,
+    .landing-page .nabar-bg .navbar-default .nav li a:visited {
+        color: #eee;
+    }
     .landing-page .navbar-wrapper .navbar {
-        padding-top: 0;
-        padding-bottom: 5px;
+        padding: 0 0 5px 0;
         border-bottom: 1px solid #e7eaec;
         border-radius: 0;
     }
@@ -19410,10 +19445,6 @@ c
     }
     .navbar-collapse {
         padding-left: 30px!important;
-    }
-    .landing-page .navbar-wrapper .navbar {
-        padding-left: 15px;
-        padding-right: 5px;
     }
     .landing-page .navbar-default .navbar-nav > .active > a,
     .landing-page .navbar-default .navbar-nav > .active > a:hover {
@@ -19861,12 +19892,17 @@ body.rtls.top-navigation .footer.fixed {
         margin: 10px
     }
     .settings-router {
-        padding: 0
+        padding: 0 5%;
+        border-left: 0;
     }
     .settings-router .form-reset {
         width: 80%;
     }
+    .settings-router .table-responsive {
+        border: 0;
+    }
     .settings-nav .settings-nav-list .settings-nav-tab {
+        display: inline-block;
         padding: 5px 2%;
         width: 6rem;
     }
