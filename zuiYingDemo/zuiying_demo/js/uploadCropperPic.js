@@ -255,7 +255,31 @@ $(function () {
                 initCropperInModal($('#avatar_show_pic'), $('#avatarInput'), $('#popAddAlbumPic'), $(this), picBox, picUrl, picZPJSize);
             });
         })(i);
+
     }
+    for (var i = 0; i < picZPJ.length; i++) {
+        (function (i) {
+            var picBox = picZPJ.eq(i);
+            var btnCollectionIn = picBox.find('[name="btn_collection_in"]');
+            btnCollectionIn.click(function () {
+                $(this).parents('.set-card-box').hide();
+                $('.set-collection-box').show();
+            });
+        })(i);
+
+    }
+    $('.settings-nav-tab').eq(1).click(function () {
+        $('.set-card-box').show();
+        $('.set-collection-box').hide();
+        $('.settings-video-add').hide();
+
+    });
+    $('#tab-video').find('.nav-tabs li').eq(1).click(function () {
+        $('.set-card-box').show();
+        $('.set-collection-box').hide();
+        $('.settings-video-add').hide();
+
+    });
     //头像上传
     var picAvatar = $('[name="pic_avatar"]');
     var picAvatarSize = 1;
@@ -294,10 +318,14 @@ $(function () {
             var videoBox = videoAdd.eq(i);
             var videoUpload = videoBox;
             // var videoUrl = picBox.find('img').attr('src');
-            btnUploadPagePic.click(function () {
+            videoUpload.click(function () {
                 picPopHtml("视频上传");
                 $('.album-pic').removeClass('circle-avatar');
-                initCropperInModal($('#avatar_show_pic'), $('#avatarInput'), $('#popAddAlbumPic'), $(this), videoBox, picUrl, picUserCenterSize);
+
+                $('.set-card-box').hide();
+                $('.set-collection-box').hide();
+                $('.settings-video-add').show();
+                // initCropperInModal($('#avatar_show_pic'), $('#avatarInput'), $('#popAddAlbumPic'), $(this), videoBox, picUrl, picUserCenterSize);
             });
         })(i);
     }
