@@ -83,7 +83,7 @@
     <div class="container main">
         <div class="settings">
             <div class="row">
-                <div class="col-lg-3 col-sm-3 col-xs-12">
+                <div class="col-lg-2 col-sm-2 col-xs-12">
                     <div class="settings-nav">
                         <div class="settings-user"><span class="ivu-avatar ivu-avatar-circle ivu-avatar-large"><span
                                 class="ivu-avatar-string"
@@ -104,7 +104,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-9 col-sm-9 col-xs-12">
+                <div class="col-lg-10 col-sm-10 col-xs-12 tab-content">
                     <div class="settings-router" style="display: block">
                         <div class="tabs-container setings-activity">
                             <ul class="nav nav-tabs">
@@ -230,18 +230,16 @@
                                     <div class="settings-video-main">
                                         <div class="set-collection-box">
                                             <div class="flex-box flex-wrap">
-                                                <div class="set-c-v-add ">
+                                                <div class="set-c-v-add">
                                                     <div class="">
                                                         <div class="ivu-upload">
-                                                            <div class="ivu-upload ivu-upload-drag"><input type="file"
-                                                                                                           multiple="multiple"
-                                                                                                           class="ivu-upload-input">
+                                                            <div class="ivu-upload ivu-upload-drag" name="video_add" data-toggle="modal" data-target="#popAddAlbumPic">
+                                                                <input type="file" multiple="multiple" class="ivu-upload-input avatar-input">
                                                                 <div class="upload-box"><i
                                                                         class="ivu-icon ivu-icon-ios-cloud-upload"
                                                                         style="font-size: 52px;"></i>
                                                                     <p class="text-hint">添加视频</p></div>
                                                             </div>
-                                                            <ul class="ivu-upload-list"></ul>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -478,6 +476,12 @@
                     </div>
                 </div>
             </div>
+
+            <div class="modal" id="popAddAlbumPic" tabindex="-1" role="dialog"
+                 aria-hidden="true"
+                 style="display: none"
+                 aria-labelledby="avatar-modal-label">
+            </div>
         </div>
     </div>
 </section>
@@ -622,7 +626,8 @@
 <script src="js/inspinia.js"></script>
 <script src="js/plugins/pace/pace.min.js"></script>
 <script src="js/plugins/wow/wow.min.js"></script>
+<script src="js/plugins/uploadPic/cropper.min.js"></script>
+<script src="js/uploadCropperPic.js"></script>
 <script src="js/common.js"></script>
-
 </body>
 </html>
