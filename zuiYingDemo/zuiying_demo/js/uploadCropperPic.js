@@ -67,7 +67,7 @@ var initCropperInModal = function (img, input, modal, btnModal, picBox, picUrl, 
         $image.cropper('destroy').attr('src', blobURL);
     });
     if (URL) {
-        $inputImage.change(function () {
+        $inputImage.change(function (e) {
             var files = this.files;
             var file;
             if (!$image.data('cropper')) {
@@ -77,6 +77,16 @@ var initCropperInModal = function (img, input, modal, btnModal, picBox, picUrl, 
                 file = files[0];
 
                 if (/^image\/\w+$/.test(file.type)) {
+                    $(".pic-upload-alert").remove();
+
+                    var picMaxSize = 1024 * 6;//6M
+                    var target = $(e.target);
+                    var pidSize = target[0].files[0].size / 1024;
+                    if(pidSize > picMaxSize) {
+                        $('[name="avatar_preview_box"]').append('<div class="alert alert-danger pic-upload-alert"><button type="button" class="close" data-dismiss="alert">×</button>请选择质量小于6M的图片</div>');
+                        // $(".avatar-wrapper").childre().remove;
+                        return false;
+                    }
 
                     if (blobURL) {
                         URL.revokeObjectURL(blobURL);
@@ -157,7 +167,6 @@ var initCropperInModal = function (img, input, modal, btnModal, picBox, picUrl, 
                                         // 将上传的头像的地址填入，为保证不载入缓存加个随机数
                                         $picBox.find('img').attr('src', '头像地址?t=' + Math.random());
                                         $('#popAddAlbumPic').modal('hide');
-
                                     } else {
                                         alert(data.info);
                                     }
@@ -170,7 +179,7 @@ var initCropperInModal = function (img, input, modal, btnModal, picBox, picUrl, 
                     })
 
                 } else {
-                    window.alert('请选择以.png／.jpg／.jpeg为扩展名的图片');
+                    $('[name="avatar_preview_box"]').append('<div class="alert alert-danger pic-upload-alert"><button type="button" class="close" data-dismiss="alert">×</button>请选择以.png .jpg .jpeg为扩展名的图片</div>');
                 }
             }
         });
