@@ -15458,6 +15458,11 @@ span.ivu-date-picker-cells-cell-disabled.ivu-date-picker-cells-cell-selected em 
     padding: 0 5px;
     text-align: left;
 }
+.ivu-upload-video-text .text-hint {
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+}
 
 .ivu-upload-list {
     margin-top: 8px

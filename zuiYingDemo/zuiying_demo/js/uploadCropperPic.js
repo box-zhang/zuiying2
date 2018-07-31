@@ -17,7 +17,9 @@ var initCropperInModal = function (img, input, modal, btnModal, picBox, picUrl, 
     var options = {
         aspectRatio: $picSize, // 纵横比
         viewMode: 2,
-        preview: '.album-pic' // 预览图的class名
+        preview: '.album-pic', // 预览图的class名
+        responsive:false,
+        restore:false,
     };
     // 模态框隐藏后需要保存的数据对象
     var saveData = {};
@@ -38,6 +40,14 @@ var initCropperInModal = function (img, input, modal, btnModal, picBox, picUrl, 
             }
         }));
         $image.cropper('reset').cropper('replace', $picUrl);
+        $("#btnL").click(function () {
+            $image.cropper('rotate', -90);
+
+        });
+        $("#btnR").click(function () {
+            $image.cropper('rotate', 90);
+
+        });
     }).on('shown.bs.modal', function () {
         // 重新创建
         $image.cropper($.extend(options, {
@@ -65,15 +75,9 @@ var initCropperInModal = function (img, input, modal, btnModal, picBox, picUrl, 
             }
             if (files && files.length) {
                 file = files[0];
-                if (!/.(jpg|jpeg|png|JPG|png)$/.test(file)) {
-                    window.alert('请选择以.png／.jpg／.jpeg为扩展名的图片');
-                }else {
 
-                }
-                if(URL.file>6291456){
-                    window.alert('请上传小于6M的图片');
+                if (/^image\/\w+$/.test(file.type)) {
 
-                }else {
                     if (blobURL) {
                         URL.revokeObjectURL(blobURL);
                     }
@@ -84,28 +88,27 @@ var initCropperInModal = function (img, input, modal, btnModal, picBox, picUrl, 
 
                     // 选择文件后，显示和隐藏相关内容
                     $('[name="avatar_save"]').removeAttr('disabled').removeClass('disabled');
-                    console.log($picBox.find('img').attr('src'))
+                    console.log($picBox.find('img').attr('src'));
                     $('[name="avatar_save"]').click(function () {
-                        // sendPhoto()
-
-                        // 得到PNG格式的dataURL
-                        /*var photo = $('#avatar_show_pic').cropper('getCroppedCanvas', {
-                         width: 300,
-                         height: 300
-                         }).toDataURL('image/png');*/
-
+                        var cas=$image.cropper('getCroppedCanvas');
+                        var base64url=cas.toDataURL('image/jpeg');
+                        cas.toBlob(function (e) {
+                            console.log(e);  //生成Blob的图片格式
+                        });
+                        console.log(base64url); //生成base64图片的格式
+                        // $('body').html(cas)  //在body显示出canvas元素
                         if ($picBox.attr("name") == "pic_zpj") {
                             //作品集封面
                             $.ajax({
                                 url: '上传地址', // 要上传的地址
                                 type: 'post',
                                 data: {
-                                    'imgData': photo
+                                    'imgData': base64url
                                 },
                                 dataType: 'json',
                                 success: function (data) {
                                     if (data.status == 0) {
-                                        // 将上传的头像的地址填入，为保证不载入缓存加个随机数
+                                        // 将上传图片的地址填入，为保证不载入缓存加个随机数
                                         $picBox.find('img').attr('src', '头像地址?t=' + Math.random());
                                         $('#popAddAlbumPic').modal('hide');
                                         $("#popAddAlbumPic").empty();
@@ -113,6 +116,9 @@ var initCropperInModal = function (img, input, modal, btnModal, picBox, picUrl, 
                                     } else {
                                         alert(data.info);
                                     }
+                                },
+                                error: function () {
+                                    console.log('上传失败');
                                 }
                             });
                         } else if ($picBox.attr("name") == "pic_avatar") {
@@ -126,12 +132,15 @@ var initCropperInModal = function (img, input, modal, btnModal, picBox, picUrl, 
                                 dataType: 'json',
                                 success: function (data) {
                                     if (data.status == 0) {
-                                        // 将上传的头像的地址填入，为保证不载入缓存加个随机数
+                                        // 将上传图片的地址填入，为保证不载入缓存加个随机数
                                         $('[name="show_avatar"]').attr('src', '头像地址?t=' + Math.random());
                                         $('#popAddAlbumPic').modal('hide');
                                     } else {
                                         alert(data.info);
                                     }
+                                },
+                                error: function () {
+                                    console.log('上传失败');
                                 }
                             });
                         } else if ($picBox.attr("name") == "pic_user_center") {
@@ -148,21 +157,27 @@ var initCropperInModal = function (img, input, modal, btnModal, picBox, picUrl, 
                                         // 将上传的头像的地址填入，为保证不载入缓存加个随机数
                                         $picBox.find('img').attr('src', '头像地址?t=' + Math.random());
                                         $('#popAddAlbumPic').modal('hide');
+
                                     } else {
                                         alert(data.info);
                                     }
+                                },
+                                error: function () {
+                                    console.log('上传失败');
                                 }
                             });
                         }
                     })
 
+                } else {
+                    window.alert('请选择以.png／.jpg／.jpeg为扩展名的图片');
                 }
             }
         });
     } else {
         $inputImage.prop('disabled', true).addClass('disabled');
     }
-}
+};
 $(function () {
     function picPopHtml(titleName) {
         var picPopHtml =
@@ -186,15 +201,17 @@ $(function () {
             '<input class="avatar-input" id="avatarInput" name="avatar_file" type="file">' +
             '<div>' +
             '<i class="ivu-icon ivu-icon-ios-cloud-upload" style="font-size: 34px;"></i>' +
-            '<p class="text-hint">点击上传/更换图片<br>仅支持jpg，png大小不超过2M </p>' +
+            '<p class="text-hint">点击上传/更换图片<br>仅支持jpg，png 大小不超过2M </p>' +
             '</div>' +
             '</div>' +
             '</div>' +
             '<div class="avatar-wrapper " name="avatar_wrapper">' +
             '<img src="" alt="" id="avatar_show_pic">' +
             '</div>' +
+            '<p>提示：在剪裁框内双击，可以进行拖拽内容的切换</p>'+
             '</div>' +
             '<div class="col-lg-4 col-sm-4 col-xs-12">' +
+            '<p style="text-align: left;padding: 10px 0">预览：</p>'+
             '<div class="pic-box " name="avatar_preview_box">' +
             '<div class="album-pic preview-lg" name="avatar_preview"></div>' +
             '<div class="album-pic preview-md" name="avatar_preview"></div>' +
@@ -202,13 +219,13 @@ $(function () {
             '</div>' +
             '</div>' +
             '</div>' +
-            '<div class="row avatar-btns hide" name="avatar_btns">' +
+            '<div class="row avatar-btns" name="avatar_btns">' +
             '<div class="col-lg-12 col-sm-12 col-xs-12 ">' +
             '<div class="btn-group">' +
-            '<button class="btn" data-method="rotate" data-option="-90" type="button" title="逆时针旋转 -90 度"><i class="fa fa-undo"></i> 向左旋转 </button>' +
+            '<button class="btn" id="btnL" data-method="rotate" data-option="-90" type="button" title="逆时针旋转 -90 度"><i class="fa fa-undo"></i> 向左旋转 </button>' +
             '</div>' +
             '<div class="btn-group">' +
-            '<button class="btn" data-method="rotate" data-option="90" type="button" title="顺时针旋转 90 度"><i class="fa fa-repeat"></i> 向右旋转 </button>' +
+            '<button class="btn" id="btnR" data-method="rotate" data-option="90" type="button" title="顺时针旋转 90 度"><i class="fa fa-repeat"></i> 向右旋转 </button>' +
             '</div>' +
             '</div>' +
             '</div>' +
@@ -228,18 +245,7 @@ $(function () {
             '<div class="ivu-modal-footer">  </div>' +
             '</div>' +
             '</div>';
-        $("#popAddAlbumPic").append(picPopHtml);
-        (function () {
-            $("[name='cancel_upload']").click(function () {
-                $("#popAddAlbumPic").empty();
-                $('.modal-backdrop').remove();
-            })
-            $(".modal-backdrop").click(function () {
-                $("#popAddAlbumPic").empty();
-                $('.modal-backdrop').remove();
-            })
-
-        })()
+        $("#popAddAlbumPic").empty().append(picPopHtml);
     }
     //视频管理 封面图上传
     var picZPJ = $('[name="pic_zpj"]');

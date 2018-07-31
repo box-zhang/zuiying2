@@ -1011,12 +1011,15 @@
                                         <div class="set-collection-box" style="display: none">
                                             <div class="flex-box flex-wrap">
                                                 <div class="set-c-v-add">
-                                                    <div class="">
-                                                        <div class="ivu-upload">
-                                                            <div class="ivu-upload ivu-upload-drag" name="video_add" data-toggle="modal" data-target="#popAddAlbumPic">
-                                                                <input type="file" multiple="multiple" class="ivu-upload-input avatar-input">
-                                                                <div class="upload-box"><i class="ivu-icon ivu-icon-ios-cloud-upload" style="font-size: 52px;"></i>
-                                                                    <p class="text-hint">添加视频</p></div>
+                                                    <div class="ivu-upload">
+                                                        <div class="ivu-upload ivu-upload-drag avatar-upload" name="video_add" data-toggle="modal" data-target="#popAddAlbumPic">
+                                                            <input class="avatar-src" name="avatar_src" type="hidden">
+                                                            <input class="avatar-data" name="avatar_data" type="hidden">
+                                                            <input class="avatar-input" id="videoInput" name="video_file" type="file">
+                                                            <div class="ivu-upload-video-text">
+                                                                <i class="ivu-icon ivu-icon-ios-cloud-upload" style="font-size: 34px;"></i>
+                                                                <p class="text-hint">点击上传视频<br>大小不超过1G
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
