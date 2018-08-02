@@ -2702,6 +2702,7 @@ dl dt {
 }
 
 .settings-video-add .video-add-item {
+    position: relative;
     padding: 30px;
     background: #eee;
     border-bottom: 1px solid #ddd
@@ -7600,7 +7601,6 @@ fieldset[disabled] .ivu-btn-text>a:only-child:after {
 }
 
 .ivu-btn-text:hover {
-    color: #fe6061;
     background-color: transparent;
     border-color: transparent
 }
@@ -15448,6 +15448,7 @@ span.ivu-date-picker-cells-cell-disabled.ivu-date-picker-cells-cell-selected em 
 .ivu-upload input[type=file] {
     /*display: none*/
     position: absolute;
+    z-index: 99;
     top: 0;
     left: 0;
     bottom: 0;
@@ -15457,6 +15458,12 @@ span.ivu-date-picker-cells-cell-disabled.ivu-date-picker-cells-cell-selected em 
     display: inline-block;
     padding: 0 5px;
     text-align: left;
+}
+.video-cancle {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    margin-top: -15px;
 }
 .pic-upload-alert {
     margin: 30px 0;
@@ -16404,6 +16411,22 @@ html {
 .ivu-icon {
     font-size: 18px;
     color: #ccc
+}
+.setings-activity {
+    position: relative;
+}
+.goback {
+    position: absolute;
+    top: 8px;
+    right: 0;
+
+}
+.ivu-icon-ios-arrow-right:before {
+    content: "\F3D3";
+}
+.ivu-btn-small  .ivu-icon-ios-arrow-right {
+    font-size: 14px;
+    font-weight: 700;
 }
 
 .form-icon .ivu-input {
