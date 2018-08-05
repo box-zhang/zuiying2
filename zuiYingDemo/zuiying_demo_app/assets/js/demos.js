@@ -1,3 +1,18 @@
+$(document).ready(function(){
+  // 图片懒加载
+  for(var i=0;i<10;i++){
+    $('.lazyload').eq(i).picLazyLoad({
+      threshold: 100,
+      placeholder: 'http://image.yihaodianimg.com/front-homepage/global/images/blank.gif'
+    });
+  }
+  $('.native-scrol').bind('load scroll.ImgLoading', function () {
+    $('.lazyload').picLazyLoad({
+      threshold: 100,
+      placeholder: 'http://image.yihaodianimg.com/front-homepage/global/images/blank.gif'
+    });
+  });
+});
 $(function () {
   'use strict';
 
@@ -348,4 +363,5 @@ $(function () {
   });
 
   $.init();
+
 });

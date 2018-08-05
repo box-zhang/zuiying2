@@ -11,17 +11,13 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
 
-    <!-- Google Web Fonts -->
-
     <link rel="stylesheet" href="./dist_z/css/sm.css">
     <link rel="stylesheet" href="./dist_z/css/sm-extend.css">
     <link rel="stylesheet" href="./assets/css/demos.css">
 
     <script src="./assets/js/zepto.js"></script>
+    <script src="./assets/js/picLazyLoad.min.js"></script>
     <script src="./assets/js/config.js"></script>
-    <script>
-        //ga
-    </script>
 
 </head>
 <body>
@@ -104,8 +100,10 @@
                         <div class="card-h-l">
                             <div class="user-inf">
                                 <div class="user-avatar"><img
-                                        src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg"
-                                        width="34" height="34"></div>
+                                        class="lazyload"
+                                        src="assets/img/icon-avatar.png"
+                                        data-original="assets/img/avatar.jpg"
+                                        ></div>
                                 <div class="user-inf-text">
                                     <p>作品名称</p>
                                     <p>尹小白 <span class="color-gray">／#广告</span></p>
@@ -137,8 +135,10 @@
                         <div class="card-h-l">
                             <div class="user-inf">
                                 <div class="user-avatar"><img
-                                        src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg"
-                                        width="34" height="34"></div>
+                                        class="lazyload"
+                                        src="assets/img/icon-avatar.png"
+                                        data-original="assets/img/avatar.jpg"
+                                        ></div>
                                 <div class="user-inf-text">
                                     <p class="works-inf-name">作品名称</p>
                                     <p class="user-inf-name">尹小白 <span class="color-gray">／#广告</span></p>
@@ -170,8 +170,10 @@
                         <div class="card-h-l">
                             <div class="user-inf">
                                 <div class="user-avatar"><img
-                                        src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg"
-                                        width="34" height="34"></div>
+                                        class="lazyload"
+                                        src="assets/img/icon-avatar.png"
+                                        data-original="assets/img/avatar.jpg"
+                                        ></div>
                                 <div class="user-inf-text">
                                     <p class="works-inf-name">作品名称</p>
                                     <p class="user-inf-name">尹小白 <span class="color-gray">／#广告</span></p>
@@ -201,7 +203,7 @@
                     <p>关于关于关于。</p>
                     <p>关于关于关于</p>
                     <p></p>
-                    <p><a class="button button-round close-popup">确定</a></p>
+                    <p><a class="button btn-small btn-center button-round close-popup">确定</a></p>
                 </div>
             </div>
         </div>
