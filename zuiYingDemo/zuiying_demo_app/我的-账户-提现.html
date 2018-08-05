@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="./assets/css/demos.css">
 
     <script src="./assets/js/zepto.js"></script>
-    <script src="./assets/js/picLazyLoad.min.js"></script>
     <script src="./assets/js/config.js"></script>
 
 </head>
@@ -25,11 +24,10 @@
 <div class="page-group user-account">
     <div id="page-nav-bar" class="page">
         <header class="bar bar-nav">
-            <a class="button button-link button-nav pull-left back" href="../index.html">
-                <span class="icon icon-left"></span>
-                返回
+            <a class="button button-link button-nav pull-left cancel-back" href="javascript:;">
+                取消
             </a>
-            <h1 class="title">我的账户</h1>
+            <h2 class="title title-h2">账户提现</h2>
         </header>
         <nav class="bar bar-tab">
             <a class="tab-item external active" href="javascript:;">
@@ -52,13 +50,15 @@
         </nav>
         <div class="content native-scrol">
             <div class="price-box">
-                <div class="price-logo">
-                    <img src="" width="100%" alt="">
+                <div class="form-price">
+                    <p class="form-price-lable">提现金额</p>
+                    <div class="form-price-input">
+                        <input type="number" value="1000">
+                        <span class="icon-price">¥</span>
+                    </div>
+                    <p class="form-hint">最多可提 ¥999</p>
+                    <div class="btn-box"><a class="button btn-center button-round button-pink confirm-ok">提现</a></div>
                 </div>
-                <p class="price-num">
-                    ¥ <span>1,000</span>
-                </p>
-                <div class="btn-box"><a class="button btn-center button-round close-popup">提现</a></div>
             </div>
 
         </div>

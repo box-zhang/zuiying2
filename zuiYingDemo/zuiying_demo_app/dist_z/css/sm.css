@@ -360,7 +360,7 @@ a:active {
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: .85rem;
+  font-size: .75rem;
   text-transform: uppercase;
   line-height: 1;
   color: #3E3D54;
@@ -990,6 +990,10 @@ a:active {
   text-align: center;
   white-space: nowrap;
 }
+.title-h2 {
+  font-weight: normal;
+  font-size: .75rem;
+}
 .title a {
   color: inherit;
 }
@@ -1097,7 +1101,7 @@ a:active {
 }
 .bar .button-link:active,
 .bar .button-link.active {
-  color: #0675bb;
+  color: #56556a;
 }
 .bar .button-block {
   top: 0.35rem;
@@ -1122,6 +1126,11 @@ a:active {
   padding: .5rem .1rem;
   font-size: 1rem;
   line-height: 1.2rem;
+}
+.bar .icon.icon-left{
+  font-size: .8rem;
+  line-height: 2.4rem;
+  font-weight: bold;
 }
 .bar .button .icon {
   padding: 0;

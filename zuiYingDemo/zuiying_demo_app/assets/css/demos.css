@@ -381,7 +381,64 @@ body{
 .user-account .price-box .price-num {
   margin-bottom: 60px;
 }
-
+.bar .button.cancel-back {
+  padding: 0 .8rem
+}
+.user-account .form-price {
+  margin: 15% 5%;
+  padding: 5% 10%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #DCDCEC;
+}
+.user-account .form-price .form-price-lable {
+  text-align: left;
+}
+.user-account .form-price .form-price-input {
+  position: relative;
+  padding: 3px 0;
+  text-align: left;
+  border-bottom: 1px solid #D2D0D0;
+}
+.user-account .form-price .form-price-input input {
+  margin-left: 10%;
+  width: 90%;
+  border: 0
+}
+.user-account .form-price .icon-price {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 10%;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  text-align: center;
+}
+.user-account .form-price .form-hint {
+  text-align: left;
+  font-size: .65rem;
+  color: #ccc;
+}
+.button.button-pink {
+  background-color: #413f57;
+  background-image: linear-gradient(90deg,#413f57,#ff4259);
+  border-color: #ff4259;
+  border-color: rgba(255,255,255,0.4);
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  color: #fff
+}
+.button.button-pink:hover,
+.button.button-pink:active {
+  background-color: transparent;
+  background-image: none;
+  border-color: #ff4545;
+  color: #ff4545
+}
+.form-price .btn-box {
+  padding: 30px 0;
+}
 
 
 
