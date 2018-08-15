@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="最影工作室">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="./dist_z/css/sm.css">
+    <link rel="stylesheet" href="./dist_z/css/sm-extend.css">
+    <link rel="stylesheet" href="./assets/css/demos.css">
+
+    <script src="./assets/js/zepto.js"></script>
+    <script src="./assets/js/picLazyLoad.min.js"></script>
+    <script src="./assets/js/config.js"></script>
+
+</head>
+<body>
+
+<div class="page-group video-wrapper">
+    <div class="page">
+        <div class="content native-scrol">
+            <div class="video-main">
+                <div class="video">
+                    <video src=""></video>
+                    <div class="user-homepage-top clearfix">
+                        <a href="" class="user-homepage-back back">
+                            <span class="lnr lnr-cross"></span>
+                        </a>
+                        <div class="user-homepage-share">
+                            <span class="lnr lnr-exit-up open-popup" data-popup=".popup-share"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3>作品名称</h3>
+                    <div class="video-sign">
+                        <span>#广告</span>／
+                        <span>5:06</span>／
+                        <span>最影推荐</span>
+                    </div>
+                    <div class="video-introduce"><p>作品介绍作品介绍作品介绍作品介绍作品介绍作品介绍作品介绍</p></div>
+                    <div class="video-data-num">
+                        <div class="video-data-num-item">
+                            <span class="lnr lnr-thumbs-up"></span><span>99</span>
+                        </div>
+                        <div class="video-data-num-item">
+                            <span class="lnr lnr-bookmark"></span><span>99</span>
+                        </div>
+                        <div class="video-data-num-item">
+                            <span class="lnr lnr-exit-up"></span><span>99</span>
+                        </div>
+                        <div class="video-data-num-item">
+                            <span class="lnr lnr-enter-down"></span><span>99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-user">
+                <div class="video-user-main">
+                    <div class="video-user-avatar lnr lnr-user"><img src="" alt=""></div>
+                    <div class="video-user-text">
+                        <p class="video-user-name">作者姓名</p>
+                        <p class="video-user-sign color-gray">个性签名个性签名个性签名个性签名个性签名个性签名个性签名个性签名</p>
+                    </div>
+                </div>
+                <!--attention 关注，已关注、取消关注、相互关注，都在attention 后面追加样式 on 例如：<button type="button" class="button button-small button-primary attention on">取消关注</button>-->
+                <button type="button" class="button button-small button-primary attention">+ 关注</button>
+            </div>
+            <div class="video-user">
+                <div class="video-user-main">
+                    <div class="video-user-avatar lnr lnr-user"><img src="" alt=""></div>
+                    <div class="video-user-text">
+                        <p class="video-user-name">作者姓名</p>
+                        <p class="video-user-sign color-gray">个性签名个性签名个性签名个性签名个性签名个性签名个性签名个性签名</p>
+                    </div>
+                </div>
+                <!--attention 关注，已关注、取消关注、相互关注，都在attention 后面追加样式 on 例如：<button type="button" class="button button-small button-primary attention on">取消关注</button>-->
+                <button type="button" class="button button-small button-primary attention on">取消关注</button>
+            </div>
+            <div class="video-user">
+                <div class="video-user-main">
+                    <div class="video-user-avatar lnr lnr-user"><img src="" alt=""></div>
+                    <div class="video-user-text">
+                        <p class="video-user-name">作者姓名</p>
+                        <p class="video-user-sign color-gray">个性签名个性签名个性签名个性签名个性签名个性签名个性签名个性签名</p>
+                    </div>
+                </div>
+                <!--attention 关注，已关注、取消关注、相互关注，都在attention 后面追加样式 on 例如：<button type="button" class="button button-small button-primary attention on">取消关注</button>-->
+                <button type="button" class="button button-small button-primary attention on">相互关注</button>
+            </div>
+
+            <div id="videoList" class="page-list tab">
+                <div class="content-block-title">相关推荐</div>
+                <div class="list-block media-list">
+                    <ul>
+                        <li>
+                            <a href="作品详情.html" class="item-link item-content">
+                                <div class="item-media">
+                                    <div class="item-media-box">
+                                        <img class="lazyload"
+                                             src=""
+                                             data-original="assets/img/show_pic2.jpg">
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">作品名称</div>
+                                    </div>
+                                    <div class="item-subtitle">by：<span>尹小白</span></div>
+                                    <div class="item-text">
+                                        <span>#广告</span><span>#中国</span>
+                                    </div>
+                                    <div class="share-num">
+                                        <span class="lnr lnr-exit-up"></span><span class="color-gray">100</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="作品详情.html" class="item-link item-content">
+                                <div class="item-media">
+                                    <div class="item-media-box">
+                                        <img class="lazyload"
+                                             src=""
+                                             data-original="assets/img/show_pic.jpg">
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">作品名称</div>
+                                    </div>
+                                    <div class="item-subtitle">by：<span>尹小白</span></div>
+                                    <div class="item-text">
+                                        <span>#广告</span><span>#中国</span>
+                                    </div>
+                                    <div class="share-num">
+                                        <span class="lnr lnr-exit-up"></span><span class="color-gray">100</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="作品详情.html" class="item-link item-content">
+                                <div class="item-media">
+                                    <div class="item-media-box">
+                                        <img class="lazyload"
+                                             src=""
+                                             data-original="assets/img/show_pic2.jpg">
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">作品名称</div>
+                                    </div>
+                                    <div class="item-subtitle">by：<span>尹小白</span></div>
+                                    <div class="item-text">
+                                        <span>#广告</span><span>#中国</span>
+                                    </div>
+                                    <div class="share-num">
+                                        <span class="lnr lnr-exit-up"></span><span class="color-gray">100</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="作品详情.html" class="item-link item-content">
+                                <div class="item-media">
+                                    <div class="item-media-box">
+                                        <img class="lazyload"
+                                             src=""
+                                             data-original="assets/img/show_pic.jpg">
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">作品名称</div>
+                                    </div>
+                                    <div class="item-subtitle">by：<span>尹小白</span></div>
+                                    <div class="item-text">
+                                        <span>#广告</span><span>#中国</span>
+                                    </div>
+                                    <div class="share-num">
+                                        <span class="lnr lnr-exit-up"></span><span class="color-gray">100</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="作品详情.html" class="item-link item-content">
+                                <div class="item-media">
+                                    <div class="item-media-box">
+                                        <img class="lazyload"
+                                             src=""
+                                             data-original="assets/img/show_pic2.jpg">
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">作品名称</div>
+                                    </div>
+                                    <div class="item-subtitle">by：<span>尹小白</span></div>
+                                    <div class="item-text">
+                                        <span>#广告</span><span>#中国</span>
+                                    </div>
+                                    <div class="share-num">
+                                        <span class="lnr lnr-exit-up"></span><span class="color-gray">100</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="作品详情.html" class="item-link item-content">
+                                <div class="item-media">
+                                    <div class="item-media-box">
+                                        <img class="lazyload"
+                                             src=""
+                                             data-original="assets/img/show_pic.jpg">
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">作品名称</div>
+                                    </div>
+                                    <div class="item-subtitle">by：<span>尹小白</span></div>
+                                    <div class="item-text">
+                                        <span>#广告</span><span>#中国</span>
+                                    </div>
+                                    <div class="share-num">
+                                        <span class="lnr lnr-exit-up"></span><span class="color-gray">100</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="作品详情.html" class="item-link item-content">
+                                <div class="item-media">
+                                    <div class="item-media-box">
+                                        <img class="lazyload"
+                                             src=""
+                                             data-original="assets/img/show_pic2.jpg">
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">作品名称</div>
+                                    </div>
+                                    <div class="item-subtitle">by：<span>尹小白</span></div>
+                                    <div class="item-text">
+                                        <span>#广告</span><span>#中国</span>
+                                    </div>
+                                    <div class="share-num">
+                                        <span class="lnr lnr-exit-up"></span><span class="color-gray">100</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="作品详情.html" class="item-link item-content">
+                                <div class="item-media">
+                                    <div class="item-media-box">
+                                        <img class="lazyload"
+                                             src=""
+                                             data-original="assets/img/show_pic.jpg">
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">作品名称</div>
+                                    </div>
+                                    <div class="item-subtitle">by：<span>尹小白</span></div>
+                                    <div class="item-text">
+                                        <span>#广告</span><span>#中国</span>
+                                    </div>
+                                    <div class="share-num">
+                                        <span class="lnr lnr-exit-up"></span><span class="color-gray">100</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="作品详情.html" class="item-link item-content">
+                                <div class="item-media">
+                                    <div class="item-media-box">
+                                        <img class="lazyload"
+                                             src=""
+                                             data-original="assets/img/show_pic2.jpg">
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">作品名称</div>
+                                    </div>
+                                    <div class="item-subtitle">by：<span>尹小白</span></div>
+                                    <div class="item-text">
+                                        <span>#广告</span><span>#中国</span>
+                                    </div>
+                                    <div class="share-num">
+                                        <span class="lnr lnr-exit-up"></span><span class="color-gray">100</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="infinite-scroll-preloader">
+                        <div class="preloader">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup popup-share" style="display: none;">
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-right close-popup">
+                关闭
+            </a>
+            <h1 class="title">分享</h1>
+        </header>
+        <div class="content native-scroll">
+            <div class="content-inner">
+                <div class="content-block color-dark flex-center-box">
+                    <dl>
+                        <dt class="icon icon-wb"></dt>
+                        <dd>微博</dd>
+                    </dl>
+                    <dl>
+                        <dt class="icon icon-pq"></dt>
+                        <dd>朋友圈</dd>
+                    </dl>
+                    <dl>
+                        <dt class="icon icon-wx"></dt>
+                        <dd>微信好友</dd>
+                    </dl>
+                    <dl>
+                        <dt class="icon icon-qq"></dt>
+                        <dd>QQ</dd>
+                    </dl>
+                    <dl>
+                        <dt class="lnr lnr-link"></dt>
+                        <dd>复制链接</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="./dist_z/js/sm.js"></script>
+<script src="./dist_z/js/sm-extend.js"></script>
+<script src="./assets/js/demos.js"></script>
+</body>
+</html>
