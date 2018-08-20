@@ -1709,12 +1709,12 @@ html:not(.watch-active-state) .list-block .item-link:active .item-inner:after,
   position: absolute;
   left: 0;
   bottom: .6rem;
-  width: 70%;
+  width: 66%;
   font-size: 0.55rem;
   line-height: 1.05rem;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   display: -webkit-box;
   color: #BDBDBD

@@ -23,7 +23,7 @@
 <body>
 
 <div class="page-group user-homepage">
-    <div class="page">
+    <div id="page-infinite-scroll-bottom" class="page native-scroll">
         <div class="content native-scrol">
             <div class="swiper-container" data-space-between='10'>
                 <div class="swiper-wrapper">
@@ -65,7 +65,7 @@
                     </dl>
                 </div>
             </div>
-            <div class="home-card user-homepage-card">
+            <div class="home-card user-homepage-card infinite-scroll" id="userMainVideoList">
                 <div class="user-homepage-card-title">
                     <h4>最近更新</h4>
                 </div>
@@ -235,9 +235,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="infinite-scroll-preloader">
-                        <div class="preloader">
-                        </div>
+                </div>
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader">
                     </div>
                 </div>
             </div>
@@ -269,7 +269,7 @@
                         <dt class="icon icon-qq"></dt>
                         <dd>QQ</dd>
                     </dl>
-                    <dl>
+                    <dl id="copyUrl">
                         <dt class="lnr lnr-link"></dt>
                         <dd>复制链接</dd>
                     </dl>

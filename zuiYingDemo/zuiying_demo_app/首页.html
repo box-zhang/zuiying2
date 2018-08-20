@@ -23,7 +23,7 @@
 <body>
 
 <div class="page-group home">
-    <div class="page">
+    <div class="page" id="page-fixed-tab-infinite-scroll">
         <header class="bar bar-nav">
             <a class="icon icon-me pull-left open-panel" data-panel=".panel-left"></a>
             <a class="button button-link button-nav pull-right open-popup" data-popup=".popup-about">
@@ -51,8 +51,9 @@
                 <span class="badge">2</span>
             </a>
         </nav>
-        <div class="content native-scrol tabs" style="display: block">
-            <div id="discover" class="tab active">
+        <div class="content tabs" style="display: block">
+            <!--发现-->
+            <div id="discover" class="tab infinite-scroll active">
                 <div class="swiper-container" data-space-between='10'>
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="assets/img/focus1.jpg" alt="" style='width: 100%'></div>
@@ -111,8 +112,8 @@
                                             </a>
                                         </div>
                                         <div class="user-inf-text">
-                                            <p>作品名称</p>
-                                            <p>尹小白 <span class="color-gray">／#广告</span></p>
+                                            <p>作品名称作品名称作品名称作品名称作品名称作品名称作品名称</p>
+                                            <p>尹小白 <span class="color-gray">／#广告／#广告／#广告／#广告／#广告／#广告／#广告</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -190,81 +191,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-content">
-                                <a href="作品详情.html">
-                                    <img src="assets/img/show_pic.jpg" width="100%" alt="">
-                                </a>
-                                <div class="time-box">
-                                    <span>4:08</span>
-                                </div>
-                            </div>
-                            <div class="card-footer clearfix">
-                                <div class="card-h-l">
-                                    <div class="user-inf">
-                                        <div class="card-avatar">
-                                            <a href="个人主页.html">
-                                                <img class="lazyload"
-                                                     src=""
-                                                     data-original="assets/img/avatar.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="user-inf-text">
-                                            <p>作品名称</p>
-                                            <p>尹小白 <span class="color-gray">／#广告</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-h-r">
-                                    <div class="user-inf-data"><a href="javascript;;"><span
-                                            class="lnr lnr-thumbs-up"></span><span class="color-gray">9</span></a></div>
-                                    <div class="user-inf-data"><a href="javascript;;"><span
-                                            class="lnr lnr-exit-up"></span><span class="color-gray">100</span></a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-content">
-                                <a href="作品详情.html">
-                                    <img src="assets/img/show_pic.jpg" width="100%" alt="">
-                                </a>
-                                <div class="time-box">
-                                    <span>4:08</span>
-                                </div>
-                            </div>
-                            <div class="card-footer clearfix">
-                                <div class="card-h-l">
-                                    <div class="user-inf">
-                                        <div class="card-avatar">
-                                            <a href="个人主页.html">
-                                                <img class="lazyload"
-                                                     src=""
-                                                     data-original="assets/img/avatar.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="user-inf-text">
-                                            <p>作品名称</p>
-                                            <p>尹小白 <span class="color-gray">／#广告</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-h-r">
-                                    <div class="user-inf-data"><a href="javascript;;"><span
-                                            class="lnr lnr-thumbs-up"></span><span class="color-gray">9</span></a></div>
-                                    <div class="user-inf-data"><a href="javascript;;"><span
-                                            class="lnr lnr-exit-up"></span><span class="color-gray">100</span></a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="infinite-scroll-preloader">
-                            <div class="preloader">
-                            </div>
+                    </div>
+                    <!-- 加载提示符 -->
+                    <div class="infinite-scroll-preloader">
+                        <div class="preloader">
                         </div>
                     </div>
                 </div>
             </div>
             <!--排行版-->
-            <div id="videoList" class="page-list tab">
+            <div id="videoList" class="page-list infinite-scroll tab">
                 <div class="content-block-title">视频列表</div>
                 <div class="list-block media-list">
                     <ul>
@@ -282,11 +218,11 @@
                                 </div>
                                 <div class="item-inner">
                                     <div class="item-title-row">
-                                        <div class="item-title">作品名称</div>
+                                        <div class="item-title">作品名称作品名称作品名称作品名称作品名称作品名称</div>
                                     </div>
-                                    <div class="item-subtitle">by：<span>尹小白</span></div>
+                                    <div class="item-subtitle">by：<span>尹小白尹小白尹小白尹小白尹小白尹小白尹小白</span></div>
                                     <div class="item-text">
-                                        <span>#广告</span><span>#中国</span>
+                                        <span>#广告</span><span>#中国#中国#中国#中国#中国#中国#中国#中国</span>
                                     </div>
                                     <div class="share-num">
                                         <span class="icon icon-share"></span>12
@@ -555,14 +491,15 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="infinite-scroll-preloader">
-                        <div class="preloader">
-                        </div>
+                </div>
+                <!-- 加载提示符 -->
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader">
                     </div>
                 </div>
             </div>
             <!--名人堂-->
-            <div id="userExcellent" class="user-work tab">
+            <div id="userExcellent" class="user-work infinite-scroll tab">
                 <div class="content-block-title">
                     名人堂
                     <a class="content-block-title-link" href="javascript:;"><span class="icon icon-r"></span>全部播放</a>
@@ -574,7 +511,7 @@
                                 <div class="user-list-item-avatar">
                                     <img src="assets/img/avatar.jpg" width="100%" alt="">
                                 </div>
-                                <span class="user-list-item-name">xiaobai</span>
+                                <span class="user-list-item-name">xiaobaixiaobaixiaobaixiaobai</span>
                             </a>
                         </div>
                         <div class="user-list-item">
@@ -641,8 +578,8 @@
                                             </a>
                                         </div>
                                         <div class="user-inf-text">
-                                            <p>作品名称</p>
-                                            <p>尹小白 <span class="color-gray">／#广告</span></p>
+                                            <p>作品名称作品名称作品名称作品名称作品名称作品名称作品名称</p>
+                                            <p>尹小白 <span class="color-gray">／#广告／#广告／#广告／#广告／#广告／#广告／#广告／#广告</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -753,42 +690,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-content">
-                                <a href="作品详情.html">
-                                    <img src="assets/img/show_pic.jpg" width="100%" alt="">
-                                </a>
-                                <div class="time-box">
-                                    <span>4:08</span>
-                                </div>
-                            </div>
-                            <div class="card-footer clearfix">
-                                <div class="card-h-l">
-                                    <div class="user-inf">
-                                        <div class="card-avatar">
-                                            <a href="个人主页.html">
-                                                <img class="lazyload"
-                                                     src=""
-                                                     data-original="assets/img/avatar.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="user-inf-text">
-                                            <p>作品名称</p>
-                                            <p>尹小白 <span class="color-gray">／#广告</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-h-r">
-                                    <div class="user-inf-data"><a href="javascript;;"><span
-                                            class="lnr lnr-thumbs-up"></span><span class="color-gray">9</span></a></div>
-                                    <div class="user-inf-data"><a href="javascript;;"><span
-                                            class="lnr lnr-exit-up"></span><span class="color-gray">100</span></a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="infinite-scroll-preloader">
-                            <div class="preloader">
-                            </div>
+                    </div>
+                    <!-- 加载提示符 -->
+                    <div class="infinite-scroll-preloader">
+                        <div class="preloader">
                         </div>
                     </div>
                 </div>

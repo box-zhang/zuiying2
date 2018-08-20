@@ -935,6 +935,7 @@ body {
 }
 
 .user-work .user-list .user-list-item {
+    width: 20%;
     flex-grow: 1;
     font-size: .65rem;
     text-align: center;
@@ -1446,7 +1447,8 @@ textarea:-ms-input-placeholder {
     text-align: center;
 }
 .user-homepage-data dl {
-    flex-grow:1
+    flex-grow:1;
+    width: 30%;
 }
 .user-homepage-data dl dt,
 .user-homepage-data dl dd {
@@ -1454,9 +1456,19 @@ textarea:-ms-input-placeholder {
 }
 .user-homepage-data dl dd {
     font-weight: bold;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 .user-homepage-data dl dt {
     color: #838181;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 .user-homepage-data:before,
 .user-homepage-data:after,

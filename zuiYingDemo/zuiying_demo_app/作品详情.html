@@ -23,8 +23,8 @@
 <body>
 
 <div class="page-group video-wrapper">
-    <div class="page">
-        <div class="content native-scrol">
+    <div id="page-infinite-scroll-bottom" class="page">
+        <div class="content native-scroll">
             <div class="video-main">
                 <div class="video">
                     <video src=""></video>
@@ -65,7 +65,7 @@
                 <div class="video-user-main">
                     <div class="video-user-avatar lnr lnr-user"><img src="" alt=""></div>
                     <div class="video-user-text">
-                        <p class="video-user-name">作者姓名</p>
+                        <p class="video-user-name">作者姓名作者姓名作者姓名作者姓名作者姓名作者姓名作者姓名作者姓名</p>
                         <p class="video-user-sign color-gray">个性签名个性签名个性签名个性签名个性签名个性签名个性签名个性签名</p>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                 <button type="button" class="button button-small button-primary attention on">相互关注</button>
             </div>
 
-            <div id="videoList" class="page-list tab">
+            <div class="page-list infinite-scroll" id="worksVideoList">
                 <div class="content-block-title">相关推荐</div>
                 <div class="list-block media-list">
                     <ul>
@@ -113,11 +113,11 @@
                                 </div>
                                 <div class="item-inner">
                                     <div class="item-title-row">
-                                        <div class="item-title">作品名称</div>
+                                        <div class="item-title">作品名称作品名称作品名称作品名称作品名称</div>
                                     </div>
-                                    <div class="item-subtitle">by：<span>尹小白</span></div>
+                                    <div class="item-subtitle">by：<span>尹小白尹小白尹小白尹小白尹小白</span></div>
                                     <div class="item-text">
-                                        <span>#广告</span><span>#中国</span>
+                                        <span>#广告</span><span>#中国</span><span>#中国</span><span>#中国</span><span>#中国</span>
                                     </div>
                                     <div class="share-num">
                                         <span class="lnr lnr-exit-up"></span><span class="color-gray">100</span>
@@ -368,7 +368,7 @@
                         <dt class="icon icon-qq"></dt>
                         <dd>QQ</dd>
                     </dl>
-                    <dl>
+                    <dl id="copyUrl">
                         <dt class="lnr lnr-link"></dt>
                         <dd>复制链接</dd>
                     </dl>
