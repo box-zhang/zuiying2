@@ -12,7 +12,6 @@
     <meta name="format-detection" content="telephone=no">
 
     <link rel="stylesheet" href="./dist_z/css/sm.css">
-    <link rel="stylesheet" href="./dist_z/css/sm-extend.css">
     <link rel="stylesheet" href="./assets/css/demos.css">
 
     <script src="./assets/js/zepto.js"></script>
@@ -50,10 +49,10 @@
                 <span class="badge">2</span>
             </a>
         </nav>
-        <div class="content infinite-scroll" id="myAttentionList">
+        <div class="content infinite-scroll" id="listMyAttention">
             <div class="list-block person-list">
-                <ul>
-                    <li>
+                <ul class="add-item-box">
+                    <li class="i">
                         <a href="个人主页.html" target="_blank" class="item-link item-content">
                             <div class="item-person">
                                 <div class="item-person-box">
@@ -78,7 +77,7 @@
                             <button type="button" class="button button-small button-primary attention">关注</button>
                         </div>
                     </li>
-                    <li>
+                    <li class="i">
                         <a href="个人主页.html" class="item-link item-content">
                             <div class="item-person">
                                 <div class="item-person-box">
@@ -101,7 +100,7 @@
                             <button type="button" class="button button-small button-primary attention on">取消关注</button>
                         </div>
                     </li>
-                    <li>
+                    <li class="i">
                         <a href="个人主页.html" class="item-link item-content">
                             <div class="item-person">
                                 <div class="item-person-box">
@@ -124,7 +123,7 @@
                             <button type="button" class="button button-small button-primary attention on">相互关注</button>
                         </div>
                     </li>
-                    <li>
+                    <li class="i">
                         <a href="个人主页.html" target="_blank" class="item-link item-content">
                             <div class="item-person">
                                 <div class="item-person-box">
@@ -148,7 +147,7 @@
                             <button type="button" class="button button-small button-primary attention" disabled>已关注</button>
                         </div>
                     </li>
-                    <li>
+                    <li class="i">
                         <a href="个人主页.html" class="item-link item-content">
                             <div class="item-person">
                                 <div class="item-person-box">
@@ -171,13 +170,13 @@
                             <button type="button" class="button button-small button-primary attention">关注</button>
                         </div>
                     </li>
-                    <li>
+                    <li class="i">
                         <a href="个人主页.html" class="item-link item-content">
                             <div class="item-person">
                                 <div class="item-person-box">
                                     <img class="lazyload"
                                          src=""
-                                         data-original="assets/img/show_pic.jpg">
+                                         data-original="assets/img/show_pic2.jpg">
                                 </div>
                             </div>
                             <div class="item-inner">
@@ -194,7 +193,7 @@
                             <button type="button" class="button button-small button-primary attention">关注</button>
                         </div>
                     </li>
-                    <li>
+                    <li class="i">
                         <a href="个人主页.html" class="item-link item-content">
                             <div class="item-person">
                                 <div class="item-person-box">
@@ -214,54 +213,7 @@
                             </div>
                         </a>
                         <div class="enjoy">
-                            <button type="button" class="button" disabled>已关注</button>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="个人主页.html" class="item-link item-content">
-                            <div class="item-person">
-                                <div class="item-person-box">
-                                    <img class="lazyload"
-                                         src=""
-                                         data-original="assets/img/show_pic2.jpg">
-                                </div>
-                            </div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-person-title">我的名字</div>
-                                </div>
-                                <div class="item-subtitle">我的家乡</div>
-                                <div class="item-text item-person-love">
-                                    我的粉丝：<span>999</span>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="enjoy">
-                            <button type="button" class="button">关注</button>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="个人主页.html" class="item-link item-content">
-                            <div class="item-person">
-                                <div class="item-person-box">
-                                    <img class="lazyload"
-                                         src=""
-                                         data-original="assets/img/show_pic.jpg">
-                                </div>
-                            </div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-person-title">我的名字</div>
-                                </div>
-                                <div class="item-subtitle">我的家乡</div>
-                                <div class="item-text item-person-love">
-                                    我的粉丝：<span>999</span>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="enjoy">
-                            <!--attention 关注，已关注、取消关注、相互关注，都在attention 后面追加样式 on 例如：<button type="button" class="button button-small button-primary attention on">取消关注</button>-->
-                            <button type="button" class="button button-small button-primary attention on">相互关注</button>
+                            <button type="button" class="button button-small button-primary attention">关注</button>
                         </div>
                     </li>
                 </ul>
@@ -274,9 +226,7 @@
     </div>
 </div>
 <script src="./dist_z/js/sm.js"></script>
-<script src="./dist_z/js/sm-extend.js"></script>
+<script src="./dist_z/js/swiper.min.js"></script>
 <script src="./assets/js/demos.js"></script>
-<script>
-</script>
 </body>
 </html>

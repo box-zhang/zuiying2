@@ -749,7 +749,7 @@ body {
 }
 .home-card .card {
     margin: 0;
-    padding-bottom: .6rem;
+    padding-bottom: .65rem;
     border-radius: 0;
 }
 .home-card .card-header:after {
@@ -782,12 +782,24 @@ body {
     position: absolute;
     bottom: 8px;
     right: 10px;
-    padding: 1% 10px;
+    padding: 1px 10px;
     color: #fff;
     background: #3E3D54;
     background: rgba(61, 61, 84, .8);
     font-size: 12px;
     border-radius: 5px;
+    font-weight: 200;
+}
+.video-wrapper .time-box {
+    padding: 0 5px;
+    right: 5px;
+    bottom: 3px;
+}
+.add-item-end {
+    padding: .5rem .5rem 1rem;
+    text-align: center;
+    color: #efefef;
+    font-size: .65rem;
 }
 
 .h-list {
@@ -803,6 +815,14 @@ body {
     border-radius: 100%;
     text-align: center;
     color: #fff;
+    overflow: hidden;
+}
+.h-list .h-list-item a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
 }
 
 .h-list .h-list-item span {
@@ -816,6 +836,7 @@ body {
 
 .home-card .color-gray {
     font-size: 0.55rem;
+    font-weight: 300;
 }
 
 .card-h-l {
@@ -845,6 +866,42 @@ body {
 .home-card .user-inf-text {
     padding-left: 50px;
 }
+.home-card.card-mrt .card-footer .user-inf-text {
+    width: 50%;
+}
+.home-card.card-mrt .card-footer .user-inf-text p {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.home-card.card-mrt .card-footer .card-h-r {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    margin-top: -.5rem;
+    line-height: 1rem;
+}
+.home-card.card-mrt .card-content {
+    background: transparent;
+    margin: 0 .5rem;
+    padding: 0;
+}
+.home-card.card-mrt .card-content .card-video-item {
+    position: relative;
+    margin: 0 2px;
+    border-radius: 1px;
+    overflow: hidden;
+}
+.home-card.card-mrt .time-box {
+    right: 5px;
+    bottom: 3px;
+    padding: 0 5px;
+    font-size: .45rem;
+}
+.home-card.card-mrt .card:after {
+    height: 0;
+}
 
 .home-card .card-avatar {
     position: absolute;
@@ -868,7 +925,7 @@ body {
 .home-card .user-inf-data {
     position: relative;
     float: left;
-    margin: 0 8px
+    margin: 0 5px
 }
 .home-card .user-inf-data a {
     color: #999494;
@@ -880,7 +937,7 @@ body {
 
 .home-card .user-inf-data .color-gray,
 .share-num .color-gray {
-    padding-left: 6px;
+    padding-left: 4px;
 }
 
 .home-card .user-inf-data .icon {
@@ -919,10 +976,12 @@ body {
 
 .user-work .content-block-title-link {
     position: absolute;
-    top: 3px;
+    top: 50%;
     right: 0;
+    margin-top: -.5rem;
     color: #3E3D54;
     font-size: .65rem;
+    line-height: 1rem;
 }
 
 .user-work .content-block-title-link:active {
@@ -930,8 +989,8 @@ body {
 }
 
 .user-work .user-list {
-    margin: 0 2%;
-    padding: 15px 2%;
+    margin:.8rem .5rem;
+    padding: 0 2%;
 }
 
 .user-work .user-list .user-list-item {
@@ -1606,6 +1665,7 @@ textarea:-ms-input-placeholder {
     position: relative;
 }
 .video-wrapper .video-user .video-user-main {
+    margin-top: -1px;
     padding: .8rem .5rem;
 }
 .video-wrapper .video-user .video-user-text {
@@ -1638,6 +1698,9 @@ textarea:-ms-input-placeholder {
     top: 50%;
     right: .5rem;
     margin-top: -0.6rem;
+}
+.button.attention {
+    font-weight: 200;
 }
 .attention.on,
 .attention.on-double {

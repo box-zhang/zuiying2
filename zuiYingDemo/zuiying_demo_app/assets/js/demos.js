@@ -3,16 +3,16 @@ $(function () {
     $('.page').scrollTop(0);
     //图片懒加载
     /*setTimeout(function () {
-        for (var i = 0; i < $('.lazyload').length; i++) {
-            $(".lazyload").eq(i).picLazyLoad({
-                effect: "fadeIn", //渐现，show(直接显示),fadeIn(淡入),slideDown(下拉)
-                threshold: 180, //预加载，在图片距离屏幕180px时提前载入
-                event: 'click',  // 事件触发时才加载，click(点击),mouseover(鼠标划过),sporty(运动的),默认为scroll（滑动）
-                container: $(".page"), // 指定对某容器中的图片实现效果
-                failure_limit: 2 //加载2张可见区域外的图片,lazyload默认在找到第一张不在可见区域里的图片时则不再继续加载,但当HTML容器混乱的时候可能出现可见区域内图片并没加载出来的情况
-            });
-        }
-    }, 1000);*/
+     for (var i = 0; i < $('.lazyload').length; i++) {
+     $(".lazyload").eq(i).picLazyLoad({
+     effect: "fadeIn", //渐现，show(直接显示),fadeIn(淡入),slideDown(下拉)
+     threshold: 180, //预加载，在图片距离屏幕180px时提前载入
+     event: 'click',  // 事件触发时才加载，click(点击),mouseover(鼠标划过),sporty(运动的),默认为scroll（滑动）
+     container: $(".page"), // 指定对某容器中的图片实现效果
+     failure_limit: 2 //加载2张可见区域外的图片,lazyload默认在找到第一张不在可见区域里的图片时则不再继续加载,但当HTML容器混乱的时候可能出现可见区域内图片并没加载出来的情况
+     });
+     }
+     }, 1000);*/
     //首页 tab
     var barTabBtnBox = $('.home .bar-tab');
     var barTabBtnItem = barTabBtnBox.find('.tab-item');
@@ -20,8 +20,9 @@ $(function () {
     for (var i = 0; i < barTabBtnItem.length; i++) {
         (function (i) {
             barTabBtnItem.eq(i).click(function () {
-                var barTabTitleText = barTabBtnItem.eq(i).find('.tab-label').text();
-                $('.bar-nav').find('.title').html(barTabTitleText);
+                $(this).addClass('active').siblings().removeClass('active')
+                // var barTabTitleText = barTabBtnItem.eq(i).find('.tab-label').text();
+                // $('.bar-nav').find('.title').html(barTabTitleText);
                 $('.native-scroll').scrollTop(0);
             })
         })(i)
@@ -63,397 +64,503 @@ $(function () {
     $(document).on("pageInit", "#page-infinite-scroll-bottom", function (e, id, page) {
         var loading = false;
         // 每次加载添加多少条目
-        var itemsPerLoad = 10;
+        var itemsPerLoad = 2;
         // 最多可加载的条目
-        var maxItems = 100;
-        var lastIndex = $('.card-list .card').length;
+        var maxItems = 30;
 
-        //我的关注-页面新条目
-        function addMyAttentionItem(number, lastIndex) {
-            var htmlMyAttentionItem = '';
-            for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
-                htmlMyAttentionItem += '' +
-                    '<li>' +
-                    '<a href="个人主页.html" class="item-link item-content">' +
-                    '<div class="item-person">' +
-                    '<div class="item-person-box">' +
-                    '<img class="lazyload" src="" data-original="assets/img/show_pic2.jpg">' +
-                    '</div>' +
-                    '</div>' +
-                    '<div class="item-inner">' +
-                    '<div class="item-title-row">' +
-                    '<div class="item-person-title">我的名字</div>' +
-                    '</div>' +
-                    '<div class="item-subtitle">我的家乡</div>' +
-                    '<div class="item-text item-person-love">' +
-                    '我的粉丝：<span>999</span>' +
-                    '</div>' +
-                    '</div>' +
-                    '</a>' +
-                    '<div class="enjoy">' +
-                    '<button type="button" class="button">关注</button>' +
-                    '</div>' +
-                    '</li>';
-            }
-            // 添加新条目
-            $('.infinite-scroll .person-list ul').append(htmlMyAttentionItem);
-        }
+        var listMyAttention = $('#listMyAttention').find('.add-item-box .i').length;//我的-关注-list
+        var listViewVideo = $('#listViewVideo').find('.add-item-box .i').length;//我的-观看记录-list
+        var listUserMainVideo = $('#listUserMainVideo').find('.add-item-box .i').length;//个人主页-list
+        var listWorksVideo = $('#listWorksVideo').find('.add-item-box .i').length;//作品详情-list
 
-        //观看记录-页面新条目
-        function addViewVideoListItem(number, lastIndex) {
-            var htmlViewVideoListItem = '';
-            for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
-                htmlViewVideoListItem += '<li>' +
-                    '<a href="作品详情.html" class="item-link item-content">' +
-                    '<div class="item-media">' +
-                    '<div class="item-media-box">' +
-                    '<img class="lazyload" src="" data-original="assets/img/show_pic2.jpg">' +
-                    '<div class="time-box">' +
-                    '<span>4:08</span>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '<div class="item-inner">' +
-                    '<div class="item-title-row">' +
-                    '<div class="item-title">作品名称</div>' +
-                    '</div>' +
-                    '<div class="item-subtitle">by：<span>尹小白</span></div>' +
-                    '<div class="item-text">' +
-                    '<span>#广告</span><span>#中国</span>' +
-                    '</div>' +
-                    '<div class="share-num">' +
-                    '<span class="icon icon-share"></span>12' +
-                    '</div>' +
-                    '</div>' +
-                    '</a>' +
-                    '</li>';
-            }
-            // 添加新条目
-            $('.infinite-scroll .media-list ul').append(htmlViewVideoListItem);
-        }
+        //我的-关注-item-html
+        var htmlMyAttentionItem = '<li class="i">' +
+            '<a href="个人主页.html" class="item-link item-content">' +
+            '<div class="item-person">' +
+            '<div class="item-person-box">' +
+            '<img class="lazyload" src="" data-original="assets/img/show_pic2.jpg">' +
+            '</div>' +
+            '</div>' +
+            '<div class="item-inner">' +
+            '<div class="item-title-row">' +
+            '<div class="item-person-title">我的名字</div>' +
+            '</div>' +
+            '<div class="item-subtitle">我的家乡</div>' +
+            '<div class="item-text item-person-love">' +
+            '我的粉丝：<span>999</span>' +
+            '</div>' +
+            '</div>' +
+            '</a>' +
+            '<div class="enjoy">' +
+            '<button type="button" class="button attention">关注</button>' +
+            '</div>' +
+            '</li>';
 
-        //个人主页-页面新条目
-        function addUserMainVideoItem(number, lastIndex) {
-            var htmlUserMainVideoItem = '';
-            for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
-                htmlUserMainVideoItem += '<div class="card">' +
-                    '<div class="card-content">' +
-                    '<a href="作品详情.html">' +
-                    '<img src="assets/img/show_pic.jpg" width="100%" alt="">' +
-                    '</a>' +
-                    '<div class="time-box">' +
-                    '<span>4:08</span>' +
-                    '</div>' +
-                    '</div>' +
-                    '<div class="card-footer clearfix">' +
-                    '<div class="card-h-l">' +
-                    '<div class="user-inf">' +
-                    '<div class="card-avatar">' +
-                    '<a href="个人主页.html">' +
-                    '<img class="lazyload" src="" data-original="assets/img/avatar.jpg">' +
-                    '</a>' +
-                    '</div>' +
-                    '<div class="user-inf-text">' +
-                    '<p>作品名称</p>' +
-                    '<p>尹小白 <span class="color-gray">／#广告</span></p>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '<div class="card-h-r">' +
-                    '<div class="user-inf-data"><a href="javascript;;"><span class="lnr lnr-thumbs-up"></span><span class="color-gray">9</span></a></div>' +
-                    '<div class="user-inf-data"><a href="javascript;;"><span class="lnr lnr-exit-up"></span><span class="color-gray">100</span></a></div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>';
-                ;
-            }
-            // 添加新条目
-            $('.infinite-scroll .card-list').append(htmlUserMainVideoItem);
-        }
+        //观看记录-item-html
+        var htmlViewVideoListItem = '<li class="i">' +
+            '<a href="作品详情.html" class="item-link item-content">' +
+            '<div class="item-media">' +
+            '<div class="item-media-box">' +
+            '<img class="lazyload" src="" data-original="assets/img/show_pic2.jpg">' +
+            '<div class="time-box">' +
+            '<span>4:08</span>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '<div class="item-inner">' +
+            '<div class="item-title-row">' +
+            '<div class="item-title">作品名称</div>' +
+            '</div>' +
+            '<div class="item-subtitle">by：<span>尹小白</span></div>' +
+            '<div class="item-text">' +
+            '<span>#广告</span><span>#中国</span>' +
+            '</div>' +
+            '<div class="share-num">' +
+            '<span class="icon icon-share"></span>12' +
+            '</div>' +
+            '</div>' +
+            '</a>' +
+            '</li>';
 
-        //作品详情-页面新条目
-        function addWorksVideoItem(number, lastIndex) {
-            var htmlWorksVideoItem = '';
-            for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
-                htmlWorksVideoItem += '<li>' +
-                    '<a href="作品详情.html" class="item-link item-content">' +
-                    '<div class="item-media">' +
-                    '<div class="item-media-box">' +
-                    '<img class="lazyload" src="" data-original="assets/img/show_pic2.jpg">' +
-                    '<div class="time-box">' +
-                    '<span>4:08</span>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '<div class="item-inner">' +
-                    '<div class="item-title-row">' +
-                    '<div class="item-title">作品名称</div>' +
-                    '</div>' +
-                    '<div class="item-subtitle">by：<span>尹小白</span></div>' +
-                    '<div class="item-text">' +
-                    '<span>#广告</span><span>#中国</span>' +
-                    '</div>' +
-                    '<div class="share-num">' +
-                    '<span class="icon icon-share"></span>12' +
-                    '</div>' +
-                    '</div>' +
-                    '</a>' +
-                    '</li>';
-            }
-            // 添加新条目
-            $('.infinite-scroll .media-list ul').append(htmlWorksVideoItem);
-        }
+        //个人主页-item-html
+        var htmlUserMainVideoItem = '<div class="card i">' +
+            '<div class="card-content">' +
+            '<a href="作品详情.html">' +
+            '<img src="assets/img/show_pic.jpg" width="100%" alt="">' +
+            '</a>' +
+            '<div class="time-box">' +
+            '<span>4:08</span>' +
+            '</div>' +
+            '</div>' +
+            '<div class="card-footer clearfix">' +
+            '<div class="card-h-l">' +
+            '<div class="user-inf">' +
+            '<div class="card-avatar">' +
+            '<a href="个人主页.html">' +
+            '<img class="lazyload" src="" data-original="assets/img/avatar.jpg">' +
+            '</a>' +
+            '</div>' +
+            '<div class="user-inf-text">' +
+            '<p>作品名称</p>' +
+            '<p>尹小白 <span class="color-gray">／#广告</span></p>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '<div class="card-h-r">' +
+            '<div class="user-inf-data"><a href="javascript;;"><span class="lnr lnr-thumbs-up"></span><span class="color-gray">9</span></a></div>' +
+            '<div class="user-inf-data"><a href="javascript;;"><span class="lnr lnr-exit-up"></span><span class="color-gray">100</span></a></div>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+
+        //作品详情-item-html
+        var htmlWorksVideoItem = '<li class="i">' +
+            '<a href="作品详情.html" class="item-link item-content">' +
+            '<div class="item-media">' +
+            '<div class="item-media-box">' +
+            '<img class="lazyload" src="" data-original="assets/img/show_pic2.jpg">' +
+            '<div class="time-box">' +
+            '<span>4:08</span>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '<div class="item-inner">' +
+            '<div class="item-title-row">' +
+            '<div class="item-title">作品名称</div>' +
+            '</div>' +
+            '<div class="item-subtitle">by：<span>尹小白</span></div>' +
+            '<div class="item-text">' +
+            '<span>#广告</span><span>#中国</span>' +
+            '</div>' +
+            '<div class="share-num">' +
+            '<span class="icon icon-share"></span>12' +
+            '</div>' +
+            '</div>' +
+            '</a>' +
+            '</li>';
+
+        //首页-发现-item-html
+        var htmlDiscoverItem = '<div class="card i">' +
+            '<div class="card-content">' +
+            '<a href="作品详情.html">' +
+            '<img src="assets/img/show_pic.jpg" width="100%" alt="">' +
+            '</a>' +
+            '<div class="time-box">' +
+            '<span>4:08</span>' +
+            '</div>' +
+            '</div>' +
+            '<div class="card-footer clearfix">' +
+            '<div class="card-h-l">' +
+            '<div class="user-inf">' +
+            '<div class="card-avatar">' +
+            '<a href="个人主页.html">' +
+            '<img class="lazyload" src="" data-original="assets/img/avatar.jpg">' +
+            '</a>' +
+            '</div>' +
+            '<div class="user-inf-text">' +
+            '<p>作品名称</p>' +
+            '<p>尹小白 <span class="color-gray">／#广告</span></p>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '<div class="card-h-r">' +
+            '<div class="user-inf-data"><a href="javascript;;"><span class="lnr lnr-thumbs-up"></span><span class="color-gray">9</span></a></div>' +
+            '<div class="user-inf-data"><a href="javascript;;"><span class="lnr lnr-exit-up"></span><span class="color-gray">100</span></a></div>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+
+        //首页-排行榜-item-html
+        var htmlVideoListItem = '<li class="i">' +
+            '<a href="作品详情.html" class="item-link item-content">' +
+            '<div class="item-media">' +
+            '<div class="item-media-box">' +
+            '<img class="lazyload" src="" data-original="assets/img/show_pic2.jpg">' +
+            '<div class="time-box">' +
+            '<span>4:08</span>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '<div class="item-inner">' +
+            '<div class="item-title-row">' +
+            '<div class="item-title">作品名称</div>' +
+            '</div>' +
+            '<div class="item-subtitle">by：<span>尹小白</span></div>' +
+            '<div class="item-text">' +
+            '<span>#广告</span><span>#中国</span>' +
+            '</div>' +
+            '<div class="share-num">' +
+            '<span class="icon icon-share"></span>12' +
+            '</div>' +
+            '</div>' +
+            '</a>' +
+            '</li>';
+
+        //首页-名人堂-item-html
+        var htmlMrtVideoListItem = '<div class="card i">' +
+            '<div class="card-footer clearfix">' +
+            '<div class="card-h-l">' +
+            '<div class="user-inf">' +
+            '<div class="card-avatar">' +
+            '<a href="个人主页.html">' +
+            '<img class="lazyload" src="" data-original="assets/img/avatar.jpg">' +
+            '</a>' +
+            '</div>' +
+            '<div class="user-inf-text">' +
+            '<p>作品名称作品名称作品名称作品名称作品名称作品名称作品名称</p>' +
+            '<p>尹小白 <span class="color-gray">／#广告／#广告／#广告／#广告／#广告／#广告／#广告／#广告</span></p>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '<div class="card-h-r">' +
+            '<div class="user-inf-data">' +
+            '<a href="javascript;;">' +
+            '<span class="lnr lnr-thumbs-up">' +
+            '</span><span class="color-gray">' +
+            '9' +
+            '</span></a></div>' +
+            '<div class="user-inf-data">' +
+            '<a href="javascript;;">' +
+            '<span class="lnr lnr-exit-up">' +
+            '</span><span class="color-gray">' +
+            '100' +
+            '</span></a></div>' +
+            '</div>' +
+            '</div>' +
+            '<div class="card-content"><div class="flex-center-box"><div class="card-video-item">' +
+            '<a href="作品详情.html">' +
+            '<img src="assets/img/show_pic.jpg" width="100%" alt="">' +
+            '</a><div class="time-box"><span>' +
+            '4:08' +
+            '</span></div></div><div class="card-video-item">' +
+            '<a href="作品详情.html">' +
+            '<img src="assets/img/show_pic.jpg" width="100%" alt="">' +
+            '</a><div class="time-box"><span>' +
+            '4:08' +
+            '</span></div></div></div></div></div>';
 
         $(page).on('infinite', function () {
             // 如果正在加载，则退出
             if (loading) return;
             // 设置flag
             loading = true;
-            var _this=$(this);
+            var _this = $(this);
+            var _thisID = _this.find('.infinite-scroll').attr('id');
             //我的关注
-            if ($(this).find('.infinite-scroll').attr('id') == "myAttentionList") {
-                // 模拟1s的加载过程
-                setTimeout(function () {
-                    // 重置加载flag
-                    loading = false;
-                    if (lastIndex >= maxItems) {
-                        // 加载完毕，则注销无限加载事件，以防不必要的加载
-                        $.detachInfiniteScroll($('.infinite-scroll'));
-                        // 删除加载提示符
-                        $('.infinite-scroll-preloader').remove();
-                        return;
-                    }
-                    addMyAttentionItem(itemsPerLoad, lastIndex);
-                    console.log(itemsPerLoad);
-                    console.log(lastIndex);
-                    for (var i = lastIndex-itemsPerLoad; i <= lastIndex; i++) {
-                        _this.find('#myAttentionList').find('.person-list ul li').eq(i).find('.lazyload').picLazyLoad();
-                    }
+            switch (_thisID) {
+                case 'listMyAttention':
+                    setTimeout(_addItem(listMyAttention,htmlMyAttentionItem), 1000);
                     // 更新最后加载的序号
-                    lastIndex = _this.find('#myAttentionList').find('.person-list ul li').length;
-                    $.refreshScroller();
-                }, 1000);
-
+                    listMyAttention += $('#' + _thisID).find('.add-item-box .i').length;
+                    break;
+                case 'listViewVideo':
+                    setTimeout(_addItem(listViewVideo,htmlViewVideoListItem), 1000);
+                    // 更新最后加载的序号
+                    listViewVideo += $('#' + _thisID).find('.add-item-box .i').length;
+                    break;
+                case 'listUserMainVideo':
+                    setTimeout(_addItem(listUserMainVideo,htmlUserMainVideoItem), 1000);
+                    // 更新最后加载的序号
+                    listUserMainVideo += $('#' + _thisID).find('.add-item-box .i').length;
+                    break;
+                case 'listWorksVideo':
+                    setTimeout(_addItem(listWorksVideo,htmlWorksVideoItem), 1000);
+                    // 更新最后加载的序号
+                    listWorksVideo += $('#' + _thisID).find('.add-item-box .i').length;
+                    break;
+                case 'discover':
+                    setTimeout(_addItem(discover,htmlDiscoverItem), 1000);
+                    // 更新最后加载的序号
+                    listWorksVideo += $('#' + _thisID).find('.add-item-box .i').length;
+                    break;
+                case 'videoList':
+                    setTimeout(_addItem(videoList,htmlVideoListItem), 1000);
+                    // 更新最后加载的序号
+                    listWorksVideo += $('#' + _thisID).find('.add-item-box .i').length;
+                    break;
+                case 'userExcellent':
+                    setTimeout(_addItem(userExcellent,htmlMrtVideoListItem), 1000);
+                    // 更新最后加载的序号
+                    listWorksVideo += $('#' + _thisID).find('.add-item-box .i').length;
+                    break;
+                default:
+                    break
             }
-            //观看记录
-            if ($(this).find('.infinite-scroll').attr('id') == "viewVideoList") {
-                // 模拟1s的加载过程
+            function _addItem(lastIndex,htmlItem) {
                 setTimeout(function () {
                     // 重置加载flag
                     loading = false;
                     if (lastIndex >= maxItems) {
                         // 加载完毕，则注销无限加载事件，以防不必要的加载
                         $.detachInfiniteScroll($('.infinite-scroll'));
-                        // 删除加载提示符
-                        $('.infinite-scroll-preloader').remove();
-                        return;
-                    }
-                    addViewVideoListItem(itemsPerLoad, lastIndex);
-                    // 更新最后加载的序号
-                    lastIndex = _this.find('#viewVideoList').find('.media-list ul li').length;
-                    console.log(lastIndex)
-                    $.refreshScroller();
-                }, 1000);
 
-            }
-            //个人主页
-            if ($(this).find('.infinite-scroll').attr('id') == "userMainVideoList") {
-                // 模拟1s的加载过程
-                setTimeout(function () {
-                    // 重置加载flag
-                    loading = false;
-                    if (lastIndex >= maxItems) {
-                        // 加载完毕，则注销无限加载事件，以防不必要的加载
-                        $.detachInfiniteScroll($('.infinite-scroll'));
+                        // $('#' + _thisID).find('.add-item-box .i').find('.lazyload').picLazyLoad();
+                        $('#' + _thisID).find('.add-item-box').append('<p class="add-item-end">数据已全部加载</p>');
                         // 删除加载提示符
                         $('.infinite-scroll-preloader').remove();
                         return;
                     }
-                    addUserMainVideoItem(itemsPerLoad, lastIndex);
-                    // 更新最后加载的序号
-                    lastIndex = _this.find('#userMainVideoList').find('.card-list .card').length;
-                    $.refreshScroller();
-                }, 1000);
-
-            }
-            //作品详情
-            if ($(this).find('.infinite-scroll').attr('id') == "worksVideoList") {
-                // 模拟1s的加载过程
-                setTimeout(function () {
-                    // 重置加载flag
-                    loading = false;
-                    if (lastIndex >= maxItems) {
-                        // 加载完毕，则注销无限加载事件，以防不必要的加载
-                        $.detachInfiniteScroll($('.infinite-scroll'));
-                        // 删除加载提示符
-                        $('.infinite-scroll-preloader').remove();
-                        return;
+                    // 循环添加新条目
+                    for (var i = lastIndex; i <= lastIndex + itemsPerLoad; i++) {
+                        (function (i) {
+                            $('#' + _thisID).find('.add-item-box').append(htmlItem);
+                            // $('#' + _thisID).find('.add-item-box .i').find('.lazyload').picLazyLoad();
+                        })(i);
                     }
-                    addWorksVideoItem(itemsPerLoad, lastIndex);
-                    // 更新最后加载的序号
-                    lastIndex = _this.find('#worksVideoList').find('.media-list ul li').length;
                     $.refreshScroller();
-                }, 1000);
+                }, 500);
+                $('#' + _thisID).find('.add-item-box .i').find('.lazyload').picLazyLoad();
 
             }
         });
     });
 
     //多个标签页下的无限滚动
-    $(document).on("pageInit", "#page-fixed-tab-infinite-scroll", function (e, id, page) {
-        var loading = false;
-        // 每次加载添加多少条目
-        var itemsPerLoad = 5;
-        // 最多可加载的条目
-        var maxItems = 100;
-
-        //发现-页面新条目
-        function addDiscoverCard(number, lastIndex) {
-            var htmlDiscoverCard = '';
-            for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
-                htmlDiscoverCard += '<div class="card">' +
-                    '<div class="card-content">' +
-                    '<a href="作品详情.html">' +
-                    '<img src="assets/img/show_pic.jpg" width="100%" alt="">' +
-                    '</a>' +
-                    '<div class="time-box">' +
-                    '<span>4:08</span>' +
-                    '</div>' +
-                    '</div>' +
-                    '<div class="card-footer clearfix">' +
-                    '<div class="card-h-l">' +
-                    '<div class="user-inf">' +
-                    '<div class="card-avatar">' +
-                    '<a href="个人主页.html">' +
-                    '<img class="lazyload" src="" data-original="assets/img/avatar.jpg">' +
-                    '</a>' +
-                    '</div>' +
-                    '<div class="user-inf-text">' +
-                    '<p>作品名称</p>' +
-                    '<p>尹小白 <span class="color-gray">／#广告</span></p>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '<div class="card-h-r">' +
-                    '<div class="user-inf-data"><a href="javascript;;"><span class="lnr lnr-thumbs-up"></span><span class="color-gray">9</span></a></div>' +
-                    '<div class="user-inf-data"><a href="javascript;;"><span class="lnr lnr-exit-up"></span><span class="color-gray">100</span></a></div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>';
-            }
-            // 添加新条目
-            $('.infinite-scroll.active .card-list').append(htmlDiscoverCard);
-        }
-
-        //排行版-页面新条目
-        function addVideoListItem(number, lastIndex) {
-            // 生成新条目的HTML
-            var htmlVideoListItem = '';
-            for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
-                htmlVideoListItem += '<li>' +
-                    '<a href="作品详情.html" class="item-link item-content">' +
-                    '<div class="item-media">' +
-                    '<div class="item-media-box">' +
-                    '<img class="lazyload" src="" data-original="assets/img/show_pic2.jpg">' +
-                    '<div class="time-box">' +
-                    '<span>4:08</span>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '<div class="item-inner">' +
-                    '<div class="item-title-row">' +
-                    '<div class="item-title">作品名称</div>' +
-                    '</div>' +
-                    '<div class="item-subtitle">by：<span>尹小白</span></div>' +
-                    '<div class="item-text">' +
-                    '<span>#广告</span><span>#中国</span>' +
-                    '</div>' +
-                    '<div class="share-num">' +
-                    '<span class="icon icon-share"></span>12' +
-                    '</div>' +
-                    '</div>' +
-                    '</a>' +
-                    '</li>';
-            }
-            // 添加新条目
-            $('.infinite-scroll.active .media-list ul').append(htmlVideoListItem);
-        }
-
-        $(page).on('infinite', function () {
-            // 如果正在加载，则退出
-            if (loading) return;
-            // 设置flag
-            loading = true;
-            var _this=$(this);
-            var tabIndex = 0;
-            if ($(this).find('.infinite-scroll.active').attr('id') == "discover") {
-                //发现-页面加载无限滚动内容
-                (function () {
-                    var lastIndex = _this.find('#discover').find('.card').length;
-                    // 模拟1s的加载过程
-                    setTimeout(function () {
-                        // 重置加载flag
-                        loading = false;
-                        if (lastIndex >= maxItems) {
-                            // 加载完毕，则注销无限加载事件，以防不必要的加载
-                            //$.detachInfiniteScroll($('.infinite-scroll').eq(tabIndex));
-                            // 删除加载提示符
-                            _this.find('#discover').find('.infinite-scroll-preloader').hide();
-                            return;
-                        }
-                        addDiscoverCard(itemsPerLoad, lastIndex);
-                        // 更新最后加载的序号
-                        lastIndex = _this.find('#discover').find('.card').length;
-                        $.refreshScroller();
-                    }, 1000);
-                })();
-            }
-            if ($(this).find('.infinite-scroll.active').attr('id') == "videoList") {
-                //排行版-页面加载无限滚动内容
-                (function () {
-                    var lastIndex = _this.find('#videoList').find('.media-list li').length;
-                    // 模拟1s的加载过程
-                    setTimeout(function () {
-                        // 重置加载flag
-                        loading = false;
-                        if (lastIndex >= maxItems) {
-                            // 加载完毕，则注销无限加载事件，以防不必要的加载
-                            //$.detachInfiniteScroll($('.infinite-scroll').eq(tabIndex));
-                            // 删除加载提示符
-                            _this.find('#videoList').find('.infinite-scroll-preloader').hide();
-                            return;
-                        }
-                        addVideoListItem(itemsPerLoad, lastIndex);
-                        // 更新最后加载的序号
-                        lastIndex = _this.find('#videoList').find('.media-list li').length;
-                        $.refreshScroller();
-                    }, 1000);
-                })();
-            }
-            if ($(this).find('.infinite-scroll.active').attr('id') == "userExcellent") {
-                //名人堂-页面加载无限滚动内容
-                (function () {
-                    var lastIndex = _this.find('#userExcellent').find('.card').length;
-                    // 模拟1s的加载过程
-                    setTimeout(function () {
-                        // 重置加载flag
-                        loading = false;
-                        if (lastIndex >= maxItems) {
-                            // 加载完毕，则注销无限加载事件，以防不必要的加载
-                            //$.detachInfiniteScroll($('.infinite-scroll').eq(tabIndex));
-                            // 删除加载提示符
-                            _this.find('#userExcellent').find('.infinite-scroll-preloader').hide();
-                            return;
-                        }
-                        addDiscoverCard(itemsPerLoad, lastIndex);
-                        // 更新最后加载的序号
-                        lastIndex = _this.find('#userExcellent').find('.card').length;
-                        $.refreshScroller();
-                    }, 1000);
-                })();
-            }
-        });
-    });
+    // $(document).on("pageInit", "#page-fixed-tab-infinite-scroll", function (e, id, page) {
+    //     var loading = false;
+    //     // 每次加载添加多少条目
+    //     var itemsPerLoad = 5;
+    //     // 最多可加载的条目
+    //     var maxItems = 100;
+    //
+    //     //发现-页面新条目
+    //     function addDiscoverCard(number, lastIndex) {
+    //         var htmlDiscoverCard = '';
+    //         for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
+    //             htmlDiscoverCard += '<div class="card">' +
+    //                 '<div class="card-content">' +
+    //                 '<a href="作品详情.html">' +
+    //                 '<img src="assets/img/show_pic.jpg" width="100%" alt="">' +
+    //                 '</a>' +
+    //                 '<div class="time-box">' +
+    //                 '<span>4:08</span>' +
+    //                 '</div>' +
+    //                 '</div>' +
+    //                 '<div class="card-footer clearfix">' +
+    //                 '<div class="card-h-l">' +
+    //                 '<div class="user-inf">' +
+    //                 '<div class="card-avatar">' +
+    //                 '<a href="个人主页.html">' +
+    //                 '<img class="lazyload" src="" data-original="assets/img/avatar.jpg">' +
+    //                 '</a>' +
+    //                 '</div>' +
+    //                 '<div class="user-inf-text">' +
+    //                 '<p>作品名称</p>' +
+    //                 '<p>尹小白 <span class="color-gray">／#广告</span></p>' +
+    //                 '</div>' +
+    //                 '</div>' +
+    //                 '</div>' +
+    //                 '<div class="card-h-r">' +
+    //                 '<div class="user-inf-data"><a href="javascript;;"><span class="lnr lnr-thumbs-up"></span><span class="color-gray">9</span></a></div>' +
+    //                 '<div class="user-inf-data"><a href="javascript;;"><span class="lnr lnr-exit-up"></span><span class="color-gray">100</span></a></div>' +
+    //                 '</div>' +
+    //                 '</div>' +
+    //                 '</div>';
+    //         }
+    //         // 添加新条目
+    //         $('.infinite-scroll.active .card-list').append(htmlDiscoverCard);
+    //     }
+    //
+    //     //排行版-页面新条目
+    //     function addVideoListItem(number, lastIndex) {
+    //         // 生成新条目的HTML
+    //         var htmlVideoListItem = '';
+    //         for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
+    //             htmlVideoListItem += '<li>' +
+    //                 '<a href="作品详情.html" class="item-link item-content">' +
+    //                 '<div class="item-media">' +
+    //                 '<div class="item-media-box">' +
+    //                 '<img class="lazyload" src="" data-original="assets/img/show_pic2.jpg">' +
+    //                 '<div class="time-box">' +
+    //                 '<span>4:08</span>' +
+    //                 '</div>' +
+    //                 '</div>' +
+    //                 '</div>' +
+    //                 '<div class="item-inner">' +
+    //                 '<div class="item-title-row">' +
+    //                 '<div class="item-title">作品名称</div>' +
+    //                 '</div>' +
+    //                 '<div class="item-subtitle">by：<span>尹小白</span></div>' +
+    //                 '<div class="item-text">' +
+    //                 '<span>#广告</span><span>#中国</span>' +
+    //                 '</div>' +
+    //                 '<div class="share-num">' +
+    //                 '<span class="icon icon-share"></span>12' +
+    //                 '</div>' +
+    //                 '</div>' +
+    //                 '</a>' +
+    //                 '</li>';
+    //         }
+    //         // 添加新条目
+    //         $('.infinite-scroll.active .media-list ul').append(htmlVideoListItem);
+    //     }
+    //
+    //     //名人堂-页面新条目
+    //     function addMrtVideoListItem(number, lastIndex) {
+    //         // 生成新条目的HTML
+    //         var htmlMrtVideoListItem = '';
+    //         for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
+    //             htmlMrtVideoListItem += '<div class="card">' +
+    //                 '<div class="card-footer clearfix">' +
+    //                 '<div class="card-h-l">' +
+    //                 '<div class="user-inf">' +
+    //                 '<div class="card-avatar">' +
+    //                 '<a href="个人主页.html">' +
+    //                 '<img class="lazyload" src="" data-original="assets/img/avatar.jpg">' +
+    //                 '</a>' +
+    //                 '</div>' +
+    //                 '<div class="user-inf-text">' +
+    //                 '<p>作品名称作品名称作品名称作品名称作品名称作品名称作品名称</p>' +
+    //                 '<p>尹小白 <span class="color-gray">／#广告／#广告／#广告／#广告／#广告／#广告／#广告／#广告</span></p>' +
+    //                 '</div>' +
+    //                 '</div>' +
+    //                 '</div>' +
+    //                 '<div class="card-h-r">' +
+    //                 '<div class="user-inf-data">' +
+    //                 '<a href="javascript;;">' +
+    //                 '<span class="lnr lnr-thumbs-up">' +
+    //                 '</span><span class="color-gray">' +
+    //                 '9' +
+    //                 '</span></a></div>' +
+    //                 '<div class="user-inf-data">' +
+    //                 '<a href="javascript;;">' +
+    //                 '<span class="lnr lnr-exit-up">' +
+    //                 '</span><span class="color-gray">' +
+    //                 '100' +
+    //                 '</span></a></div>' +
+    //                 '</div>' +
+    //                 '</div>' +
+    //                 '<div class="card-content"><div class="flex-center-box"><div class="card-video-item">' +
+    //                 '<a href="作品详情.html">' +
+    //                 '<img src="assets/img/show_pic.jpg" width="100%" alt="">' +
+    //                 '</a><div class="time-box"><span>' +
+    //                 '4:08' +
+    //                 '</span></div></div><div class="card-video-item">' +
+    //                 '<a href="作品详情.html">' +
+    //                 '<img src="assets/img/show_pic.jpg" width="100%" alt="">' +
+    //                 '</a><div class="time-box"><span>' +
+    //                 '4:08' +
+    //                 '</span></div></div></div></div></div>';
+    //         }
+    //         // 添加新条目
+    //         $('.infinite-scroll.active .card-list').append(htmlMrtVideoListItem);
+    //     }
+    //
+    //     $(page).on('infinite', function () {
+    //         // 如果正在加载，则退出
+    //         if (loading) return;
+    //         // 设置flag
+    //         loading = true;
+    //         var _this = $(this);
+    //         var tabIndex = 0;
+    //         if ($(this).find('.infinite-scroll.active').attr('id') == "discover") {
+    //             //发现-页面加载无限滚动内容
+    //             (function () {
+    //                 var lastIndex = _this.find('#discover').find('.card').length;
+    //                 // 模拟1s的加载过程
+    //                 setTimeout(function () {
+    //                     // 重置加载flag
+    //                     loading = false;
+    //                     if (lastIndex >= maxItems) {
+    //                         // 加载完毕，则注销无限加载事件，以防不必要的加载
+    //                         //$.detachInfiniteScroll($('.infinite-scroll').eq(tabIndex));
+    //                         // 删除加载提示符
+    //                         _this.find('#discover').find('.infinite-scroll-preloader').hide();
+    //                         return;
+    //                     }
+    //                     addDiscoverCard(itemsPerLoad, lastIndex);
+    //                     // 更新最后加载的序号
+    //                     lastIndex = _this.find('#discover').find('.card').length;
+    //                     $.refreshScroller();
+    //                 }, 1000);
+    //             })();
+    //         }
+    //         if ($(this).find('.infinite-scroll.active').attr('id') == "videoList") {
+    //             //排行版-页面加载无限滚动内容
+    //             (function () {
+    //                 var lastIndex = _this.find('#videoList').find('.media-list li').length;
+    //                 // 模拟1s的加载过程
+    //                 setTimeout(function () {
+    //                     // 重置加载flag
+    //                     loading = false;
+    //                     if (lastIndex >= maxItems) {
+    //                         // 加载完毕，则注销无限加载事件，以防不必要的加载
+    //                         //$.detachInfiniteScroll($('.infinite-scroll').eq(tabIndex));
+    //                         // 删除加载提示符
+    //                         _this.find('#videoList').find('.infinite-scroll-preloader').hide();
+    //                         return;
+    //                     }
+    //                     addVideoListItem(itemsPerLoad, lastIndex);
+    //                     // 更新最后加载的序号
+    //                     lastIndex = _this.find('#videoList').find('.media-list li').length;
+    //                     $.refreshScroller();
+    //                 }, 1000);
+    //             })();
+    //         }
+    //         if ($(this).find('.infinite-scroll.active').attr('id') == "userExcellent") {
+    //             //名人堂-页面加载无限滚动内容
+    //             (function () {
+    //                 var lastIndex = _this.find('#userExcellent').find('.card').length;
+    //                 // 模拟1s的加载过程
+    //                 setTimeout(function () {
+    //                     // 重置加载flag
+    //                     loading = false;
+    //                     if (lastIndex >= maxItems) {
+    //                         // 加载完毕，则注销无限加载事件，以防不必要的加载
+    //                         //$.detachInfiniteScroll($('.infinite-scroll').eq(tabIndex));
+    //                         // 删除加载提示符
+    //                         _this.find('#userExcellent').find('.infinite-scroll-preloader').hide();
+    //                         return;
+    //                     }
+    //                     addMrtVideoListItem(itemsPerLoad, lastIndex);
+    //                     // 更新最后加载的序号
+    //                     lastIndex = _this.find('#userExcellent').find('.card').length;
+    //                     $.refreshScroller();
+    //                 }, 1000);
+    //             })();
+    //         }
+    //     });
+    // });
 
     //图片浏览器
     /*
@@ -570,6 +677,49 @@ $(function () {
                 $.hideIndicator();
             }, 2000);
         });
+    });
+
+    //幻灯片
+    var swiperBanner = new Swiper('.swiper-discover-banner', {
+        autoplay: {
+            delay: 5000,//1秒切换一次
+        },
+        pagination: {
+            el: '.swiper-pagination-banner',
+        },
+        loop: true,
+    });
+    var swiperDiscoverButton = new Swiper('.swiper-discover-button', {
+        autoplay: {
+            delay: 7500,//1秒切换一次
+        },
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        slidesPerView: 4,
+        pagination: {
+            el: '.swiper-pagination-bar',
+            type: 'progressbar',
+            renderProgressbar: function (progressbarFillClass) {
+                return '<span class="' + progressbarFillClass + '"></span>';
+            }
+        },
+        // loop : true,
+    });
+    var swiperMrtButton = new Swiper('.swiper-mrt-button', {
+        autoplay: {
+            delay: 7500,//1秒切换一次
+        },
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        slidesPerView: 4,
+        pagination: {
+            el: '.swiper-pagination-bar-mrt',
+            type: 'progressbar',
+            renderProgressbar: function (progressbarFillClass) {
+                return '<span class="' + progressbarFillClass + '"></span>';
+            }
+        },
+        // loop : true,
     });
 
     $.init();

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="最影工作室">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="./dist_z/css/sm.css">
+    <link rel="stylesheet" href="./assets/css/demos.css">
+
+    <script src="./assets/js/zepto.js"></script>
+    <script src="./assets/js/picLazyLoad.min.js"></script>
+    <script src="./assets/js/config.js"></script>
+
+</head>
+<body>
+
+<div class="page-group home">
+    <div class="page" id="page-infinite-scroll-bottom">
+        <header class="bar bar-nav">
+            <a class="icon icon-me pull-left open-panel" data-panel=".panel-left"></a>
+            <a class="button button-link button-nav pull-right open-popup" data-popup=".popup-about">
+                关于
+                <span class="icon icon-menu"></span>
+            </a>
+            <h1 class="title">名人堂</h1>
+        </header>
+        <nav class="bar bar-tab">
+            <a class="tab-item external tab-link " href="#discover">
+                <span class="icon icon1"></span>
+                <span class="tab-label">发现</span>
+            </a>
+            <a class="tab-item external tab-link" href="#videoList">
+                <span class="icon icon2"></span>
+                <span class="tab-label">排行榜</span>
+            </a>
+            <a class="tab-item external tab-link active" href="#userExcellent">
+                <span class="icon icon3"></span>
+                <span class="tab-label">名人堂</span>
+            </a>
+            <a class="tab-item external tab-link" href="#userInfor">
+                <span class="icon icon4"></span>
+                <span class="tab-label">我的</span>
+                <span class="badge">2</span>
+            </a>
+        </nav>
+        <div class="content tabs" style="display: block">
+            <!--名人堂-->
+            <div id="userExcellent" class="user-work infinite-scroll tab active">
+                <div class="content-block-title">
+                    名人堂
+                    <a class="content-block-title-link" href="javascript:;"><span class="icon icon-r"></span>全部播放</a>
+                </div>
+                <div class="user-list clearfix">
+                    <div class="flex-wrap-box">
+                        <div class="user-list-item">
+                            <a href="./个人主页.html" class="item-link">
+                                <div class="user-list-item-avatar">
+                                    <img src="assets/img/avatar.jpg" width="100%" alt="">
+                                </div>
+                                <span class="user-list-item-name">xiaobaixiaobaixiaobaixiaobai</span>
+                            </a>
+                        </div>
+                        <div class="user-list-item">
+                            <a href="./个人主页.html" class="item-link">
+                                <div class="user-list-item-avatar">
+                                    <img src="assets/img/avatar.jpg" width="100%" alt="">
+                                </div>
+                                <span class="user-list-item-name">小白</span>
+                            </a>
+                        </div>
+                        <div class="user-list-item">
+                            <a href="./个人主页.html" class="item-link">
+                                <div class="user-list-item-avatar">
+                                    <img src="assets/img/avatar.jpg" width="100%" alt="">
+                                </div>
+                                <span class="user-list-item-name">xiaobai</span>
+                            </a>
+                        </div>
+                        <div class="user-list-item">
+                            <a href="./个人主页.html" class="item-link">
+                                <div class="user-list-item-avatar">
+                                    <img src="assets/img/avatar.jpg" width="100%" alt="">
+                                </div>
+                                <span class="user-list-item-name">小白</span>
+                            </a>
+                        </div>
+                        <div class="user-list-item">
+                            <a href="./个人主页.html" class="item-link">
+                                <div class="user-list-item-avatar">
+                                    <img src="assets/img/avatar.jpg" width="100%" alt="">
+                                </div>
+                                <span class="user-list-item-name">xiaobai</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-list clearfix">
+                    <div class="swiper-container swiper-mrt-button">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-visible">
+                                <div class="flex-center-box">
+                                    <div class="h-list-item">
+                                        <a href="javascript:;">
+                                            <span class="h-list-item-text">01</span>
+                                            <!--<img src="assets/img/avatar.jpg" width="100%" alt="">-->
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-visible">
+                                <div class="flex-center-box">
+                                    <div class="h-list-item">
+                                        <a href="javascript:;">
+                                            <span class="h-list-item-text">02</span>
+                                            <!--<img src="assets/img/avatar.jpg" width="100%" alt="">-->
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-visible">
+                                <div class="flex-center-box">
+                                    <div class="h-list-item">
+                                        <a href="javascript:;">
+                                            <span class="h-list-item-text">03</span>
+                                            <!--<img src="assets/img/avatar.jpg" width="100%" alt="">-->
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-visible">
+                                <div class="flex-center-box">
+                                    <div class="h-list-item">
+                                        <a href="javascript:;">
+                                            <span class="h-list-item-text">04</span>
+                                            <!--<img src="assets/img/avatar.jpg" width="100%" alt="">-->
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-visible">
+                                <div class="flex-center-box">
+                                    <div class="h-list-item">
+                                        <a href="javascript:;">
+                                            <span class="h-list-item-text">05</span>
+                                            <!--<img src="assets/img/avatar.jpg" width="100%" alt="">-->
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-visible">
+                                <div class="flex-center-box">
+                                    <div class="h-list-item">
+                                        <a href="javascript:;">
+                                            <span class="h-list-item-text">06</span>
+                                            <!--<img src="assets/img/avatar.jpg" width="100%" alt="">-->
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-visible">
+                                <div class="flex-center-box">
+                                    <div class="h-list-item">
+                                        <a href="javascript:;">
+                                            <span class="h-list-item-text">07</span>
+                                            <!--<img src="assets/img/avatar.jpg" width="100%" alt="">-->
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-visible">
+                                <div class="flex-center-box">
+                                    <div class="h-list-item">
+                                        <a href="javascript:;">
+                                            <span class="h-list-item-text">08</span>
+                                            <!--<img src="assets/img/avatar.jpg" width="100%" alt="">-->
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-bar-mrt"></div>
+                    </div>
+                </div>
+                <div class="home-card card-mrt">
+                    <div class="card-header clearfix">
+                        <div class="card-h-l">
+                            <p>最热 <span class="color-gray">2015/01/15</span></p>
+                        </div>
+                        <div class="card-h-r">
+                            <p>22 <span class="color-gray">人发布</span></p>
+                        </div>
+                    </div>
+                    <div class="card-list add-item-box">
+                        <div class="card i">
+                            <div class="card-footer clearfix">
+                                <div class="card-h-l">
+                                    <div class="user-inf">
+                                        <div class="card-avatar">
+                                            <a href="个人主页.html">
+                                                <img class="lazyload"
+                                                     src=""
+                                                     data-original="assets/img/avatar.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="user-inf-text">
+                                            <p>作品名称作品名称作品名称作品名称作品名称作品名称作品名称</p>
+                                            <p>尹小白 <span class="color-gray">／#广告／#广告／#广告／#广告／#广告／#广告／#广告／#广告</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-h-r">
+                                    <div class="user-inf-data"><a href="javascript;;"><span
+                                            class="lnr lnr-thumbs-up"></span><span class="color-gray">9</span></a></div>
+                                    <div class="user-inf-data"><a href="javascript;;"><span
+                                            class="lnr lnr-exit-up"></span><span class="color-gray">100</span></a></div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="flex-center-box">
+                                    <div class="card-video-item">
+                                        <a href="作品详情.html">
+                                            <img src="assets/img/show_pic.jpg" width="100%" alt="">
+                                        </a>
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-video-item">
+                                        <a href="作品详情.html">
+                                            <img src="assets/img/show_pic.jpg" width="100%" alt="">
+                                        </a>
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card i">
+                            <div class="card-footer clearfix">
+                                <div class="card-h-l">
+                                    <div class="user-inf">
+                                        <div class="card-avatar">
+                                            <a href="个人主页.html">
+                                                <img class="lazyload"
+                                                     src=""
+                                                     data-original="assets/img/avatar.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="user-inf-text">
+                                            <p>作品名称作品名称作品名称作品名称作品名称作品名称作品名称</p>
+                                            <p>尹小白 <span class="color-gray">／#广告／#广告／#广告／#广告／#广告／#广告／#广告／#广告</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-h-r">
+                                    <div class="user-inf-data"><a href="javascript;;"><span
+                                            class="lnr lnr-thumbs-up"></span><span class="color-gray">9</span></a></div>
+                                    <div class="user-inf-data"><a href="javascript;;"><span
+                                            class="lnr lnr-exit-up"></span><span class="color-gray">100</span></a></div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="flex-center-box">
+                                    <div class="card-video-item">
+                                        <a href="作品详情.html">
+                                            <img src="assets/img/show_pic.jpg" width="100%" alt="">
+                                        </a>
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-video-item">
+                                        <a href="作品详情.html">
+                                            <img src="assets/img/show_pic.jpg" width="100%" alt="">
+                                        </a>
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card i">
+                            <div class="card-footer clearfix">
+                                <div class="card-h-l">
+                                    <div class="user-inf">
+                                        <div class="card-avatar">
+                                            <a href="个人主页.html">
+                                                <img class="lazyload"
+                                                     src=""
+                                                     data-original="assets/img/avatar.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="user-inf-text">
+                                            <p>作品名称作品名称作品名称作品名称作品名称作品名称作品名称</p>
+                                            <p>尹小白 <span class="color-gray">／#广告／#广告／#广告／#广告／#广告／#广告／#广告／#广告</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-h-r">
+                                    <div class="user-inf-data"><a href="javascript;;"><span
+                                            class="lnr lnr-thumbs-up"></span><span class="color-gray">9</span></a></div>
+                                    <div class="user-inf-data"><a href="javascript;;"><span
+                                            class="lnr lnr-exit-up"></span><span class="color-gray">100</span></a></div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="flex-center-box">
+                                    <div class="card-video-item">
+                                        <a href="作品详情.html">
+                                            <img src="assets/img/show_pic.jpg" width="100%" alt="">
+                                        </a>
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-video-item">
+                                        <a href="作品详情.html">
+                                            <img src="assets/img/show_pic.jpg" width="100%" alt="">
+                                        </a>
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card i">
+                            <div class="card-footer clearfix">
+                                <div class="card-h-l">
+                                    <div class="user-inf">
+                                        <div class="card-avatar">
+                                            <a href="个人主页.html">
+                                                <img class="lazyload"
+                                                     src=""
+                                                     data-original="assets/img/avatar.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="user-inf-text">
+                                            <p>作品名称作品名称作品名称作品名称作品名称作品名称作品名称</p>
+                                            <p>尹小白 <span class="color-gray">／#广告／#广告／#广告／#广告／#广告／#广告／#广告／#广告</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-h-r">
+                                    <div class="user-inf-data"><a href="javascript;;"><span
+                                            class="lnr lnr-thumbs-up"></span><span class="color-gray">9</span></a></div>
+                                    <div class="user-inf-data"><a href="javascript;;"><span
+                                            class="lnr lnr-exit-up"></span><span class="color-gray">100</span></a></div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="flex-center-box">
+                                    <div class="card-video-item">
+                                        <a href="作品详情.html">
+                                            <img src="assets/img/show_pic.jpg" width="100%" alt="">
+                                        </a>
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-video-item">
+                                        <a href="作品详情.html">
+                                            <img src="assets/img/show_pic.jpg" width="100%" alt="">
+                                        </a>
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card i">
+                            <div class="card-footer clearfix">
+                                <div class="card-h-l">
+                                    <div class="user-inf">
+                                        <div class="card-avatar">
+                                            <a href="个人主页.html">
+                                                <img class="lazyload"
+                                                     src=""
+                                                     data-original="assets/img/avatar.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="user-inf-text">
+                                            <p>作品名称作品名称作品名称作品名称作品名称作品名称作品名称</p>
+                                            <p>尹小白 <span class="color-gray">／#广告／#广告／#广告／#广告／#广告／#广告／#广告／#广告</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-h-r">
+                                    <div class="user-inf-data"><a href="javascript;;"><span
+                                            class="lnr lnr-thumbs-up"></span><span class="color-gray">9</span></a></div>
+                                    <div class="user-inf-data"><a href="javascript;;"><span
+                                            class="lnr lnr-exit-up"></span><span class="color-gray">100</span></a></div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="flex-center-box">
+                                    <div class="card-video-item">
+                                        <a href="作品详情.html">
+                                            <img src="assets/img/show_pic.jpg" width="100%" alt="">
+                                        </a>
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-video-item">
+                                        <a href="作品详情.html">
+                                            <img src="assets/img/show_pic.jpg" width="100%" alt="">
+                                        </a>
+                                        <div class="time-box">
+                                            <span>4:08</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 加载提示符 -->
+                    <div class="infinite-scroll-preloader">
+                        <div class="preloader">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup-about" style="display: none;">
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-right close-popup">
+                关闭
+            </a>
+            <h1 class="title">关于最影</h1>
+        </header>
+        <div class="content native-scroll">
+            <div class="content-inner">
+                <div class="content-block color-dark">
+                    <p>关于关于关于。</p>
+                    <p>关于关于关于。</p>
+                    <p>关于关于关于</p>
+                    <p></p>
+                    <p><a class="button btn-small btn-center button-round close-popup">确定</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <p><a href="javascript:;" target="_blank"></a>我的主页</p>
+            <p></p>
+            <!-- Click on link with "close-panel" class will close panel -->
+            <p><a href="javascript:;" class="close-panel">关闭</a></p>
+        </div>
+    </div>
+</div>
+<script src="./dist_z/js/sm.js"></script>
+<script src="./dist_z/js/swiper.min.js"></script>
+<script src="./assets/js/demos.js"></script>
+</body>
+</html>
