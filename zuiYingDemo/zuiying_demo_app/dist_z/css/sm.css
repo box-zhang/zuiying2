@@ -2693,6 +2693,11 @@ input[type="button"].button {
   top: 0;
   width: 100%;
   height: 2.2rem;
+  opacity: 0;
+}
+.pull-down .pull-to-refresh-layer,
+.pull-up .pull-to-refresh-layer {
+  opacity: 1;
 }
 .pull-to-refresh-layer .preloader {
   position: absolute;

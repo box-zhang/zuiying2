@@ -32,15 +32,15 @@
             <h1 class="title">排行榜</h1>
         </header>
         <nav class="bar bar-tab">
-            <a class="tab-item external tab-link" href="#discover">
+            <a class="tab-item external tab-link active" href="#listDiscover">
                 <span class="icon icon1"></span>
                 <span class="tab-label">发现</span>
             </a>
-            <a class="tab-item external tab-link active" href="#videoList">
+            <a class="tab-item external tab-link" href="#listVideoRanking">
                 <span class="icon icon2"></span>
                 <span class="tab-label">排行榜</span>
             </a>
-            <a class="tab-item external tab-link" href="#userExcellent">
+            <a class="tab-item external tab-link" href="#listUserExcellent">
                 <span class="icon icon3"></span>
                 <span class="tab-label">名人堂</span>
             </a>
@@ -50,9 +50,13 @@
                 <span class="badge">2</span>
             </a>
         </nav>
-        <div class="content tabs" style="display: block">
+        <div class="content pull-to-refresh-content tabs" style="display: block">
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
             <!--排行榜-->
-            <div id="videoList" class="page-list infinite-scroll tab active">
+            <div id="listVideoRanking" class="page-list infinite-scroll tab active">
                 <div class="content-block-title">视频列表</div>
                 <div class="list-block media-list">
                     <ul class="add-item-box">

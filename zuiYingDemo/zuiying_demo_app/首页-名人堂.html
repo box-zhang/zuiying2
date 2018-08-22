@@ -32,15 +32,15 @@
             <h1 class="title">名人堂</h1>
         </header>
         <nav class="bar bar-tab">
-            <a class="tab-item external tab-link " href="#discover">
+            <a class="tab-item external tab-link active" href="#listDiscover">
                 <span class="icon icon1"></span>
                 <span class="tab-label">发现</span>
             </a>
-            <a class="tab-item external tab-link" href="#videoList">
+            <a class="tab-item external tab-link" href="#listVideoRanking">
                 <span class="icon icon2"></span>
                 <span class="tab-label">排行榜</span>
             </a>
-            <a class="tab-item external tab-link active" href="#userExcellent">
+            <a class="tab-item external tab-link" href="#listUserExcellent">
                 <span class="icon icon3"></span>
                 <span class="tab-label">名人堂</span>
             </a>
@@ -50,9 +50,13 @@
                 <span class="badge">2</span>
             </a>
         </nav>
-        <div class="content tabs" style="display: block">
+        <div class="content pull-to-refresh-content tabs" style="display: block">
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
             <!--名人堂-->
-            <div id="userExcellent" class="user-work infinite-scroll tab active">
+            <div id="listUserExcellent" class="user-work infinite-scroll tab active">
                 <div class="content-block-title">
                     名人堂
                     <a class="content-block-title-link" href="javascript:;"><span class="icon icon-r"></span>全部播放</a>
@@ -104,7 +108,7 @@
                 <div class="h-list clearfix">
                     <div class="swiper-container swiper-mrt-button">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide swiper-slide-visible">
+                            <div class="swiper-slide">
                                 <div class="flex-center-box">
                                     <div class="h-list-item">
                                         <a href="javascript:;">
@@ -114,7 +118,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide swiper-slide-visible">
+                            <div class="swiper-slide">
                                 <div class="flex-center-box">
                                     <div class="h-list-item">
                                         <a href="javascript:;">
@@ -124,7 +128,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide swiper-slide-visible">
+                            <div class="swiper-slide">
                                 <div class="flex-center-box">
                                     <div class="h-list-item">
                                         <a href="javascript:;">
@@ -134,7 +138,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide swiper-slide-visible">
+                            <div class="swiper-slide">
                                 <div class="flex-center-box">
                                     <div class="h-list-item">
                                         <a href="javascript:;">
@@ -144,7 +148,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide swiper-slide-visible">
+                            <div class="swiper-slide">
                                 <div class="flex-center-box">
                                     <div class="h-list-item">
                                         <a href="javascript:;">
@@ -154,7 +158,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide swiper-slide-visible">
+                            <div class="swiper-slide">
                                 <div class="flex-center-box">
                                     <div class="h-list-item">
                                         <a href="javascript:;">
@@ -164,7 +168,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide swiper-slide-visible">
+                            <div class="swiper-slide">
                                 <div class="flex-center-box">
                                     <div class="h-list-item">
                                         <a href="javascript:;">
@@ -174,7 +178,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide swiper-slide-visible">
+                            <div class="swiper-slide">
                                 <div class="flex-center-box">
                                     <div class="h-list-item">
                                         <a href="javascript:;">
