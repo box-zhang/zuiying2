@@ -191,12 +191,31 @@
     -ms-flex-pack: justify;
     justify-content: space-between
 }
-
+.discover-person .discover-person-list {
+    display: flex;
+}
 .discover-person .discover-person-list ul li {
     float: left;
     position: relative;
     margin: 4px .5%;
     width: 24%;
+    height: 120px;
+    overflow: hidden;
+}
+@media (max-width: 1200px){
+    .discover-person .col-sm-12 .discover-person-list ul li {
+        height: 140px;
+    }
+}
+@media (max-width: 680px){
+    .discover-person .col-sm-12 .discover-person-list ul li {
+        height: 94px;
+    }
+}
+@media (max-width: 470px){
+    .discover-person .col-sm-12 .discover-person-list ul li {
+        height: 64px;
+    }
 }
 
 .discover-person .discover-person-list ul li :active:before,
@@ -263,7 +282,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: 5%;
+    /*padding: 5%;*/
     width: 100%;
     height: 100%;
     text-align: center;
@@ -291,14 +310,14 @@
 }
 
 .discover-video .video-list ul {
-    /*display: -ms-flexbox;*/
-    /*display: flex;*/
-    /*-ms-flex-wrap: nowrap;*/
-    /*flex-wrap: nowrap;*/
-    /*-ms-flex-line-pack: center;*/
-    /*align-content: center;*/
-    /*-ms-flex-pack: justify;*/
-    /*justify-content: space-between*/
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -ms-flex-pack: justify;
+    justify-content: center
 }
 
 .discover-video .video-list ul li {
@@ -310,7 +329,9 @@
     /*-ms-flex-positive: 1;*/
     /*flex-grow: 1;*/
     margin: 1px;
-    width: 24%;
+    width: 32.5%;
+    height: 120px;
+    overflow: hidden;
 }
 
 .discover-video .video-list ul li img {
@@ -1855,9 +1876,30 @@ dl dt {
     line-height: 28px
 }
 
-.video-detailed .video-detailed-top,
+/*.video-detailed .video-detailed-top,*/
 .video-detailed .overflow-hidden {
     background: #3e3d54
+}
+.video-detailed-top-box {
+    overflow: hidden;
+}
+.video-detailed-top-box .video-play-box {
+    padding-top: 50px;
+}
+
+.video-detailed .video-detailed-top {
+    position: relative;
+}
+.video-detailed-top-filter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-filter: blur(15px); /* Chrome, Safari, Opera */
+    filter: blur(15px);
+    background-color: #3e3d54;
+    opacity: .9;
 }
 
 .video-detailed .video-inf {
@@ -16789,9 +16831,9 @@ ol .level-none {
 
 .video-play {
     margin: 0 auto;
-    width: 900px;
-    height: 500px;
-    background: hsla(240, 8%, 44%, .25)
+    width: 1000px;
+    min-height: 500px;
+    background: hsla(240, 8%, 44%, .1)
 }
 
 .video-play .video-player-box {
