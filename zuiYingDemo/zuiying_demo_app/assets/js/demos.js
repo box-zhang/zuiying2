@@ -224,7 +224,6 @@ window.onload = function () {
             dataType: "json",
             url: urlAjaxDataFX,
             success: function (data) {
-                alert("data");
                 console.log(data)
             },
             error: function () {
@@ -241,7 +240,6 @@ window.onload = function () {
             dataType: "json",
             url: urlAjaxDataMRT,
             success: function (data) {
-                alert("data");
                 console.log(data)
             },
             error: function () {
@@ -258,7 +256,6 @@ window.onload = function () {
             dataType: "json",
             url: urlAjaxDataPHB,
             success: function (data) {
-                alert("data");
                 console.log(data)
             },
             error: function () {
@@ -275,7 +272,6 @@ window.onload = function () {
             dataType: "json",
             url: urlAjaxDataGKJL,
             success: function (data) {
-                alert("data");
                 console.log(data)
             },
             error: function () {
@@ -292,7 +288,6 @@ window.onload = function () {
             dataType: "json",
             url: urlAjaxDataGZ,
             success: function (data) {
-                alert("data");
                 console.log(data)
             },
             error: function () {
@@ -309,7 +304,6 @@ window.onload = function () {
             dataType: "json",
             url: urlAjaxDataZPXQ,
             success: function (data) {
-                alert("data");
                 console.log(data)
             },
             error: function () {
@@ -326,7 +320,6 @@ window.onload = function () {
             dataType: "json",
             url: urlAjaxDataGRZY,
             success: function (data) {
-                alert("data");
                 console.log(data)
             },
             error: function () {
