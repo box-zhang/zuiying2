@@ -6653,6 +6653,7 @@ body.body-small .vote-icon {
   letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 14px;
+  background-color: transparent;
 }
 .landing-page .navbar-default .nav li:hover a,
 .landing-page .navbar-default .nav li:hover {
@@ -6731,7 +6732,14 @@ body.body-small .vote-icon {
 }
 .landing-page .navbar-default .navbar-nav > .active > a,
 .landing-page .navbar-default .navbar-nav > .active > a:hover {
-  border-top: 6px solid #ff5757;
+  border-bottom: 3px solid #ff5757;
+  background: transparent;
+  color: #eee;
+  font-weight: bold;
+}
+.landing-page .navbar-default.navbar-scroll .navbar-nav > .active > a,
+.landing-page .navbar-default.navbar-scroll .navbar-nav > .active > a:hover {
+  border-bottom-color: #fff4f5;
 }
 .landing-page .navbar-fixed-top.navbar-scroll {
   border-bottom: 1px solid rgba(255,255,255,0.4) !important;

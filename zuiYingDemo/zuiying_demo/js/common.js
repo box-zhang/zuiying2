@@ -7,6 +7,17 @@
 
 
 $(document).ready(function () {
+    var navItem = $('#navbar .navbar-nav>li');
+
+    //每点击一下按钮，首页头部标签名字进行对应的更替
+    for (var i = 0; i < navItem.length; i++) {
+        (function (i) {
+            navItem.eq(i).click(function () {
+                $('#navbar .navbar-nav>li').removeClass('active');
+                $(this).addClass('active');
+            })
+        })(i)
+    }
 
     $('body').scrollspy({
         target: '.navbar-fixed-top',
