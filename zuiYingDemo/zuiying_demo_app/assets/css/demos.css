@@ -696,7 +696,7 @@ body {
     display: inline-block;
     width: 14px;
     height: 14px;
-    background: url("../img/icon_zan.png") no-repeat center center;
+    /*background: url("../img/icon_zan.png") no-repeat center center;*/
     background-size: 100% 100%;
 }
 
@@ -721,7 +721,7 @@ body {
     display: inline-block;
     width: 14px;
     height: 14px;
-    background: url("../img/icon_zan_active.png") no-repeat center center;
+    /*background: url("../img/icon_zan_active.png") no-repeat center center;*/
     background-size: 100% 100%;
 }
 .icon.icon-wb {
@@ -771,6 +771,7 @@ body {
 }
 .card-content a,
 .card-avatar a {
+    position: relative;
     display: block;
     width: 100%;
     height: 100%;
@@ -808,6 +809,8 @@ body {
 
 .h-list .h-list-item {
     position: relative;
+    left: 50%;
+    margin-left: -28px;
     width: 56px;
     height: 56px;
     line-height: 56px;
@@ -816,6 +819,13 @@ body {
     text-align: center;
     color: #fff;
     overflow: hidden;
+}
+.h-list .h-list-item-text-b {
+    margin: 5px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+    color: #3E3D54;
 }
 .h-list .h-list-item a {
     position: relative;
@@ -831,7 +841,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    font-size: 24px;
+    font-size: .85rem;
 }
 
 .home-card .color-gray {
@@ -843,10 +853,38 @@ body {
     float: left;
     text-align: left;
 }
+.user-work .card-h-l {
+    width: 70%;
+}
+.video-btn-box {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    overflow: hidden;
+    background: rgba(0,0,0,.4);
+}
+.video-btn-box .video-btn-in-1 {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    margin-top: -12px;
+    margin-left: -7px;
+    border-width: 12px 0 12px 20px;
+    border-style:solid;
+    border-color: transparent transparent transparent #ddd;/*透明 透明 透明 灰*/
+}
 
 .card-h-r {
     float: right;
     text-align: right;
+    font-size: .65rem;
 }
 
 .card-h-l p,
@@ -867,7 +905,8 @@ body {
     padding-left: 50px;
 }
 .home-card.card-mrt .card-footer .user-inf-text {
-    width: 50%;
+    width: 100%;
+    height: 40px;
 }
 .home-card.card-mrt .card-footer .user-inf-text p {
     width: 100%;
@@ -890,6 +929,7 @@ body {
 .home-card.card-mrt .card-content .card-video-item {
     position: relative;
     margin: 0 2px;
+    width: 50%;
     border-radius: 1px;
     overflow: hidden;
 }
@@ -1021,6 +1061,16 @@ body {
     height: 50px;
     border-radius: 100%;
     overflow: hidden;
+}
+.user-work .home-card .card-avatar {
+    position: relative;
+}
+.user-work .home-card .card-avatar img {
+    position: absolute;
+}
+.user-work .home-card .user-inf-text {
+    position: absolute;
+    top: 0;
 }
 
 .user-settings .list-block ul:after {
@@ -1618,7 +1668,7 @@ textarea:-ms-input-placeholder {
     padding-left: .5rem;
 }
 .video-wrapper .list-block.media-list .item-media{
-    width: 7rem;
+    width: 6.4rem;
 }
 .video-wrapper .list-block.media-list .item-inner {
     padding-right: .5rem
@@ -1652,6 +1702,7 @@ textarea:-ms-input-placeholder {
     margin-right: 5px;
 }
 .video-wrapper .video-user-avatar {
+    position: relative;
     width: 2.2rem;
     height: 2.2rem;
     border-radius: 100%;
@@ -1660,6 +1711,18 @@ textarea:-ms-input-placeholder {
     color: #ff5757;
     line-height: 2.2rem;
     text-align: center;
+}
+.video-wrapper .video-user-avatar img{
+    position: relative;
+    z-index: 1;
+}
+.video-wrapper .video-user-avatar.lnr-user:before {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 0;
 }
 .video-wrapper .video-user {
     position: relative;
